@@ -1,0 +1,59 @@
+\hypertarget{group__cap__put__frame}{}\subsection{Frame-\/\+Based Decoding Functions}
+\label{group__cap__put__frame}\index{Frame-\/\+Based Decoding Functions@{Frame-\/\+Based Decoding Functions}}
+\subsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{group__cap__put__frame_gade62af02658acd724fda731b6300eec7}{aom\+\_\+codec\+\_\+put\+\_\+frame\+\_\+cb\+\_\+fn\+\_\+t}) (void $\ast$user\+\_\+priv, const \hyperlink{aom__image_8h_a5409ae8fdb326fe1cc32622ef4e23748}{aom\+\_\+image\+\_\+t} $\ast$img)
+\begin{DoxyCompactList}\small\item\em put frame callback prototype \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__codec_gaaae61e0f8663e6137f1e228757248e7c}{aom\+\_\+codec\+\_\+err\+\_\+t} \hyperlink{group__cap__put__frame_ga0d6672fef284041573a29b76a0a5ef1b}{aom\+\_\+codec\+\_\+register\+\_\+put\+\_\+frame\+\_\+cb} (\hyperlink{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}{aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$ctx, \hyperlink{group__cap__put__frame_gade62af02658acd724fda731b6300eec7}{aom\+\_\+codec\+\_\+put\+\_\+frame\+\_\+cb\+\_\+fn\+\_\+t} cb, void $\ast$user\+\_\+priv)
+\begin{DoxyCompactList}\small\item\em Register for notification of frame completion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+The following functions are required to be implemented for all decoders that advertise the A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+P\+U\+T\+\_\+\+F\+R\+A\+ME capability. Calling these functions for codecs that don\textquotesingle{}t advertise this capability will result in an error code being returned, usually A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+E\+R\+R\+OR 
+
+\subsubsection{Typedef Documentation}
+\index{Frame-\/\+Based Decoding Functions@{Frame-\/\+Based Decoding Functions}!aom\+\_\+codec\+\_\+put\+\_\+frame\+\_\+cb\+\_\+fn\+\_\+t@{aom\+\_\+codec\+\_\+put\+\_\+frame\+\_\+cb\+\_\+fn\+\_\+t}}
+\index{aom\+\_\+codec\+\_\+put\+\_\+frame\+\_\+cb\+\_\+fn\+\_\+t@{aom\+\_\+codec\+\_\+put\+\_\+frame\+\_\+cb\+\_\+fn\+\_\+t}!Frame-\/\+Based Decoding Functions@{Frame-\/\+Based Decoding Functions}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+put\+\_\+frame\+\_\+cb\+\_\+fn\+\_\+t}{aom_codec_put_frame_cb_fn_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ aom\+\_\+codec\+\_\+put\+\_\+frame\+\_\+cb\+\_\+fn\+\_\+t) (void $\ast$user\+\_\+priv, const {\bf aom\+\_\+image\+\_\+t} $\ast$img)}\hypertarget{group__cap__put__frame_gade62af02658acd724fda731b6300eec7}{}\label{group__cap__put__frame_gade62af02658acd724fda731b6300eec7}
+
+
+put frame callback prototype 
+
+This callback is invoked by the decoder to notify the application of the availability of decoded image data. 
+
+\subsubsection{Function Documentation}
+\index{Frame-\/\+Based Decoding Functions@{Frame-\/\+Based Decoding Functions}!aom\+\_\+codec\+\_\+register\+\_\+put\+\_\+frame\+\_\+cb@{aom\+\_\+codec\+\_\+register\+\_\+put\+\_\+frame\+\_\+cb}}
+\index{aom\+\_\+codec\+\_\+register\+\_\+put\+\_\+frame\+\_\+cb@{aom\+\_\+codec\+\_\+register\+\_\+put\+\_\+frame\+\_\+cb}!Frame-\/\+Based Decoding Functions@{Frame-\/\+Based Decoding Functions}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+register\+\_\+put\+\_\+frame\+\_\+cb(aom\+\_\+codec\+\_\+ctx\+\_\+t $\ast$ctx, aom\+\_\+codec\+\_\+put\+\_\+frame\+\_\+cb\+\_\+fn\+\_\+t cb, void $\ast$user\+\_\+priv)}{aom_codec_register_put_frame_cb(aom_codec_ctx_t *ctx, aom_codec_put_frame_cb_fn_t cb, void *user_priv)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+codec\+\_\+err\+\_\+t} aom\+\_\+codec\+\_\+register\+\_\+put\+\_\+frame\+\_\+cb (
+\begin{DoxyParamCaption}
+\item[{{\bf aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$}]{ctx, }
+\item[{{\bf aom\+\_\+codec\+\_\+put\+\_\+frame\+\_\+cb\+\_\+fn\+\_\+t}}]{cb, }
+\item[{void $\ast$}]{user\+\_\+priv}
+\end{DoxyParamCaption}
+)}\hypertarget{group__cap__put__frame_ga0d6672fef284041573a29b76a0a5ef1b}{}\label{group__cap__put__frame_ga0d6672fef284041573a29b76a0a5ef1b}
+
+
+Register for notification of frame completion. 
+
+Registers a given function to be called when a decoded frame is available.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ctx} & Pointer to this instance\textquotesingle{}s context \\
+\hline
+\mbox{\tt in}  & {\em cb} & Pointer to the callback function \\
+\hline
+\mbox{\tt in}  & {\em user\+\_\+priv} & User\textquotesingle{}s private data\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7caf145dc2f86014a08ebad36ac2b140001}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+OK}} & Callback successfully registered. \\
+\hline
+{\em \hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca20f818786bc939e6e58192f6a150d691}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+E\+R\+R\+OR}} & Decoder context not initialized, or algorithm not capable of posting slice completion. \\
+\hline
+\end{DoxyRetVals}

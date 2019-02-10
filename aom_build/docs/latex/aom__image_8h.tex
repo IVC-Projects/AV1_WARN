@@ -1,0 +1,691 @@
+\hypertarget{aom__image_8h}{}\subsection{aom/aom\+\_\+image.h File Reference}
+\label{aom__image_8h}\index{aom/aom\+\_\+image.\+h@{aom/aom\+\_\+image.\+h}}
+
+
+Describes the aom image descriptor and associated operations.  
+
+
+{\ttfamily \#include \char`\"{}aom/aom\+\_\+integer.\+h\char`\"{}}\\*
+\subsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structaom__image}{aom\+\_\+image}
+\begin{DoxyCompactList}\small\item\em Image Descriptor. \end{DoxyCompactList}\item 
+struct \hyperlink{structaom__image__rect}{aom\+\_\+image\+\_\+rect}
+\begin{DoxyCompactList}\small\item\em Representation of a rectangle on a surface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{aom__image_8h_a22d60e6e3af866e523788a6b1203c71c}{A\+O\+M\+\_\+\+I\+M\+A\+G\+E\+\_\+\+A\+B\+I\+\_\+\+V\+E\+R\+S\+I\+ON}\hypertarget{aom__image_8h_a22d60e6e3af866e523788a6b1203c71c}{}\label{aom__image_8h_a22d60e6e3af866e523788a6b1203c71c}
+
+\begin{DoxyCompactList}\small\item\em Current A\+BI version number. \end{DoxyCompactList}\item 
+\#define \hyperlink{aom__image_8h_a7084ac01cd52ccf0b44e02dbe2467b5a}{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+P\+L\+A\+N\+AR}~0x100
+\item 
+\#define \hyperlink{aom__image_8h_ae3c901d141136eab9c1add5dfa7bb321}{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+U\+V\+\_\+\+F\+L\+IP}~0x200
+\item 
+\#define \hyperlink{aom__image_8h_a607b37d91f75442f54223ecd85f1b6cb}{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+H\+I\+G\+H\+B\+I\+T\+D\+E\+P\+TH}~0x800
+\item 
+\#define \hyperlink{aom__image_8h_a1be1887a76e89f3a4f84ccb11dde025e}{A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+\+P\+A\+C\+K\+ED}~0
+\item 
+\#define \hyperlink{aom__image_8h_a2ad22076006b15cf809edcaa33f6d339}{A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+Y}~0
+\item 
+\#define \hyperlink{aom__image_8h_a0845e9194541329c0f77b4bd6a38cc7c}{A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+U}~1
+\item 
+\#define \hyperlink{aom__image_8h_a32a43f20adb01d846af1925189c37495}{A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+V}~2
+\end{DoxyCompactItemize}
+\subsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{aom__image_8h_a930317c04b4bd0a660bb5e744055523c}{aom\+\_\+img\+\_\+fmt} \hyperlink{aom__image_8h_ab71efff8c7f49380fad23b93bc2e9bfc}{aom\+\_\+img\+\_\+fmt\+\_\+t}
+\begin{DoxyCompactList}\small\item\em List of supported image formats. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{aom__image_8h_a5267ad095a088ece3499336812503cef}{aom\+\_\+color\+\_\+primaries} \hyperlink{aom__image_8h_ad72aacc083639c415fe2b4a12ea2e9e9}{aom\+\_\+color\+\_\+primaries\+\_\+t}
+\begin{DoxyCompactList}\small\item\em List of supported color primaries. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{aom__image_8h_a30655997e3fb79889ee23eb294cb1992}{aom\+\_\+transfer\+\_\+characteristics} \hyperlink{aom__image_8h_aad2d14d16ce5f24c6225f716a0a30563}{aom\+\_\+transfer\+\_\+characteristics\+\_\+t}
+\begin{DoxyCompactList}\small\item\em List of supported transfer functions. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{aom__image_8h_a6bc018ed9689367acae810bc58527081}{aom\+\_\+matrix\+\_\+coefficients} \hyperlink{aom__image_8h_a9994d1b5fe7cc98d54b26859d610a1cc}{aom\+\_\+matrix\+\_\+coefficients\+\_\+t}\hypertarget{aom__image_8h_a9994d1b5fe7cc98d54b26859d610a1cc}{}\label{aom__image_8h_a9994d1b5fe7cc98d54b26859d610a1cc}
+
+\begin{DoxyCompactList}\small\item\em List of supported matrix coefficients. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{aom__image_8h_acb82d93a9a9f88ec2361b61a8cac1597}{aom\+\_\+color\+\_\+range} \hyperlink{aom__image_8h_ab7754f796b26c07a78bb338b38f8df67}{aom\+\_\+color\+\_\+range\+\_\+t}
+\begin{DoxyCompactList}\small\item\em List of supported color range. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{aom__image_8h_a10590253ef3dbde7e93ed5d4b4e0e73b}{aom\+\_\+chroma\+\_\+sample\+\_\+position} \hyperlink{aom__image_8h_a48f259fc7774b1c799b3ebe7530c19bd}{aom\+\_\+chroma\+\_\+sample\+\_\+position\+\_\+t}
+\begin{DoxyCompactList}\small\item\em List of chroma sample positions. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structaom__image}{aom\+\_\+image} \hyperlink{aom__image_8h_a5409ae8fdb326fe1cc32622ef4e23748}{aom\+\_\+image\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Image Descriptor. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structaom__image__rect}{aom\+\_\+image\+\_\+rect} \hyperlink{aom__image_8h_aeb7bd8cffc46083daea9b1955b8f245d}{aom\+\_\+image\+\_\+rect\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Representation of a rectangle on a surface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{aom__image_8h_a930317c04b4bd0a660bb5e744055523c}{aom\+\_\+img\+\_\+fmt} \{ \\*
+{\bfseries A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+N\+O\+NE}, 
+\hyperlink{aom__image_8h_a930317c04b4bd0a660bb5e744055523cad28244100a2754409f285b77a3db90a0}{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+Y\+V12}, 
+\hyperlink{aom__image_8h_a930317c04b4bd0a660bb5e744055523cabd778a3d697463e89d12a1117f417b60}{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I420} = 0x100 $\vert$ 2, 
+\hyperlink{aom__image_8h_a930317c04b4bd0a660bb5e744055523caf066b272547a880cd302c50cdcb6e76e}{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+A\+O\+M\+Y\+V12}, 
+\\*
+\hyperlink{aom__image_8h_a930317c04b4bd0a660bb5e744055523ca377a60c48da3bdc71dccf74112a4b0f6}{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+A\+O\+M\+I420} = 0x100 $\vert$ 4, 
+\hyperlink{aom__image_8h_a930317c04b4bd0a660bb5e744055523cab2f75281e94ebc0f0bc728ef287cd3e8}{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I422} = 0x100 $\vert$ 5, 
+\hyperlink{aom__image_8h_a930317c04b4bd0a660bb5e744055523ca89d423506e948ab7d3b98b5750b92655}{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I444} = 0x100 $\vert$ 6, 
+\hyperlink{aom__image_8h_a930317c04b4bd0a660bb5e744055523ca20a9cf30277260685642b4cfb4e9273b}{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I42016} = A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I420 $\vert$ 0x800, 
+\\*
+\hyperlink{aom__image_8h_a930317c04b4bd0a660bb5e744055523ca6d845490a6333fca3ac22cc1105deadd}{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+Y\+V1216} = A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+Y\+V12 $\vert$ 0x800, 
+\hyperlink{aom__image_8h_a930317c04b4bd0a660bb5e744055523ca064683ed4260fc6244af6cfc9d261c22}{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I42216} = A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I422 $\vert$ 0x800, 
+\hyperlink{aom__image_8h_a930317c04b4bd0a660bb5e744055523cab9b93d397dedbdd6bfafec84d1f8f0f5}{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I44416} = A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I444 $\vert$ 0x800
+ \}\begin{DoxyCompactList}\small\item\em List of supported image formats. \end{DoxyCompactList}
+\item 
+enum \hyperlink{aom__image_8h_a5267ad095a088ece3499336812503cef}{aom\+\_\+color\+\_\+primaries} \{ \\*
+\hyperlink{aom__image_8h_a5267ad095a088ece3499336812503cefa8032bcfaf84734707ad00633145da35c}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+0} = 0, 
+\hyperlink{aom__image_8h_a5267ad095a088ece3499336812503cefa9a2ebe055c0508a2a2f72b6c192fcce9}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+709} = 1, 
+\hyperlink{aom__image_8h_a5267ad095a088ece3499336812503cefa0835a3af8e6ffc6df298b6e64f878431}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+U\+N\+S\+P\+E\+C\+I\+F\+I\+ED} = 2, 
+\hyperlink{aom__image_8h_a5267ad095a088ece3499336812503cefae01d6159bebd65c7ea0664b26a7e181a}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+3} = 3, 
+\\*
+\hyperlink{aom__image_8h_a5267ad095a088ece3499336812503cefa5b57cb26f04f4df6585335129392d5e2}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+470\+\_\+M} = 4, 
+\hyperlink{aom__image_8h_a5267ad095a088ece3499336812503cefa8b33dc8483c16048c606d75d9f11e38a}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+470\+\_\+\+B\+\_\+G} = 5, 
+\hyperlink{aom__image_8h_a5267ad095a088ece3499336812503cefa3ce81eb125550ec2f11a58f183eeaee6}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+601} = 6, 
+\hyperlink{aom__image_8h_a5267ad095a088ece3499336812503cefa1a8b2e5694489121f80a406d9da25dfb}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+S\+M\+P\+T\+E\+\_\+240} = 7, 
+\\*
+\hyperlink{aom__image_8h_a5267ad095a088ece3499336812503cefa8dd6ba5106c22d149a233e73232aeb65}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+G\+E\+N\+E\+R\+I\+C\+\_\+\+F\+I\+LM}, 
+\hyperlink{aom__image_8h_a5267ad095a088ece3499336812503cefa6bb95baf09cd6e1f3596b459712c592a}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+2020} = 9, 
+\hyperlink{aom__image_8h_a5267ad095a088ece3499336812503cefa6032cae72a729933a6a75e3b943a542c}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+X\+YZ} = 10, 
+\hyperlink{aom__image_8h_a5267ad095a088ece3499336812503cefa54d519c9ac0ca52ebda7caf736530e57}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+S\+M\+P\+T\+E\+\_\+431} = 11, 
+\\*
+\hyperlink{aom__image_8h_a5267ad095a088ece3499336812503cefa227b6e4116ed0266af20b705aebaf661}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+S\+M\+P\+T\+E\+\_\+432} = 12, 
+\hyperlink{aom__image_8h_a5267ad095a088ece3499336812503cefa53f592f9fef9c421db024f1c4697a908}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+13} = 13, 
+\hyperlink{aom__image_8h_a5267ad095a088ece3499336812503cefa9e74dcb338953bfab3101aa33ea44157}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+E\+B\+U\+\_\+3213} = 22, 
+\hyperlink{aom__image_8h_a5267ad095a088ece3499336812503cefa34a3459d4b145006614dfb428b9ebe8a}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+23} = 23
+ \}\begin{DoxyCompactList}\small\item\em List of supported color primaries. \end{DoxyCompactList}
+\item 
+enum \hyperlink{aom__image_8h_a30655997e3fb79889ee23eb294cb1992}{aom\+\_\+transfer\+\_\+characteristics} \{ \\*
+\hyperlink{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a31c9111a24763c11ae11f17aab940783}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+0} = 0, 
+\hyperlink{aom__image_8h_a30655997e3fb79889ee23eb294cb1992affe340e422646b7d70ef91edd6a8053c}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+709} = 1, 
+\hyperlink{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a81a9e0af519cb43502caa899233f4c7e}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+U\+N\+S\+P\+E\+C\+I\+F\+I\+ED} = 2, 
+\hyperlink{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a4f17a249c9791f5e8b0d22850d13842f}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+3} = 3, 
+\\*
+\hyperlink{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a356d6943d11d88e7a42370c1c698c214}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+470\+\_\+M} = 4, 
+\hyperlink{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a7a347c6d5605db0a6ee89cc81dec0b37}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+470\+\_\+\+B\+\_\+G} = 5, 
+\hyperlink{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a5b51bfcf0f3779a7d907ac45ee4067a4}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+601} = 6, 
+\hyperlink{aom__image_8h_a30655997e3fb79889ee23eb294cb1992ac3b5e95e3400830c334268fca69a1226}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+240} = 7, 
+\\*
+\hyperlink{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a99ebdb0b1a35e0bf25808f851aa80a35}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+L\+I\+N\+E\+AR} = 8, 
+\hyperlink{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a54ec8cfad46215d855696bafe371ffe1}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+L\+O\+G\+\_\+100} = 9, 
+\hyperlink{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a7d79c257042a5958bafa6b5ccfbd96cb}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+L\+O\+G\+\_\+100\+\_\+\+S\+Q\+R\+T10}, 
+\hyperlink{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a57f92f410badf8a43b19df18edc9b8b9}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+I\+E\+C\+\_\+61966} = 11, 
+\\*
+\hyperlink{aom__image_8h_a30655997e3fb79889ee23eb294cb1992ac60ca749a2d0ca1c860d82f0825a3e2d}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+1361} = 12, 
+\hyperlink{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a94553e773e3d3fb005236ed70eeedfea}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+S\+R\+GB} = 13, 
+\hyperlink{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a1ce5fbca5277266680d70bb7211646d6}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+2020\+\_\+10\+\_\+\+B\+IT} = 14, 
+\hyperlink{aom__image_8h_a30655997e3fb79889ee23eb294cb1992afcc74c6858aefc13c426dd6992198e75}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+2020\+\_\+12\+\_\+\+B\+IT} = 15, 
+\\*
+\hyperlink{aom__image_8h_a30655997e3fb79889ee23eb294cb1992ab48fdcc8c2c0350f6423b9c116c1876d}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+2084} = 16, 
+\hyperlink{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a45df590313483af0c614708f346028c4}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+428} = 17, 
+\hyperlink{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a3d7b83c425c539d1a36fb36e9aebf268}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+H\+LG} = 18, 
+\hyperlink{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a2d10943cf211ebef4d149155b0ec2b1e}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+19} = 19
+ \}\begin{DoxyCompactList}\small\item\em List of supported transfer functions. \end{DoxyCompactList}
+\item 
+enum \hyperlink{aom__image_8h_a6bc018ed9689367acae810bc58527081}{aom\+\_\+matrix\+\_\+coefficients} \{ \\*
+\hyperlink{aom__image_8h_a6bc018ed9689367acae810bc58527081a17489bf0aed544427f7c6bbe4837b212}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+I\+D\+E\+N\+T\+I\+TY} = 0, 
+\hyperlink{aom__image_8h_a6bc018ed9689367acae810bc58527081aa70fd9b88bc91bd0d126aaa07421c49a}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+709} = 1, 
+\hyperlink{aom__image_8h_a6bc018ed9689367acae810bc58527081a06a4defb1e5d9bb1d2aad092b8656a03}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+U\+N\+S\+P\+E\+C\+I\+F\+I\+ED} = 2, 
+\hyperlink{aom__image_8h_a6bc018ed9689367acae810bc58527081a6444a997c52f5c54044e317e195dab1d}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+3} = 3, 
+\\*
+\hyperlink{aom__image_8h_a6bc018ed9689367acae810bc58527081ae368663c2c2f34683b513e159c5738b9}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+F\+CC} = 4, 
+\hyperlink{aom__image_8h_a6bc018ed9689367acae810bc58527081ae9107262b437659514abdcd928e977db}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+470\+\_\+\+B\+\_\+G} = 5, 
+\hyperlink{aom__image_8h_a6bc018ed9689367acae810bc58527081a0f81310501079cc1184d5265ae2c18a5}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+601} = 6, 
+\hyperlink{aom__image_8h_a6bc018ed9689367acae810bc58527081a42016b6c816d7ba0e13f3805f9911043}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+240} = 7, 
+\\*
+\hyperlink{aom__image_8h_a6bc018ed9689367acae810bc58527081aa2140164b26b42404c376cc921ce27c5}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+\+Y\+C\+G\+CO} = 8, 
+\hyperlink{aom__image_8h_a6bc018ed9689367acae810bc58527081adf60aa79c6a68f4eb41e1095f8bf7bf6}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+2020\+\_\+\+N\+CL}, 
+\hyperlink{aom__image_8h_a6bc018ed9689367acae810bc58527081a34148eae7b467eece6af5c90405dde6b}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+2020\+\_\+\+CL} = 10, 
+\hyperlink{aom__image_8h_a6bc018ed9689367acae810bc58527081a3aeb0ed0afc0a92ce758f109cd05ee80}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+2085} = 11, 
+\\*
+\hyperlink{aom__image_8h_a6bc018ed9689367acae810bc58527081a30661e9d9b70ffe9f51f3bdbfd02865b}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+C\+H\+R\+O\+M\+A\+T\+\_\+\+N\+CL}, 
+\hyperlink{aom__image_8h_a6bc018ed9689367acae810bc58527081aa391f9255e4775da0120f7472b417193}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+C\+H\+R\+O\+M\+A\+T\+\_\+\+CL} = 13, 
+\hyperlink{aom__image_8h_a6bc018ed9689367acae810bc58527081a7695b0577d3884a89c578f28f4237aee}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+I\+C\+T\+CP} = 14, 
+\hyperlink{aom__image_8h_a6bc018ed9689367acae810bc58527081a2dea210273bc3d85af0631fd06a1066a}{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+15} = 15
+ \}\begin{DoxyCompactList}\small\item\em List of supported matrix coefficients. \end{DoxyCompactList}
+\item 
+enum \hyperlink{aom__image_8h_acb82d93a9a9f88ec2361b61a8cac1597}{aom\+\_\+color\+\_\+range} \{ \hyperlink{aom__image_8h_acb82d93a9a9f88ec2361b61a8cac1597a42efbf144c6cdfbd8d230abba62573d2}{A\+O\+M\+\_\+\+C\+R\+\_\+\+S\+T\+U\+D\+I\+O\+\_\+\+R\+A\+N\+GE} = 0, 
+\hyperlink{aom__image_8h_acb82d93a9a9f88ec2361b61a8cac1597a477797bb12706b2bfbfcf400699e2945}{A\+O\+M\+\_\+\+C\+R\+\_\+\+F\+U\+L\+L\+\_\+\+R\+A\+N\+GE} = 1
+ \}\begin{DoxyCompactList}\small\item\em List of supported color range. \end{DoxyCompactList}
+\item 
+enum \hyperlink{aom__image_8h_a10590253ef3dbde7e93ed5d4b4e0e73b}{aom\+\_\+chroma\+\_\+sample\+\_\+position} \{ \hyperlink{aom__image_8h_a10590253ef3dbde7e93ed5d4b4e0e73ba7843506f3e28f720be0d4f03237fb48c}{A\+O\+M\+\_\+\+C\+S\+P\+\_\+\+U\+N\+K\+N\+O\+WN} = 0, 
+\hyperlink{aom__image_8h_a10590253ef3dbde7e93ed5d4b4e0e73baf95ced9b8288642205301cc51e0b55c6}{A\+O\+M\+\_\+\+C\+S\+P\+\_\+\+V\+E\+R\+T\+I\+C\+AL} = 1, 
+\hyperlink{aom__image_8h_a10590253ef3dbde7e93ed5d4b4e0e73ba01ef7204c2234ef43acfd493d5e18c84}{A\+O\+M\+\_\+\+C\+S\+P\+\_\+\+C\+O\+L\+O\+C\+A\+T\+ED} = 2, 
+\hyperlink{aom__image_8h_a10590253ef3dbde7e93ed5d4b4e0e73baae9f183ca3336d18e21d180341d00a36}{A\+O\+M\+\_\+\+C\+S\+P\+\_\+\+R\+E\+S\+E\+R\+V\+ED} = 3
+ \}\begin{DoxyCompactList}\small\item\em List of chroma sample positions. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{aom__image_8h_a5409ae8fdb326fe1cc32622ef4e23748}{aom\+\_\+image\+\_\+t} $\ast$ \hyperlink{aom__image_8h_a570db29fbd122951235a08fe9375f6bb}{aom\+\_\+img\+\_\+alloc} (\hyperlink{aom__image_8h_a5409ae8fdb326fe1cc32622ef4e23748}{aom\+\_\+image\+\_\+t} $\ast$img, \hyperlink{aom__image_8h_ab71efff8c7f49380fad23b93bc2e9bfc}{aom\+\_\+img\+\_\+fmt\+\_\+t} fmt, unsigned int d\+\_\+w, unsigned int d\+\_\+h, unsigned int align)
+\begin{DoxyCompactList}\small\item\em Open a descriptor, allocating storage for the underlying image. \end{DoxyCompactList}\item 
+\hyperlink{aom__image_8h_a5409ae8fdb326fe1cc32622ef4e23748}{aom\+\_\+image\+\_\+t} $\ast$ \hyperlink{aom__image_8h_a314394a55ea489f1470ba5d1e977e0ec}{aom\+\_\+img\+\_\+wrap} (\hyperlink{aom__image_8h_a5409ae8fdb326fe1cc32622ef4e23748}{aom\+\_\+image\+\_\+t} $\ast$img, \hyperlink{aom__image_8h_ab71efff8c7f49380fad23b93bc2e9bfc}{aom\+\_\+img\+\_\+fmt\+\_\+t} fmt, unsigned int d\+\_\+w, unsigned int d\+\_\+h, unsigned int align, unsigned char $\ast$img\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Open a descriptor, using existing storage for the underlying image. \end{DoxyCompactList}\item 
+\hyperlink{aom__image_8h_a5409ae8fdb326fe1cc32622ef4e23748}{aom\+\_\+image\+\_\+t} $\ast$ \hyperlink{aom__image_8h_aeb211e5184687f7e10d7c5bed4dcfdcd}{aom\+\_\+img\+\_\+alloc\+\_\+with\+\_\+border} (\hyperlink{aom__image_8h_a5409ae8fdb326fe1cc32622ef4e23748}{aom\+\_\+image\+\_\+t} $\ast$img, \hyperlink{aom__image_8h_ab71efff8c7f49380fad23b93bc2e9bfc}{aom\+\_\+img\+\_\+fmt\+\_\+t} fmt, unsigned int d\+\_\+w, unsigned int d\+\_\+h, unsigned int align, unsigned int size\+\_\+align, unsigned int border)
+\begin{DoxyCompactList}\small\item\em Open a descriptor, allocating storage for the underlying image with a border. \end{DoxyCompactList}\item 
+int \hyperlink{aom__image_8h_a0c5fe4946bdc15a5fe6bedc7ee96d400}{aom\+\_\+img\+\_\+set\+\_\+rect} (\hyperlink{aom__image_8h_a5409ae8fdb326fe1cc32622ef4e23748}{aom\+\_\+image\+\_\+t} $\ast$img, unsigned int x, unsigned int y, unsigned int w, unsigned int h, unsigned int border)
+\begin{DoxyCompactList}\small\item\em Set the rectangle identifying the displayed portion of the image. \end{DoxyCompactList}\item 
+void \hyperlink{aom__image_8h_a1fc7a318a190ffdadc723aca13e373cf}{aom\+\_\+img\+\_\+flip} (\hyperlink{aom__image_8h_a5409ae8fdb326fe1cc32622ef4e23748}{aom\+\_\+image\+\_\+t} $\ast$img)
+\begin{DoxyCompactList}\small\item\em Flip the image vertically (top for bottom) \end{DoxyCompactList}\item 
+void \hyperlink{aom__image_8h_afff22f7f3eb9409c5b678d1962f110a8}{aom\+\_\+img\+\_\+free} (\hyperlink{aom__image_8h_a5409ae8fdb326fe1cc32622ef4e23748}{aom\+\_\+image\+\_\+t} $\ast$img)
+\begin{DoxyCompactList}\small\item\em Close an image descriptor. \end{DoxyCompactList}\item 
+int \hyperlink{aom__image_8h_adfb2ea2e110ee42e38370868b64bf232}{aom\+\_\+img\+\_\+plane\+\_\+width} (const \hyperlink{aom__image_8h_a5409ae8fdb326fe1cc32622ef4e23748}{aom\+\_\+image\+\_\+t} $\ast$img, int plane)
+\begin{DoxyCompactList}\small\item\em Get the width of a plane. \end{DoxyCompactList}\item 
+int \hyperlink{aom__image_8h_ab87684a93e3da97bd6223d1e46876848}{aom\+\_\+img\+\_\+plane\+\_\+height} (const \hyperlink{aom__image_8h_a5409ae8fdb326fe1cc32622ef4e23748}{aom\+\_\+image\+\_\+t} $\ast$img, int plane)
+\begin{DoxyCompactList}\small\item\em Get the height of a plane. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Describes the aom image descriptor and associated operations. 
+
+
+
+\subsubsection{Macro Definition Documentation}
+\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+P\+L\+A\+N\+AR@{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+P\+L\+A\+N\+AR}}
+\index{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+P\+L\+A\+N\+AR@{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+P\+L\+A\+N\+AR}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+P\+L\+A\+N\+AR}{AOM_IMG_FMT_PLANAR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+P\+L\+A\+N\+AR~0x100}\hypertarget{aom__image_8h_a7084ac01cd52ccf0b44e02dbe2467b5a}{}\label{aom__image_8h_a7084ac01cd52ccf0b44e02dbe2467b5a}
+Image is a planar format. \index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+U\+V\+\_\+\+F\+L\+IP@{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+U\+V\+\_\+\+F\+L\+IP}}
+\index{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+U\+V\+\_\+\+F\+L\+IP@{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+U\+V\+\_\+\+F\+L\+IP}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+U\+V\+\_\+\+F\+L\+IP}{AOM_IMG_FMT_UV_FLIP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+U\+V\+\_\+\+F\+L\+IP~0x200}\hypertarget{aom__image_8h_ae3c901d141136eab9c1add5dfa7bb321}{}\label{aom__image_8h_ae3c901d141136eab9c1add5dfa7bb321}
+V plane precedes U in memory. \index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+H\+I\+G\+H\+B\+I\+T\+D\+E\+P\+TH@{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+H\+I\+G\+H\+B\+I\+T\+D\+E\+P\+TH}}
+\index{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+H\+I\+G\+H\+B\+I\+T\+D\+E\+P\+TH@{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+H\+I\+G\+H\+B\+I\+T\+D\+E\+P\+TH}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+H\+I\+G\+H\+B\+I\+T\+D\+E\+P\+TH}{AOM_IMG_FMT_HIGHBITDEPTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+H\+I\+G\+H\+B\+I\+T\+D\+E\+P\+TH~0x800}\hypertarget{aom__image_8h_a607b37d91f75442f54223ecd85f1b6cb}{}\label{aom__image_8h_a607b37d91f75442f54223ecd85f1b6cb}
+0x400 used to signal alpha channel, skipping for backwards compatibility. Image uses 16bit framebuffer. \index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+\+P\+A\+C\+K\+ED@{A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+\+P\+A\+C\+K\+ED}}
+\index{A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+\+P\+A\+C\+K\+ED@{A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+\+P\+A\+C\+K\+ED}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+\+P\+A\+C\+K\+ED}{AOM_PLANE_PACKED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+\+P\+A\+C\+K\+ED~0}\hypertarget{aom__image_8h_a1be1887a76e89f3a4f84ccb11dde025e}{}\label{aom__image_8h_a1be1887a76e89f3a4f84ccb11dde025e}
+To be used for all packed formats \index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+Y@{A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+Y}}
+\index{A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+Y@{A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+Y}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+Y}{AOM_PLANE_Y}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+Y~0}\hypertarget{aom__image_8h_a2ad22076006b15cf809edcaa33f6d339}{}\label{aom__image_8h_a2ad22076006b15cf809edcaa33f6d339}
+Y (Luminance) plane \index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+U@{A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+U}}
+\index{A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+U@{A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+U}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+U}{AOM_PLANE_U}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+U~1}\hypertarget{aom__image_8h_a0845e9194541329c0f77b4bd6a38cc7c}{}\label{aom__image_8h_a0845e9194541329c0f77b4bd6a38cc7c}
+U (Chroma) plane \index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+V@{A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+V}}
+\index{A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+V@{A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+V}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+V}{AOM_PLANE_V}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+O\+M\+\_\+\+P\+L\+A\+N\+E\+\_\+V~2}\hypertarget{aom__image_8h_a32a43f20adb01d846af1925189c37495}{}\label{aom__image_8h_a32a43f20adb01d846af1925189c37495}
+V (Chroma) plane 
+
+\subsubsection{Typedef Documentation}
+\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!aom\+\_\+img\+\_\+fmt\+\_\+t@{aom\+\_\+img\+\_\+fmt\+\_\+t}}
+\index{aom\+\_\+img\+\_\+fmt\+\_\+t@{aom\+\_\+img\+\_\+fmt\+\_\+t}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{aom\+\_\+img\+\_\+fmt\+\_\+t}{aom_img_fmt_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf aom\+\_\+img\+\_\+fmt}  {\bf aom\+\_\+img\+\_\+fmt\+\_\+t}}\hypertarget{aom__image_8h_ab71efff8c7f49380fad23b93bc2e9bfc}{}\label{aom__image_8h_ab71efff8c7f49380fad23b93bc2e9bfc}
+
+
+List of supported image formats. 
+
+alias for enum aom\+\_\+img\+\_\+fmt \index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!aom\+\_\+color\+\_\+primaries\+\_\+t@{aom\+\_\+color\+\_\+primaries\+\_\+t}}
+\index{aom\+\_\+color\+\_\+primaries\+\_\+t@{aom\+\_\+color\+\_\+primaries\+\_\+t}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{aom\+\_\+color\+\_\+primaries\+\_\+t}{aom_color_primaries_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf aom\+\_\+color\+\_\+primaries}  {\bf aom\+\_\+color\+\_\+primaries\+\_\+t}}\hypertarget{aom__image_8h_ad72aacc083639c415fe2b4a12ea2e9e9}{}\label{aom__image_8h_ad72aacc083639c415fe2b4a12ea2e9e9}
+
+
+List of supported color primaries. 
+
+alias for enum aom\+\_\+color\+\_\+primaries \index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!aom\+\_\+transfer\+\_\+characteristics\+\_\+t@{aom\+\_\+transfer\+\_\+characteristics\+\_\+t}}
+\index{aom\+\_\+transfer\+\_\+characteristics\+\_\+t@{aom\+\_\+transfer\+\_\+characteristics\+\_\+t}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{aom\+\_\+transfer\+\_\+characteristics\+\_\+t}{aom_transfer_characteristics_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf aom\+\_\+transfer\+\_\+characteristics}  {\bf aom\+\_\+transfer\+\_\+characteristics\+\_\+t}}\hypertarget{aom__image_8h_aad2d14d16ce5f24c6225f716a0a30563}{}\label{aom__image_8h_aad2d14d16ce5f24c6225f716a0a30563}
+
+
+List of supported transfer functions. 
+
+alias for enum aom\+\_\+transfer\+\_\+function \index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!aom\+\_\+color\+\_\+range\+\_\+t@{aom\+\_\+color\+\_\+range\+\_\+t}}
+\index{aom\+\_\+color\+\_\+range\+\_\+t@{aom\+\_\+color\+\_\+range\+\_\+t}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{aom\+\_\+color\+\_\+range\+\_\+t}{aom_color_range_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf aom\+\_\+color\+\_\+range}  {\bf aom\+\_\+color\+\_\+range\+\_\+t}}\hypertarget{aom__image_8h_ab7754f796b26c07a78bb338b38f8df67}{}\label{aom__image_8h_ab7754f796b26c07a78bb338b38f8df67}
+
+
+List of supported color range. 
+
+alias for enum aom\+\_\+color\+\_\+range \index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!aom\+\_\+chroma\+\_\+sample\+\_\+position\+\_\+t@{aom\+\_\+chroma\+\_\+sample\+\_\+position\+\_\+t}}
+\index{aom\+\_\+chroma\+\_\+sample\+\_\+position\+\_\+t@{aom\+\_\+chroma\+\_\+sample\+\_\+position\+\_\+t}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{aom\+\_\+chroma\+\_\+sample\+\_\+position\+\_\+t}{aom_chroma_sample_position_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf aom\+\_\+chroma\+\_\+sample\+\_\+position}  {\bf aom\+\_\+chroma\+\_\+sample\+\_\+position\+\_\+t}}\hypertarget{aom__image_8h_a48f259fc7774b1c799b3ebe7530c19bd}{}\label{aom__image_8h_a48f259fc7774b1c799b3ebe7530c19bd}
+
+
+List of chroma sample positions. 
+
+alias for enum aom\+\_\+transfer\+\_\+function \index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!aom\+\_\+image\+\_\+t@{aom\+\_\+image\+\_\+t}}
+\index{aom\+\_\+image\+\_\+t@{aom\+\_\+image\+\_\+t}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{aom\+\_\+image\+\_\+t}{aom_image_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf aom\+\_\+image}  {\bf aom\+\_\+image\+\_\+t}}\hypertarget{aom__image_8h_a5409ae8fdb326fe1cc32622ef4e23748}{}\label{aom__image_8h_a5409ae8fdb326fe1cc32622ef4e23748}
+
+
+Image Descriptor. 
+
+alias for struct \hyperlink{structaom__image}{aom\+\_\+image} \index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!aom\+\_\+image\+\_\+rect\+\_\+t@{aom\+\_\+image\+\_\+rect\+\_\+t}}
+\index{aom\+\_\+image\+\_\+rect\+\_\+t@{aom\+\_\+image\+\_\+rect\+\_\+t}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{aom\+\_\+image\+\_\+rect\+\_\+t}{aom_image_rect_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf aom\+\_\+image\+\_\+rect}  {\bf aom\+\_\+image\+\_\+rect\+\_\+t}}\hypertarget{aom__image_8h_aeb7bd8cffc46083daea9b1955b8f245d}{}\label{aom__image_8h_aeb7bd8cffc46083daea9b1955b8f245d}
+
+
+Representation of a rectangle on a surface. 
+
+alias for struct \hyperlink{structaom__image__rect}{aom\+\_\+image\+\_\+rect} 
+
+\subsubsection{Enumeration Type Documentation}
+\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!aom\+\_\+img\+\_\+fmt@{aom\+\_\+img\+\_\+fmt}}
+\index{aom\+\_\+img\+\_\+fmt@{aom\+\_\+img\+\_\+fmt}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{aom\+\_\+img\+\_\+fmt}{aom_img_fmt}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf aom\+\_\+img\+\_\+fmt}}\hypertarget{aom__image_8h_a930317c04b4bd0a660bb5e744055523c}{}\label{aom__image_8h_a930317c04b4bd0a660bb5e744055523c}
+
+
+List of supported image formats. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+Y\+V12@{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+Y\+V12}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+Y\+V12@{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+Y\+V12}}\item[{\em 
+A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+Y\+V12\hypertarget{aom__image_8h_a930317c04b4bd0a660bb5e744055523cad28244100a2754409f285b77a3db90a0}{}\label{aom__image_8h_a930317c04b4bd0a660bb5e744055523cad28244100a2754409f285b77a3db90a0}
+}]Image is a planar format. V plane precedes U in memory. planar Y\+VU \index{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I420@{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I420}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I420@{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I420}}\item[{\em 
+A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I420\hypertarget{aom__image_8h_a930317c04b4bd0a660bb5e744055523cabd778a3d697463e89d12a1117f417b60}{}\label{aom__image_8h_a930317c04b4bd0a660bb5e744055523cabd778a3d697463e89d12a1117f417b60}
+}]Image is a planar format. \index{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+A\+O\+M\+Y\+V12@{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+A\+O\+M\+Y\+V12}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+A\+O\+M\+Y\+V12@{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+A\+O\+M\+Y\+V12}}\item[{\em 
+A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+A\+O\+M\+Y\+V12\hypertarget{aom__image_8h_a930317c04b4bd0a660bb5e744055523caf066b272547a880cd302c50cdcb6e76e}{}\label{aom__image_8h_a930317c04b4bd0a660bb5e744055523caf066b272547a880cd302c50cdcb6e76e}
+}]Image is a planar format. V plane precedes U in memory. \index{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+A\+O\+M\+I420@{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+A\+O\+M\+I420}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+A\+O\+M\+I420@{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+A\+O\+M\+I420}}\item[{\em 
+A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+A\+O\+M\+I420\hypertarget{aom__image_8h_a930317c04b4bd0a660bb5e744055523ca377a60c48da3bdc71dccf74112a4b0f6}{}\label{aom__image_8h_a930317c04b4bd0a660bb5e744055523ca377a60c48da3bdc71dccf74112a4b0f6}
+}]$<$ planar 4\+:2\+:0 format with aom color space Image is a planar format. \index{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I422@{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I422}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I422@{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I422}}\item[{\em 
+A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I422\hypertarget{aom__image_8h_a930317c04b4bd0a660bb5e744055523cab2f75281e94ebc0f0bc728ef287cd3e8}{}\label{aom__image_8h_a930317c04b4bd0a660bb5e744055523cab2f75281e94ebc0f0bc728ef287cd3e8}
+}]Image is a planar format. \index{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I444@{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I444}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I444@{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I444}}\item[{\em 
+A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I444\hypertarget{aom__image_8h_a930317c04b4bd0a660bb5e744055523ca89d423506e948ab7d3b98b5750b92655}{}\label{aom__image_8h_a930317c04b4bd0a660bb5e744055523ca89d423506e948ab7d3b98b5750b92655}
+}]Image is a planar format. \index{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I42016@{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I42016}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I42016@{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I42016}}\item[{\em 
+A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I42016\hypertarget{aom__image_8h_a930317c04b4bd0a660bb5e744055523ca20a9cf30277260685642b4cfb4e9273b}{}\label{aom__image_8h_a930317c04b4bd0a660bb5e744055523ca20a9cf30277260685642b4cfb4e9273b}
+}]Image uses 16bit framebuffer. \index{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+Y\+V1216@{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+Y\+V1216}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+Y\+V1216@{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+Y\+V1216}}\item[{\em 
+A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+Y\+V1216\hypertarget{aom__image_8h_a930317c04b4bd0a660bb5e744055523ca6d845490a6333fca3ac22cc1105deadd}{}\label{aom__image_8h_a930317c04b4bd0a660bb5e744055523ca6d845490a6333fca3ac22cc1105deadd}
+}]Image uses 16bit framebuffer. \index{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I42216@{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I42216}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I42216@{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I42216}}\item[{\em 
+A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I42216\hypertarget{aom__image_8h_a930317c04b4bd0a660bb5e744055523ca064683ed4260fc6244af6cfc9d261c22}{}\label{aom__image_8h_a930317c04b4bd0a660bb5e744055523ca064683ed4260fc6244af6cfc9d261c22}
+}]Image uses 16bit framebuffer. \index{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I44416@{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I44416}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I44416@{A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I44416}}\item[{\em 
+A\+O\+M\+\_\+\+I\+M\+G\+\_\+\+F\+M\+T\+\_\+\+I44416\hypertarget{aom__image_8h_a930317c04b4bd0a660bb5e744055523cab9b93d397dedbdd6bfafec84d1f8f0f5}{}\label{aom__image_8h_a930317c04b4bd0a660bb5e744055523cab9b93d397dedbdd6bfafec84d1f8f0f5}
+}]Image uses 16bit framebuffer. \end{description}
+\end{Desc}
+\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!aom\+\_\+color\+\_\+primaries@{aom\+\_\+color\+\_\+primaries}}
+\index{aom\+\_\+color\+\_\+primaries@{aom\+\_\+color\+\_\+primaries}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{aom\+\_\+color\+\_\+primaries}{aom_color_primaries}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf aom\+\_\+color\+\_\+primaries}}\hypertarget{aom__image_8h_a5267ad095a088ece3499336812503cef}{}\label{aom__image_8h_a5267ad095a088ece3499336812503cef}
+
+
+List of supported color primaries. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+0@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+0}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+0@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+0}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+0\hypertarget{aom__image_8h_a5267ad095a088ece3499336812503cefa8032bcfaf84734707ad00633145da35c}{}\label{aom__image_8h_a5267ad095a088ece3499336812503cefa8032bcfaf84734707ad00633145da35c}
+}]For future use \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+709@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+709}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+709@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+709}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+709\hypertarget{aom__image_8h_a5267ad095a088ece3499336812503cefa9a2ebe055c0508a2a2f72b6c192fcce9}{}\label{aom__image_8h_a5267ad095a088ece3499336812503cefa9a2ebe055c0508a2a2f72b6c192fcce9}
+}]B\+T.\+709 \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+U\+N\+S\+P\+E\+C\+I\+F\+I\+ED@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+U\+N\+S\+P\+E\+C\+I\+F\+I\+ED}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+U\+N\+S\+P\+E\+C\+I\+F\+I\+ED@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+U\+N\+S\+P\+E\+C\+I\+F\+I\+ED}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+U\+N\+S\+P\+E\+C\+I\+F\+I\+ED\hypertarget{aom__image_8h_a5267ad095a088ece3499336812503cefa0835a3af8e6ffc6df298b6e64f878431}{}\label{aom__image_8h_a5267ad095a088ece3499336812503cefa0835a3af8e6ffc6df298b6e64f878431}
+}]Unspecified \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+3@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+3}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+3@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+3}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+3\hypertarget{aom__image_8h_a5267ad095a088ece3499336812503cefae01d6159bebd65c7ea0664b26a7e181a}{}\label{aom__image_8h_a5267ad095a088ece3499336812503cefae01d6159bebd65c7ea0664b26a7e181a}
+}]For future use \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+470\+\_\+M@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+470\+\_\+M}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+470\+\_\+M@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+470\+\_\+M}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+470\+\_\+M\hypertarget{aom__image_8h_a5267ad095a088ece3499336812503cefa5b57cb26f04f4df6585335129392d5e2}{}\label{aom__image_8h_a5267ad095a088ece3499336812503cefa5b57cb26f04f4df6585335129392d5e2}
+}]B\+T.\+470 System M (historical) \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+470\+\_\+\+B\+\_\+G@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+470\+\_\+\+B\+\_\+G}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+470\+\_\+\+B\+\_\+G@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+470\+\_\+\+B\+\_\+G}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+470\+\_\+\+B\+\_\+G\hypertarget{aom__image_8h_a5267ad095a088ece3499336812503cefa8b33dc8483c16048c606d75d9f11e38a}{}\label{aom__image_8h_a5267ad095a088ece3499336812503cefa8b33dc8483c16048c606d75d9f11e38a}
+}]B\+T.\+470 System B, G (historical) \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+601@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+601}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+601@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+601}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+601\hypertarget{aom__image_8h_a5267ad095a088ece3499336812503cefa3ce81eb125550ec2f11a58f183eeaee6}{}\label{aom__image_8h_a5267ad095a088ece3499336812503cefa3ce81eb125550ec2f11a58f183eeaee6}
+}]B\+T.\+601 \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+S\+M\+P\+T\+E\+\_\+240@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+S\+M\+P\+T\+E\+\_\+240}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+S\+M\+P\+T\+E\+\_\+240@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+S\+M\+P\+T\+E\+\_\+240}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+S\+M\+P\+T\+E\+\_\+240\hypertarget{aom__image_8h_a5267ad095a088ece3499336812503cefa1a8b2e5694489121f80a406d9da25dfb}{}\label{aom__image_8h_a5267ad095a088ece3499336812503cefa1a8b2e5694489121f80a406d9da25dfb}
+}]S\+M\+P\+TE 240 \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+G\+E\+N\+E\+R\+I\+C\+\_\+\+F\+I\+LM@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+G\+E\+N\+E\+R\+I\+C\+\_\+\+F\+I\+LM}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+G\+E\+N\+E\+R\+I\+C\+\_\+\+F\+I\+LM@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+G\+E\+N\+E\+R\+I\+C\+\_\+\+F\+I\+LM}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+G\+E\+N\+E\+R\+I\+C\+\_\+\+F\+I\+LM\hypertarget{aom__image_8h_a5267ad095a088ece3499336812503cefa8dd6ba5106c22d149a233e73232aeb65}{}\label{aom__image_8h_a5267ad095a088ece3499336812503cefa8dd6ba5106c22d149a233e73232aeb65}
+}]Generic film (color filters using illuminant C) \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+2020@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+2020}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+2020@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+2020}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+B\+T\+\_\+2020\hypertarget{aom__image_8h_a5267ad095a088ece3499336812503cefa6bb95baf09cd6e1f3596b459712c592a}{}\label{aom__image_8h_a5267ad095a088ece3499336812503cefa6bb95baf09cd6e1f3596b459712c592a}
+}]B\+T.\+2020, B\+T.\+2100 \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+X\+YZ@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+X\+YZ}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+X\+YZ@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+X\+YZ}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+X\+YZ\hypertarget{aom__image_8h_a5267ad095a088ece3499336812503cefa6032cae72a729933a6a75e3b943a542c}{}\label{aom__image_8h_a5267ad095a088ece3499336812503cefa6032cae72a729933a6a75e3b943a542c}
+}]S\+M\+P\+TE 428 (C\+IE 1921 X\+YZ) \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+S\+M\+P\+T\+E\+\_\+431@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+S\+M\+P\+T\+E\+\_\+431}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+S\+M\+P\+T\+E\+\_\+431@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+S\+M\+P\+T\+E\+\_\+431}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+S\+M\+P\+T\+E\+\_\+431\hypertarget{aom__image_8h_a5267ad095a088ece3499336812503cefa54d519c9ac0ca52ebda7caf736530e57}{}\label{aom__image_8h_a5267ad095a088ece3499336812503cefa54d519c9ac0ca52ebda7caf736530e57}
+}]S\+M\+P\+TE RP 431-\/2 \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+S\+M\+P\+T\+E\+\_\+432@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+S\+M\+P\+T\+E\+\_\+432}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+S\+M\+P\+T\+E\+\_\+432@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+S\+M\+P\+T\+E\+\_\+432}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+S\+M\+P\+T\+E\+\_\+432\hypertarget{aom__image_8h_a5267ad095a088ece3499336812503cefa227b6e4116ed0266af20b705aebaf661}{}\label{aom__image_8h_a5267ad095a088ece3499336812503cefa227b6e4116ed0266af20b705aebaf661}
+}]S\+M\+P\+TE EG 432-\/1 \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+13@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+13}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+13@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+13}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+13\hypertarget{aom__image_8h_a5267ad095a088ece3499336812503cefa53f592f9fef9c421db024f1c4697a908}{}\label{aom__image_8h_a5267ad095a088ece3499336812503cefa53f592f9fef9c421db024f1c4697a908}
+}]For future use (values 13 -\/ 21) \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+E\+B\+U\+\_\+3213@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+E\+B\+U\+\_\+3213}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+E\+B\+U\+\_\+3213@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+E\+B\+U\+\_\+3213}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+E\+B\+U\+\_\+3213\hypertarget{aom__image_8h_a5267ad095a088ece3499336812503cefa9e74dcb338953bfab3101aa33ea44157}{}\label{aom__image_8h_a5267ad095a088ece3499336812503cefa9e74dcb338953bfab3101aa33ea44157}
+}]E\+BU Tech. 3213-\/E \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+23@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+23}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+23@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+23}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+C\+P\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+23\hypertarget{aom__image_8h_a5267ad095a088ece3499336812503cefa34a3459d4b145006614dfb428b9ebe8a}{}\label{aom__image_8h_a5267ad095a088ece3499336812503cefa34a3459d4b145006614dfb428b9ebe8a}
+}]For future use (values 23 -\/ 255) \end{description}
+\end{Desc}
+\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!aom\+\_\+transfer\+\_\+characteristics@{aom\+\_\+transfer\+\_\+characteristics}}
+\index{aom\+\_\+transfer\+\_\+characteristics@{aom\+\_\+transfer\+\_\+characteristics}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{aom\+\_\+transfer\+\_\+characteristics}{aom_transfer_characteristics}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf aom\+\_\+transfer\+\_\+characteristics}}\hypertarget{aom__image_8h_a30655997e3fb79889ee23eb294cb1992}{}\label{aom__image_8h_a30655997e3fb79889ee23eb294cb1992}
+
+
+List of supported transfer functions. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+0@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+0}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+0@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+0}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+0\hypertarget{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a31c9111a24763c11ae11f17aab940783}{}\label{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a31c9111a24763c11ae11f17aab940783}
+}]For future use \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+709@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+709}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+709@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+709}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+709\hypertarget{aom__image_8h_a30655997e3fb79889ee23eb294cb1992affe340e422646b7d70ef91edd6a8053c}{}\label{aom__image_8h_a30655997e3fb79889ee23eb294cb1992affe340e422646b7d70ef91edd6a8053c}
+}]B\+T.\+709 \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+U\+N\+S\+P\+E\+C\+I\+F\+I\+ED@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+U\+N\+S\+P\+E\+C\+I\+F\+I\+ED}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+U\+N\+S\+P\+E\+C\+I\+F\+I\+ED@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+U\+N\+S\+P\+E\+C\+I\+F\+I\+ED}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+U\+N\+S\+P\+E\+C\+I\+F\+I\+ED\hypertarget{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a81a9e0af519cb43502caa899233f4c7e}{}\label{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a81a9e0af519cb43502caa899233f4c7e}
+}]Unspecified \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+3@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+3}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+3@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+3}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+3\hypertarget{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a4f17a249c9791f5e8b0d22850d13842f}{}\label{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a4f17a249c9791f5e8b0d22850d13842f}
+}]For future use \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+470\+\_\+M@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+470\+\_\+M}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+470\+\_\+M@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+470\+\_\+M}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+470\+\_\+M\hypertarget{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a356d6943d11d88e7a42370c1c698c214}{}\label{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a356d6943d11d88e7a42370c1c698c214}
+}]B\+T.\+470 System M (historical) \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+470\+\_\+\+B\+\_\+G@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+470\+\_\+\+B\+\_\+G}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+470\+\_\+\+B\+\_\+G@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+470\+\_\+\+B\+\_\+G}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+470\+\_\+\+B\+\_\+G\hypertarget{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a7a347c6d5605db0a6ee89cc81dec0b37}{}\label{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a7a347c6d5605db0a6ee89cc81dec0b37}
+}]B\+T.\+470 System B, G (historical) \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+601@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+601}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+601@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+601}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+601\hypertarget{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a5b51bfcf0f3779a7d907ac45ee4067a4}{}\label{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a5b51bfcf0f3779a7d907ac45ee4067a4}
+}]B\+T.\+601 \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+240@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+240}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+240@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+240}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+240\hypertarget{aom__image_8h_a30655997e3fb79889ee23eb294cb1992ac3b5e95e3400830c334268fca69a1226}{}\label{aom__image_8h_a30655997e3fb79889ee23eb294cb1992ac3b5e95e3400830c334268fca69a1226}
+}]S\+M\+P\+TE 240 M \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+L\+I\+N\+E\+AR@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+L\+I\+N\+E\+AR}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+L\+I\+N\+E\+AR@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+L\+I\+N\+E\+AR}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+L\+I\+N\+E\+AR\hypertarget{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a99ebdb0b1a35e0bf25808f851aa80a35}{}\label{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a99ebdb0b1a35e0bf25808f851aa80a35}
+}]Linear \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+L\+O\+G\+\_\+100@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+L\+O\+G\+\_\+100}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+L\+O\+G\+\_\+100@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+L\+O\+G\+\_\+100}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+L\+O\+G\+\_\+100\hypertarget{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a54ec8cfad46215d855696bafe371ffe1}{}\label{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a54ec8cfad46215d855696bafe371ffe1}
+}]Logarithmic (100 \+: 1 range) \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+L\+O\+G\+\_\+100\+\_\+\+S\+Q\+R\+T10@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+L\+O\+G\+\_\+100\+\_\+\+S\+Q\+R\+T10}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+L\+O\+G\+\_\+100\+\_\+\+S\+Q\+R\+T10@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+L\+O\+G\+\_\+100\+\_\+\+S\+Q\+R\+T10}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+L\+O\+G\+\_\+100\+\_\+\+S\+Q\+R\+T10\hypertarget{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a7d79c257042a5958bafa6b5ccfbd96cb}{}\label{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a7d79c257042a5958bafa6b5ccfbd96cb}
+}]Logarithmic (100 $\ast$ Sqrt(10) \+: 1 range) \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+I\+E\+C\+\_\+61966@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+I\+E\+C\+\_\+61966}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+I\+E\+C\+\_\+61966@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+I\+E\+C\+\_\+61966}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+I\+E\+C\+\_\+61966\hypertarget{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a57f92f410badf8a43b19df18edc9b8b9}{}\label{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a57f92f410badf8a43b19df18edc9b8b9}
+}]I\+EC 61966-\/2-\/4 \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+1361@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+1361}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+1361@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+1361}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+1361\hypertarget{aom__image_8h_a30655997e3fb79889ee23eb294cb1992ac60ca749a2d0ca1c860d82f0825a3e2d}{}\label{aom__image_8h_a30655997e3fb79889ee23eb294cb1992ac60ca749a2d0ca1c860d82f0825a3e2d}
+}]B\+T.\+1361 \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+S\+R\+GB@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+S\+R\+GB}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+S\+R\+GB@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+S\+R\+GB}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+S\+R\+GB\hypertarget{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a94553e773e3d3fb005236ed70eeedfea}{}\label{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a94553e773e3d3fb005236ed70eeedfea}
+}]s\+R\+GB or s\+Y\+CC \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+2020\+\_\+10\+\_\+\+B\+IT@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+2020\+\_\+10\+\_\+\+B\+IT}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+2020\+\_\+10\+\_\+\+B\+IT@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+2020\+\_\+10\+\_\+\+B\+IT}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+2020\+\_\+10\+\_\+\+B\+IT\hypertarget{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a1ce5fbca5277266680d70bb7211646d6}{}\label{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a1ce5fbca5277266680d70bb7211646d6}
+}]B\+T.\+2020 10-\/bit systems \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+2020\+\_\+12\+\_\+\+B\+IT@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+2020\+\_\+12\+\_\+\+B\+IT}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+2020\+\_\+12\+\_\+\+B\+IT@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+2020\+\_\+12\+\_\+\+B\+IT}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+B\+T\+\_\+2020\+\_\+12\+\_\+\+B\+IT\hypertarget{aom__image_8h_a30655997e3fb79889ee23eb294cb1992afcc74c6858aefc13c426dd6992198e75}{}\label{aom__image_8h_a30655997e3fb79889ee23eb294cb1992afcc74c6858aefc13c426dd6992198e75}
+}]B\+T.\+2020 12-\/bit systems \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+2084@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+2084}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+2084@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+2084}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+2084\hypertarget{aom__image_8h_a30655997e3fb79889ee23eb294cb1992ab48fdcc8c2c0350f6423b9c116c1876d}{}\label{aom__image_8h_a30655997e3fb79889ee23eb294cb1992ab48fdcc8c2c0350f6423b9c116c1876d}
+}]S\+M\+P\+TE ST 2084, I\+TU B\+T.\+2100 PQ \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+428@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+428}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+428@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+428}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+428\hypertarget{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a45df590313483af0c614708f346028c4}{}\label{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a45df590313483af0c614708f346028c4}
+}]S\+M\+P\+TE ST 428 \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+H\+LG@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+H\+LG}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+H\+LG@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+H\+LG}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+H\+LG\hypertarget{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a3d7b83c425c539d1a36fb36e9aebf268}{}\label{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a3d7b83c425c539d1a36fb36e9aebf268}
+}]B\+T.\+2100 H\+LG, A\+R\+IB S\+T\+D-\/\+B67 \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+19@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+19}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+19@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+19}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+T\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+19\hypertarget{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a2d10943cf211ebef4d149155b0ec2b1e}{}\label{aom__image_8h_a30655997e3fb79889ee23eb294cb1992a2d10943cf211ebef4d149155b0ec2b1e}
+}]For future use (values 19-\/255) \end{description}
+\end{Desc}
+\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!aom\+\_\+matrix\+\_\+coefficients@{aom\+\_\+matrix\+\_\+coefficients}}
+\index{aom\+\_\+matrix\+\_\+coefficients@{aom\+\_\+matrix\+\_\+coefficients}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{aom\+\_\+matrix\+\_\+coefficients}{aom_matrix_coefficients}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf aom\+\_\+matrix\+\_\+coefficients}}\hypertarget{aom__image_8h_a6bc018ed9689367acae810bc58527081}{}\label{aom__image_8h_a6bc018ed9689367acae810bc58527081}
+
+
+List of supported matrix coefficients. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+I\+D\+E\+N\+T\+I\+TY@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+I\+D\+E\+N\+T\+I\+TY}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+I\+D\+E\+N\+T\+I\+TY@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+I\+D\+E\+N\+T\+I\+TY}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+I\+D\+E\+N\+T\+I\+TY\hypertarget{aom__image_8h_a6bc018ed9689367acae810bc58527081a17489bf0aed544427f7c6bbe4837b212}{}\label{aom__image_8h_a6bc018ed9689367acae810bc58527081a17489bf0aed544427f7c6bbe4837b212}
+}]Identity matrix \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+709@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+709}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+709@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+709}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+709\hypertarget{aom__image_8h_a6bc018ed9689367acae810bc58527081aa70fd9b88bc91bd0d126aaa07421c49a}{}\label{aom__image_8h_a6bc018ed9689367acae810bc58527081aa70fd9b88bc91bd0d126aaa07421c49a}
+}]B\+T.\+709 \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+U\+N\+S\+P\+E\+C\+I\+F\+I\+ED@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+U\+N\+S\+P\+E\+C\+I\+F\+I\+ED}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+U\+N\+S\+P\+E\+C\+I\+F\+I\+ED@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+U\+N\+S\+P\+E\+C\+I\+F\+I\+ED}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+U\+N\+S\+P\+E\+C\+I\+F\+I\+ED\hypertarget{aom__image_8h_a6bc018ed9689367acae810bc58527081a06a4defb1e5d9bb1d2aad092b8656a03}{}\label{aom__image_8h_a6bc018ed9689367acae810bc58527081a06a4defb1e5d9bb1d2aad092b8656a03}
+}]Unspecified \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+3@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+3}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+3@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+3}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+3\hypertarget{aom__image_8h_a6bc018ed9689367acae810bc58527081a6444a997c52f5c54044e317e195dab1d}{}\label{aom__image_8h_a6bc018ed9689367acae810bc58527081a6444a997c52f5c54044e317e195dab1d}
+}]For future use \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+F\+CC@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+F\+CC}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+F\+CC@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+F\+CC}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+F\+CC\hypertarget{aom__image_8h_a6bc018ed9689367acae810bc58527081ae368663c2c2f34683b513e159c5738b9}{}\label{aom__image_8h_a6bc018ed9689367acae810bc58527081ae368663c2c2f34683b513e159c5738b9}
+}]US F\+CC 73.\+628 \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+470\+\_\+\+B\+\_\+G@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+470\+\_\+\+B\+\_\+G}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+470\+\_\+\+B\+\_\+G@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+470\+\_\+\+B\+\_\+G}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+470\+\_\+\+B\+\_\+G\hypertarget{aom__image_8h_a6bc018ed9689367acae810bc58527081ae9107262b437659514abdcd928e977db}{}\label{aom__image_8h_a6bc018ed9689367acae810bc58527081ae9107262b437659514abdcd928e977db}
+}]B\+T.\+470 System B, G (historical) \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+601@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+601}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+601@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+601}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+601\hypertarget{aom__image_8h_a6bc018ed9689367acae810bc58527081a0f81310501079cc1184d5265ae2c18a5}{}\label{aom__image_8h_a6bc018ed9689367acae810bc58527081a0f81310501079cc1184d5265ae2c18a5}
+}]B\+T.\+601 \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+240@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+240}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+240@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+240}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+240\hypertarget{aom__image_8h_a6bc018ed9689367acae810bc58527081a42016b6c816d7ba0e13f3805f9911043}{}\label{aom__image_8h_a6bc018ed9689367acae810bc58527081a42016b6c816d7ba0e13f3805f9911043}
+}]S\+M\+P\+TE 240 M \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+\+Y\+C\+G\+CO@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+\+Y\+C\+G\+CO}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+\+Y\+C\+G\+CO@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+\+Y\+C\+G\+CO}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+\+Y\+C\+G\+CO\hypertarget{aom__image_8h_a6bc018ed9689367acae810bc58527081aa2140164b26b42404c376cc921ce27c5}{}\label{aom__image_8h_a6bc018ed9689367acae810bc58527081aa2140164b26b42404c376cc921ce27c5}
+}]Y\+Cg\+Co \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+2020\+\_\+\+N\+CL@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+2020\+\_\+\+N\+CL}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+2020\+\_\+\+N\+CL@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+2020\+\_\+\+N\+CL}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+2020\+\_\+\+N\+CL\hypertarget{aom__image_8h_a6bc018ed9689367acae810bc58527081adf60aa79c6a68f4eb41e1095f8bf7bf6}{}\label{aom__image_8h_a6bc018ed9689367acae810bc58527081adf60aa79c6a68f4eb41e1095f8bf7bf6}
+}]B\+T.\+2020 non-\/constant luminance, B\+T.\+2100 Y\+Cb\+Cr \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+2020\+\_\+\+CL@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+2020\+\_\+\+CL}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+2020\+\_\+\+CL@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+2020\+\_\+\+CL}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+B\+T\+\_\+2020\+\_\+\+CL\hypertarget{aom__image_8h_a6bc018ed9689367acae810bc58527081a34148eae7b467eece6af5c90405dde6b}{}\label{aom__image_8h_a6bc018ed9689367acae810bc58527081a34148eae7b467eece6af5c90405dde6b}
+}]B\+T.\+2020 constant luminance \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+2085@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+2085}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+2085@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+2085}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+S\+M\+P\+T\+E\+\_\+2085\hypertarget{aom__image_8h_a6bc018ed9689367acae810bc58527081a3aeb0ed0afc0a92ce758f109cd05ee80}{}\label{aom__image_8h_a6bc018ed9689367acae810bc58527081a3aeb0ed0afc0a92ce758f109cd05ee80}
+}]S\+M\+P\+TE ST 2085 Y\+Dz\+Dx \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+C\+H\+R\+O\+M\+A\+T\+\_\+\+N\+CL@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+C\+H\+R\+O\+M\+A\+T\+\_\+\+N\+CL}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+C\+H\+R\+O\+M\+A\+T\+\_\+\+N\+CL@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+C\+H\+R\+O\+M\+A\+T\+\_\+\+N\+CL}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+C\+H\+R\+O\+M\+A\+T\+\_\+\+N\+CL\hypertarget{aom__image_8h_a6bc018ed9689367acae810bc58527081a30661e9d9b70ffe9f51f3bdbfd02865b}{}\label{aom__image_8h_a6bc018ed9689367acae810bc58527081a30661e9d9b70ffe9f51f3bdbfd02865b}
+}]Chromaticity-\/derived non-\/constant luminance \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+C\+H\+R\+O\+M\+A\+T\+\_\+\+CL@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+C\+H\+R\+O\+M\+A\+T\+\_\+\+CL}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+C\+H\+R\+O\+M\+A\+T\+\_\+\+CL@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+C\+H\+R\+O\+M\+A\+T\+\_\+\+CL}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+C\+H\+R\+O\+M\+A\+T\+\_\+\+CL\hypertarget{aom__image_8h_a6bc018ed9689367acae810bc58527081aa391f9255e4775da0120f7472b417193}{}\label{aom__image_8h_a6bc018ed9689367acae810bc58527081aa391f9255e4775da0120f7472b417193}
+}]Chromaticity-\/derived constant luminance \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+I\+C\+T\+CP@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+I\+C\+T\+CP}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+I\+C\+T\+CP@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+I\+C\+T\+CP}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+I\+C\+T\+CP\hypertarget{aom__image_8h_a6bc018ed9689367acae810bc58527081a7695b0577d3884a89c578f28f4237aee}{}\label{aom__image_8h_a6bc018ed9689367acae810bc58527081a7695b0577d3884a89c578f28f4237aee}
+}]B\+T.\+2100 I\+Ct\+Cp \index{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+15@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+15}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+15@{A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+15}}\item[{\em 
+A\+O\+M\+\_\+\+C\+I\+C\+P\+\_\+\+M\+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+15\hypertarget{aom__image_8h_a6bc018ed9689367acae810bc58527081a2dea210273bc3d85af0631fd06a1066a}{}\label{aom__image_8h_a6bc018ed9689367acae810bc58527081a2dea210273bc3d85af0631fd06a1066a}
+}]For future use (values 15-\/255) \end{description}
+\end{Desc}
+\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!aom\+\_\+color\+\_\+range@{aom\+\_\+color\+\_\+range}}
+\index{aom\+\_\+color\+\_\+range@{aom\+\_\+color\+\_\+range}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{aom\+\_\+color\+\_\+range}{aom_color_range}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf aom\+\_\+color\+\_\+range}}\hypertarget{aom__image_8h_acb82d93a9a9f88ec2361b61a8cac1597}{}\label{aom__image_8h_acb82d93a9a9f88ec2361b61a8cac1597}
+
+
+List of supported color range. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+O\+M\+\_\+\+C\+R\+\_\+\+S\+T\+U\+D\+I\+O\+\_\+\+R\+A\+N\+GE@{A\+O\+M\+\_\+\+C\+R\+\_\+\+S\+T\+U\+D\+I\+O\+\_\+\+R\+A\+N\+GE}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+R\+\_\+\+S\+T\+U\+D\+I\+O\+\_\+\+R\+A\+N\+GE@{A\+O\+M\+\_\+\+C\+R\+\_\+\+S\+T\+U\+D\+I\+O\+\_\+\+R\+A\+N\+GE}}\item[{\em 
+A\+O\+M\+\_\+\+C\+R\+\_\+\+S\+T\+U\+D\+I\+O\+\_\+\+R\+A\+N\+GE\hypertarget{aom__image_8h_acb82d93a9a9f88ec2361b61a8cac1597a42efbf144c6cdfbd8d230abba62573d2}{}\label{aom__image_8h_acb82d93a9a9f88ec2361b61a8cac1597a42efbf144c6cdfbd8d230abba62573d2}
+}]Y \mbox{[}16..235\mbox{]}, UV \mbox{[}16..240\mbox{]} \index{A\+O\+M\+\_\+\+C\+R\+\_\+\+F\+U\+L\+L\+\_\+\+R\+A\+N\+GE@{A\+O\+M\+\_\+\+C\+R\+\_\+\+F\+U\+L\+L\+\_\+\+R\+A\+N\+GE}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+R\+\_\+\+F\+U\+L\+L\+\_\+\+R\+A\+N\+GE@{A\+O\+M\+\_\+\+C\+R\+\_\+\+F\+U\+L\+L\+\_\+\+R\+A\+N\+GE}}\item[{\em 
+A\+O\+M\+\_\+\+C\+R\+\_\+\+F\+U\+L\+L\+\_\+\+R\+A\+N\+GE\hypertarget{aom__image_8h_acb82d93a9a9f88ec2361b61a8cac1597a477797bb12706b2bfbfcf400699e2945}{}\label{aom__image_8h_acb82d93a9a9f88ec2361b61a8cac1597a477797bb12706b2bfbfcf400699e2945}
+}]Y\+U\+V/\+R\+GB \mbox{[}0..255\mbox{]} \end{description}
+\end{Desc}
+\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!aom\+\_\+chroma\+\_\+sample\+\_\+position@{aom\+\_\+chroma\+\_\+sample\+\_\+position}}
+\index{aom\+\_\+chroma\+\_\+sample\+\_\+position@{aom\+\_\+chroma\+\_\+sample\+\_\+position}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{aom\+\_\+chroma\+\_\+sample\+\_\+position}{aom_chroma_sample_position}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf aom\+\_\+chroma\+\_\+sample\+\_\+position}}\hypertarget{aom__image_8h_a10590253ef3dbde7e93ed5d4b4e0e73b}{}\label{aom__image_8h_a10590253ef3dbde7e93ed5d4b4e0e73b}
+
+
+List of chroma sample positions. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+O\+M\+\_\+\+C\+S\+P\+\_\+\+U\+N\+K\+N\+O\+WN@{A\+O\+M\+\_\+\+C\+S\+P\+\_\+\+U\+N\+K\+N\+O\+WN}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+S\+P\+\_\+\+U\+N\+K\+N\+O\+WN@{A\+O\+M\+\_\+\+C\+S\+P\+\_\+\+U\+N\+K\+N\+O\+WN}}\item[{\em 
+A\+O\+M\+\_\+\+C\+S\+P\+\_\+\+U\+N\+K\+N\+O\+WN\hypertarget{aom__image_8h_a10590253ef3dbde7e93ed5d4b4e0e73ba7843506f3e28f720be0d4f03237fb48c}{}\label{aom__image_8h_a10590253ef3dbde7e93ed5d4b4e0e73ba7843506f3e28f720be0d4f03237fb48c}
+}]Unknown \index{A\+O\+M\+\_\+\+C\+S\+P\+\_\+\+V\+E\+R\+T\+I\+C\+AL@{A\+O\+M\+\_\+\+C\+S\+P\+\_\+\+V\+E\+R\+T\+I\+C\+AL}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+S\+P\+\_\+\+V\+E\+R\+T\+I\+C\+AL@{A\+O\+M\+\_\+\+C\+S\+P\+\_\+\+V\+E\+R\+T\+I\+C\+AL}}\item[{\em 
+A\+O\+M\+\_\+\+C\+S\+P\+\_\+\+V\+E\+R\+T\+I\+C\+AL\hypertarget{aom__image_8h_a10590253ef3dbde7e93ed5d4b4e0e73baf95ced9b8288642205301cc51e0b55c6}{}\label{aom__image_8h_a10590253ef3dbde7e93ed5d4b4e0e73baf95ced9b8288642205301cc51e0b55c6}
+}]Horizontally co-\/located with luma(0, 0) sample, between two vertical samples \index{A\+O\+M\+\_\+\+C\+S\+P\+\_\+\+C\+O\+L\+O\+C\+A\+T\+ED@{A\+O\+M\+\_\+\+C\+S\+P\+\_\+\+C\+O\+L\+O\+C\+A\+T\+ED}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+S\+P\+\_\+\+C\+O\+L\+O\+C\+A\+T\+ED@{A\+O\+M\+\_\+\+C\+S\+P\+\_\+\+C\+O\+L\+O\+C\+A\+T\+ED}}\item[{\em 
+A\+O\+M\+\_\+\+C\+S\+P\+\_\+\+C\+O\+L\+O\+C\+A\+T\+ED\hypertarget{aom__image_8h_a10590253ef3dbde7e93ed5d4b4e0e73ba01ef7204c2234ef43acfd493d5e18c84}{}\label{aom__image_8h_a10590253ef3dbde7e93ed5d4b4e0e73ba01ef7204c2234ef43acfd493d5e18c84}
+}]Co-\/located with luma(0, 0) sample \index{A\+O\+M\+\_\+\+C\+S\+P\+\_\+\+R\+E\+S\+E\+R\+V\+ED@{A\+O\+M\+\_\+\+C\+S\+P\+\_\+\+R\+E\+S\+E\+R\+V\+ED}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!A\+O\+M\+\_\+\+C\+S\+P\+\_\+\+R\+E\+S\+E\+R\+V\+ED@{A\+O\+M\+\_\+\+C\+S\+P\+\_\+\+R\+E\+S\+E\+R\+V\+ED}}\item[{\em 
+A\+O\+M\+\_\+\+C\+S\+P\+\_\+\+R\+E\+S\+E\+R\+V\+ED\hypertarget{aom__image_8h_a10590253ef3dbde7e93ed5d4b4e0e73baae9f183ca3336d18e21d180341d00a36}{}\label{aom__image_8h_a10590253ef3dbde7e93ed5d4b4e0e73baae9f183ca3336d18e21d180341d00a36}
+}]Reserved value \end{description}
+\end{Desc}
+
+
+\subsubsection{Function Documentation}
+\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!aom\+\_\+img\+\_\+alloc@{aom\+\_\+img\+\_\+alloc}}
+\index{aom\+\_\+img\+\_\+alloc@{aom\+\_\+img\+\_\+alloc}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{aom\+\_\+img\+\_\+alloc(aom\+\_\+image\+\_\+t $\ast$img, aom\+\_\+img\+\_\+fmt\+\_\+t fmt, unsigned int d\+\_\+w, unsigned int d\+\_\+h, unsigned int align)}{aom_img_alloc(aom_image_t *img, aom_img_fmt_t fmt, unsigned int d_w, unsigned int d_h, unsigned int align)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+image\+\_\+t}$\ast$ aom\+\_\+img\+\_\+alloc (
+\begin{DoxyParamCaption}
+\item[{{\bf aom\+\_\+image\+\_\+t} $\ast$}]{img, }
+\item[{{\bf aom\+\_\+img\+\_\+fmt\+\_\+t}}]{fmt, }
+\item[{unsigned int}]{d\+\_\+w, }
+\item[{unsigned int}]{d\+\_\+h, }
+\item[{unsigned int}]{align}
+\end{DoxyParamCaption}
+)}\hypertarget{aom__image_8h_a570db29fbd122951235a08fe9375f6bb}{}\label{aom__image_8h_a570db29fbd122951235a08fe9375f6bb}
+
+
+Open a descriptor, allocating storage for the underlying image. 
+
+Returns a descriptor for storing an image of the given format. The storage for the descriptor is allocated on the heap.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em img} & Pointer to storage for descriptor. If this parameter is N\+U\+LL, the storage for the descriptor will be allocated on the heap. \\
+\hline
+\mbox{\tt in}  & {\em fmt} & Format for the image \\
+\hline
+\mbox{\tt in}  & {\em d\+\_\+w} & Width of the image \\
+\hline
+\mbox{\tt in}  & {\em d\+\_\+h} & Height of the image \\
+\hline
+\mbox{\tt in}  & {\em align} & Alignment, in bytes, of the image buffer and each row in the image(stride).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a pointer to the initialized image descriptor. If the img parameter is non-\/null, the value of the img parameter will be returned. 
+\end{DoxyReturn}
+\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!aom\+\_\+img\+\_\+wrap@{aom\+\_\+img\+\_\+wrap}}
+\index{aom\+\_\+img\+\_\+wrap@{aom\+\_\+img\+\_\+wrap}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{aom\+\_\+img\+\_\+wrap(aom\+\_\+image\+\_\+t $\ast$img, aom\+\_\+img\+\_\+fmt\+\_\+t fmt, unsigned int d\+\_\+w, unsigned int d\+\_\+h, unsigned int align, unsigned char $\ast$img\+\_\+data)}{aom_img_wrap(aom_image_t *img, aom_img_fmt_t fmt, unsigned int d_w, unsigned int d_h, unsigned int align, unsigned char *img_data)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+image\+\_\+t}$\ast$ aom\+\_\+img\+\_\+wrap (
+\begin{DoxyParamCaption}
+\item[{{\bf aom\+\_\+image\+\_\+t} $\ast$}]{img, }
+\item[{{\bf aom\+\_\+img\+\_\+fmt\+\_\+t}}]{fmt, }
+\item[{unsigned int}]{d\+\_\+w, }
+\item[{unsigned int}]{d\+\_\+h, }
+\item[{unsigned int}]{align, }
+\item[{unsigned char $\ast$}]{img\+\_\+data}
+\end{DoxyParamCaption}
+)}\hypertarget{aom__image_8h_a314394a55ea489f1470ba5d1e977e0ec}{}\label{aom__image_8h_a314394a55ea489f1470ba5d1e977e0ec}
+
+
+Open a descriptor, using existing storage for the underlying image. 
+
+Returns a descriptor for storing an image of the given format. The storage for descriptor has been allocated elsewhere, and a descriptor is desired to \char`\"{}wrap\char`\"{} that storage.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em img} & Pointer to storage for descriptor. If this parameter is N\+U\+LL, the storage for the descriptor will be allocated on the heap. \\
+\hline
+\mbox{\tt in}  & {\em fmt} & Format for the image \\
+\hline
+\mbox{\tt in}  & {\em d\+\_\+w} & Width of the image \\
+\hline
+\mbox{\tt in}  & {\em d\+\_\+h} & Height of the image \\
+\hline
+\mbox{\tt in}  & {\em align} & Alignment, in bytes, of each row in the image. \\
+\hline
+\mbox{\tt in}  & {\em img\+\_\+data} & Storage to use for the image\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a pointer to the initialized image descriptor. If the img parameter is non-\/null, the value of the img parameter will be returned. 
+\end{DoxyReturn}
+\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!aom\+\_\+img\+\_\+alloc\+\_\+with\+\_\+border@{aom\+\_\+img\+\_\+alloc\+\_\+with\+\_\+border}}
+\index{aom\+\_\+img\+\_\+alloc\+\_\+with\+\_\+border@{aom\+\_\+img\+\_\+alloc\+\_\+with\+\_\+border}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{aom\+\_\+img\+\_\+alloc\+\_\+with\+\_\+border(aom\+\_\+image\+\_\+t $\ast$img, aom\+\_\+img\+\_\+fmt\+\_\+t fmt, unsigned int d\+\_\+w, unsigned int d\+\_\+h, unsigned int align, unsigned int size\+\_\+align, unsigned int border)}{aom_img_alloc_with_border(aom_image_t *img, aom_img_fmt_t fmt, unsigned int d_w, unsigned int d_h, unsigned int align, unsigned int size_align, unsigned int border)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+image\+\_\+t}$\ast$ aom\+\_\+img\+\_\+alloc\+\_\+with\+\_\+border (
+\begin{DoxyParamCaption}
+\item[{{\bf aom\+\_\+image\+\_\+t} $\ast$}]{img, }
+\item[{{\bf aom\+\_\+img\+\_\+fmt\+\_\+t}}]{fmt, }
+\item[{unsigned int}]{d\+\_\+w, }
+\item[{unsigned int}]{d\+\_\+h, }
+\item[{unsigned int}]{align, }
+\item[{unsigned int}]{size\+\_\+align, }
+\item[{unsigned int}]{border}
+\end{DoxyParamCaption}
+)}\hypertarget{aom__image_8h_aeb211e5184687f7e10d7c5bed4dcfdcd}{}\label{aom__image_8h_aeb211e5184687f7e10d7c5bed4dcfdcd}
+
+
+Open a descriptor, allocating storage for the underlying image with a border. 
+
+Returns a descriptor for storing an image of the given format and its borders. The storage for the descriptor is allocated on the heap.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em img} & Pointer to storage for descriptor. If this parameter is N\+U\+LL, the storage for the descriptor will be allocated on the heap. \\
+\hline
+\mbox{\tt in}  & {\em fmt} & Format for the image \\
+\hline
+\mbox{\tt in}  & {\em d\+\_\+w} & Width of the image \\
+\hline
+\mbox{\tt in}  & {\em d\+\_\+h} & Height of the image \\
+\hline
+\mbox{\tt in}  & {\em align} & Alignment, in bytes, of the image buffer and each row in the image(stride). \\
+\hline
+\mbox{\tt in}  & {\em size\+\_\+align} & Alignment, in bytes, of the image width and height. \\
+\hline
+\mbox{\tt in}  & {\em border} & A border that is padded on four sides of the image.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a pointer to the initialized image descriptor. If the img parameter is non-\/null, the value of the img parameter will be returned. 
+\end{DoxyReturn}
+\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!aom\+\_\+img\+\_\+set\+\_\+rect@{aom\+\_\+img\+\_\+set\+\_\+rect}}
+\index{aom\+\_\+img\+\_\+set\+\_\+rect@{aom\+\_\+img\+\_\+set\+\_\+rect}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{aom\+\_\+img\+\_\+set\+\_\+rect(aom\+\_\+image\+\_\+t $\ast$img, unsigned int x, unsigned int y, unsigned int w, unsigned int h, unsigned int border)}{aom_img_set_rect(aom_image_t *img, unsigned int x, unsigned int y, unsigned int w, unsigned int h, unsigned int border)}}]{\setlength{\rightskip}{0pt plus 5cm}int aom\+\_\+img\+\_\+set\+\_\+rect (
+\begin{DoxyParamCaption}
+\item[{{\bf aom\+\_\+image\+\_\+t} $\ast$}]{img, }
+\item[{unsigned int}]{x, }
+\item[{unsigned int}]{y, }
+\item[{unsigned int}]{w, }
+\item[{unsigned int}]{h, }
+\item[{unsigned int}]{border}
+\end{DoxyParamCaption}
+)}\hypertarget{aom__image_8h_a0c5fe4946bdc15a5fe6bedc7ee96d400}{}\label{aom__image_8h_a0c5fe4946bdc15a5fe6bedc7ee96d400}
+
+
+Set the rectangle identifying the displayed portion of the image. 
+
+Updates the displayed rectangle (aka viewport) on the image surface to match the specified coordinates and size.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em img} & Image descriptor \\
+\hline
+\mbox{\tt in}  & {\em x} & leftmost column \\
+\hline
+\mbox{\tt in}  & {\em y} & topmost row \\
+\hline
+\mbox{\tt in}  & {\em w} & width \\
+\hline
+\mbox{\tt in}  & {\em h} & height \\
+\hline
+\mbox{\tt in}  & {\em border} & A border that is padded on four sides of the image.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the requested rectangle is valid, nonzero otherwise. 
+\end{DoxyReturn}
+\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!aom\+\_\+img\+\_\+flip@{aom\+\_\+img\+\_\+flip}}
+\index{aom\+\_\+img\+\_\+flip@{aom\+\_\+img\+\_\+flip}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{aom\+\_\+img\+\_\+flip(aom\+\_\+image\+\_\+t $\ast$img)}{aom_img_flip(aom_image_t *img)}}]{\setlength{\rightskip}{0pt plus 5cm}void aom\+\_\+img\+\_\+flip (
+\begin{DoxyParamCaption}
+\item[{{\bf aom\+\_\+image\+\_\+t} $\ast$}]{img}
+\end{DoxyParamCaption}
+)}\hypertarget{aom__image_8h_a1fc7a318a190ffdadc723aca13e373cf}{}\label{aom__image_8h_a1fc7a318a190ffdadc723aca13e373cf}
+
+
+Flip the image vertically (top for bottom) 
+
+Adjusts the image descriptor\textquotesingle{}s pointers and strides to make the image be referenced upside-\/down.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em img} & Image descriptor \\
+\hline
+\end{DoxyParams}
+\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!aom\+\_\+img\+\_\+free@{aom\+\_\+img\+\_\+free}}
+\index{aom\+\_\+img\+\_\+free@{aom\+\_\+img\+\_\+free}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{aom\+\_\+img\+\_\+free(aom\+\_\+image\+\_\+t $\ast$img)}{aom_img_free(aom_image_t *img)}}]{\setlength{\rightskip}{0pt plus 5cm}void aom\+\_\+img\+\_\+free (
+\begin{DoxyParamCaption}
+\item[{{\bf aom\+\_\+image\+\_\+t} $\ast$}]{img}
+\end{DoxyParamCaption}
+)}\hypertarget{aom__image_8h_afff22f7f3eb9409c5b678d1962f110a8}{}\label{aom__image_8h_afff22f7f3eb9409c5b678d1962f110a8}
+
+
+Close an image descriptor. 
+
+Frees all allocated storage associated with an image descriptor.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em img} & Image descriptor \\
+\hline
+\end{DoxyParams}
+\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!aom\+\_\+img\+\_\+plane\+\_\+width@{aom\+\_\+img\+\_\+plane\+\_\+width}}
+\index{aom\+\_\+img\+\_\+plane\+\_\+width@{aom\+\_\+img\+\_\+plane\+\_\+width}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{aom\+\_\+img\+\_\+plane\+\_\+width(const aom\+\_\+image\+\_\+t $\ast$img, int plane)}{aom_img_plane_width(const aom_image_t *img, int plane)}}]{\setlength{\rightskip}{0pt plus 5cm}int aom\+\_\+img\+\_\+plane\+\_\+width (
+\begin{DoxyParamCaption}
+\item[{const {\bf aom\+\_\+image\+\_\+t} $\ast$}]{img, }
+\item[{int}]{plane}
+\end{DoxyParamCaption}
+)}\hypertarget{aom__image_8h_adfb2ea2e110ee42e38370868b64bf232}{}\label{aom__image_8h_adfb2ea2e110ee42e38370868b64bf232}
+
+
+Get the width of a plane. 
+
+Get the width of a plane of an image
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em img} & Image descriptor \\
+\hline
+\mbox{\tt in}  & {\em plane} & Plane index \\
+\hline
+\end{DoxyParams}
+\index{aom\+\_\+image.\+h@{aom\+\_\+image.\+h}!aom\+\_\+img\+\_\+plane\+\_\+height@{aom\+\_\+img\+\_\+plane\+\_\+height}}
+\index{aom\+\_\+img\+\_\+plane\+\_\+height@{aom\+\_\+img\+\_\+plane\+\_\+height}!aom\+\_\+image.\+h@{aom\+\_\+image.\+h}}
+\paragraph[{\texorpdfstring{aom\+\_\+img\+\_\+plane\+\_\+height(const aom\+\_\+image\+\_\+t $\ast$img, int plane)}{aom_img_plane_height(const aom_image_t *img, int plane)}}]{\setlength{\rightskip}{0pt plus 5cm}int aom\+\_\+img\+\_\+plane\+\_\+height (
+\begin{DoxyParamCaption}
+\item[{const {\bf aom\+\_\+image\+\_\+t} $\ast$}]{img, }
+\item[{int}]{plane}
+\end{DoxyParamCaption}
+)}\hypertarget{aom__image_8h_ab87684a93e3da97bd6223d1e46876848}{}\label{aom__image_8h_ab87684a93e3da97bd6223d1e46876848}
+
+
+Get the height of a plane. 
+
+Get the height of a plane of an image
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em img} & Image descriptor \\
+\hline
+\mbox{\tt in}  & {\em plane} & Plane index \\
+\hline
+\end{DoxyParams}

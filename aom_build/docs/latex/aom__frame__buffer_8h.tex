@@ -1,0 +1,80 @@
+\hypertarget{aom__frame__buffer_8h}{}\subsection{aom/aom\+\_\+frame\+\_\+buffer.h File Reference}
+\label{aom__frame__buffer_8h}\index{aom/aom\+\_\+frame\+\_\+buffer.\+h@{aom/aom\+\_\+frame\+\_\+buffer.\+h}}
+
+
+Describes the decoder external frame buffer interface.  
+
+
+{\ttfamily \#include \char`\"{}aom/aom\+\_\+integer.\+h\char`\"{}}\\*
+\subsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structaom__codec__frame__buffer}{aom\+\_\+codec\+\_\+frame\+\_\+buffer}
+\begin{DoxyCompactList}\small\item\em External frame buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{aom__frame__buffer_8h_a9470ef667d6ce967e93d9e528d523919}{A\+O\+M\+\_\+\+M\+A\+X\+I\+M\+U\+M\+\_\+\+W\+O\+R\+K\+\_\+\+B\+U\+F\+F\+E\+RS}~8\hypertarget{aom__frame__buffer_8h_a9470ef667d6ce967e93d9e528d523919}{}\label{aom__frame__buffer_8h_a9470ef667d6ce967e93d9e528d523919}
+
+\begin{DoxyCompactList}\small\item\em The maximum number of work buffers used by libaom. Support maximum 4 threads to decode video in parallel. Each thread will use one work buffer. T\+O\+D\+O(hkuang)\+: Add support to set number of worker threads dynamically. \end{DoxyCompactList}\item 
+\#define \hyperlink{aom__frame__buffer_8h_ae4e6b2da21b594cbea52e2927d1efbeb}{A\+O\+M\+\_\+\+M\+A\+X\+I\+M\+U\+M\+\_\+\+R\+E\+F\+\_\+\+B\+U\+F\+F\+E\+RS}~8\hypertarget{aom__frame__buffer_8h_ae4e6b2da21b594cbea52e2927d1efbeb}{}\label{aom__frame__buffer_8h_ae4e6b2da21b594cbea52e2927d1efbeb}
+
+\begin{DoxyCompactList}\small\item\em The maximum number of reference buffers that a A\+V1 encoder may use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structaom__codec__frame__buffer}{aom\+\_\+codec\+\_\+frame\+\_\+buffer} \hyperlink{aom__frame__buffer_8h_a1b5fd1822859e7b06db3e9b6bdb7b74f}{aom\+\_\+codec\+\_\+frame\+\_\+buffer\+\_\+t}
+\begin{DoxyCompactList}\small\item\em External frame buffer. \end{DoxyCompactList}\item 
+typedef int($\ast$ \hyperlink{aom__frame__buffer_8h_a01fdfbbc9be8b320437a49d3de07814d}{aom\+\_\+get\+\_\+frame\+\_\+buffer\+\_\+cb\+\_\+fn\+\_\+t}) (void $\ast$priv, size\+\_\+t min\+\_\+size, \hyperlink{aom__frame__buffer_8h_a1b5fd1822859e7b06db3e9b6bdb7b74f}{aom\+\_\+codec\+\_\+frame\+\_\+buffer\+\_\+t} $\ast$fb)
+\begin{DoxyCompactList}\small\item\em get frame buffer callback prototype \end{DoxyCompactList}\item 
+typedef int($\ast$ \hyperlink{aom__frame__buffer_8h_a1803cd0766dc297d88172f174fbb6ab5}{aom\+\_\+release\+\_\+frame\+\_\+buffer\+\_\+cb\+\_\+fn\+\_\+t}) (void $\ast$priv, \hyperlink{aom__frame__buffer_8h_a1b5fd1822859e7b06db3e9b6bdb7b74f}{aom\+\_\+codec\+\_\+frame\+\_\+buffer\+\_\+t} $\ast$fb)
+\begin{DoxyCompactList}\small\item\em release frame buffer callback prototype \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Describes the decoder external frame buffer interface. 
+
+
+
+\subsubsection{Typedef Documentation}
+\index{aom\+\_\+frame\+\_\+buffer.\+h@{aom\+\_\+frame\+\_\+buffer.\+h}!aom\+\_\+codec\+\_\+frame\+\_\+buffer\+\_\+t@{aom\+\_\+codec\+\_\+frame\+\_\+buffer\+\_\+t}}
+\index{aom\+\_\+codec\+\_\+frame\+\_\+buffer\+\_\+t@{aom\+\_\+codec\+\_\+frame\+\_\+buffer\+\_\+t}!aom\+\_\+frame\+\_\+buffer.\+h@{aom\+\_\+frame\+\_\+buffer.\+h}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+frame\+\_\+buffer\+\_\+t}{aom_codec_frame_buffer_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf aom\+\_\+codec\+\_\+frame\+\_\+buffer}  {\bf aom\+\_\+codec\+\_\+frame\+\_\+buffer\+\_\+t}}\hypertarget{aom__frame__buffer_8h_a1b5fd1822859e7b06db3e9b6bdb7b74f}{}\label{aom__frame__buffer_8h_a1b5fd1822859e7b06db3e9b6bdb7b74f}
+
+
+External frame buffer. 
+
+This structure holds allocated frame buffers used by the decoder. \index{aom\+\_\+frame\+\_\+buffer.\+h@{aom\+\_\+frame\+\_\+buffer.\+h}!aom\+\_\+get\+\_\+frame\+\_\+buffer\+\_\+cb\+\_\+fn\+\_\+t@{aom\+\_\+get\+\_\+frame\+\_\+buffer\+\_\+cb\+\_\+fn\+\_\+t}}
+\index{aom\+\_\+get\+\_\+frame\+\_\+buffer\+\_\+cb\+\_\+fn\+\_\+t@{aom\+\_\+get\+\_\+frame\+\_\+buffer\+\_\+cb\+\_\+fn\+\_\+t}!aom\+\_\+frame\+\_\+buffer.\+h@{aom\+\_\+frame\+\_\+buffer.\+h}}
+\paragraph[{\texorpdfstring{aom\+\_\+get\+\_\+frame\+\_\+buffer\+\_\+cb\+\_\+fn\+\_\+t}{aom_get_frame_buffer_cb_fn_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef int($\ast$ aom\+\_\+get\+\_\+frame\+\_\+buffer\+\_\+cb\+\_\+fn\+\_\+t) (void $\ast$priv, size\+\_\+t min\+\_\+size, {\bf aom\+\_\+codec\+\_\+frame\+\_\+buffer\+\_\+t} $\ast$fb)}\hypertarget{aom__frame__buffer_8h_a01fdfbbc9be8b320437a49d3de07814d}{}\label{aom__frame__buffer_8h_a01fdfbbc9be8b320437a49d3de07814d}
+
+
+get frame buffer callback prototype 
+
+This callback is invoked by the decoder to retrieve data for the frame buffer in order for the decode call to complete. The callback must allocate at least min\+\_\+size in bytes and assign it to fb-\/$>$data. The callback must zero out all the data allocated. Then the callback must set fb-\/$>$size to the allocated size. The application does not need to align the allocated data. The callback is triggered when the decoder needs a frame buffer to decode a compressed image into. This function may be called more than once for every call to aom\+\_\+codec\+\_\+decode. The application may set fb-\/$>$priv to some data which will be passed back in the ximage and the release function call. $\vert$fb$\vert$ is guaranteed to not be N\+U\+LL. On success the callback must return 0. Any failure the callback must return a value less than 0.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em priv} & Callback\textquotesingle{}s private data \\
+\hline
+\mbox{\tt in}  & {\em new\+\_\+size} & Size in bytes needed by the buffer \\
+\hline
+\mbox{\tt in,out}  & {\em fb} & Pointer to aom\+\_\+codec\+\_\+frame\+\_\+buffer\+\_\+t \\
+\hline
+\end{DoxyParams}
+\index{aom\+\_\+frame\+\_\+buffer.\+h@{aom\+\_\+frame\+\_\+buffer.\+h}!aom\+\_\+release\+\_\+frame\+\_\+buffer\+\_\+cb\+\_\+fn\+\_\+t@{aom\+\_\+release\+\_\+frame\+\_\+buffer\+\_\+cb\+\_\+fn\+\_\+t}}
+\index{aom\+\_\+release\+\_\+frame\+\_\+buffer\+\_\+cb\+\_\+fn\+\_\+t@{aom\+\_\+release\+\_\+frame\+\_\+buffer\+\_\+cb\+\_\+fn\+\_\+t}!aom\+\_\+frame\+\_\+buffer.\+h@{aom\+\_\+frame\+\_\+buffer.\+h}}
+\paragraph[{\texorpdfstring{aom\+\_\+release\+\_\+frame\+\_\+buffer\+\_\+cb\+\_\+fn\+\_\+t}{aom_release_frame_buffer_cb_fn_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef int($\ast$ aom\+\_\+release\+\_\+frame\+\_\+buffer\+\_\+cb\+\_\+fn\+\_\+t) (void $\ast$priv, {\bf aom\+\_\+codec\+\_\+frame\+\_\+buffer\+\_\+t} $\ast$fb)}\hypertarget{aom__frame__buffer_8h_a1803cd0766dc297d88172f174fbb6ab5}{}\label{aom__frame__buffer_8h_a1803cd0766dc297d88172f174fbb6ab5}
+
+
+release frame buffer callback prototype 
+
+This callback is invoked by the decoder when the frame buffer is not referenced by any other buffers. $\vert$fb$\vert$ is guaranteed to not be N\+U\+LL. On success the callback must return 0. Any failure the callback must return a value less than 0.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em priv} & Callback\textquotesingle{}s private data \\
+\hline
+\mbox{\tt in}  & {\em fb} & Pointer to aom\+\_\+codec\+\_\+frame\+\_\+buffer\+\_\+t \\
+\hline
+\end{DoxyParams}

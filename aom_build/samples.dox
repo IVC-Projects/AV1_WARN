@@ -1,0 +1,28 @@
+
+/*!\page samples Sample Code
+This SDK includes a number of sample applications. Each sample documents a
+feature of the SDK in both prose and the associated C code. The following
+samples are included:
+
+ - \subpage example_decode_to_md5 Frame by frame MD5 checksum.
+ - \subpage example_decode_with_drops Drops frames while decoding.
+ - \subpage example_simple_decoder Simplified decoder loop.
+ - \subpage example_lossless_encoder Simplified lossless encoder.
+ - \subpage example_set_maps Set active and ROI maps.
+ - \subpage example_simple_encoder Simplified encoder loop.
+ - \subpage example_twopass_encoder Two-pass encoder loop.
+ - \subpage example_scalable_encoder Scalable encoder loop.
+ - \subpage example_aom_cx_set_ref Set encoder reference frame.
+ - \subpage example_lightfield_encoder Lightfield encoder example.
+ - \subpage example_lightfield_tile_list_decoder Lightfield tile list decoder example.
+ - \subpage example_lightfield_decoder Lightfield decoder example.
+ - \subpage example_lightfield_bitstream_parsing Lightfield bitstream parsing example.
+
+In addition, the SDK contains a number of utilities. Since these utilities are
+built upon the concepts described in the sample code listed above, they are not
+documented in pieces like the samples are. Their source is included here for
+reference. The following utilities are included:
+
+ - \subpage example_aomdec Full featured decoder.
+ - \subpage example_aomenc Full featured encoder.
+*/

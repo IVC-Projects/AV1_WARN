@@ -1,0 +1,40 @@
+\hypertarget{structaom__postproc__cfg}{}\subsection{aom\+\_\+postproc\+\_\+cfg Struct Reference}
+\label{structaom__postproc__cfg}\index{aom\+\_\+postproc\+\_\+cfg@{aom\+\_\+postproc\+\_\+cfg}}
+
+
+post process flags  
+
+
+
+
+{\ttfamily \#include $<$aom.\+h$>$}
+
+\subsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{structaom__postproc__cfg_a47b934aabe66e2fd4ec2e95661a9d9fd}{post\+\_\+proc\+\_\+flag}\hypertarget{structaom__postproc__cfg_a47b934aabe66e2fd4ec2e95661a9d9fd}{}\label{structaom__postproc__cfg_a47b934aabe66e2fd4ec2e95661a9d9fd}
+
+\begin{DoxyCompactList}\small\item\em the types of post processing to be done, should be combination of \char`\"{}aom\+\_\+postproc\+\_\+level\char`\"{} \end{DoxyCompactList}\item 
+int \hyperlink{structaom__postproc__cfg_ae1137e5688f978994e88b231c72b5a63}{deblocking\+\_\+level}
+\item 
+int \hyperlink{structaom__postproc__cfg_aa68fb341be4d3de6d4feb66d3b659c26}{noise\+\_\+level}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+post process flags 
+
+This define a structure that describe the post processing settings. For the best objective measure (using the P\+S\+NR metric) set post\+\_\+proc\+\_\+flag to A\+O\+M\+\_\+\+D\+E\+B\+L\+O\+CK and deblocking\+\_\+level to 1. 
+
+\subsubsection{Field Documentation}
+\index{aom\+\_\+postproc\+\_\+cfg@{aom\+\_\+postproc\+\_\+cfg}!deblocking\+\_\+level@{deblocking\+\_\+level}}
+\index{deblocking\+\_\+level@{deblocking\+\_\+level}!aom\+\_\+postproc\+\_\+cfg@{aom\+\_\+postproc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{deblocking\+\_\+level}{deblocking_level}}]{\setlength{\rightskip}{0pt plus 5cm}int aom\+\_\+postproc\+\_\+cfg\+::deblocking\+\_\+level}\hypertarget{structaom__postproc__cfg_ae1137e5688f978994e88b231c72b5a63}{}\label{structaom__postproc__cfg_ae1137e5688f978994e88b231c72b5a63}
+the strength of deblocking, valid range \mbox{[}0, 16\mbox{]} \index{aom\+\_\+postproc\+\_\+cfg@{aom\+\_\+postproc\+\_\+cfg}!noise\+\_\+level@{noise\+\_\+level}}
+\index{noise\+\_\+level@{noise\+\_\+level}!aom\+\_\+postproc\+\_\+cfg@{aom\+\_\+postproc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{noise\+\_\+level}{noise_level}}]{\setlength{\rightskip}{0pt plus 5cm}int aom\+\_\+postproc\+\_\+cfg\+::noise\+\_\+level}\hypertarget{structaom__postproc__cfg_aa68fb341be4d3de6d4feb66d3b659c26}{}\label{structaom__postproc__cfg_aa68fb341be4d3de6d4feb66d3b659c26}
+the strength of additive noise, valid range \mbox{[}0, 16\mbox{]} 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+aom/\hyperlink{aom_8h}{aom.\+h}\end{DoxyCompactItemize}

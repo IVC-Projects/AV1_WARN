@@ -1,0 +1,147 @@
+\hypertarget{aom__encoder_8h}{}\subsection{aom/aom\+\_\+encoder.h File Reference}
+\label{aom__encoder_8h}\index{aom/aom\+\_\+encoder.\+h@{aom/aom\+\_\+encoder.\+h}}
+
+
+Describes the encoder algorithm interface to applications.  
+
+
+{\ttfamily \#include \char`\"{}aom/aom\+\_\+codec.\+h\char`\"{}}\\*
+\subsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structaom__fixed__buf}{aom\+\_\+fixed\+\_\+buf}
+\begin{DoxyCompactList}\small\item\em Generic fixed size buffer structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structaom__codec__cx__pkt}{aom\+\_\+codec\+\_\+cx\+\_\+pkt}
+\begin{DoxyCompactList}\small\item\em Encoder output packet. \end{DoxyCompactList}\item 
+struct \hyperlink{structaom__rational}{aom\+\_\+rational}
+\begin{DoxyCompactList}\small\item\em Rational Number. \end{DoxyCompactList}\item 
+struct \hyperlink{structaom__codec__enc__cfg}{aom\+\_\+codec\+\_\+enc\+\_\+cfg}
+\begin{DoxyCompactList}\small\item\em Encoder configuration structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__encoder_gae4af664f2049d5b7d7b644d9a61d497c}{A\+O\+M\+\_\+\+E\+N\+C\+O\+D\+E\+R\+\_\+\+A\+B\+I\+\_\+\+V\+E\+R\+S\+I\+ON}
+\begin{DoxyCompactList}\small\item\em Current A\+BI version number. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__encoder_gaaf72058c11fcf006c41662114997e12c}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+P\+S\+NR}~0x10000
+\begin{DoxyCompactList}\small\item\em Encoder capabilities bitfield. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__encoder_ga608725216f15096fa209d30fef121c1c}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+H\+I\+G\+H\+B\+I\+T\+D\+E\+P\+TH}~0x40000
+\item 
+\#define \hyperlink{group__encoder_gae722c9f9ba9b4ca8dba6bbe7c0692024}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+U\+S\+E\+\_\+\+P\+S\+NR}~0x10000
+\begin{DoxyCompactList}\small\item\em Initialization-\/time Feature Enabling. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__encoder_gae30bbbdef18e9da3631b69c170533e92}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+U\+S\+E\+\_\+\+H\+I\+G\+H\+B\+I\+T\+D\+E\+P\+TH}~0x40000
+\begin{DoxyCompactList}\small\item\em Make the encoder output one partition at a time. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__encoder_gaf4a58f123913a5eef0a3796f0619e5f3}{A\+O\+M\+\_\+\+F\+R\+A\+M\+E\+\_\+\+I\+S\+\_\+\+K\+EY}~0x1
+\item 
+\#define \hyperlink{group__encoder_ga5c5a0513ebc6177ce500370cf89ad489}{A\+O\+M\+\_\+\+F\+R\+A\+M\+E\+\_\+\+I\+S\+\_\+\+D\+R\+O\+P\+P\+A\+B\+LE}~0x2
+\begin{DoxyCompactList}\small\item\em frame can be dropped without affecting the stream (no future frame depends on this one) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__encoder_ga5ffee67363a67d56654926d49e98b7d4}{A\+O\+M\+\_\+\+F\+R\+A\+M\+E\+\_\+\+I\+S\+\_\+\+I\+N\+T\+R\+A\+O\+N\+LY}~0x10
+\begin{DoxyCompactList}\small\item\em this is an I\+N\+T\+R\+A\+\_\+\+O\+N\+LY frame \end{DoxyCompactList}\item 
+\#define \hyperlink{group__encoder_gadcd30e5b2e9f025d38c733d90c0b651c}{A\+O\+M\+\_\+\+F\+R\+A\+M\+E\+\_\+\+I\+S\+\_\+\+S\+W\+I\+T\+CH}~0x20
+\begin{DoxyCompactList}\small\item\em this is an S-\/frame \end{DoxyCompactList}\item 
+\#define \hyperlink{group__encoder_ga38c20192519a602646b9121c66dc0e70}{A\+O\+M\+\_\+\+F\+R\+A\+M\+E\+\_\+\+I\+S\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+E\+S\+I\+L\+I\+E\+NT}~0x40
+\begin{DoxyCompactList}\small\item\em this is an error-\/resilient frame \end{DoxyCompactList}\item 
+\#define \hyperlink{group__encoder_ga42450a4820d734d42acd9fa99dcf5768}{A\+O\+M\+\_\+\+F\+R\+A\+M\+E\+\_\+\+I\+S\+\_\+\+D\+E\+L\+A\+Y\+E\+D\+\_\+\+R\+A\+N\+D\+O\+M\+\_\+\+A\+C\+C\+E\+S\+S\+\_\+\+P\+O\+I\+NT}~0x80
+\begin{DoxyCompactList}\small\item\em this is a key-\/frame dependent recovery-\/point frame \end{DoxyCompactList}\item 
+\#define \hyperlink{group__encoder_ga4118658e1fc1590f72fec38478ae230d}{A\+O\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+E\+S\+I\+L\+I\+E\+N\+T\+\_\+\+D\+E\+F\+A\+U\+LT}~0x1
+\begin{DoxyCompactList}\small\item\em Improve resiliency against losses of whole frames. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__encoder_ga86a6a9053205149cccc98481b5460337}{A\+O\+M\+\_\+\+E\+F\+L\+A\+G\+\_\+\+F\+O\+R\+C\+E\+\_\+\+KF}~(1 $<$$<$ 0)
+\item 
+\#define \hyperlink{aom__encoder_8h_a3ec4904ea175471a03d10705f384d07c}{M\+A\+X\+\_\+\+T\+I\+L\+E\+\_\+\+W\+I\+D\+T\+HS}~64
+\begin{DoxyCompactList}\small\item\em Maximum number of tile widths in tile widths array. \end{DoxyCompactList}\item 
+\#define \hyperlink{aom__encoder_8h_a446aae868ff07f3971d9e84b6602a890}{M\+A\+X\+\_\+\+T\+I\+L\+E\+\_\+\+H\+E\+I\+G\+H\+TS}~64
+\begin{DoxyCompactList}\small\item\em Maximum number of tile heights in tile heights array. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__encoder_gaade68a7d33d30f97dc9a596aa5e065d8}{aom\+\_\+codec\+\_\+enc\+\_\+init}(ctx,  iface,  cfg,  flags)~\hyperlink{group__encoder_ga205cf6f9460f4b4a842872012ef6fb0c}{aom\+\_\+codec\+\_\+enc\+\_\+init\+\_\+ver}(ctx, iface, cfg, flags, \hyperlink{group__encoder_gae4af664f2049d5b7d7b644d9a61d497c}{A\+O\+M\+\_\+\+E\+N\+C\+O\+D\+E\+R\+\_\+\+A\+B\+I\+\_\+\+V\+E\+R\+S\+I\+ON})
+\begin{DoxyCompactList}\small\item\em Convenience macro for \hyperlink{group__encoder_ga205cf6f9460f4b4a842872012ef6fb0c}{aom\+\_\+codec\+\_\+enc\+\_\+init\+\_\+ver()} \end{DoxyCompactList}\item 
+\#define \hyperlink{group__encoder_ga4410c689b0f8d0b75aca881ff7b25253}{aom\+\_\+codec\+\_\+enc\+\_\+init\+\_\+multi}(ctx,  iface,  cfg,  num\+\_\+enc,  flags,  dsf)
+\begin{DoxyCompactList}\small\item\em Convenience macro for \hyperlink{group__encoder_gad3dfb2298402298abadb2c1b059b5f0b}{aom\+\_\+codec\+\_\+enc\+\_\+init\+\_\+multi\+\_\+ver()} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structaom__fixed__buf}{aom\+\_\+fixed\+\_\+buf} \hyperlink{group__encoder_ga85cca9fad6bc25c667f013a39c607174}{aom\+\_\+fixed\+\_\+buf\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Generic fixed size buffer structure. \end{DoxyCompactList}\item 
+typedef int64\+\_\+t \hyperlink{group__encoder_ga958524226c9a65251c9e4f7bb78fc606}{aom\+\_\+codec\+\_\+pts\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Time Stamp Type. \end{DoxyCompactList}\item 
+typedef uint32\+\_\+t \hyperlink{group__encoder_gaf776d31e60e32bee1cdbaf052a8ea12a}{aom\+\_\+codec\+\_\+frame\+\_\+flags\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Compressed Frame Flags. \end{DoxyCompactList}\item 
+typedef uint32\+\_\+t \hyperlink{group__encoder_ga5f326af84993f371bb165883bb5a5a59}{aom\+\_\+codec\+\_\+er\+\_\+flags\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Error Resilient flags. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structaom__codec__cx__pkt}{aom\+\_\+codec\+\_\+cx\+\_\+pkt} \hyperlink{group__encoder_ga2373bdec1f53ddb0736c53a5ebce7b7b}{aom\+\_\+codec\+\_\+cx\+\_\+pkt\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Encoder output packet. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structaom__rational}{aom\+\_\+rational} \hyperlink{group__encoder_ga89310b75f722a6f3ee5e88d9b0f5853f}{aom\+\_\+rational\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Rational Number. \end{DoxyCompactList}\item 
+typedef long \hyperlink{group__encoder_gacbef92200b831adb94283f84128f83de}{aom\+\_\+enc\+\_\+frame\+\_\+flags\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Encoded Frame Flags. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structaom__codec__enc__cfg}{aom\+\_\+codec\+\_\+enc\+\_\+cfg} \hyperlink{group__encoder_gab9627d5dcf858b7e755a5fc4a879e451}{aom\+\_\+codec\+\_\+enc\+\_\+cfg\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Encoder configuration structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__encoder_gafeb69da4a9649a54e805f59c26d8dfed}{aom\+\_\+codec\+\_\+cx\+\_\+pkt\+\_\+kind} \{ \\*
+\hyperlink{group__encoder_ggafeb69da4a9649a54e805f59c26d8dfeda793165d0f219812342f69d5fd9b2b9c8}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+X\+\_\+\+F\+R\+A\+M\+E\+\_\+\+P\+KT}, 
+\hyperlink{group__encoder_ggafeb69da4a9649a54e805f59c26d8dfeda7dcdcb6c401cac64ca98b51f52de8d4b}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+S\+T\+A\+T\+S\+\_\+\+P\+KT}, 
+\hyperlink{group__encoder_ggafeb69da4a9649a54e805f59c26d8dfedaaa76df44da4c92b08150b8a5326f5ebe}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+F\+P\+M\+B\+\_\+\+S\+T\+A\+T\+S\+\_\+\+P\+KT}, 
+\hyperlink{group__encoder_ggafeb69da4a9649a54e805f59c26d8dfeda3293bb764f30c11e9583510029578b75}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+P\+S\+N\+R\+\_\+\+P\+KT}, 
+\\*
+\hyperlink{group__encoder_ggafeb69da4a9649a54e805f59c26d8dfeda476a2ac59be68d61662824316bd57a8e}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+P\+KT} = 256
+ \}\begin{DoxyCompactList}\small\item\em Encoder output packet variants. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__encoder_ga92b6709b58dc3435e3ba652da562eda1}{aom\+\_\+enc\+\_\+pass} \{ \hyperlink{group__encoder_gga92b6709b58dc3435e3ba652da562eda1a1b4b8ee9c1910fc59ac9dfd9700f3f02}{A\+O\+M\+\_\+\+R\+C\+\_\+\+O\+N\+E\+\_\+\+P\+A\+SS}, 
+\hyperlink{group__encoder_gga92b6709b58dc3435e3ba652da562eda1ad342b33a290482c20238bfde5d9bea1e}{A\+O\+M\+\_\+\+R\+C\+\_\+\+F\+I\+R\+S\+T\+\_\+\+P\+A\+SS}, 
+\hyperlink{group__encoder_gga92b6709b58dc3435e3ba652da562eda1a621c3f07937527618dc06e962425f6cc}{A\+O\+M\+\_\+\+R\+C\+\_\+\+L\+A\+S\+T\+\_\+\+P\+A\+SS}
+ \}\begin{DoxyCompactList}\small\item\em Multi-\/pass Encoding Pass. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__encoder_ga7c084d3ecef569aad166ce70b0e8a957}{aom\+\_\+rc\+\_\+mode} \{ \hyperlink{group__encoder_gga7c084d3ecef569aad166ce70b0e8a957a7d3a2574737ea63d0f160ffdbd7f0110}{A\+O\+M\+\_\+\+V\+BR}, 
+\hyperlink{group__encoder_gga7c084d3ecef569aad166ce70b0e8a957a14b6057d61c61e6117f5af16dcf89b0c}{A\+O\+M\+\_\+\+C\+BR}, 
+\hyperlink{group__encoder_gga7c084d3ecef569aad166ce70b0e8a957a70aa1f15e91f6576ba3e63879947be64}{A\+O\+M\+\_\+\+CQ}, 
+\hyperlink{group__encoder_gga7c084d3ecef569aad166ce70b0e8a957aff3bbd4fe870b4b946c2093e59eb14e5}{A\+O\+M\+\_\+Q}
+ \}\begin{DoxyCompactList}\small\item\em Rate control mode. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__encoder_gac0498fc02cd368e6d9675cdb0bab5a84}{aom\+\_\+kf\+\_\+mode} \{ \hyperlink{group__encoder_ggac0498fc02cd368e6d9675cdb0bab5a84a8d6f57a670b8bd8f11dae3e89acedb1d}{A\+O\+M\+\_\+\+K\+F\+\_\+\+F\+I\+X\+ED}, 
+\hyperlink{group__encoder_ggac0498fc02cd368e6d9675cdb0bab5a84aea1965a235dea1b99d2b52145be35d4e}{A\+O\+M\+\_\+\+K\+F\+\_\+\+A\+U\+TO}, 
+\hyperlink{group__encoder_ggac0498fc02cd368e6d9675cdb0bab5a84af81473ffe0169271763f9c9d05393405}{A\+O\+M\+\_\+\+K\+F\+\_\+\+D\+I\+S\+A\+B\+L\+ED} = 0
+ \}\begin{DoxyCompactList}\small\item\em Keyframe placement mode. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__codec_gaaae61e0f8663e6137f1e228757248e7c}{aom\+\_\+codec\+\_\+err\+\_\+t} \hyperlink{group__encoder_ga205cf6f9460f4b4a842872012ef6fb0c}{aom\+\_\+codec\+\_\+enc\+\_\+init\+\_\+ver} (\hyperlink{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}{aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$ctx, \hyperlink{group__codec_ga4ef55b44c762836d1550e11921bed403}{aom\+\_\+codec\+\_\+iface\+\_\+t} $\ast$iface, const \hyperlink{group__encoder_gab9627d5dcf858b7e755a5fc4a879e451}{aom\+\_\+codec\+\_\+enc\+\_\+cfg\+\_\+t} $\ast$cfg, \hyperlink{group__codec_ga18f2242c1afca329581fbd3f2c81721b}{aom\+\_\+codec\+\_\+flags\+\_\+t} flags, int ver)
+\begin{DoxyCompactList}\small\item\em Initialize an encoder instance. \end{DoxyCompactList}\item 
+\hyperlink{group__codec_gaaae61e0f8663e6137f1e228757248e7c}{aom\+\_\+codec\+\_\+err\+\_\+t} \hyperlink{group__encoder_gad3dfb2298402298abadb2c1b059b5f0b}{aom\+\_\+codec\+\_\+enc\+\_\+init\+\_\+multi\+\_\+ver} (\hyperlink{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}{aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$ctx, \hyperlink{group__codec_ga4ef55b44c762836d1550e11921bed403}{aom\+\_\+codec\+\_\+iface\+\_\+t} $\ast$iface, \hyperlink{group__encoder_gab9627d5dcf858b7e755a5fc4a879e451}{aom\+\_\+codec\+\_\+enc\+\_\+cfg\+\_\+t} $\ast$cfg, int num\+\_\+enc, \hyperlink{group__codec_ga18f2242c1afca329581fbd3f2c81721b}{aom\+\_\+codec\+\_\+flags\+\_\+t} flags, \hyperlink{group__encoder_ga89310b75f722a6f3ee5e88d9b0f5853f}{aom\+\_\+rational\+\_\+t} $\ast$dsf, int ver)
+\begin{DoxyCompactList}\small\item\em Initialize multi-\/encoder instance. \end{DoxyCompactList}\item 
+\hyperlink{group__codec_gaaae61e0f8663e6137f1e228757248e7c}{aom\+\_\+codec\+\_\+err\+\_\+t} \hyperlink{group__encoder_gabe456ab6f99bdebc47018779b75d2521}{aom\+\_\+codec\+\_\+enc\+\_\+config\+\_\+default} (\hyperlink{group__codec_ga4ef55b44c762836d1550e11921bed403}{aom\+\_\+codec\+\_\+iface\+\_\+t} $\ast$iface, \hyperlink{group__encoder_gab9627d5dcf858b7e755a5fc4a879e451}{aom\+\_\+codec\+\_\+enc\+\_\+cfg\+\_\+t} $\ast$cfg, unsigned int reserved)
+\begin{DoxyCompactList}\small\item\em Get a default configuration. \end{DoxyCompactList}\item 
+\hyperlink{group__codec_gaaae61e0f8663e6137f1e228757248e7c}{aom\+\_\+codec\+\_\+err\+\_\+t} \hyperlink{group__encoder_gaf4a4c3c3c91dd92c960990f6e534271d}{aom\+\_\+codec\+\_\+enc\+\_\+config\+\_\+set} (\hyperlink{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}{aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$ctx, const \hyperlink{group__encoder_gab9627d5dcf858b7e755a5fc4a879e451}{aom\+\_\+codec\+\_\+enc\+\_\+cfg\+\_\+t} $\ast$cfg)
+\begin{DoxyCompactList}\small\item\em Set or change configuration. \end{DoxyCompactList}\item 
+\hyperlink{group__encoder_ga85cca9fad6bc25c667f013a39c607174}{aom\+\_\+fixed\+\_\+buf\+\_\+t} $\ast$ \hyperlink{group__encoder_gaa444a90b9ffdc2878686ac5bc83b50ff}{aom\+\_\+codec\+\_\+get\+\_\+global\+\_\+headers} (\hyperlink{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}{aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Get global stream headers. \end{DoxyCompactList}\item 
+\hyperlink{group__codec_gaaae61e0f8663e6137f1e228757248e7c}{aom\+\_\+codec\+\_\+err\+\_\+t} \hyperlink{group__encoder_ga6f4a777de5389771e783df7ff1f116d4}{aom\+\_\+codec\+\_\+encode} (\hyperlink{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}{aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$ctx, const \hyperlink{aom__image_8h_a5409ae8fdb326fe1cc32622ef4e23748}{aom\+\_\+image\+\_\+t} $\ast$img, \hyperlink{group__encoder_ga958524226c9a65251c9e4f7bb78fc606}{aom\+\_\+codec\+\_\+pts\+\_\+t} pts, unsigned long duration, \hyperlink{group__encoder_gacbef92200b831adb94283f84128f83de}{aom\+\_\+enc\+\_\+frame\+\_\+flags\+\_\+t} flags)
+\begin{DoxyCompactList}\small\item\em Encode a frame. \end{DoxyCompactList}\item 
+\hyperlink{group__codec_gaaae61e0f8663e6137f1e228757248e7c}{aom\+\_\+codec\+\_\+err\+\_\+t} \hyperlink{group__encoder_ga67b338974dd0a21cefec71d152dd5f51}{aom\+\_\+codec\+\_\+set\+\_\+cx\+\_\+data\+\_\+buf} (\hyperlink{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}{aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$ctx, const \hyperlink{group__encoder_ga85cca9fad6bc25c667f013a39c607174}{aom\+\_\+fixed\+\_\+buf\+\_\+t} $\ast$buf, unsigned int pad\+\_\+before, unsigned int pad\+\_\+after)
+\begin{DoxyCompactList}\small\item\em Set compressed data output buffer. \end{DoxyCompactList}\item 
+const \hyperlink{group__encoder_ga2373bdec1f53ddb0736c53a5ebce7b7b}{aom\+\_\+codec\+\_\+cx\+\_\+pkt\+\_\+t} $\ast$ \hyperlink{group__encoder_gaedc4c56b60d4217677cb561066360884}{aom\+\_\+codec\+\_\+get\+\_\+cx\+\_\+data} (\hyperlink{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}{aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$ctx, \hyperlink{group__codec_gadf9e173c9e02788a9999399edab20a02}{aom\+\_\+codec\+\_\+iter\+\_\+t} $\ast$iter)
+\begin{DoxyCompactList}\small\item\em Encoded data iterator. \end{DoxyCompactList}\item 
+const \hyperlink{aom__image_8h_a5409ae8fdb326fe1cc32622ef4e23748}{aom\+\_\+image\+\_\+t} $\ast$ \hyperlink{group__encoder_gadc3c2f483a71123d760552ef2593e0e5}{aom\+\_\+codec\+\_\+get\+\_\+preview\+\_\+frame} (\hyperlink{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}{aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Get Preview Frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Describes the encoder algorithm interface to applications. 
+
+This file describes the interface between an application and a video encoder algorithm. 
+
+\subsubsection{Macro Definition Documentation}
+\index{aom\+\_\+encoder.\+h@{aom\+\_\+encoder.\+h}!M\+A\+X\+\_\+\+T\+I\+L\+E\+\_\+\+W\+I\+D\+T\+HS@{M\+A\+X\+\_\+\+T\+I\+L\+E\+\_\+\+W\+I\+D\+T\+HS}}
+\index{M\+A\+X\+\_\+\+T\+I\+L\+E\+\_\+\+W\+I\+D\+T\+HS@{M\+A\+X\+\_\+\+T\+I\+L\+E\+\_\+\+W\+I\+D\+T\+HS}!aom\+\_\+encoder.\+h@{aom\+\_\+encoder.\+h}}
+\paragraph[{\texorpdfstring{M\+A\+X\+\_\+\+T\+I\+L\+E\+\_\+\+W\+I\+D\+T\+HS}{MAX_TILE_WIDTHS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+T\+I\+L\+E\+\_\+\+W\+I\+D\+T\+HS~64}\hypertarget{aom__encoder_8h_a3ec4904ea175471a03d10705f384d07c}{}\label{aom__encoder_8h_a3ec4904ea175471a03d10705f384d07c}
+
+
+Maximum number of tile widths in tile widths array. 
+
+This define gives the maximum number of elements in the tile\+\_\+widths array. \index{aom\+\_\+encoder.\+h@{aom\+\_\+encoder.\+h}!M\+A\+X\+\_\+\+T\+I\+L\+E\+\_\+\+H\+E\+I\+G\+H\+TS@{M\+A\+X\+\_\+\+T\+I\+L\+E\+\_\+\+H\+E\+I\+G\+H\+TS}}
+\index{M\+A\+X\+\_\+\+T\+I\+L\+E\+\_\+\+H\+E\+I\+G\+H\+TS@{M\+A\+X\+\_\+\+T\+I\+L\+E\+\_\+\+H\+E\+I\+G\+H\+TS}!aom\+\_\+encoder.\+h@{aom\+\_\+encoder.\+h}}
+\paragraph[{\texorpdfstring{M\+A\+X\+\_\+\+T\+I\+L\+E\+\_\+\+H\+E\+I\+G\+H\+TS}{MAX_TILE_HEIGHTS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+T\+I\+L\+E\+\_\+\+H\+E\+I\+G\+H\+TS~64}\hypertarget{aom__encoder_8h_a446aae868ff07f3971d9e84b6602a890}{}\label{aom__encoder_8h_a446aae868ff07f3971d9e84b6602a890}
+
+
+Maximum number of tile heights in tile heights array. 
+
+This define gives the maximum number of elements in the tile\+\_\+heights array. 

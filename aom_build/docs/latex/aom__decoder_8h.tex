@@ -1,0 +1,69 @@
+\hypertarget{aom__decoder_8h}{}\subsection{aom/aom\+\_\+decoder.h File Reference}
+\label{aom__decoder_8h}\index{aom/aom\+\_\+decoder.\+h@{aom/aom\+\_\+decoder.\+h}}
+
+
+Describes the decoder algorithm interface to applications.  
+
+
+{\ttfamily \#include \char`\"{}aom/aom\+\_\+codec.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}aom/aom\+\_\+frame\+\_\+buffer.\+h\char`\"{}}\\*
+\subsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structaom__codec__stream__info}{aom\+\_\+codec\+\_\+stream\+\_\+info}
+\begin{DoxyCompactList}\small\item\em Stream properties. \end{DoxyCompactList}\item 
+struct \hyperlink{structaom__codec__dec__cfg}{aom\+\_\+codec\+\_\+dec\+\_\+cfg}
+\begin{DoxyCompactList}\small\item\em Initialization Configurations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__decoder_ga23378c7ca8c361c097181aaaa2a5a734}{A\+O\+M\+\_\+\+D\+E\+C\+O\+D\+E\+R\+\_\+\+A\+B\+I\+\_\+\+V\+E\+R\+S\+I\+ON}
+\begin{DoxyCompactList}\small\item\em Current A\+BI version number. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__decoder_ga1e50f39bf0434fc5d18aeed80e06d044}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+P\+U\+T\+\_\+\+S\+L\+I\+CE}~0x10000
+\begin{DoxyCompactList}\small\item\em Decoder capabilities bitfield. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__decoder_ga667591ede452c5625fcf9345c66514d5}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+P\+U\+T\+\_\+\+F\+R\+A\+ME}~0x20000
+\item 
+\#define \hyperlink{group__decoder_gabcb476dc9748f64ad4a3718419bffc47}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+P\+O\+S\+T\+P\+R\+OC}~0x40000
+\item 
+\#define \hyperlink{group__decoder_gabd11df9f35d52ea76de2c8d32aa36963}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+B\+U\+F\+F\+ER}~0x200000
+\begin{DoxyCompactList}\small\item\em Initialization-\/time Feature Enabling. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__decoder_ga7b6c145833964c9edd3ff78be017f7ec}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+U\+S\+E\+\_\+\+P\+O\+S\+T\+P\+R\+OC}~0x10000
+\item 
+\#define \hyperlink{group__decoder_gafdbfca65b19ab1f6d72b32cd01753b9b}{aom\+\_\+codec\+\_\+dec\+\_\+init}(ctx,  iface,  cfg,  flags)~\hyperlink{group__decoder_gab2bfd2f5517b9452d2c71b7c2b2e8e8d}{aom\+\_\+codec\+\_\+dec\+\_\+init\+\_\+ver}(ctx, iface, cfg, flags, \hyperlink{group__decoder_ga23378c7ca8c361c097181aaaa2a5a734}{A\+O\+M\+\_\+\+D\+E\+C\+O\+D\+E\+R\+\_\+\+A\+B\+I\+\_\+\+V\+E\+R\+S\+I\+ON})
+\begin{DoxyCompactList}\small\item\em Convenience macro for \hyperlink{group__decoder_gab2bfd2f5517b9452d2c71b7c2b2e8e8d}{aom\+\_\+codec\+\_\+dec\+\_\+init\+\_\+ver()} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structaom__codec__stream__info}{aom\+\_\+codec\+\_\+stream\+\_\+info} \hyperlink{group__decoder_gab348c42a78bbbaa6488c84cdf3a28aaa}{aom\+\_\+codec\+\_\+stream\+\_\+info\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Stream properties. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structaom__codec__dec__cfg}{aom\+\_\+codec\+\_\+dec\+\_\+cfg} \hyperlink{group__decoder_ga629c80380a9351796022345f655a5f3d}{aom\+\_\+codec\+\_\+dec\+\_\+cfg\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Initialization Configurations. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{group__cap__put__frame_gade62af02658acd724fda731b6300eec7}{aom\+\_\+codec\+\_\+put\+\_\+frame\+\_\+cb\+\_\+fn\+\_\+t}) (void $\ast$user\+\_\+priv, const \hyperlink{aom__image_8h_a5409ae8fdb326fe1cc32622ef4e23748}{aom\+\_\+image\+\_\+t} $\ast$img)
+\begin{DoxyCompactList}\small\item\em put frame callback prototype \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{group__cap__put__slice_ga1eedb3b2df824386126cff04c0ce5bc9}{aom\+\_\+codec\+\_\+put\+\_\+slice\+\_\+cb\+\_\+fn\+\_\+t}) (void $\ast$user\+\_\+priv, const \hyperlink{aom__image_8h_a5409ae8fdb326fe1cc32622ef4e23748}{aom\+\_\+image\+\_\+t} $\ast$img, const \hyperlink{aom__image_8h_aeb7bd8cffc46083daea9b1955b8f245d}{aom\+\_\+image\+\_\+rect\+\_\+t} $\ast$valid, const \hyperlink{aom__image_8h_aeb7bd8cffc46083daea9b1955b8f245d}{aom\+\_\+image\+\_\+rect\+\_\+t} $\ast$update)
+\begin{DoxyCompactList}\small\item\em put slice callback prototype \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__codec_gaaae61e0f8663e6137f1e228757248e7c}{aom\+\_\+codec\+\_\+err\+\_\+t} \hyperlink{group__decoder_gab2bfd2f5517b9452d2c71b7c2b2e8e8d}{aom\+\_\+codec\+\_\+dec\+\_\+init\+\_\+ver} (\hyperlink{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}{aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$ctx, \hyperlink{group__codec_ga4ef55b44c762836d1550e11921bed403}{aom\+\_\+codec\+\_\+iface\+\_\+t} $\ast$iface, const \hyperlink{group__decoder_ga629c80380a9351796022345f655a5f3d}{aom\+\_\+codec\+\_\+dec\+\_\+cfg\+\_\+t} $\ast$cfg, \hyperlink{group__codec_ga18f2242c1afca329581fbd3f2c81721b}{aom\+\_\+codec\+\_\+flags\+\_\+t} flags, int ver)
+\begin{DoxyCompactList}\small\item\em Initialize a decoder instance. \end{DoxyCompactList}\item 
+\hyperlink{group__codec_gaaae61e0f8663e6137f1e228757248e7c}{aom\+\_\+codec\+\_\+err\+\_\+t} \hyperlink{group__decoder_ga2544bac9fdc439f0effd6b1b14df54be}{aom\+\_\+codec\+\_\+peek\+\_\+stream\+\_\+info} (\hyperlink{group__codec_ga4ef55b44c762836d1550e11921bed403}{aom\+\_\+codec\+\_\+iface\+\_\+t} $\ast$iface, const uint8\+\_\+t $\ast$data, size\+\_\+t data\+\_\+sz, \hyperlink{group__decoder_gab348c42a78bbbaa6488c84cdf3a28aaa}{aom\+\_\+codec\+\_\+stream\+\_\+info\+\_\+t} $\ast$si)
+\begin{DoxyCompactList}\small\item\em Parse stream info from a buffer. \end{DoxyCompactList}\item 
+\hyperlink{group__codec_gaaae61e0f8663e6137f1e228757248e7c}{aom\+\_\+codec\+\_\+err\+\_\+t} \hyperlink{group__decoder_ga2b456cf67b1b64dabed370c5d7514b29}{aom\+\_\+codec\+\_\+get\+\_\+stream\+\_\+info} (\hyperlink{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}{aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$ctx, \hyperlink{group__decoder_gab348c42a78bbbaa6488c84cdf3a28aaa}{aom\+\_\+codec\+\_\+stream\+\_\+info\+\_\+t} $\ast$si)
+\begin{DoxyCompactList}\small\item\em Return information about the current stream. \end{DoxyCompactList}\item 
+\hyperlink{group__codec_gaaae61e0f8663e6137f1e228757248e7c}{aom\+\_\+codec\+\_\+err\+\_\+t} \hyperlink{group__decoder_gab03fdb999d1f83a5896869a3ba5f68f7}{aom\+\_\+codec\+\_\+decode} (\hyperlink{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}{aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$ctx, const uint8\+\_\+t $\ast$data, size\+\_\+t data\+\_\+sz, void $\ast$user\+\_\+priv)
+\begin{DoxyCompactList}\small\item\em Decode data. \end{DoxyCompactList}\item 
+\hyperlink{aom__image_8h_a5409ae8fdb326fe1cc32622ef4e23748}{aom\+\_\+image\+\_\+t} $\ast$ \hyperlink{group__decoder_ga780aad27a2728abefab725faa3bc4f79}{aom\+\_\+codec\+\_\+get\+\_\+frame} (\hyperlink{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}{aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$ctx, \hyperlink{group__codec_gadf9e173c9e02788a9999399edab20a02}{aom\+\_\+codec\+\_\+iter\+\_\+t} $\ast$iter)
+\begin{DoxyCompactList}\small\item\em Decoded frames iterator. \end{DoxyCompactList}\item 
+\hyperlink{group__codec_gaaae61e0f8663e6137f1e228757248e7c}{aom\+\_\+codec\+\_\+err\+\_\+t} \hyperlink{group__cap__put__frame_ga0d6672fef284041573a29b76a0a5ef1b}{aom\+\_\+codec\+\_\+register\+\_\+put\+\_\+frame\+\_\+cb} (\hyperlink{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}{aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$ctx, \hyperlink{group__cap__put__frame_gade62af02658acd724fda731b6300eec7}{aom\+\_\+codec\+\_\+put\+\_\+frame\+\_\+cb\+\_\+fn\+\_\+t} cb, void $\ast$user\+\_\+priv)
+\begin{DoxyCompactList}\small\item\em Register for notification of frame completion. \end{DoxyCompactList}\item 
+\hyperlink{group__codec_gaaae61e0f8663e6137f1e228757248e7c}{aom\+\_\+codec\+\_\+err\+\_\+t} \hyperlink{group__cap__put__slice_ga1146b3f996a8a2347fa7157f7826957d}{aom\+\_\+codec\+\_\+register\+\_\+put\+\_\+slice\+\_\+cb} (\hyperlink{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}{aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$ctx, \hyperlink{group__cap__put__slice_ga1eedb3b2df824386126cff04c0ce5bc9}{aom\+\_\+codec\+\_\+put\+\_\+slice\+\_\+cb\+\_\+fn\+\_\+t} cb, void $\ast$user\+\_\+priv)
+\begin{DoxyCompactList}\small\item\em Register for notification of slice completion. \end{DoxyCompactList}\item 
+\hyperlink{group__codec_gaaae61e0f8663e6137f1e228757248e7c}{aom\+\_\+codec\+\_\+err\+\_\+t} \hyperlink{group__cap__external__frame__buffer_ga1818a812e4d1e70eeafbe5b0ee538d6e}{aom\+\_\+codec\+\_\+set\+\_\+frame\+\_\+buffer\+\_\+functions} (\hyperlink{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}{aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$ctx, \hyperlink{aom__frame__buffer_8h_a01fdfbbc9be8b320437a49d3de07814d}{aom\+\_\+get\+\_\+frame\+\_\+buffer\+\_\+cb\+\_\+fn\+\_\+t} cb\+\_\+get, \hyperlink{aom__frame__buffer_8h_a1803cd0766dc297d88172f174fbb6ab5}{aom\+\_\+release\+\_\+frame\+\_\+buffer\+\_\+cb\+\_\+fn\+\_\+t} cb\+\_\+release, void $\ast$cb\+\_\+priv)
+\begin{DoxyCompactList}\small\item\em Pass in external frame buffers for the decoder to use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Describes the decoder algorithm interface to applications. 
+
+This file describes the interface between an application and a video decoder algorithm. 

@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/chenjs/a5/aom_190109/aom/aom/aom_integer.h
+stddef.h
+-
+stdint.h
+-
+inttypes.h
+-
+
+/home/chenjs/a5/aom_190109/aom/aom_mem/aom_mem.c
+aom_mem.h
+/home/chenjs/a5/aom_190109/aom/aom_mem/aom_mem.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+include/aom_mem_intrnl.h
+/home/chenjs/a5/aom_190109/aom/aom_mem/include/aom_mem_intrnl.h
+aom/aom_integer.h
+/home/chenjs/a5/aom_190109/aom/aom_mem/aom/aom_integer.h
+
+/home/chenjs/a5/aom_190109/aom/aom_mem/aom_mem.h
+aom/aom_integer.h
+/home/chenjs/a5/aom_190109/aom/aom_mem/aom/aom_integer.h
+config/aom_config.h
+/home/chenjs/a5/aom_190109/aom/aom_mem/config/aom_config.h
+lddk.h
+-
+string.h
+-
+
+/home/chenjs/a5/aom_190109/aom/aom_mem/include/aom_mem_intrnl.h
+config/aom_config.h
+/home/chenjs/a5/aom_190109/aom/aom_mem/include/config/aom_config.h
+
+config/aom_config.h
+

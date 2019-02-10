@@ -1,0 +1,100 @@
+\hypertarget{structaom__codec__cx__pkt}{}\subsection{aom\+\_\+codec\+\_\+cx\+\_\+pkt Struct Reference}
+\label{structaom__codec__cx__pkt}\index{aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}}
+
+
+Encoder output packet.  
+
+
+
+
+{\ttfamily \#include $<$aom\+\_\+encoder.\+h$>$}
+
+\subsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__encoder_gafeb69da4a9649a54e805f59c26d8dfed}{aom\+\_\+codec\+\_\+cx\+\_\+pkt\+\_\+kind} \hyperlink{structaom__codec__cx__pkt_a11e586120c689ece9a7690e72ff384be}{kind}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>void $\ast$ \hyperlink{structaom__codec__cx__pkt_ae7f651df762a1f26529a1e9482b6ab7a}{buf}\\
+\>\>size\_t \hyperlink{structaom__codec__cx__pkt_a08d19fa7a14be2767d9578f5cca5631e}{sz}\\
+\>\>\hyperlink{group__encoder_ga958524226c9a65251c9e4f7bb78fc606}{aom\_codec\_pts\_t} \hyperlink{structaom__codec__cx__pkt_a66df8937a8944bae940a421e34eb0f41}{pts}\\
+\>\>\>{\em time stamp to show frame (in timebase units) }\\
+\>\>unsigned long \hyperlink{structaom__codec__cx__pkt_a072e5fe84d59d6f7d0fc910b5b608bdf}{duration}\\
+\>\>\>{\em duration to show frame (in timebase units) }\\
+\>\>\hyperlink{group__encoder_gaf776d31e60e32bee1cdbaf052a8ea12a}{aom\_codec\_frame\_flags\_t} \hyperlink{structaom__codec__cx__pkt_a9b064c19b81195c081af90e93879dec0}{flags}\\
+\>\>int \hyperlink{structaom__codec__cx__pkt_adfaff3754439ea957ee6957e05c85029}{partition\_id}\\
+\>\>\>{\em the partition id defines the decoding order of the partitions. Only applicable when \char`\"{}output partition\char`\"{} mode is enabled. First partition has id 0. }\\
+\>\>size\_t \hyperlink{structaom__codec__cx__pkt_a9219d4191e4141bd806ab5b55fb93f9d}{vis\_frame\_size}\\
+\>\>\>{\em size of the visible frame in this packet }\\
+\>\} \hyperlink{structaom__codec__cx__pkt_a4180a6ae59b0d295bc915d4689df4cb0}{frame}\\
+\>\hyperlink{group__encoder_ga85cca9fad6bc25c667f013a39c607174}{aom\_fixed\_buf\_t} \hyperlink{structaom__codec__cx__pkt_a40d469839bcd8195c3c8e80db6561dbb}{twopass\_stats}\\
+\>\hyperlink{group__encoder_ga85cca9fad6bc25c667f013a39c607174}{aom\_fixed\_buf\_t} \hyperlink{structaom__codec__cx__pkt_a8ce39bab39da5a247a27e42eb78386e2}{firstpass\_mb\_stats}\\
+\>struct {\bfseries aom\_psnr\_pkt} \{\\
+\>\>unsigned int \hyperlink{structaom__codec__cx__pkt_ae506ecf56b35d126ac24eb2c3ba7bb07}{samples} \mbox{[}4\mbox{]}\\
+\>\>uint64\_t \hyperlink{structaom__codec__cx__pkt_afe2d06d74e3fae7d04fdde4e7d1ae455}{sse} \mbox{[}4\mbox{]}\\
+\>\>double \hyperlink{structaom__codec__cx__pkt_a3a38e942aa0da463260a05eb05f51762}{psnr} \mbox{[}4\mbox{]}\\
+\>\} \hyperlink{structaom__codec__cx__pkt_a95d437114a001414f864e086ca6ab152}{psnr}\\
+\>\hyperlink{group__encoder_ga85cca9fad6bc25c667f013a39c607174}{aom\_fixed\_buf\_t} \hyperlink{structaom__codec__cx__pkt_a4fc6ea5e240c5df0acbf77aa2fe5ec6f}{raw}\\
+\>char \hyperlink{structaom__codec__cx__pkt_afe326262723aeb6bcd2eaa32d8d83336}{pad} \mbox{[}128-\/sizeof(enum \\
+\>\>\hyperlink{group__encoder_gafeb69da4a9649a54e805f59c26d8dfed}{aom\_codec\_cx\_pkt\_kind})\mbox{]}\\
+\} \hyperlink{structaom__codec__cx__pkt_afb379cd4bfa7692d1d6e85f4e4b2b410}{data}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Encoder output packet. 
+
+This structure contains the different kinds of output data the encoder may produce while compressing a frame. 
+
+\subsubsection{Field Documentation}
+\index{aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}!kind@{kind}}
+\index{kind@{kind}!aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}}
+\paragraph[{\texorpdfstring{kind}{kind}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf aom\+\_\+codec\+\_\+cx\+\_\+pkt\+\_\+kind} aom\+\_\+codec\+\_\+cx\+\_\+pkt\+::kind}\hypertarget{structaom__codec__cx__pkt_a11e586120c689ece9a7690e72ff384be}{}\label{structaom__codec__cx__pkt_a11e586120c689ece9a7690e72ff384be}
+packet variant \index{aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}!buf@{buf}}
+\index{buf@{buf}!aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}}
+\paragraph[{\texorpdfstring{buf}{buf}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ aom\+\_\+codec\+\_\+cx\+\_\+pkt\+::buf}\hypertarget{structaom__codec__cx__pkt_ae7f651df762a1f26529a1e9482b6ab7a}{}\label{structaom__codec__cx__pkt_ae7f651df762a1f26529a1e9482b6ab7a}
+compressed data buffer \index{aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}!sz@{sz}}
+\index{sz@{sz}!aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}}
+\paragraph[{\texorpdfstring{sz}{sz}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t aom\+\_\+codec\+\_\+cx\+\_\+pkt\+::sz}\hypertarget{structaom__codec__cx__pkt_a08d19fa7a14be2767d9578f5cca5631e}{}\label{structaom__codec__cx__pkt_a08d19fa7a14be2767d9578f5cca5631e}
+length of compressed data \index{aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}!flags@{flags}}
+\index{flags@{flags}!aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}}
+\paragraph[{\texorpdfstring{flags}{flags}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+codec\+\_\+frame\+\_\+flags\+\_\+t} aom\+\_\+codec\+\_\+cx\+\_\+pkt\+::flags}\hypertarget{structaom__codec__cx__pkt_a9b064c19b81195c081af90e93879dec0}{}\label{structaom__codec__cx__pkt_a9b064c19b81195c081af90e93879dec0}
+flags for this frame \index{aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}!frame@{frame}}
+\index{frame@{frame}!aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}}
+\paragraph[{\texorpdfstring{frame}{frame}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   aom\+\_\+codec\+\_\+cx\+\_\+pkt\+::frame}\hypertarget{structaom__codec__cx__pkt_a4180a6ae59b0d295bc915d4689df4cb0}{}\label{structaom__codec__cx__pkt_a4180a6ae59b0d295bc915d4689df4cb0}
+data for compressed frame packet \index{aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}!twopass\+\_\+stats@{twopass\+\_\+stats}}
+\index{twopass\+\_\+stats@{twopass\+\_\+stats}!aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}}
+\paragraph[{\texorpdfstring{twopass\+\_\+stats}{twopass_stats}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+fixed\+\_\+buf\+\_\+t} aom\+\_\+codec\+\_\+cx\+\_\+pkt\+::twopass\+\_\+stats}\hypertarget{structaom__codec__cx__pkt_a40d469839bcd8195c3c8e80db6561dbb}{}\label{structaom__codec__cx__pkt_a40d469839bcd8195c3c8e80db6561dbb}
+data for two-\/pass packet \index{aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}!firstpass\+\_\+mb\+\_\+stats@{firstpass\+\_\+mb\+\_\+stats}}
+\index{firstpass\+\_\+mb\+\_\+stats@{firstpass\+\_\+mb\+\_\+stats}!aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}}
+\paragraph[{\texorpdfstring{firstpass\+\_\+mb\+\_\+stats}{firstpass_mb_stats}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+fixed\+\_\+buf\+\_\+t} aom\+\_\+codec\+\_\+cx\+\_\+pkt\+::firstpass\+\_\+mb\+\_\+stats}\hypertarget{structaom__codec__cx__pkt_a8ce39bab39da5a247a27e42eb78386e2}{}\label{structaom__codec__cx__pkt_a8ce39bab39da5a247a27e42eb78386e2}
+first pass mb packet \index{aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}!samples@{samples}}
+\index{samples@{samples}!aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}}
+\paragraph[{\texorpdfstring{samples}{samples}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+cx\+\_\+pkt\+::samples\mbox{[}4\mbox{]}}\hypertarget{structaom__codec__cx__pkt_ae506ecf56b35d126ac24eb2c3ba7bb07}{}\label{structaom__codec__cx__pkt_ae506ecf56b35d126ac24eb2c3ba7bb07}
+Number of samples, total/y/u/v \index{aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}!sse@{sse}}
+\index{sse@{sse}!aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}}
+\paragraph[{\texorpdfstring{sse}{sse}}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t aom\+\_\+codec\+\_\+cx\+\_\+pkt\+::sse\mbox{[}4\mbox{]}}\hypertarget{structaom__codec__cx__pkt_afe2d06d74e3fae7d04fdde4e7d1ae455}{}\label{structaom__codec__cx__pkt_afe2d06d74e3fae7d04fdde4e7d1ae455}
+sum squared error, total/y/u/v \index{aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}!psnr@{psnr}}
+\index{psnr@{psnr}!aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}}
+\paragraph[{\texorpdfstring{psnr}{psnr}}]{\setlength{\rightskip}{0pt plus 5cm}double aom\+\_\+codec\+\_\+cx\+\_\+pkt\+::psnr\mbox{[}4\mbox{]}}\hypertarget{structaom__codec__cx__pkt_a3a38e942aa0da463260a05eb05f51762}{}\label{structaom__codec__cx__pkt_a3a38e942aa0da463260a05eb05f51762}
+P\+S\+NR, total/y/u/v \index{aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}!psnr@{psnr}}
+\index{psnr@{psnr}!aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}}
+\paragraph[{\texorpdfstring{psnr}{psnr}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \} \+::aom\+\_\+psnr\+\_\+pkt  aom\+\_\+codec\+\_\+cx\+\_\+pkt\+::psnr}\hypertarget{structaom__codec__cx__pkt_a95d437114a001414f864e086ca6ab152}{}\label{structaom__codec__cx__pkt_a95d437114a001414f864e086ca6ab152}
+data for P\+S\+NR packet \index{aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}!raw@{raw}}
+\index{raw@{raw}!aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}}
+\paragraph[{\texorpdfstring{raw}{raw}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+fixed\+\_\+buf\+\_\+t} aom\+\_\+codec\+\_\+cx\+\_\+pkt\+::raw}\hypertarget{structaom__codec__cx__pkt_a4fc6ea5e240c5df0acbf77aa2fe5ec6f}{}\label{structaom__codec__cx__pkt_a4fc6ea5e240c5df0acbf77aa2fe5ec6f}
+data for arbitrary packets \index{aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}!pad@{pad}}
+\index{pad@{pad}!aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}}
+\paragraph[{\texorpdfstring{pad}{pad}}]{\setlength{\rightskip}{0pt plus 5cm}char aom\+\_\+codec\+\_\+cx\+\_\+pkt\+::pad\mbox{[}128-\/sizeof(enum {\bf aom\+\_\+codec\+\_\+cx\+\_\+pkt\+\_\+kind})\mbox{]}}\hypertarget{structaom__codec__cx__pkt_afe326262723aeb6bcd2eaa32d8d83336}{}\label{structaom__codec__cx__pkt_afe326262723aeb6bcd2eaa32d8d83336}
+fixed sz \index{aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}!data@{data}}
+\index{data@{data}!aom\+\_\+codec\+\_\+cx\+\_\+pkt@{aom\+\_\+codec\+\_\+cx\+\_\+pkt}}
+\paragraph[{\texorpdfstring{data}{data}}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \}   aom\+\_\+codec\+\_\+cx\+\_\+pkt\+::data}\hypertarget{structaom__codec__cx__pkt_afb379cd4bfa7692d1d6e85f4e4b2b410}{}\label{structaom__codec__cx__pkt_afb379cd4bfa7692d1d6e85f4e4b2b410}
+packet data 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+aom/\hyperlink{aom__encoder_8h}{aom\+\_\+encoder.\+h}\end{DoxyCompactItemize}

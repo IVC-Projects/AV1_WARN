@@ -1,0 +1,42 @@
+\hypertarget{structAv1DecodeReturn}{}\subsection{Av1\+Decode\+Return Struct Reference}
+\label{structAv1DecodeReturn}\index{Av1\+Decode\+Return@{Av1\+Decode\+Return}}
+
+
+Structure to collect a buffer index when inspecting.  
+
+
+
+
+{\ttfamily \#include $<$aomdx.\+h$>$}
+
+\subsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const unsigned char $\ast$ \hyperlink{structAv1DecodeReturn_aab2b7d54d778b8d5ef5b475b4460ee9f}{buf}
+\item 
+int \hyperlink{structAv1DecodeReturn_aeefcb8b1f412902428fa86ea066e4414}{idx}
+\item 
+int \hyperlink{structAv1DecodeReturn_ac95f1cc492f7bb172dc1d9132674c3ec}{show\+\_\+existing}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Structure to collect a buffer index when inspecting. 
+
+Defines a structure to hold the buffer and return an index when calling decode from inspect. This enables us to decode non showable sub frames. 
+
+\subsubsection{Field Documentation}
+\index{Av1\+Decode\+Return@{Av1\+Decode\+Return}!buf@{buf}}
+\index{buf@{buf}!Av1\+Decode\+Return@{Av1\+Decode\+Return}}
+\paragraph[{\texorpdfstring{buf}{buf}}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned char$\ast$ Av1\+Decode\+Return\+::buf}\hypertarget{structAv1DecodeReturn_aab2b7d54d778b8d5ef5b475b4460ee9f}{}\label{structAv1DecodeReturn_aab2b7d54d778b8d5ef5b475b4460ee9f}
+Pointer for new position in compressed buffer after decoding 1 O\+BU. \index{Av1\+Decode\+Return@{Av1\+Decode\+Return}!idx@{idx}}
+\index{idx@{idx}!Av1\+Decode\+Return@{Av1\+Decode\+Return}}
+\paragraph[{\texorpdfstring{idx}{idx}}]{\setlength{\rightskip}{0pt plus 5cm}int Av1\+Decode\+Return\+::idx}\hypertarget{structAv1DecodeReturn_aeefcb8b1f412902428fa86ea066e4414}{}\label{structAv1DecodeReturn_aeefcb8b1f412902428fa86ea066e4414}
+Index into reference buffer array to see result of decoding 1 O\+BU. \index{Av1\+Decode\+Return@{Av1\+Decode\+Return}!show\+\_\+existing@{show\+\_\+existing}}
+\index{show\+\_\+existing@{show\+\_\+existing}!Av1\+Decode\+Return@{Av1\+Decode\+Return}}
+\paragraph[{\texorpdfstring{show\+\_\+existing}{show_existing}}]{\setlength{\rightskip}{0pt plus 5cm}int Av1\+Decode\+Return\+::show\+\_\+existing}\hypertarget{structAv1DecodeReturn_ac95f1cc492f7bb172dc1d9132674c3ec}{}\label{structAv1DecodeReturn_ac95f1cc492f7bb172dc1d9132674c3ec}
+Is a show existing frame. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+aom/\hyperlink{aomdx_8h}{aomdx.\+h}\end{DoxyCompactItemize}

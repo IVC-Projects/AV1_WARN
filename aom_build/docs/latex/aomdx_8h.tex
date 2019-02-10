@@ -1,0 +1,85 @@
+\hypertarget{aomdx_8h}{}\subsection{aom/aomdx.h File Reference}
+\label{aomdx_8h}\index{aom/aomdx.\+h@{aom/aomdx.\+h}}
+
+
+Provides definitions for using A\+OM or A\+V1 within the aom Decoder interface.  
+
+
+{\ttfamily \#include \char`\"{}aom/aom.\+h\char`\"{}}\\*
+\subsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structaom__inspect__init}{aom\+\_\+inspect\+\_\+init}
+\begin{DoxyCompactList}\small\item\em Structure to hold inspection callback and context. \end{DoxyCompactList}\item 
+struct \hyperlink{structAv1DecodeReturn}{Av1\+Decode\+Return}
+\begin{DoxyCompactList}\small\item\em Structure to collect a buffer index when inspecting. \end{DoxyCompactList}\item 
+struct \hyperlink{structaom__tile__data}{aom\+\_\+tile\+\_\+data}
+\begin{DoxyCompactList}\small\item\em Structure to hold a tile\textquotesingle{}s start address and size in the bitstream. \end{DoxyCompactList}\item 
+struct \hyperlink{structav1__ext__ref__frame}{av1\+\_\+ext\+\_\+ref\+\_\+frame}
+\begin{DoxyCompactList}\small\item\em Structure to hold the external reference frame pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group__aom__decoder_ga4e755ba2db79154311994183ad9e4b28}{Accounting} \hyperlink{group__aom__decoder_ga4e755ba2db79154311994183ad9e4b28}{Accounting}
+\item 
+typedef void($\ast$ \hyperlink{group__aom__decoder_ga1b37b4b76004e5a2776c2e2f16b052cd}{aom\+\_\+inspect\+\_\+cb}) (void $\ast$decoder, void $\ast$ctx)
+\item 
+typedef struct \hyperlink{structaom__inspect__init}{aom\+\_\+inspect\+\_\+init} \hyperlink{group__aom__decoder_gacb9e1c8988786bd40511f75106785f6d}{aom\+\_\+inspect\+\_\+init}
+\begin{DoxyCompactList}\small\item\em Structure to hold inspection callback and context. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structaom__tile__data}{aom\+\_\+tile\+\_\+data} \hyperlink{group__aom__decoder_ga9a0f96778a43917403e5163338bc1554}{aom\+\_\+tile\+\_\+data}
+\begin{DoxyCompactList}\small\item\em Structure to hold a tile\textquotesingle{}s start address and size in the bitstream. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structav1__ext__ref__frame}{av1\+\_\+ext\+\_\+ref\+\_\+frame} \hyperlink{group__aom__decoder_ga83fa00a891fa821cd5eb1c15ffd7287b}{av1\+\_\+ext\+\_\+ref\+\_\+frame\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Structure to hold the external reference frame pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__aom__decoder_ga3865fd4b3192489baa9a5c3632ebe97b}{aom\+\_\+dec\+\_\+control\+\_\+id} \{ \\*
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97babab96509cdce01ed1cf027185da4d874}{A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+R\+E\+F\+\_\+\+U\+P\+D\+A\+T\+ES} = A\+O\+M\+\_\+\+D\+E\+C\+O\+D\+E\+R\+\_\+\+C\+T\+R\+L\+\_\+\+I\+D\+\_\+\+S\+T\+A\+RT, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba159ddb748cb69956226b7c13e3890ff6}{A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba03f15fd9a3044ca1a1707e12b6a4588b}{A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+R\+E\+F\+\_\+\+U\+S\+ED}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba175c454a7adf2d3927a0e979b4a2b07b}{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+S\+I\+ZE}, 
+\\*
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba592a5d1390204d743ddfe7bfe8ef177c}{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+S\+I\+ZE}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97bace55b4f6d152f2f0d29f70ab918cba4f}{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+B\+I\+T\+\_\+\+D\+E\+P\+TH}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97bacd7229e5fb766670fe995739931c2ee3}{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+I\+M\+G\+\_\+\+F\+O\+R\+M\+AT}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba4d9799d9e520785870b8d1f73a19c3c4}{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+S\+I\+ZE}, 
+\\*
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba242d7dba47ef646f51f9795e2fa92f91}{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+C\+O\+U\+NT}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97babb0f1c97c6092ebed96ca9800e05157e}{A\+V1\+\_\+\+S\+E\+T\+\_\+\+B\+Y\+T\+E\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97bac19ffcb187b1e1b5eee18499a97f69d2}{A\+V1\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+\+T\+I\+L\+E\+\_\+\+D\+E\+C\+O\+D\+E\+\_\+\+O\+R\+D\+ER}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba45b658bd6518cfd30c56b13e98ab168a}{A\+V1\+\_\+\+S\+E\+T\+\_\+\+S\+K\+I\+P\+\_\+\+L\+O\+O\+P\+\_\+\+F\+I\+L\+T\+ER}, 
+\\*
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97bab7332818193596356a580c83ecb12a66}{A\+V1\+\_\+\+G\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+T\+I\+NG}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97baa984acc8b42df9c7d18fc3556a14fd29}{A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+Q\+U\+A\+N\+T\+I\+Z\+ER}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97bac056b4cf80427fd05e3c4c9fc46edb78}{A\+V1\+\_\+\+S\+E\+T\+\_\+\+D\+E\+C\+O\+D\+E\+\_\+\+T\+I\+L\+E\+\_\+\+R\+OW}, 
+{\bfseries A\+V1\+\_\+\+S\+E\+T\+\_\+\+D\+E\+C\+O\+D\+E\+\_\+\+T\+I\+L\+E\+\_\+\+C\+OL}, 
+\\*
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba0795d8084ae8c78528c01587198df9e2}{A\+V1\+\_\+\+S\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+M\+O\+DE}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97baed16ed4514ea1bd2847e607ca880b246}{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+I\+N\+FO}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97badf1e96275f692bc97ddb4ce2fbdb456e}{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+D\+A\+TA}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97badfbe6c1ebe4039bfef4d2cfd98755add}{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+R\+E\+F\+\_\+\+P\+TR}, 
+\\*
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97baffdaca91296725bd16142a33f3cc6522}{A\+V1\+D\+\_\+\+E\+X\+T\+\_\+\+T\+I\+L\+E\+\_\+\+D\+E\+B\+UG}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba4784af3a10d73a36f739cb1c99caf876}{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+R\+O\+W\+\_\+\+MT}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba1fb269c5c5913d9995b6c35d28e2a788}{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+I\+S\+\_\+\+A\+N\+N\+E\+XB}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97baa8b955fc5a2f6e33c6dad858d7c15f67}{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+N\+G\+\_\+\+P\+O\+I\+NT}, 
+\\*
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba8d51f96b8877b665225f5cfaa73ded8e}{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+A\+L\+L\+\_\+\+L\+A\+Y\+E\+RS}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97bae02fd57774db8c30e49b083fa51b6236}{A\+V1\+\_\+\+S\+E\+T\+\_\+\+I\+N\+S\+P\+E\+C\+T\+I\+O\+N\+\_\+\+C\+A\+L\+L\+B\+A\+CK}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba17fa09c9ce1ae4a68eae21efd219418b}{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+S\+K\+I\+P\+\_\+\+F\+I\+L\+M\+\_\+\+G\+R\+A\+IN}, 
+{\bfseries A\+O\+M\+\_\+\+D\+E\+C\+O\+D\+E\+R\+\_\+\+C\+T\+R\+L\+\_\+\+I\+D\+\_\+\+M\+AX}
+ \}\begin{DoxyCompactList}\small\item\em A\+OM decoder control functions. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsubsection*{Algorithm interface for A\+V1}
+\label{_amgrp8c574bd9a585a04008b0d15257056884}%
+This interface provides the capability to decode A\+V1 streams. \begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__codec_ga4ef55b44c762836d1550e11921bed403}{aom\+\_\+codec\+\_\+iface\+\_\+t} {\bfseries aom\+\_\+codec\+\_\+av1\+\_\+dx\+\_\+algo}
+\item 
+\hyperlink{group__codec_ga4ef55b44c762836d1550e11921bed403}{aom\+\_\+codec\+\_\+iface\+\_\+t} $\ast$ {\bfseries aom\+\_\+codec\+\_\+av1\+\_\+dx} (void)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Provides definitions for using A\+OM or A\+V1 within the aom Decoder interface. 
+

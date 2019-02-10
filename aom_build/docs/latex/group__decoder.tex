@@ -1,0 +1,291 @@
+\hypertarget{group__decoder}{}\subsection{Decoder Algorithm Interface}
+\label{group__decoder}\index{Decoder Algorithm Interface@{Decoder Algorithm Interface}}
+\subsubsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__cap__put__frame}{Frame-\/\+Based Decoding Functions}
+\item 
+\hyperlink{group__cap__put__slice}{Slice-\/\+Based Decoding Functions}
+\item 
+\hyperlink{group__cap__external__frame__buffer}{External Frame Buffer Functions}
+\end{DoxyCompactItemize}
+\subsubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{aom__decoder_8h}{aom\+\_\+decoder.\+h}
+\begin{DoxyCompactList}\small\item\em Describes the decoder algorithm interface to applications. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structaom__codec__stream__info}{aom\+\_\+codec\+\_\+stream\+\_\+info}
+\begin{DoxyCompactList}\small\item\em Stream properties. \end{DoxyCompactList}\item 
+struct \hyperlink{structaom__codec__dec__cfg}{aom\+\_\+codec\+\_\+dec\+\_\+cfg}
+\begin{DoxyCompactList}\small\item\em Initialization Configurations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__decoder_ga23378c7ca8c361c097181aaaa2a5a734}{A\+O\+M\+\_\+\+D\+E\+C\+O\+D\+E\+R\+\_\+\+A\+B\+I\+\_\+\+V\+E\+R\+S\+I\+ON}\hypertarget{group__decoder_ga23378c7ca8c361c097181aaaa2a5a734}{}\label{group__decoder_ga23378c7ca8c361c097181aaaa2a5a734}
+
+\begin{DoxyCompactList}\small\item\em Current A\+BI version number. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__decoder_ga1e50f39bf0434fc5d18aeed80e06d044}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+P\+U\+T\+\_\+\+S\+L\+I\+CE}~0x10000
+\begin{DoxyCompactList}\small\item\em Decoder capabilities bitfield. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__decoder_ga667591ede452c5625fcf9345c66514d5}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+P\+U\+T\+\_\+\+F\+R\+A\+ME}~0x20000
+\item 
+\#define \hyperlink{group__decoder_gabcb476dc9748f64ad4a3718419bffc47}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+P\+O\+S\+T\+P\+R\+OC}~0x40000
+\item 
+\#define \hyperlink{group__decoder_gabd11df9f35d52ea76de2c8d32aa36963}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+B\+U\+F\+F\+ER}~0x200000
+\begin{DoxyCompactList}\small\item\em Initialization-\/time Feature Enabling. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__decoder_ga7b6c145833964c9edd3ff78be017f7ec}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+U\+S\+E\+\_\+\+P\+O\+S\+T\+P\+R\+OC}~0x10000
+\item 
+\#define \hyperlink{group__decoder_gafdbfca65b19ab1f6d72b32cd01753b9b}{aom\+\_\+codec\+\_\+dec\+\_\+init}(ctx,  iface,  cfg,  flags)~\hyperlink{group__decoder_gab2bfd2f5517b9452d2c71b7c2b2e8e8d}{aom\+\_\+codec\+\_\+dec\+\_\+init\+\_\+ver}(ctx, iface, cfg, flags, \hyperlink{group__decoder_ga23378c7ca8c361c097181aaaa2a5a734}{A\+O\+M\+\_\+\+D\+E\+C\+O\+D\+E\+R\+\_\+\+A\+B\+I\+\_\+\+V\+E\+R\+S\+I\+ON})
+\begin{DoxyCompactList}\small\item\em Convenience macro for \hyperlink{group__decoder_gab2bfd2f5517b9452d2c71b7c2b2e8e8d}{aom\+\_\+codec\+\_\+dec\+\_\+init\+\_\+ver()} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structaom__codec__stream__info}{aom\+\_\+codec\+\_\+stream\+\_\+info} \hyperlink{group__decoder_gab348c42a78bbbaa6488c84cdf3a28aaa}{aom\+\_\+codec\+\_\+stream\+\_\+info\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Stream properties. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structaom__codec__dec__cfg}{aom\+\_\+codec\+\_\+dec\+\_\+cfg} \hyperlink{group__decoder_ga629c80380a9351796022345f655a5f3d}{aom\+\_\+codec\+\_\+dec\+\_\+cfg\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Initialization Configurations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__codec_gaaae61e0f8663e6137f1e228757248e7c}{aom\+\_\+codec\+\_\+err\+\_\+t} \hyperlink{group__decoder_gab2bfd2f5517b9452d2c71b7c2b2e8e8d}{aom\+\_\+codec\+\_\+dec\+\_\+init\+\_\+ver} (\hyperlink{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}{aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$ctx, \hyperlink{group__codec_ga4ef55b44c762836d1550e11921bed403}{aom\+\_\+codec\+\_\+iface\+\_\+t} $\ast$iface, const \hyperlink{group__decoder_ga629c80380a9351796022345f655a5f3d}{aom\+\_\+codec\+\_\+dec\+\_\+cfg\+\_\+t} $\ast$cfg, \hyperlink{group__codec_ga18f2242c1afca329581fbd3f2c81721b}{aom\+\_\+codec\+\_\+flags\+\_\+t} flags, int ver)
+\begin{DoxyCompactList}\small\item\em Initialize a decoder instance. \end{DoxyCompactList}\item 
+\hyperlink{group__codec_gaaae61e0f8663e6137f1e228757248e7c}{aom\+\_\+codec\+\_\+err\+\_\+t} \hyperlink{group__decoder_ga2544bac9fdc439f0effd6b1b14df54be}{aom\+\_\+codec\+\_\+peek\+\_\+stream\+\_\+info} (\hyperlink{group__codec_ga4ef55b44c762836d1550e11921bed403}{aom\+\_\+codec\+\_\+iface\+\_\+t} $\ast$iface, const uint8\+\_\+t $\ast$data, size\+\_\+t data\+\_\+sz, \hyperlink{group__decoder_gab348c42a78bbbaa6488c84cdf3a28aaa}{aom\+\_\+codec\+\_\+stream\+\_\+info\+\_\+t} $\ast$si)
+\begin{DoxyCompactList}\small\item\em Parse stream info from a buffer. \end{DoxyCompactList}\item 
+\hyperlink{group__codec_gaaae61e0f8663e6137f1e228757248e7c}{aom\+\_\+codec\+\_\+err\+\_\+t} \hyperlink{group__decoder_ga2b456cf67b1b64dabed370c5d7514b29}{aom\+\_\+codec\+\_\+get\+\_\+stream\+\_\+info} (\hyperlink{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}{aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$ctx, \hyperlink{group__decoder_gab348c42a78bbbaa6488c84cdf3a28aaa}{aom\+\_\+codec\+\_\+stream\+\_\+info\+\_\+t} $\ast$si)
+\begin{DoxyCompactList}\small\item\em Return information about the current stream. \end{DoxyCompactList}\item 
+\hyperlink{group__codec_gaaae61e0f8663e6137f1e228757248e7c}{aom\+\_\+codec\+\_\+err\+\_\+t} \hyperlink{group__decoder_gab03fdb999d1f83a5896869a3ba5f68f7}{aom\+\_\+codec\+\_\+decode} (\hyperlink{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}{aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$ctx, const uint8\+\_\+t $\ast$data, size\+\_\+t data\+\_\+sz, void $\ast$user\+\_\+priv)
+\begin{DoxyCompactList}\small\item\em Decode data. \end{DoxyCompactList}\item 
+\hyperlink{aom__image_8h_a5409ae8fdb326fe1cc32622ef4e23748}{aom\+\_\+image\+\_\+t} $\ast$ \hyperlink{group__decoder_ga780aad27a2728abefab725faa3bc4f79}{aom\+\_\+codec\+\_\+get\+\_\+frame} (\hyperlink{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}{aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$ctx, \hyperlink{group__codec_gadf9e173c9e02788a9999399edab20a02}{aom\+\_\+codec\+\_\+iter\+\_\+t} $\ast$iter)
+\begin{DoxyCompactList}\small\item\em Decoded frames iterator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+This abstraction allows applications using this decoder to easily support multiple video formats with minimal code duplication. This section describes the interface common to all decoders. 
+
+\subsubsection{Macro Definition Documentation}
+\index{Decoder Algorithm Interface@{Decoder Algorithm Interface}!A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+P\+U\+T\+\_\+\+S\+L\+I\+CE@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+P\+U\+T\+\_\+\+S\+L\+I\+CE}}
+\index{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+P\+U\+T\+\_\+\+S\+L\+I\+CE@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+P\+U\+T\+\_\+\+S\+L\+I\+CE}!Decoder Algorithm Interface@{Decoder Algorithm Interface}}
+\paragraph[{\texorpdfstring{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+P\+U\+T\+\_\+\+S\+L\+I\+CE}{AOM_CODEC_CAP_PUT_SLICE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+P\+U\+T\+\_\+\+S\+L\+I\+CE~0x10000}\hypertarget{group__decoder_ga1e50f39bf0434fc5d18aeed80e06d044}{}\label{group__decoder_ga1e50f39bf0434fc5d18aeed80e06d044}
+
+
+Decoder capabilities bitfield. 
+
+Each decoder advertises the capabilities it supports as part of its \hyperlink{group__codec_ga4ef55b44c762836d1550e11921bed403}{aom\+\_\+codec\+\_\+iface\+\_\+t} interface structure. Capabilities are extra interfaces or functionality, and are not required to be supported by a decoder.
+
+The available flags are specified by A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+$\ast$ defines.\+Will issue put\+\_\+slice callbacks \index{Decoder Algorithm Interface@{Decoder Algorithm Interface}!A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+P\+U\+T\+\_\+\+F\+R\+A\+ME@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+P\+U\+T\+\_\+\+F\+R\+A\+ME}}
+\index{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+P\+U\+T\+\_\+\+F\+R\+A\+ME@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+P\+U\+T\+\_\+\+F\+R\+A\+ME}!Decoder Algorithm Interface@{Decoder Algorithm Interface}}
+\paragraph[{\texorpdfstring{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+P\+U\+T\+\_\+\+F\+R\+A\+ME}{AOM_CODEC_CAP_PUT_FRAME}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+P\+U\+T\+\_\+\+F\+R\+A\+ME~0x20000}\hypertarget{group__decoder_ga667591ede452c5625fcf9345c66514d5}{}\label{group__decoder_ga667591ede452c5625fcf9345c66514d5}
+Will issue put\+\_\+frame callbacks \index{Decoder Algorithm Interface@{Decoder Algorithm Interface}!A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+P\+O\+S\+T\+P\+R\+OC@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+P\+O\+S\+T\+P\+R\+OC}}
+\index{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+P\+O\+S\+T\+P\+R\+OC@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+P\+O\+S\+T\+P\+R\+OC}!Decoder Algorithm Interface@{Decoder Algorithm Interface}}
+\paragraph[{\texorpdfstring{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+P\+O\+S\+T\+P\+R\+OC}{AOM_CODEC_CAP_POSTPROC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+P\+O\+S\+T\+P\+R\+OC~0x40000}\hypertarget{group__decoder_gabcb476dc9748f64ad4a3718419bffc47}{}\label{group__decoder_gabcb476dc9748f64ad4a3718419bffc47}
+Can postprocess decoded frame \index{Decoder Algorithm Interface@{Decoder Algorithm Interface}!A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+B\+U\+F\+F\+ER@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+B\+U\+F\+F\+ER}}
+\index{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+B\+U\+F\+F\+ER@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+B\+U\+F\+F\+ER}!Decoder Algorithm Interface@{Decoder Algorithm Interface}}
+\paragraph[{\texorpdfstring{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+B\+U\+F\+F\+ER}{AOM_CODEC_CAP_EXTERNAL_FRAME_BUFFER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+B\+U\+F\+F\+ER~0x200000}\hypertarget{group__decoder_gabd11df9f35d52ea76de2c8d32aa36963}{}\label{group__decoder_gabd11df9f35d52ea76de2c8d32aa36963}
+
+
+Initialization-\/time Feature Enabling. 
+
+Certain codec features must be known at initialization time, to allow for proper memory allocation.
+
+The available flags are specified by A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+U\+S\+E\+\_\+$\ast$ defines.
+
+brief Can support external frame buffers \index{Decoder Algorithm Interface@{Decoder Algorithm Interface}!A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+U\+S\+E\+\_\+\+P\+O\+S\+T\+P\+R\+OC@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+U\+S\+E\+\_\+\+P\+O\+S\+T\+P\+R\+OC}}
+\index{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+U\+S\+E\+\_\+\+P\+O\+S\+T\+P\+R\+OC@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+U\+S\+E\+\_\+\+P\+O\+S\+T\+P\+R\+OC}!Decoder Algorithm Interface@{Decoder Algorithm Interface}}
+\paragraph[{\texorpdfstring{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+U\+S\+E\+\_\+\+P\+O\+S\+T\+P\+R\+OC}{AOM_CODEC_USE_POSTPROC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+U\+S\+E\+\_\+\+P\+O\+S\+T\+P\+R\+OC~0x10000}\hypertarget{group__decoder_ga7b6c145833964c9edd3ff78be017f7ec}{}\label{group__decoder_ga7b6c145833964c9edd3ff78be017f7ec}
+Postprocess decoded frame \index{Decoder Algorithm Interface@{Decoder Algorithm Interface}!aom\+\_\+codec\+\_\+dec\+\_\+init@{aom\+\_\+codec\+\_\+dec\+\_\+init}}
+\index{aom\+\_\+codec\+\_\+dec\+\_\+init@{aom\+\_\+codec\+\_\+dec\+\_\+init}!Decoder Algorithm Interface@{Decoder Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+dec\+\_\+init}{aom_codec_dec_init}}]{\setlength{\rightskip}{0pt plus 5cm}\#define aom\+\_\+codec\+\_\+dec\+\_\+init(
+\begin{DoxyParamCaption}
+\item[{}]{ctx, }
+\item[{}]{iface, }
+\item[{}]{cfg, }
+\item[{}]{flags}
+\end{DoxyParamCaption}
+)~{\bf aom\+\_\+codec\+\_\+dec\+\_\+init\+\_\+ver}(ctx, iface, cfg, flags, {\bf A\+O\+M\+\_\+\+D\+E\+C\+O\+D\+E\+R\+\_\+\+A\+B\+I\+\_\+\+V\+E\+R\+S\+I\+ON})}\hypertarget{group__decoder_gafdbfca65b19ab1f6d72b32cd01753b9b}{}\label{group__decoder_gafdbfca65b19ab1f6d72b32cd01753b9b}
+
+
+Convenience macro for \hyperlink{group__decoder_gab2bfd2f5517b9452d2c71b7c2b2e8e8d}{aom\+\_\+codec\+\_\+dec\+\_\+init\+\_\+ver()} 
+
+Ensures the A\+BI version parameter is properly set. 
+
+\subsubsection{Typedef Documentation}
+\index{Decoder Algorithm Interface@{Decoder Algorithm Interface}!aom\+\_\+codec\+\_\+stream\+\_\+info\+\_\+t@{aom\+\_\+codec\+\_\+stream\+\_\+info\+\_\+t}}
+\index{aom\+\_\+codec\+\_\+stream\+\_\+info\+\_\+t@{aom\+\_\+codec\+\_\+stream\+\_\+info\+\_\+t}!Decoder Algorithm Interface@{Decoder Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+stream\+\_\+info\+\_\+t}{aom_codec_stream_info_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf aom\+\_\+codec\+\_\+stream\+\_\+info}  {\bf aom\+\_\+codec\+\_\+stream\+\_\+info\+\_\+t}}\hypertarget{group__decoder_gab348c42a78bbbaa6488c84cdf3a28aaa}{}\label{group__decoder_gab348c42a78bbbaa6488c84cdf3a28aaa}
+
+
+Stream properties. 
+
+This structure is used to query or set properties of the decoded stream. \index{Decoder Algorithm Interface@{Decoder Algorithm Interface}!aom\+\_\+codec\+\_\+dec\+\_\+cfg\+\_\+t@{aom\+\_\+codec\+\_\+dec\+\_\+cfg\+\_\+t}}
+\index{aom\+\_\+codec\+\_\+dec\+\_\+cfg\+\_\+t@{aom\+\_\+codec\+\_\+dec\+\_\+cfg\+\_\+t}!Decoder Algorithm Interface@{Decoder Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+dec\+\_\+cfg\+\_\+t}{aom_codec_dec_cfg_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf aom\+\_\+codec\+\_\+dec\+\_\+cfg}  {\bf aom\+\_\+codec\+\_\+dec\+\_\+cfg\+\_\+t}}\hypertarget{group__decoder_ga629c80380a9351796022345f655a5f3d}{}\label{group__decoder_ga629c80380a9351796022345f655a5f3d}
+
+
+Initialization Configurations. 
+
+This structure is used to pass init time configuration options to the decoder.\+alias for struct \hyperlink{structaom__codec__dec__cfg}{aom\+\_\+codec\+\_\+dec\+\_\+cfg} 
+
+\subsubsection{Function Documentation}
+\index{Decoder Algorithm Interface@{Decoder Algorithm Interface}!aom\+\_\+codec\+\_\+dec\+\_\+init\+\_\+ver@{aom\+\_\+codec\+\_\+dec\+\_\+init\+\_\+ver}}
+\index{aom\+\_\+codec\+\_\+dec\+\_\+init\+\_\+ver@{aom\+\_\+codec\+\_\+dec\+\_\+init\+\_\+ver}!Decoder Algorithm Interface@{Decoder Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+dec\+\_\+init\+\_\+ver(aom\+\_\+codec\+\_\+ctx\+\_\+t $\ast$ctx, aom\+\_\+codec\+\_\+iface\+\_\+t $\ast$iface, const aom\+\_\+codec\+\_\+dec\+\_\+cfg\+\_\+t $\ast$cfg, aom\+\_\+codec\+\_\+flags\+\_\+t flags, int ver)}{aom_codec_dec_init_ver(aom_codec_ctx_t *ctx, aom_codec_iface_t *iface, const aom_codec_dec_cfg_t *cfg, aom_codec_flags_t flags, int ver)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+codec\+\_\+err\+\_\+t} aom\+\_\+codec\+\_\+dec\+\_\+init\+\_\+ver (
+\begin{DoxyParamCaption}
+\item[{{\bf aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$}]{ctx, }
+\item[{{\bf aom\+\_\+codec\+\_\+iface\+\_\+t} $\ast$}]{iface, }
+\item[{const {\bf aom\+\_\+codec\+\_\+dec\+\_\+cfg\+\_\+t} $\ast$}]{cfg, }
+\item[{{\bf aom\+\_\+codec\+\_\+flags\+\_\+t}}]{flags, }
+\item[{int}]{ver}
+\end{DoxyParamCaption}
+)}\hypertarget{group__decoder_gab2bfd2f5517b9452d2c71b7c2b2e8e8d}{}\label{group__decoder_gab2bfd2f5517b9452d2c71b7c2b2e8e8d}
+
+
+Initialize a decoder instance. 
+
+Initializes a decoder context using the given interface. Applications should call the aom\+\_\+codec\+\_\+dec\+\_\+init convenience macro instead of this function directly, to ensure that the A\+BI version number parameter is properly initialized.
+
+If the library was configured with --disable-\/multithread, this call is not thread safe and should be guarded with a lock if being used in a multithreaded context.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ctx} & Pointer to this instance\textquotesingle{}s context. \\
+\hline
+\mbox{\tt in}  & {\em iface} & Pointer to the algorithm interface to use. \\
+\hline
+\mbox{\tt in}  & {\em cfg} & Configuration to use, if known. May be N\+U\+LL. \\
+\hline
+\mbox{\tt in}  & {\em flags} & Bitfield of A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+U\+S\+E\+\_\+$\ast$ flags \\
+\hline
+\mbox{\tt in}  & {\em ver} & A\+BI version number. Must be set to A\+O\+M\+\_\+\+D\+E\+C\+O\+D\+E\+R\+\_\+\+A\+B\+I\+\_\+\+V\+E\+R\+S\+I\+ON \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7caf145dc2f86014a08ebad36ac2b140001}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+OK}} & The decoder algorithm initialized. \\
+\hline
+{\em \hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7caa4328d9fc527a3fd3cf76eb54e3db1a2}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+M\+E\+M\+\_\+\+E\+R\+R\+OR}} & Memory allocation failed. \\
+\hline
+\end{DoxyRetVals}
+\index{Decoder Algorithm Interface@{Decoder Algorithm Interface}!aom\+\_\+codec\+\_\+peek\+\_\+stream\+\_\+info@{aom\+\_\+codec\+\_\+peek\+\_\+stream\+\_\+info}}
+\index{aom\+\_\+codec\+\_\+peek\+\_\+stream\+\_\+info@{aom\+\_\+codec\+\_\+peek\+\_\+stream\+\_\+info}!Decoder Algorithm Interface@{Decoder Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+peek\+\_\+stream\+\_\+info(aom\+\_\+codec\+\_\+iface\+\_\+t $\ast$iface, const uint8\+\_\+t $\ast$data, size\+\_\+t data\+\_\+sz, aom\+\_\+codec\+\_\+stream\+\_\+info\+\_\+t $\ast$si)}{aom_codec_peek_stream_info(aom_codec_iface_t *iface, const uint8_t *data, size_t data_sz, aom_codec_stream_info_t *si)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+codec\+\_\+err\+\_\+t} aom\+\_\+codec\+\_\+peek\+\_\+stream\+\_\+info (
+\begin{DoxyParamCaption}
+\item[{{\bf aom\+\_\+codec\+\_\+iface\+\_\+t} $\ast$}]{iface, }
+\item[{const uint8\+\_\+t $\ast$}]{data, }
+\item[{size\+\_\+t}]{data\+\_\+sz, }
+\item[{{\bf aom\+\_\+codec\+\_\+stream\+\_\+info\+\_\+t} $\ast$}]{si}
+\end{DoxyParamCaption}
+)}\hypertarget{group__decoder_ga2544bac9fdc439f0effd6b1b14df54be}{}\label{group__decoder_ga2544bac9fdc439f0effd6b1b14df54be}
+
+
+Parse stream info from a buffer. 
+
+Performs high level parsing of the bitstream. Construction of a decoder context is not necessary. Can be used to determine if the bitstream is of the proper format, and to extract information from the stream.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em iface} & Pointer to the algorithm interface \\
+\hline
+\mbox{\tt in}  & {\em data} & Pointer to a block of data to parse \\
+\hline
+\mbox{\tt in}  & {\em data\+\_\+sz} & Size of the data buffer \\
+\hline
+\mbox{\tt in,out}  & {\em si} & Pointer to stream info to update. The is\+\_\+annexb member \hyperlink{rfc2119_MUST}{M\+U\+ST} be properly initialized. This function sets the rest of the members.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7caf145dc2f86014a08ebad36ac2b140001}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+OK}} & Bitstream is parsable and stream information updated. \\
+\hline
+{\em \hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca0c6ff8587f8bcc0429aecfa9fe2762df}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM}} & One of the arguments is invalid, for example a N\+U\+LL pointer. \\
+\hline
+{\em \hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca38b6a9786805f6c215cff72985cc6fdb}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+U\+N\+S\+U\+P\+\_\+\+B\+I\+T\+S\+T\+R\+E\+AM}} & The decoder didn\textquotesingle{}t recognize the coded data, or the buffer was too short. \\
+\hline
+\end{DoxyRetVals}
+\index{Decoder Algorithm Interface@{Decoder Algorithm Interface}!aom\+\_\+codec\+\_\+get\+\_\+stream\+\_\+info@{aom\+\_\+codec\+\_\+get\+\_\+stream\+\_\+info}}
+\index{aom\+\_\+codec\+\_\+get\+\_\+stream\+\_\+info@{aom\+\_\+codec\+\_\+get\+\_\+stream\+\_\+info}!Decoder Algorithm Interface@{Decoder Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+get\+\_\+stream\+\_\+info(aom\+\_\+codec\+\_\+ctx\+\_\+t $\ast$ctx, aom\+\_\+codec\+\_\+stream\+\_\+info\+\_\+t $\ast$si)}{aom_codec_get_stream_info(aom_codec_ctx_t *ctx, aom_codec_stream_info_t *si)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+codec\+\_\+err\+\_\+t} aom\+\_\+codec\+\_\+get\+\_\+stream\+\_\+info (
+\begin{DoxyParamCaption}
+\item[{{\bf aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$}]{ctx, }
+\item[{{\bf aom\+\_\+codec\+\_\+stream\+\_\+info\+\_\+t} $\ast$}]{si}
+\end{DoxyParamCaption}
+)}\hypertarget{group__decoder_ga2b456cf67b1b64dabed370c5d7514b29}{}\label{group__decoder_ga2b456cf67b1b64dabed370c5d7514b29}
+
+
+Return information about the current stream. 
+
+Returns information about the stream that has been parsed during decoding.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ctx} & Pointer to this instance\textquotesingle{}s context \\
+\hline
+\mbox{\tt in,out}  & {\em si} & Pointer to stream info to update.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7caf145dc2f86014a08ebad36ac2b140001}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+OK}} & Bitstream is parsable and stream information updated. \\
+\hline
+{\em \hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca0c6ff8587f8bcc0429aecfa9fe2762df}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM}} & One of the arguments is invalid, for example a N\+U\+LL pointer. \\
+\hline
+{\em \hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca38b6a9786805f6c215cff72985cc6fdb}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+U\+N\+S\+U\+P\+\_\+\+B\+I\+T\+S\+T\+R\+E\+AM}} & The decoder couldn\textquotesingle{}t parse the submitted data. \\
+\hline
+\end{DoxyRetVals}
+\index{Decoder Algorithm Interface@{Decoder Algorithm Interface}!aom\+\_\+codec\+\_\+decode@{aom\+\_\+codec\+\_\+decode}}
+\index{aom\+\_\+codec\+\_\+decode@{aom\+\_\+codec\+\_\+decode}!Decoder Algorithm Interface@{Decoder Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+decode(aom\+\_\+codec\+\_\+ctx\+\_\+t $\ast$ctx, const uint8\+\_\+t $\ast$data, size\+\_\+t data\+\_\+sz, void $\ast$user\+\_\+priv)}{aom_codec_decode(aom_codec_ctx_t *ctx, const uint8_t *data, size_t data_sz, void *user_priv)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+codec\+\_\+err\+\_\+t} aom\+\_\+codec\+\_\+decode (
+\begin{DoxyParamCaption}
+\item[{{\bf aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$}]{ctx, }
+\item[{const uint8\+\_\+t $\ast$}]{data, }
+\item[{size\+\_\+t}]{data\+\_\+sz, }
+\item[{void $\ast$}]{user\+\_\+priv}
+\end{DoxyParamCaption}
+)}\hypertarget{group__decoder_gab03fdb999d1f83a5896869a3ba5f68f7}{}\label{group__decoder_gab03fdb999d1f83a5896869a3ba5f68f7}
+
+
+Decode data. 
+
+Processes a buffer of coded data. If the processing results in a new decoded frame becoming available, P\+U\+T\+\_\+\+S\+L\+I\+CE and P\+U\+T\+\_\+\+F\+R\+A\+ME events may be generated, as appropriate. Encoded data \hyperlink{rfc2119_MUST}{M\+U\+ST} be passed in D\+TS (decode time stamp) order. Frames produced will always be in P\+TS (presentation time stamp) order.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ctx} & Pointer to this instance\textquotesingle{}s context \\
+\hline
+\mbox{\tt in}  & {\em data} & Pointer to this block of new coded data. If N\+U\+LL, a A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+B\+\_\+\+P\+U\+T\+\_\+\+F\+R\+A\+ME event is posted for the previously decoded frame. \\
+\hline
+\mbox{\tt in}  & {\em data\+\_\+sz} & Size of the coded data, in bytes. \\
+\hline
+\mbox{\tt in}  & {\em user\+\_\+priv} & Application specific data to associate with this frame.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns \hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7caf145dc2f86014a08ebad36ac2b140001}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+OK} if the coded data was processed completely and future pictures can be decoded without error. Otherwise, see the descriptions of the other error codes in \hyperlink{group__codec_gaaae61e0f8663e6137f1e228757248e7c}{aom\+\_\+codec\+\_\+err\+\_\+t} for recoverability capabilities. 
+\end{DoxyReturn}
+\index{Decoder Algorithm Interface@{Decoder Algorithm Interface}!aom\+\_\+codec\+\_\+get\+\_\+frame@{aom\+\_\+codec\+\_\+get\+\_\+frame}}
+\index{aom\+\_\+codec\+\_\+get\+\_\+frame@{aom\+\_\+codec\+\_\+get\+\_\+frame}!Decoder Algorithm Interface@{Decoder Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+get\+\_\+frame(aom\+\_\+codec\+\_\+ctx\+\_\+t $\ast$ctx, aom\+\_\+codec\+\_\+iter\+\_\+t $\ast$iter)}{aom_codec_get_frame(aom_codec_ctx_t *ctx, aom_codec_iter_t *iter)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+image\+\_\+t}$\ast$ aom\+\_\+codec\+\_\+get\+\_\+frame (
+\begin{DoxyParamCaption}
+\item[{{\bf aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$}]{ctx, }
+\item[{{\bf aom\+\_\+codec\+\_\+iter\+\_\+t} $\ast$}]{iter}
+\end{DoxyParamCaption}
+)}\hypertarget{group__decoder_ga780aad27a2728abefab725faa3bc4f79}{}\label{group__decoder_ga780aad27a2728abefab725faa3bc4f79}
+
+
+Decoded frames iterator. 
+
+Iterates over a list of the frames available for display. The iterator storage should be initialized to N\+U\+LL to start the iteration. Iteration is complete when this function returns N\+U\+LL.
+
+The list of available frames becomes valid upon completion of the aom\+\_\+codec\+\_\+decode call, and remains valid until the next call to aom\+\_\+codec\+\_\+decode.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ctx} & Pointer to this instance\textquotesingle{}s context \\
+\hline
+\mbox{\tt in,out}  & {\em iter} & Iterator storage, initialized to N\+U\+LL\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a pointer to an image, if one is ready for display. Frames produced will always be in P\+TS (presentation time stamp) order. 
+\end{DoxyReturn}

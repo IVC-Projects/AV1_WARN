@@ -1,0 +1,2 @@
+/usr/bin/ar qc libaom_ports.a  CMakeFiles/aom_ports.dir/gen_src/aom_ports_dummy.c.o
+/usr/bin/ranlib libaom_ports.a

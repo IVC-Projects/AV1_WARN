@@ -1,0 +1,59 @@
+\hypertarget{structaom__roi__map}{}\subsection{aom\+\_\+roi\+\_\+map Struct Reference}
+\label{structaom__roi__map}\index{aom\+\_\+roi\+\_\+map@{aom\+\_\+roi\+\_\+map}}
+
+
+aom region of interest map  
+
+
+
+
+{\ttfamily \#include $<$aomcx.\+h$>$}
+
+\subsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char $\ast$ \hyperlink{structaom__roi__map_a7d12a1d1074e33fd32077d568e4304d6}{roi\+\_\+map}
+\item 
+unsigned int \hyperlink{structaom__roi__map_a70a76ce19292cbdf943a5658b9601fdd}{rows}
+\item 
+unsigned int \hyperlink{structaom__roi__map_a33d4739da69f1885bf7572b99cc9b367}{cols}
+\item 
+int \hyperlink{structaom__roi__map_a85c39484ec01f907a1d50aa969d38ee2}{delta\+\_\+q} \mbox{[}8\mbox{]}
+\item 
+int \hyperlink{structaom__roi__map_a3a37c73fcdcfac9f6f7fec338e746982}{delta\+\_\+lf} \mbox{[}8\mbox{]}
+\item 
+unsigned int \hyperlink{structaom__roi__map_a68f795675cf54a123c89e2f9dda9063f}{static\+\_\+threshold} \mbox{[}8\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+aom region of interest map 
+
+These defines the data structures for the region of interest map
+
+T\+O\+D\+O(yaowu)\+: create a unit test for R\+OI map related A\+P\+Is 
+
+\subsubsection{Field Documentation}
+\index{aom\+\_\+roi\+\_\+map@{aom\+\_\+roi\+\_\+map}!roi\+\_\+map@{roi\+\_\+map}}
+\index{roi\+\_\+map@{roi\+\_\+map}!aom\+\_\+roi\+\_\+map@{aom\+\_\+roi\+\_\+map}}
+\paragraph[{\texorpdfstring{roi\+\_\+map}{roi_map}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ aom\+\_\+roi\+\_\+map\+::roi\+\_\+map}\hypertarget{structaom__roi__map_a7d12a1d1074e33fd32077d568e4304d6}{}\label{structaom__roi__map_a7d12a1d1074e33fd32077d568e4304d6}
+An id between 0 and 7 for each 8x8 region within a frame. \index{aom\+\_\+roi\+\_\+map@{aom\+\_\+roi\+\_\+map}!rows@{rows}}
+\index{rows@{rows}!aom\+\_\+roi\+\_\+map@{aom\+\_\+roi\+\_\+map}}
+\paragraph[{\texorpdfstring{rows}{rows}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+roi\+\_\+map\+::rows}\hypertarget{structaom__roi__map_a70a76ce19292cbdf943a5658b9601fdd}{}\label{structaom__roi__map_a70a76ce19292cbdf943a5658b9601fdd}
+Number of rows. \index{aom\+\_\+roi\+\_\+map@{aom\+\_\+roi\+\_\+map}!cols@{cols}}
+\index{cols@{cols}!aom\+\_\+roi\+\_\+map@{aom\+\_\+roi\+\_\+map}}
+\paragraph[{\texorpdfstring{cols}{cols}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+roi\+\_\+map\+::cols}\hypertarget{structaom__roi__map_a33d4739da69f1885bf7572b99cc9b367}{}\label{structaom__roi__map_a33d4739da69f1885bf7572b99cc9b367}
+Number of columns. \index{aom\+\_\+roi\+\_\+map@{aom\+\_\+roi\+\_\+map}!delta\+\_\+q@{delta\+\_\+q}}
+\index{delta\+\_\+q@{delta\+\_\+q}!aom\+\_\+roi\+\_\+map@{aom\+\_\+roi\+\_\+map}}
+\paragraph[{\texorpdfstring{delta\+\_\+q}{delta_q}}]{\setlength{\rightskip}{0pt plus 5cm}int aom\+\_\+roi\+\_\+map\+::delta\+\_\+q\mbox{[}8\mbox{]}}\hypertarget{structaom__roi__map_a85c39484ec01f907a1d50aa969d38ee2}{}\label{structaom__roi__map_a85c39484ec01f907a1d50aa969d38ee2}
+Quantizer deltas. \index{aom\+\_\+roi\+\_\+map@{aom\+\_\+roi\+\_\+map}!delta\+\_\+lf@{delta\+\_\+lf}}
+\index{delta\+\_\+lf@{delta\+\_\+lf}!aom\+\_\+roi\+\_\+map@{aom\+\_\+roi\+\_\+map}}
+\paragraph[{\texorpdfstring{delta\+\_\+lf}{delta_lf}}]{\setlength{\rightskip}{0pt plus 5cm}int aom\+\_\+roi\+\_\+map\+::delta\+\_\+lf\mbox{[}8\mbox{]}}\hypertarget{structaom__roi__map_a3a37c73fcdcfac9f6f7fec338e746982}{}\label{structaom__roi__map_a3a37c73fcdcfac9f6f7fec338e746982}
+Loop filter deltas. \index{aom\+\_\+roi\+\_\+map@{aom\+\_\+roi\+\_\+map}!static\+\_\+threshold@{static\+\_\+threshold}}
+\index{static\+\_\+threshold@{static\+\_\+threshold}!aom\+\_\+roi\+\_\+map@{aom\+\_\+roi\+\_\+map}}
+\paragraph[{\texorpdfstring{static\+\_\+threshold}{static_threshold}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+roi\+\_\+map\+::static\+\_\+threshold\mbox{[}8\mbox{]}}\hypertarget{structaom__roi__map_a68f795675cf54a123c89e2f9dda9063f}{}\label{structaom__roi__map_a68f795675cf54a123c89e2f9dda9063f}
+Static breakout threshold for each segment. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+aom/\hyperlink{aomcx_8h}{aomcx.\+h}\end{DoxyCompactItemize}

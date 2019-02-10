@@ -1,0 +1,2 @@
+/usr/bin/ar qc libaom_dsp_encoder_avx.a  CMakeFiles/aom_dsp_encoder_avx.dir/gen_src/aom_dsp_encoder_avx_dummy.c.o
+/usr/bin/ranlib libaom_dsp_encoder_avx.a

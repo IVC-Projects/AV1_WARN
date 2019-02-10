@@ -1,0 +1,62 @@
+\hypertarget{aom_8h}{}\subsection{aom/aom.h File Reference}
+\label{aom_8h}\index{aom/aom.\+h@{aom/aom.\+h}}
+
+
+Provides controls common to both the A\+OM encoder and decoder.  
+
+
+{\ttfamily \#include \char`\"{}aom/aom\+\_\+codec.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}aom/aom\+\_\+image.\+h\char`\"{}}\\*
+\subsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structaom__postproc__cfg}{aom\+\_\+postproc\+\_\+cfg}
+\begin{DoxyCompactList}\small\item\em post process flags \end{DoxyCompactList}\item 
+struct \hyperlink{structav1__ref__frame}{av1\+\_\+ref\+\_\+frame}
+\begin{DoxyCompactList}\small\item\em A\+V1 specific reference frame data struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structaom__postproc__cfg}{aom\+\_\+postproc\+\_\+cfg} \hyperlink{group__aom_gaf8a9b796d86228c9badeee6f13e5196b}{aom\+\_\+postproc\+\_\+cfg\+\_\+t}
+\begin{DoxyCompactList}\small\item\em post process flags \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structav1__ref__frame}{av1\+\_\+ref\+\_\+frame} \hyperlink{group__aom_ga8de31c9dd61cb25763c30066885fc9b6}{av1\+\_\+ref\+\_\+frame\+\_\+t}
+\begin{DoxyCompactList}\small\item\em A\+V1 specific reference frame data struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__aom_ga9421a1fa78c0d9587ae5aa6c1cb3d659}{aom\+\_\+com\+\_\+control\+\_\+id} \{ \\*
+\hyperlink{group__aom_gga9421a1fa78c0d9587ae5aa6c1cb3d659a38a077f5bce4e82d137ec1825b926b47}{A\+O\+M\+\_\+\+S\+E\+T\+\_\+\+P\+O\+S\+T\+P\+R\+OC} = 3, 
+\hyperlink{group__aom_gga9421a1fa78c0d9587ae5aa6c1cb3d659a92b2ba27f46b7c3c2e2ad7aabf65750a}{A\+O\+M\+\_\+\+S\+E\+T\+\_\+\+D\+B\+G\+\_\+\+C\+O\+L\+O\+R\+\_\+\+R\+E\+F\+\_\+\+F\+R\+A\+ME}, 
+\hyperlink{group__aom_gga9421a1fa78c0d9587ae5aa6c1cb3d659af103c902305c536a783f27b2afe7347d}{A\+O\+M\+\_\+\+S\+E\+T\+\_\+\+D\+B\+G\+\_\+\+C\+O\+L\+O\+R\+\_\+\+M\+B\+\_\+\+M\+O\+D\+ES} = 5, 
+\hyperlink{group__aom_gga9421a1fa78c0d9587ae5aa6c1cb3d659a95f41ff924fa77edb66ea2c1ed780942}{A\+O\+M\+\_\+\+S\+E\+T\+\_\+\+D\+B\+G\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+\_\+\+M\+O\+D\+ES} = 6, 
+\\*
+\hyperlink{group__aom_gga9421a1fa78c0d9587ae5aa6c1cb3d659af7eb68ae889b8ba8eca2b3c2a7db0a47}{A\+O\+M\+\_\+\+S\+E\+T\+\_\+\+D\+B\+G\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+MV} = 7, 
+\hyperlink{group__aom_gga9421a1fa78c0d9587ae5aa6c1cb3d659a4b8bcdaae4f4ff2e78d2e9d53090e13b}{A\+V1\+\_\+\+G\+E\+T\+\_\+\+R\+E\+F\+E\+R\+E\+N\+CE} = 128, 
+\hyperlink{group__aom_gga9421a1fa78c0d9587ae5aa6c1cb3d659a51ad4467b4dc318406cceb257e2daa41}{A\+V1\+\_\+\+S\+E\+T\+\_\+\+R\+E\+F\+E\+R\+E\+N\+CE} = 129, 
+\hyperlink{group__aom_gga9421a1fa78c0d9587ae5aa6c1cb3d659af5c56c3dbccf31fca7621e8327ba7354}{A\+V1\+\_\+\+C\+O\+P\+Y\+\_\+\+R\+E\+F\+E\+R\+E\+N\+CE}, 
+\\*
+{\bfseries A\+O\+M\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+C\+T\+R\+L\+\_\+\+I\+D\+\_\+\+M\+AX}, 
+\hyperlink{group__aom_gga9421a1fa78c0d9587ae5aa6c1cb3d659a410c706a34f5295996658cc5044a700f}{A\+V1\+\_\+\+G\+E\+T\+\_\+\+N\+E\+W\+\_\+\+F\+R\+A\+M\+E\+\_\+\+I\+M\+A\+GE} = 192, 
+\hyperlink{group__aom_gga9421a1fa78c0d9587ae5aa6c1cb3d659ae41763622ee33cd99e23ca8f78a3f8fa}{A\+V1\+\_\+\+C\+O\+P\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+R\+A\+M\+E\+\_\+\+I\+M\+A\+GE}, 
+{\bfseries A\+O\+M\+\_\+\+D\+E\+C\+O\+D\+E\+R\+\_\+\+C\+T\+R\+L\+\_\+\+I\+D\+\_\+\+S\+T\+A\+RT} = 256
+ \}\begin{DoxyCompactList}\small\item\em Control functions. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__aom_gac6080eabf4ec17e97196664eb989cc82}{aom\+\_\+postproc\+\_\+level} \{ \\*
+{\bfseries A\+O\+M\+\_\+\+N\+O\+F\+I\+L\+T\+E\+R\+I\+NG} = 0, 
+{\bfseries A\+O\+M\+\_\+\+D\+E\+B\+L\+O\+CK} = 1 $<$$<$ 0, 
+{\bfseries A\+O\+M\+\_\+\+D\+E\+M\+A\+C\+R\+O\+B\+L\+O\+CK} = 1 $<$$<$ 1, 
+{\bfseries A\+O\+M\+\_\+\+A\+D\+D\+N\+O\+I\+SE} = 1 $<$$<$ 2, 
+\\*
+\hyperlink{group__aom_ggac6080eabf4ec17e97196664eb989cc82a954d7e31134442c20e9d27f0ac9113b8}{A\+O\+M\+\_\+\+D\+E\+B\+U\+G\+\_\+\+T\+X\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+I\+N\+FO} = 1 $<$$<$ 3, 
+\hyperlink{group__aom_ggac6080eabf4ec17e97196664eb989cc82a7f9333b6fa79f7231ae73e1effafb25b}{A\+O\+M\+\_\+\+D\+E\+B\+U\+G\+\_\+\+T\+X\+T\+\_\+\+M\+B\+L\+K\+\_\+\+M\+O\+D\+ES}, 
+\hyperlink{group__aom_ggac6080eabf4ec17e97196664eb989cc82a67340f012436cb0039d3cdc62244ca50}{A\+O\+M\+\_\+\+D\+E\+B\+U\+G\+\_\+\+T\+X\+T\+\_\+\+D\+C\+\_\+\+D\+I\+FF} = 1 $<$$<$ 5, 
+\hyperlink{group__aom_ggac6080eabf4ec17e97196664eb989cc82a2ed5c856f44d6de7d5e72aa7f826df56}{A\+O\+M\+\_\+\+D\+E\+B\+U\+G\+\_\+\+T\+X\+T\+\_\+\+R\+A\+T\+E\+\_\+\+I\+N\+FO} = 1 $<$$<$ 6, 
+\\*
+{\bfseries A\+O\+M\+\_\+\+M\+F\+QE} = 1 $<$$<$ 10
+ \}\begin{DoxyCompactList}\small\item\em post process flags \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Provides controls common to both the A\+OM encoder and decoder. 
+

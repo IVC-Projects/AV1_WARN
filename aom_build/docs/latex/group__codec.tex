@@ -1,0 +1,590 @@
+\hypertarget{group__codec}{}\subsection{Common Algorithm Interface}
+\label{group__codec}\index{Common Algorithm Interface@{Common Algorithm Interface}}
+\subsubsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__decoder}{Decoder Algorithm Interface}
+\item 
+\hyperlink{group__encoder}{Encoder Algorithm Interface}
+\end{DoxyCompactItemize}
+\subsubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{aom__codec_8h}{aom\+\_\+codec.\+h}
+\begin{DoxyCompactList}\small\item\em Describes the codec algorithm interface to applications. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structaom__codec__ctx}{aom\+\_\+codec\+\_\+ctx}
+\begin{DoxyCompactList}\small\item\em Codec context structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structcfg__options}{cfg\+\_\+options}
+\begin{DoxyCompactList}\small\item\em Config Options. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__codec_gac06f52752a93708c56eb660f27601b00}{A\+O\+M\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED}\hypertarget{group__codec_gac06f52752a93708c56eb660f27601b00}{}\label{group__codec_gac06f52752a93708c56eb660f27601b00}
+
+\begin{DoxyCompactList}\small\item\em Decorator indicating a function is deprecated. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__codec_gad4bd9523583de840a940dbedb6a34d58}{A\+O\+M\+\_\+\+D\+E\+C\+L\+S\+P\+E\+C\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED}
+\begin{DoxyCompactList}\small\item\em Decorator indicating a function is deprecated. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__codec_ga999502c6c00ce4c54d0069265a31d2bb}{A\+O\+M\+\_\+\+U\+N\+U\+S\+ED}\hypertarget{group__codec_ga999502c6c00ce4c54d0069265a31d2bb}{}\label{group__codec_ga999502c6c00ce4c54d0069265a31d2bb}
+
+\begin{DoxyCompactList}\small\item\em Decorator indicating a function is potentially unused. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__codec_gad93e9ac33d1a9153bbea517a98260041}{A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+P\+A\+C\+K\+ED}\hypertarget{group__codec_gad93e9ac33d1a9153bbea517a98260041}{}\label{group__codec_gad93e9ac33d1a9153bbea517a98260041}
+
+\begin{DoxyCompactList}\small\item\em Decorator indicating that given struct/union/enum is packed. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__codec_ga801627e3edca037cef7a92f7fecd75ef}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+A\+B\+I\+\_\+\+V\+E\+R\+S\+I\+ON}\hypertarget{group__codec_ga801627e3edca037cef7a92f7fecd75ef}{}\label{group__codec_ga801627e3edca037cef7a92f7fecd75ef}
+
+\begin{DoxyCompactList}\small\item\em Current A\+BI version number. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__codec_gad362e3d79e8520028c790659c1c77174}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+D\+E\+C\+O\+D\+ER}~0x1
+\item 
+\#define \hyperlink{group__codec_ga59ba7a82c1363e296a0a4db618d4099a}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+E\+N\+C\+O\+D\+ER}~0x2
+\item 
+\#define \hyperlink{group__codec_gaf35aecefb8133a5474d0068119e6182c}{aom\+\_\+codec\+\_\+version\+\_\+major}()~((\hyperlink{group__codec_gaaed56af63c70186d571ab44c72500e77}{aom\+\_\+codec\+\_\+version}() $>$$>$ 16) \& 0xff)\hypertarget{group__codec_gaf35aecefb8133a5474d0068119e6182c}{}\label{group__codec_gaf35aecefb8133a5474d0068119e6182c}
+
+\begin{DoxyCompactList}\small\item\em Return the version major number. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__codec_gafc4f21abef83316131df07742b919d91}{aom\+\_\+codec\+\_\+version\+\_\+minor}()~((\hyperlink{group__codec_gaaed56af63c70186d571ab44c72500e77}{aom\+\_\+codec\+\_\+version}() $>$$>$ 8) \& 0xff)\hypertarget{group__codec_gafc4f21abef83316131df07742b919d91}{}\label{group__codec_gafc4f21abef83316131df07742b919d91}
+
+\begin{DoxyCompactList}\small\item\em Return the version minor number. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__codec_gaf452ede024bf9a378fa66443494070ba}{aom\+\_\+codec\+\_\+version\+\_\+patch}()~((\hyperlink{group__codec_gaaed56af63c70186d571ab44c72500e77}{aom\+\_\+codec\+\_\+version}() $>$$>$ 0) \& 0xff)\hypertarget{group__codec_gaf452ede024bf9a378fa66443494070ba}{}\label{group__codec_gaf452ede024bf9a378fa66443494070ba}
+
+\begin{DoxyCompactList}\small\item\em Return the version patch number. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__codec_ga6da974f4eeaba1fa74106b28d0fe6ac5}{aom\+\_\+codec\+\_\+control}(ctx,  id,  data)
+\begin{DoxyCompactList}\small\item\em aom\+\_\+codec\+\_\+control wrapper macro \end{DoxyCompactList}\item 
+\#define \hyperlink{group__codec_ga09132e6ec2eb0affabe3391181d15f95}{A\+O\+M\+\_\+\+C\+T\+R\+L\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+PE}(id,  typ)
+\begin{DoxyCompactList}\small\item\em aom\+\_\+codec\+\_\+control type definition macro \end{DoxyCompactList}\item 
+\#define \hyperlink{group__codec_ga9cf4b5ac7ea31c5c1b71816aec572acf}{A\+O\+M\+\_\+\+C\+T\+R\+L\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED}(id,  typ)
+\begin{DoxyCompactList}\small\item\em aom\+\_\+codec\+\_\+control deprecated type definition macro \end{DoxyCompactList}\item 
+\#define \hyperlink{group__codec_ga777f7eab335b851d90e40715efa5396c}{A\+O\+M\+\_\+\+C\+T\+R\+L\+\_\+\+V\+O\+ID}(id)
+\begin{DoxyCompactList}\small\item\em aom\+\_\+codec\+\_\+control void type definition macro \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef long \hyperlink{group__codec_ga019a4c05cd929e7c50133f6b536eeabf}{aom\+\_\+codec\+\_\+caps\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Codec capabilities bitfield. \end{DoxyCompactList}\item 
+typedef long \hyperlink{group__codec_ga18f2242c1afca329581fbd3f2c81721b}{aom\+\_\+codec\+\_\+flags\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Initialization-\/time Feature Enabling. \end{DoxyCompactList}\item 
+typedef const struct aom\+\_\+codec\+\_\+iface \hyperlink{group__codec_ga4ef55b44c762836d1550e11921bed403}{aom\+\_\+codec\+\_\+iface\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Codec interface structure. \end{DoxyCompactList}\item 
+typedef struct aom\+\_\+codec\+\_\+priv \hyperlink{group__codec_ga3671963ca4b3d6c2adbc186c8ed18023}{aom\+\_\+codec\+\_\+priv\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Codec private data structure. \end{DoxyCompactList}\item 
+typedef const void $\ast$ \hyperlink{group__codec_gadf9e173c9e02788a9999399edab20a02}{aom\+\_\+codec\+\_\+iter\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Iterator. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structaom__codec__ctx}{aom\+\_\+codec\+\_\+ctx} \hyperlink{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}{aom\+\_\+codec\+\_\+ctx\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Codec context structure. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{group__codec_ga6ed0e98eba4651c1ad845e39498e4153}{aom\+\_\+bit\+\_\+depth} \hyperlink{group__codec_ga90c2026e798a669241dc57464472a198}{aom\+\_\+bit\+\_\+depth\+\_\+t}\hypertarget{group__codec_ga90c2026e798a669241dc57464472a198}{}\label{group__codec_ga90c2026e798a669241dc57464472a198}
+
+\begin{DoxyCompactList}\small\item\em Bit depth for codec
+\begin{DoxyItemize}
+\item This enumeration determines the bit depth of the codec. 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+typedef enum \hyperlink{group__codec_gac34a24f7c6c0fef7518aed0da4425f61}{aom\+\_\+superblock\+\_\+size} \hyperlink{group__codec_ga8d0bf39eb86f047f1b2f6f1efe05a3ae}{aom\+\_\+superblock\+\_\+size\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Superblock size selection. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structcfg__options}{cfg\+\_\+options} \hyperlink{group__codec_ga58cddec4492c70945a2b4c3773c665b0}{cfg\+\_\+options\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Config Options. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__codec_gaaae61e0f8663e6137f1e228757248e7c}{aom\+\_\+codec\+\_\+err\+\_\+t} \{ \\*
+\hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7caf145dc2f86014a08ebad36ac2b140001}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+OK}, 
+\hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca20f818786bc939e6e58192f6a150d691}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+E\+R\+R\+OR}, 
+\hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7caa4328d9fc527a3fd3cf76eb54e3db1a2}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+M\+E\+M\+\_\+\+E\+R\+R\+OR}, 
+\hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca7cbf0a1ff28bf7c460f6d86d63b30842}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+A\+B\+I\+\_\+\+M\+I\+S\+M\+A\+T\+CH}, 
+\\*
+\hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7cac4a4eea6394661cef74abf674c12cfa8}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+I\+N\+C\+A\+P\+A\+B\+LE}, 
+\hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca38b6a9786805f6c215cff72985cc6fdb}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+U\+N\+S\+U\+P\+\_\+\+B\+I\+T\+S\+T\+R\+E\+AM}, 
+\hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca94436b9b9d07909fe2e85b39ef0b5615}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+U\+N\+S\+U\+P\+\_\+\+F\+E\+A\+T\+U\+RE}, 
+\hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca8b4b7f7b3ea2a3a0e07b82c9170775a2}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+O\+R\+R\+U\+P\+T\+\_\+\+F\+R\+A\+ME}, 
+\\*
+\hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca0c6ff8587f8bcc0429aecfa9fe2762df}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM}, 
+\hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca413c6090fa855359106e32fbd2b5f668}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+L\+I\+S\+T\+\_\+\+E\+ND}
+ \}\begin{DoxyCompactList}\small\item\em Algorithm return codes. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__codec_ga6ed0e98eba4651c1ad845e39498e4153}{aom\+\_\+bit\+\_\+depth} \{ \hyperlink{group__codec_gga6ed0e98eba4651c1ad845e39498e4153a4c7f55539160206a3fbb2a6cfc9ef89c}{A\+O\+M\+\_\+\+B\+I\+T\+S\+\_\+8} = 8, 
+\hyperlink{group__codec_gga6ed0e98eba4651c1ad845e39498e4153a91734384f432233c3d681052122ab8e7}{A\+O\+M\+\_\+\+B\+I\+T\+S\+\_\+10} = 10, 
+\hyperlink{group__codec_gga6ed0e98eba4651c1ad845e39498e4153a15836a87f9e9940885d5ef59a52bf728}{A\+O\+M\+\_\+\+B\+I\+T\+S\+\_\+12} = 12
+ \}\begin{DoxyCompactList}\small\item\em Bit depth for codec
+\begin{DoxyItemize}
+\item This enumeration determines the bit depth of the codec. 
+\end{DoxyItemize}\end{DoxyCompactList}
+\item 
+enum \hyperlink{group__codec_gac34a24f7c6c0fef7518aed0da4425f61}{aom\+\_\+superblock\+\_\+size} \{ \hyperlink{group__codec_ggac34a24f7c6c0fef7518aed0da4425f61a5abd24080a18d4f7e33217d93a73e968}{A\+O\+M\+\_\+\+S\+U\+P\+E\+R\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E\+\_\+64\+X64}, 
+\hyperlink{group__codec_ggac34a24f7c6c0fef7518aed0da4425f61a17127133dafcd42b1d792770981d67d0}{A\+O\+M\+\_\+\+S\+U\+P\+E\+R\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E\+\_\+128\+X128}, 
+\hyperlink{group__codec_ggac34a24f7c6c0fef7518aed0da4425f61aaabb4d9ad771b2fa177ff6fb5437b179}{A\+O\+M\+\_\+\+S\+U\+P\+E\+R\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E\+\_\+\+D\+Y\+N\+A\+M\+IC}
+ \}\begin{DoxyCompactList}\small\item\em Superblock size selection. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__codec_ga8671b36010adf45694a1c0868333c5b6}{O\+B\+U\+\_\+\+T\+Y\+PE} \{ \\*
+{\bfseries O\+B\+U\+\_\+\+S\+E\+Q\+U\+E\+N\+C\+E\+\_\+\+H\+E\+A\+D\+ER} = 1, 
+{\bfseries O\+B\+U\+\_\+\+T\+E\+M\+P\+O\+R\+A\+L\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER} = 2, 
+{\bfseries O\+B\+U\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+E\+A\+D\+ER} = 3, 
+{\bfseries O\+B\+U\+\_\+\+T\+I\+L\+E\+\_\+\+G\+R\+O\+UP} = 4, 
+\\*
+{\bfseries O\+B\+U\+\_\+\+M\+E\+T\+A\+D\+A\+TA} = 5, 
+{\bfseries O\+B\+U\+\_\+\+F\+R\+A\+ME} = 6, 
+{\bfseries O\+B\+U\+\_\+\+R\+E\+D\+U\+N\+D\+A\+N\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+E\+A\+D\+ER} = 7, 
+{\bfseries O\+B\+U\+\_\+\+T\+I\+L\+E\+\_\+\+L\+I\+ST} = 8, 
+\\*
+{\bfseries O\+B\+U\+\_\+\+P\+A\+D\+D\+I\+NG} = 15
+ \}\hypertarget{group__codec_ga8671b36010adf45694a1c0868333c5b6}{}\label{group__codec_ga8671b36010adf45694a1c0868333c5b6}
+\begin{DoxyCompactList}\small\item\em O\+BU types. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__codec_gaaeb1643131595e752f0c823cbca1c8cb}{O\+B\+U\+\_\+\+M\+E\+T\+A\+D\+A\+T\+A\+\_\+\+T\+Y\+PE} \{ \\*
+{\bfseries O\+B\+U\+\_\+\+M\+E\+T\+A\+D\+A\+T\+A\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+O\+M\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+0} = 0, 
+{\bfseries O\+B\+U\+\_\+\+M\+E\+T\+A\+D\+A\+T\+A\+\_\+\+T\+Y\+P\+E\+\_\+\+H\+D\+R\+\_\+\+C\+LL} = 1, 
+{\bfseries O\+B\+U\+\_\+\+M\+E\+T\+A\+D\+A\+T\+A\+\_\+\+T\+Y\+P\+E\+\_\+\+H\+D\+R\+\_\+\+M\+D\+CV} = 2, 
+{\bfseries O\+B\+U\+\_\+\+M\+E\+T\+A\+D\+A\+T\+A\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+C\+A\+L\+A\+B\+I\+L\+I\+TY} = 3, 
+\\*
+{\bfseries O\+B\+U\+\_\+\+M\+E\+T\+A\+D\+A\+T\+A\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+T\+U\+T\+\_\+\+T35} = 4, 
+{\bfseries O\+B\+U\+\_\+\+M\+E\+T\+A\+D\+A\+T\+A\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+I\+M\+E\+C\+O\+DE} = 5
+ \}\hypertarget{group__codec_gaaeb1643131595e752f0c823cbca1c8cb}{}\label{group__codec_gaaeb1643131595e752f0c823cbca1c8cb}
+\begin{DoxyCompactList}\small\item\em O\+BU metadata types. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__codec_gaaed56af63c70186d571ab44c72500e77}{aom\+\_\+codec\+\_\+version} (void)
+\begin{DoxyCompactList}\small\item\em Return the version information (as an integer) \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{group__codec_ga62d45353664dd1e1cb0868d6fdb77552}{aom\+\_\+codec\+\_\+version\+\_\+str} (void)
+\begin{DoxyCompactList}\small\item\em Return the version information (as a string) \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{group__codec_gadde8130d243e6228f6bfedc98f2e3532}{aom\+\_\+codec\+\_\+version\+\_\+extra\+\_\+str} (void)
+\begin{DoxyCompactList}\small\item\em Return the version information (as a string) \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{group__codec_gaf72432504daf378befd8b3c122f14c01}{aom\+\_\+codec\+\_\+build\+\_\+config} (void)
+\begin{DoxyCompactList}\small\item\em Return the build configuration. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{group__codec_ga013b1f6d96b2cf9489396311a7e5179b}{aom\+\_\+codec\+\_\+iface\+\_\+name} (\hyperlink{group__codec_ga4ef55b44c762836d1550e11921bed403}{aom\+\_\+codec\+\_\+iface\+\_\+t} $\ast$iface)
+\begin{DoxyCompactList}\small\item\em Return the name for a given interface. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{group__codec_ga83c6525528574d1a88e73a9f605c9115}{aom\+\_\+codec\+\_\+err\+\_\+to\+\_\+string} (\hyperlink{group__codec_gaaae61e0f8663e6137f1e228757248e7c}{aom\+\_\+codec\+\_\+err\+\_\+t} err)
+\begin{DoxyCompactList}\small\item\em Convert error number to printable string. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{group__codec_ga50949c0854605c722832bbfb0803f5f4}{aom\+\_\+codec\+\_\+error} (\hyperlink{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}{aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Retrieve error synopsis for codec context. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{group__codec_ga43a70562598b485685794a4e9d9d53f7}{aom\+\_\+codec\+\_\+error\+\_\+detail} (\hyperlink{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}{aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Retrieve detailed error information for codec context. \end{DoxyCompactList}\item 
+\hyperlink{group__codec_gaaae61e0f8663e6137f1e228757248e7c}{aom\+\_\+codec\+\_\+err\+\_\+t} \hyperlink{group__codec_ga9b60e186f61ba2d6ab2b8069b76a15c5}{aom\+\_\+codec\+\_\+destroy} (\hyperlink{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}{aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Destroy a codec instance. \end{DoxyCompactList}\item 
+\hyperlink{group__codec_ga019a4c05cd929e7c50133f6b536eeabf}{aom\+\_\+codec\+\_\+caps\+\_\+t} \hyperlink{group__codec_ga66b1d3c795c3868efc88d73d01439461}{aom\+\_\+codec\+\_\+get\+\_\+caps} (\hyperlink{group__codec_ga4ef55b44c762836d1550e11921bed403}{aom\+\_\+codec\+\_\+iface\+\_\+t} $\ast$iface)
+\begin{DoxyCompactList}\small\item\em Get the capabilities of an algorithm. \end{DoxyCompactList}\item 
+\hyperlink{group__codec_gaaae61e0f8663e6137f1e228757248e7c}{aom\+\_\+codec\+\_\+err\+\_\+t} \hyperlink{group__codec_ga51eb332a40dcacc39000ab8e0be36b79}{aom\+\_\+codec\+\_\+control\+\_\+} (\hyperlink{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}{aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$ctx, int ctrl\+\_\+id,...)
+\begin{DoxyCompactList}\small\item\em Control algorithm. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{group__codec_gaed56ca94e36f024f20133f253689b64b}{aom\+\_\+obu\+\_\+type\+\_\+to\+\_\+string} (\hyperlink{group__codec_ga8671b36010adf45694a1c0868333c5b6}{O\+B\+U\+\_\+\+T\+Y\+PE} type)
+\begin{DoxyCompactList}\small\item\em Returns string representation of O\+B\+U\+\_\+\+T\+Y\+PE. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+This abstraction allows applications to easily support multiple video formats with minimal code duplication. This section describes the interface common to all codecs (both encoders and decoders). 
+
+\subsubsection{Macro Definition Documentation}
+\index{Common Algorithm Interface@{Common Algorithm Interface}!A\+O\+M\+\_\+\+D\+E\+C\+L\+S\+P\+E\+C\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED@{A\+O\+M\+\_\+\+D\+E\+C\+L\+S\+P\+E\+C\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED}}
+\index{A\+O\+M\+\_\+\+D\+E\+C\+L\+S\+P\+E\+C\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED@{A\+O\+M\+\_\+\+D\+E\+C\+L\+S\+P\+E\+C\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{A\+O\+M\+\_\+\+D\+E\+C\+L\+S\+P\+E\+C\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED}{AOM_DECLSPEC_DEPRECATED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+O\+M\+\_\+\+D\+E\+C\+L\+S\+P\+E\+C\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED}\hypertarget{group__codec_gad4bd9523583de840a940dbedb6a34d58}{}\label{group__codec_gad4bd9523583de840a940dbedb6a34d58}
+
+
+Decorator indicating a function is deprecated. 
+
+\index{Common Algorithm Interface@{Common Algorithm Interface}!A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+D\+E\+C\+O\+D\+ER@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+D\+E\+C\+O\+D\+ER}}
+\index{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+D\+E\+C\+O\+D\+ER@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+D\+E\+C\+O\+D\+ER}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+D\+E\+C\+O\+D\+ER}{AOM_CODEC_CAP_DECODER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+D\+E\+C\+O\+D\+ER~0x1}\hypertarget{group__codec_gad362e3d79e8520028c790659c1c77174}{}\label{group__codec_gad362e3d79e8520028c790659c1c77174}
+Is a decoder \index{Common Algorithm Interface@{Common Algorithm Interface}!A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+E\+N\+C\+O\+D\+ER@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+E\+N\+C\+O\+D\+ER}}
+\index{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+E\+N\+C\+O\+D\+ER@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+E\+N\+C\+O\+D\+ER}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+E\+N\+C\+O\+D\+ER}{AOM_CODEC_CAP_ENCODER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+E\+N\+C\+O\+D\+ER~0x2}\hypertarget{group__codec_ga59ba7a82c1363e296a0a4db618d4099a}{}\label{group__codec_ga59ba7a82c1363e296a0a4db618d4099a}
+Is an encoder \index{Common Algorithm Interface@{Common Algorithm Interface}!aom\+\_\+codec\+\_\+control@{aom\+\_\+codec\+\_\+control}}
+\index{aom\+\_\+codec\+\_\+control@{aom\+\_\+codec\+\_\+control}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+control}{aom_codec_control}}]{\setlength{\rightskip}{0pt plus 5cm}\#define aom\+\_\+codec\+\_\+control(
+\begin{DoxyParamCaption}
+\item[{}]{ctx, }
+\item[{}]{id, }
+\item[{}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{group__codec_ga6da974f4eeaba1fa74106b28d0fe6ac5}{}\label{group__codec_ga6da974f4eeaba1fa74106b28d0fe6ac5}
+
+
+aom\+\_\+codec\+\_\+control wrapper macro 
+
+This macro allows for type safe conversions across the variadic parameter to \hyperlink{group__codec_ga51eb332a40dcacc39000ab8e0be36b79}{aom\+\_\+codec\+\_\+control\+\_\+()}. \index{Common Algorithm Interface@{Common Algorithm Interface}!A\+O\+M\+\_\+\+C\+T\+R\+L\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+PE@{A\+O\+M\+\_\+\+C\+T\+R\+L\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+PE}}
+\index{A\+O\+M\+\_\+\+C\+T\+R\+L\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+PE@{A\+O\+M\+\_\+\+C\+T\+R\+L\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+PE}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{A\+O\+M\+\_\+\+C\+T\+R\+L\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+PE}{AOM_CTRL_USE_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+O\+M\+\_\+\+C\+T\+R\+L\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+PE(
+\begin{DoxyParamCaption}
+\item[{}]{id, }
+\item[{}]{typ}
+\end{DoxyParamCaption}
+)}\hypertarget{group__codec_ga09132e6ec2eb0affabe3391181d15f95}{}\label{group__codec_ga09132e6ec2eb0affabe3391181d15f95}
+
+
+aom\+\_\+codec\+\_\+control type definition macro 
+
+This macro allows for type safe conversions across the variadic parameter to \hyperlink{group__codec_ga51eb332a40dcacc39000ab8e0be36b79}{aom\+\_\+codec\+\_\+control\+\_\+()}. It defines the type of the argument for a given control identifier. \index{Common Algorithm Interface@{Common Algorithm Interface}!A\+O\+M\+\_\+\+C\+T\+R\+L\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED@{A\+O\+M\+\_\+\+C\+T\+R\+L\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED}}
+\index{A\+O\+M\+\_\+\+C\+T\+R\+L\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED@{A\+O\+M\+\_\+\+C\+T\+R\+L\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{A\+O\+M\+\_\+\+C\+T\+R\+L\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED}{AOM_CTRL_USE_TYPE_DEPRECATED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+O\+M\+\_\+\+C\+T\+R\+L\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED(
+\begin{DoxyParamCaption}
+\item[{}]{id, }
+\item[{}]{typ}
+\end{DoxyParamCaption}
+)}\hypertarget{group__codec_ga9cf4b5ac7ea31c5c1b71816aec572acf}{}\label{group__codec_ga9cf4b5ac7ea31c5c1b71816aec572acf}
+
+
+aom\+\_\+codec\+\_\+control deprecated type definition macro 
+
+Like \hyperlink{group__codec_ga09132e6ec2eb0affabe3391181d15f95}{A\+O\+M\+\_\+\+C\+T\+R\+L\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+PE}, but indicates that the specified control is deprecated and should not be used. Consult the documentation for your codec for more information. \index{Common Algorithm Interface@{Common Algorithm Interface}!A\+O\+M\+\_\+\+C\+T\+R\+L\+\_\+\+V\+O\+ID@{A\+O\+M\+\_\+\+C\+T\+R\+L\+\_\+\+V\+O\+ID}}
+\index{A\+O\+M\+\_\+\+C\+T\+R\+L\+\_\+\+V\+O\+ID@{A\+O\+M\+\_\+\+C\+T\+R\+L\+\_\+\+V\+O\+ID}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{A\+O\+M\+\_\+\+C\+T\+R\+L\+\_\+\+V\+O\+ID}{AOM_CTRL_VOID}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+O\+M\+\_\+\+C\+T\+R\+L\+\_\+\+V\+O\+ID(
+\begin{DoxyParamCaption}
+\item[{}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{group__codec_ga777f7eab335b851d90e40715efa5396c}{}\label{group__codec_ga777f7eab335b851d90e40715efa5396c}
+
+
+aom\+\_\+codec\+\_\+control void type definition macro 
+
+This macro allows for type safe conversions across the variadic parameter to \hyperlink{group__codec_ga51eb332a40dcacc39000ab8e0be36b79}{aom\+\_\+codec\+\_\+control\+\_\+()}. It indicates that a given control identifier takes no argument. 
+
+\subsubsection{Typedef Documentation}
+\index{Common Algorithm Interface@{Common Algorithm Interface}!aom\+\_\+codec\+\_\+caps\+\_\+t@{aom\+\_\+codec\+\_\+caps\+\_\+t}}
+\index{aom\+\_\+codec\+\_\+caps\+\_\+t@{aom\+\_\+codec\+\_\+caps\+\_\+t}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+caps\+\_\+t}{aom_codec_caps_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef long {\bf aom\+\_\+codec\+\_\+caps\+\_\+t}}\hypertarget{group__codec_ga019a4c05cd929e7c50133f6b536eeabf}{}\label{group__codec_ga019a4c05cd929e7c50133f6b536eeabf}
+
+
+Codec capabilities bitfield. 
+
+Each codec advertises the capabilities it supports as part of its \hyperlink{group__codec_ga4ef55b44c762836d1550e11921bed403}{aom\+\_\+codec\+\_\+iface\+\_\+t} interface structure. Capabilities are extra interfaces or functionality, and are not required to be supported.
+
+The available flags are specified by A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+$\ast$ defines. \index{Common Algorithm Interface@{Common Algorithm Interface}!aom\+\_\+codec\+\_\+flags\+\_\+t@{aom\+\_\+codec\+\_\+flags\+\_\+t}}
+\index{aom\+\_\+codec\+\_\+flags\+\_\+t@{aom\+\_\+codec\+\_\+flags\+\_\+t}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+flags\+\_\+t}{aom_codec_flags_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef long {\bf aom\+\_\+codec\+\_\+flags\+\_\+t}}\hypertarget{group__codec_ga18f2242c1afca329581fbd3f2c81721b}{}\label{group__codec_ga18f2242c1afca329581fbd3f2c81721b}
+
+
+Initialization-\/time Feature Enabling. 
+
+Certain codec features must be known at initialization time, to allow for proper memory allocation.
+
+The available flags are specified by A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+U\+S\+E\+\_\+$\ast$ defines. \index{Common Algorithm Interface@{Common Algorithm Interface}!aom\+\_\+codec\+\_\+iface\+\_\+t@{aom\+\_\+codec\+\_\+iface\+\_\+t}}
+\index{aom\+\_\+codec\+\_\+iface\+\_\+t@{aom\+\_\+codec\+\_\+iface\+\_\+t}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+iface\+\_\+t}{aom_codec_iface_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef const struct aom\+\_\+codec\+\_\+iface {\bf aom\+\_\+codec\+\_\+iface\+\_\+t}}\hypertarget{group__codec_ga4ef55b44c762836d1550e11921bed403}{}\label{group__codec_ga4ef55b44c762836d1550e11921bed403}
+
+
+Codec interface structure. 
+
+Contains function pointers and other data private to the codec implementation. This structure is opaque to the application. \index{Common Algorithm Interface@{Common Algorithm Interface}!aom\+\_\+codec\+\_\+priv\+\_\+t@{aom\+\_\+codec\+\_\+priv\+\_\+t}}
+\index{aom\+\_\+codec\+\_\+priv\+\_\+t@{aom\+\_\+codec\+\_\+priv\+\_\+t}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+priv\+\_\+t}{aom_codec_priv_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct aom\+\_\+codec\+\_\+priv {\bf aom\+\_\+codec\+\_\+priv\+\_\+t}}\hypertarget{group__codec_ga3671963ca4b3d6c2adbc186c8ed18023}{}\label{group__codec_ga3671963ca4b3d6c2adbc186c8ed18023}
+
+
+Codec private data structure. 
+
+Contains data private to the codec implementation. This structure is opaque to the application. \index{Common Algorithm Interface@{Common Algorithm Interface}!aom\+\_\+codec\+\_\+iter\+\_\+t@{aom\+\_\+codec\+\_\+iter\+\_\+t}}
+\index{aom\+\_\+codec\+\_\+iter\+\_\+t@{aom\+\_\+codec\+\_\+iter\+\_\+t}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+iter\+\_\+t}{aom_codec_iter_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef const void$\ast$ {\bf aom\+\_\+codec\+\_\+iter\+\_\+t}}\hypertarget{group__codec_gadf9e173c9e02788a9999399edab20a02}{}\label{group__codec_gadf9e173c9e02788a9999399edab20a02}
+
+
+Iterator. 
+
+Opaque storage used for iterating over lists. \index{Common Algorithm Interface@{Common Algorithm Interface}!aom\+\_\+codec\+\_\+ctx\+\_\+t@{aom\+\_\+codec\+\_\+ctx\+\_\+t}}
+\index{aom\+\_\+codec\+\_\+ctx\+\_\+t@{aom\+\_\+codec\+\_\+ctx\+\_\+t}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+ctx\+\_\+t}{aom_codec_ctx_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf aom\+\_\+codec\+\_\+ctx}  {\bf aom\+\_\+codec\+\_\+ctx\+\_\+t}}\hypertarget{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}{}\label{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}
+
+
+Codec context structure. 
+
+All codecs \hyperlink{rfc2119_MUST}{M\+U\+ST} support this context structure fully. In general, this data should be considered private to the codec algorithm, and not be manipulated or examined by the calling application. Applications may reference the \textquotesingle{}name\textquotesingle{} member to get a printable description of the algorithm. \index{Common Algorithm Interface@{Common Algorithm Interface}!aom\+\_\+superblock\+\_\+size\+\_\+t@{aom\+\_\+superblock\+\_\+size\+\_\+t}}
+\index{aom\+\_\+superblock\+\_\+size\+\_\+t@{aom\+\_\+superblock\+\_\+size\+\_\+t}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+superblock\+\_\+size\+\_\+t}{aom_superblock_size_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf aom\+\_\+superblock\+\_\+size}  {\bf aom\+\_\+superblock\+\_\+size\+\_\+t}}\hypertarget{group__codec_ga8d0bf39eb86f047f1b2f6f1efe05a3ae}{}\label{group__codec_ga8d0bf39eb86f047f1b2f6f1efe05a3ae}
+
+
+Superblock size selection. 
+
+Defines the superblock size used for encoding. The superblock size can either be fixed at 64x64 or 128x128 pixels, or it can be dynamically selected by the encoder for each frame. \index{Common Algorithm Interface@{Common Algorithm Interface}!cfg\+\_\+options\+\_\+t@{cfg\+\_\+options\+\_\+t}}
+\index{cfg\+\_\+options\+\_\+t@{cfg\+\_\+options\+\_\+t}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{cfg\+\_\+options\+\_\+t}{cfg_options_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf cfg\+\_\+options}  {\bf cfg\+\_\+options\+\_\+t}}\hypertarget{group__codec_ga58cddec4492c70945a2b4c3773c665b0}{}\label{group__codec_ga58cddec4492c70945a2b4c3773c665b0}
+
+
+Config Options. 
+
+This type allows to enumerate and control options defined for control via config file at runtime. 
+
+\subsubsection{Enumeration Type Documentation}
+\index{Common Algorithm Interface@{Common Algorithm Interface}!aom\+\_\+codec\+\_\+err\+\_\+t@{aom\+\_\+codec\+\_\+err\+\_\+t}}
+\index{aom\+\_\+codec\+\_\+err\+\_\+t@{aom\+\_\+codec\+\_\+err\+\_\+t}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+err\+\_\+t}{aom_codec_err_t}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf aom\+\_\+codec\+\_\+err\+\_\+t}}\hypertarget{group__codec_gaaae61e0f8663e6137f1e228757248e7c}{}\label{group__codec_gaaae61e0f8663e6137f1e228757248e7c}
+
+
+Algorithm return codes. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+OK@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+OK}!Common Algorithm Interface@{Common Algorithm Interface}}\index{Common Algorithm Interface@{Common Algorithm Interface}!A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+OK@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+OK}}\item[{\em 
+A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+OK\hypertarget{group__codec_ggaaae61e0f8663e6137f1e228757248e7caf145dc2f86014a08ebad36ac2b140001}{}\label{group__codec_ggaaae61e0f8663e6137f1e228757248e7caf145dc2f86014a08ebad36ac2b140001}
+}]Operation completed without error. \index{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+E\+R\+R\+OR@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+E\+R\+R\+OR}!Common Algorithm Interface@{Common Algorithm Interface}}\index{Common Algorithm Interface@{Common Algorithm Interface}!A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+E\+R\+R\+OR@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+E\+R\+R\+OR}}\item[{\em 
+A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+E\+R\+R\+OR\hypertarget{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca20f818786bc939e6e58192f6a150d691}{}\label{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca20f818786bc939e6e58192f6a150d691}
+}]Unspecified error. \index{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+M\+E\+M\+\_\+\+E\+R\+R\+OR@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+M\+E\+M\+\_\+\+E\+R\+R\+OR}!Common Algorithm Interface@{Common Algorithm Interface}}\index{Common Algorithm Interface@{Common Algorithm Interface}!A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+M\+E\+M\+\_\+\+E\+R\+R\+OR@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+M\+E\+M\+\_\+\+E\+R\+R\+OR}}\item[{\em 
+A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+M\+E\+M\+\_\+\+E\+R\+R\+OR\hypertarget{group__codec_ggaaae61e0f8663e6137f1e228757248e7caa4328d9fc527a3fd3cf76eb54e3db1a2}{}\label{group__codec_ggaaae61e0f8663e6137f1e228757248e7caa4328d9fc527a3fd3cf76eb54e3db1a2}
+}]Memory operation failed. \index{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+A\+B\+I\+\_\+\+M\+I\+S\+M\+A\+T\+CH@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+A\+B\+I\+\_\+\+M\+I\+S\+M\+A\+T\+CH}!Common Algorithm Interface@{Common Algorithm Interface}}\index{Common Algorithm Interface@{Common Algorithm Interface}!A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+A\+B\+I\+\_\+\+M\+I\+S\+M\+A\+T\+CH@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+A\+B\+I\+\_\+\+M\+I\+S\+M\+A\+T\+CH}}\item[{\em 
+A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+A\+B\+I\+\_\+\+M\+I\+S\+M\+A\+T\+CH\hypertarget{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca7cbf0a1ff28bf7c460f6d86d63b30842}{}\label{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca7cbf0a1ff28bf7c460f6d86d63b30842}
+}]A\+BI version mismatch. \index{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+I\+N\+C\+A\+P\+A\+B\+LE@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+I\+N\+C\+A\+P\+A\+B\+LE}!Common Algorithm Interface@{Common Algorithm Interface}}\index{Common Algorithm Interface@{Common Algorithm Interface}!A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+I\+N\+C\+A\+P\+A\+B\+LE@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+I\+N\+C\+A\+P\+A\+B\+LE}}\item[{\em 
+A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+I\+N\+C\+A\+P\+A\+B\+LE\hypertarget{group__codec_ggaaae61e0f8663e6137f1e228757248e7cac4a4eea6394661cef74abf674c12cfa8}{}\label{group__codec_ggaaae61e0f8663e6137f1e228757248e7cac4a4eea6394661cef74abf674c12cfa8}
+}]Algorithm does not have required capability. \index{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+U\+N\+S\+U\+P\+\_\+\+B\+I\+T\+S\+T\+R\+E\+AM@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+U\+N\+S\+U\+P\+\_\+\+B\+I\+T\+S\+T\+R\+E\+AM}!Common Algorithm Interface@{Common Algorithm Interface}}\index{Common Algorithm Interface@{Common Algorithm Interface}!A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+U\+N\+S\+U\+P\+\_\+\+B\+I\+T\+S\+T\+R\+E\+AM@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+U\+N\+S\+U\+P\+\_\+\+B\+I\+T\+S\+T\+R\+E\+AM}}\item[{\em 
+A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+U\+N\+S\+U\+P\+\_\+\+B\+I\+T\+S\+T\+R\+E\+AM\hypertarget{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca38b6a9786805f6c215cff72985cc6fdb}{}\label{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca38b6a9786805f6c215cff72985cc6fdb}
+}]The given bitstream is not supported. The bitstream was unable to be parsed at the highest level. The decoder is unable to proceed. This error \hyperlink{rfc2119_SHOULD}{S\+H\+O\+U\+LD} be treated as fatal to the stream. \index{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+U\+N\+S\+U\+P\+\_\+\+F\+E\+A\+T\+U\+RE@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+U\+N\+S\+U\+P\+\_\+\+F\+E\+A\+T\+U\+RE}!Common Algorithm Interface@{Common Algorithm Interface}}\index{Common Algorithm Interface@{Common Algorithm Interface}!A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+U\+N\+S\+U\+P\+\_\+\+F\+E\+A\+T\+U\+RE@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+U\+N\+S\+U\+P\+\_\+\+F\+E\+A\+T\+U\+RE}}\item[{\em 
+A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+U\+N\+S\+U\+P\+\_\+\+F\+E\+A\+T\+U\+RE\hypertarget{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca94436b9b9d07909fe2e85b39ef0b5615}{}\label{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca94436b9b9d07909fe2e85b39ef0b5615}
+}]Encoded bitstream uses an unsupported feature. The decoder does not implement a feature required by the encoder. This return code should only be used for features that prevent future pictures from being properly decoded. This error \hyperlink{rfc2119_MAY}{M\+AY} be treated as fatal to the stream or \hyperlink{rfc2119_MAY}{M\+AY} be treated as fatal to the current G\+OP. \index{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+O\+R\+R\+U\+P\+T\+\_\+\+F\+R\+A\+ME@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+O\+R\+R\+U\+P\+T\+\_\+\+F\+R\+A\+ME}!Common Algorithm Interface@{Common Algorithm Interface}}\index{Common Algorithm Interface@{Common Algorithm Interface}!A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+O\+R\+R\+U\+P\+T\+\_\+\+F\+R\+A\+ME@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+O\+R\+R\+U\+P\+T\+\_\+\+F\+R\+A\+ME}}\item[{\em 
+A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+O\+R\+R\+U\+P\+T\+\_\+\+F\+R\+A\+ME\hypertarget{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca8b4b7f7b3ea2a3a0e07b82c9170775a2}{}\label{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca8b4b7f7b3ea2a3a0e07b82c9170775a2}
+}]The coded data for this stream is corrupt or incomplete. There was a problem decoding the current frame. This return code should only be used for failures that prevent future pictures from being properly decoded. This error \hyperlink{rfc2119_MAY}{M\+AY} be treated as fatal to the stream or \hyperlink{rfc2119_MAY}{M\+AY} be treated as fatal to the current G\+OP. If decoding is continued for the current G\+OP, artifacts may be present. \index{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM}!Common Algorithm Interface@{Common Algorithm Interface}}\index{Common Algorithm Interface@{Common Algorithm Interface}!A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM}}\item[{\em 
+A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM\hypertarget{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca0c6ff8587f8bcc0429aecfa9fe2762df}{}\label{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca0c6ff8587f8bcc0429aecfa9fe2762df}
+}]An application-\/supplied parameter is not valid. \index{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+L\+I\+S\+T\+\_\+\+E\+ND@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+L\+I\+S\+T\+\_\+\+E\+ND}!Common Algorithm Interface@{Common Algorithm Interface}}\index{Common Algorithm Interface@{Common Algorithm Interface}!A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+L\+I\+S\+T\+\_\+\+E\+ND@{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+L\+I\+S\+T\+\_\+\+E\+ND}}\item[{\em 
+A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+L\+I\+S\+T\+\_\+\+E\+ND\hypertarget{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca413c6090fa855359106e32fbd2b5f668}{}\label{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca413c6090fa855359106e32fbd2b5f668}
+}]An iterator reached the end of list. \end{description}
+\end{Desc}
+\index{Common Algorithm Interface@{Common Algorithm Interface}!aom\+\_\+bit\+\_\+depth@{aom\+\_\+bit\+\_\+depth}}
+\index{aom\+\_\+bit\+\_\+depth@{aom\+\_\+bit\+\_\+depth}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+bit\+\_\+depth}{aom_bit_depth}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf aom\+\_\+bit\+\_\+depth}}\hypertarget{group__codec_ga6ed0e98eba4651c1ad845e39498e4153}{}\label{group__codec_ga6ed0e98eba4651c1ad845e39498e4153}
+
+
+Bit depth for codec
+\begin{DoxyItemize}
+\item This enumeration determines the bit depth of the codec. 
+\end{DoxyItemize}
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+O\+M\+\_\+\+B\+I\+T\+S\+\_\+8@{A\+O\+M\+\_\+\+B\+I\+T\+S\+\_\+8}!Common Algorithm Interface@{Common Algorithm Interface}}\index{Common Algorithm Interface@{Common Algorithm Interface}!A\+O\+M\+\_\+\+B\+I\+T\+S\+\_\+8@{A\+O\+M\+\_\+\+B\+I\+T\+S\+\_\+8}}\item[{\em 
+A\+O\+M\+\_\+\+B\+I\+T\+S\+\_\+8\hypertarget{group__codec_gga6ed0e98eba4651c1ad845e39498e4153a4c7f55539160206a3fbb2a6cfc9ef89c}{}\label{group__codec_gga6ed0e98eba4651c1ad845e39498e4153a4c7f55539160206a3fbb2a6cfc9ef89c}
+}]8 bits \index{A\+O\+M\+\_\+\+B\+I\+T\+S\+\_\+10@{A\+O\+M\+\_\+\+B\+I\+T\+S\+\_\+10}!Common Algorithm Interface@{Common Algorithm Interface}}\index{Common Algorithm Interface@{Common Algorithm Interface}!A\+O\+M\+\_\+\+B\+I\+T\+S\+\_\+10@{A\+O\+M\+\_\+\+B\+I\+T\+S\+\_\+10}}\item[{\em 
+A\+O\+M\+\_\+\+B\+I\+T\+S\+\_\+10\hypertarget{group__codec_gga6ed0e98eba4651c1ad845e39498e4153a91734384f432233c3d681052122ab8e7}{}\label{group__codec_gga6ed0e98eba4651c1ad845e39498e4153a91734384f432233c3d681052122ab8e7}
+}]10 bits \index{A\+O\+M\+\_\+\+B\+I\+T\+S\+\_\+12@{A\+O\+M\+\_\+\+B\+I\+T\+S\+\_\+12}!Common Algorithm Interface@{Common Algorithm Interface}}\index{Common Algorithm Interface@{Common Algorithm Interface}!A\+O\+M\+\_\+\+B\+I\+T\+S\+\_\+12@{A\+O\+M\+\_\+\+B\+I\+T\+S\+\_\+12}}\item[{\em 
+A\+O\+M\+\_\+\+B\+I\+T\+S\+\_\+12\hypertarget{group__codec_gga6ed0e98eba4651c1ad845e39498e4153a15836a87f9e9940885d5ef59a52bf728}{}\label{group__codec_gga6ed0e98eba4651c1ad845e39498e4153a15836a87f9e9940885d5ef59a52bf728}
+}]12 bits \end{description}
+\end{Desc}
+\index{Common Algorithm Interface@{Common Algorithm Interface}!aom\+\_\+superblock\+\_\+size@{aom\+\_\+superblock\+\_\+size}}
+\index{aom\+\_\+superblock\+\_\+size@{aom\+\_\+superblock\+\_\+size}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+superblock\+\_\+size}{aom_superblock_size}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf aom\+\_\+superblock\+\_\+size}}\hypertarget{group__codec_gac34a24f7c6c0fef7518aed0da4425f61}{}\label{group__codec_gac34a24f7c6c0fef7518aed0da4425f61}
+
+
+Superblock size selection. 
+
+Defines the superblock size used for encoding. The superblock size can either be fixed at 64x64 or 128x128 pixels, or it can be dynamically selected by the encoder for each frame. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+O\+M\+\_\+\+S\+U\+P\+E\+R\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E\+\_\+64\+X64@{A\+O\+M\+\_\+\+S\+U\+P\+E\+R\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E\+\_\+64\+X64}!Common Algorithm Interface@{Common Algorithm Interface}}\index{Common Algorithm Interface@{Common Algorithm Interface}!A\+O\+M\+\_\+\+S\+U\+P\+E\+R\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E\+\_\+64\+X64@{A\+O\+M\+\_\+\+S\+U\+P\+E\+R\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E\+\_\+64\+X64}}\item[{\em 
+A\+O\+M\+\_\+\+S\+U\+P\+E\+R\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E\+\_\+64\+X64\hypertarget{group__codec_ggac34a24f7c6c0fef7518aed0da4425f61a5abd24080a18d4f7e33217d93a73e968}{}\label{group__codec_ggac34a24f7c6c0fef7518aed0da4425f61a5abd24080a18d4f7e33217d93a73e968}
+}]Always use 64x64 superblocks. \index{A\+O\+M\+\_\+\+S\+U\+P\+E\+R\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E\+\_\+128\+X128@{A\+O\+M\+\_\+\+S\+U\+P\+E\+R\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E\+\_\+128\+X128}!Common Algorithm Interface@{Common Algorithm Interface}}\index{Common Algorithm Interface@{Common Algorithm Interface}!A\+O\+M\+\_\+\+S\+U\+P\+E\+R\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E\+\_\+128\+X128@{A\+O\+M\+\_\+\+S\+U\+P\+E\+R\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E\+\_\+128\+X128}}\item[{\em 
+A\+O\+M\+\_\+\+S\+U\+P\+E\+R\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E\+\_\+128\+X128\hypertarget{group__codec_ggac34a24f7c6c0fef7518aed0da4425f61a17127133dafcd42b1d792770981d67d0}{}\label{group__codec_ggac34a24f7c6c0fef7518aed0da4425f61a17127133dafcd42b1d792770981d67d0}
+}]Always use 128x128 superblocks. \index{A\+O\+M\+\_\+\+S\+U\+P\+E\+R\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E\+\_\+\+D\+Y\+N\+A\+M\+IC@{A\+O\+M\+\_\+\+S\+U\+P\+E\+R\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E\+\_\+\+D\+Y\+N\+A\+M\+IC}!Common Algorithm Interface@{Common Algorithm Interface}}\index{Common Algorithm Interface@{Common Algorithm Interface}!A\+O\+M\+\_\+\+S\+U\+P\+E\+R\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E\+\_\+\+D\+Y\+N\+A\+M\+IC@{A\+O\+M\+\_\+\+S\+U\+P\+E\+R\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E\+\_\+\+D\+Y\+N\+A\+M\+IC}}\item[{\em 
+A\+O\+M\+\_\+\+S\+U\+P\+E\+R\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E\+\_\+\+D\+Y\+N\+A\+M\+IC\hypertarget{group__codec_ggac34a24f7c6c0fef7518aed0da4425f61aaabb4d9ad771b2fa177ff6fb5437b179}{}\label{group__codec_ggac34a24f7c6c0fef7518aed0da4425f61aaabb4d9ad771b2fa177ff6fb5437b179}
+}]Select superblock size dynamically. \end{description}
+\end{Desc}
+
+
+\subsubsection{Function Documentation}
+\index{Common Algorithm Interface@{Common Algorithm Interface}!aom\+\_\+codec\+\_\+version@{aom\+\_\+codec\+\_\+version}}
+\index{aom\+\_\+codec\+\_\+version@{aom\+\_\+codec\+\_\+version}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+version(void)}{aom_codec_version(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int aom\+\_\+codec\+\_\+version (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__codec_gaaed56af63c70186d571ab44c72500e77}{}\label{group__codec_gaaed56af63c70186d571ab44c72500e77}
+
+
+Return the version information (as an integer) 
+
+Returns a packed encoding of the library version number. This will only include the major.\+minor.\+patch component of the version number. Note that this encoded value should be accessed through the macros provided, as the encoding may change in the future. \index{Common Algorithm Interface@{Common Algorithm Interface}!aom\+\_\+codec\+\_\+version\+\_\+str@{aom\+\_\+codec\+\_\+version\+\_\+str}}
+\index{aom\+\_\+codec\+\_\+version\+\_\+str@{aom\+\_\+codec\+\_\+version\+\_\+str}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+version\+\_\+str(void)}{aom_codec_version_str(void)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ aom\+\_\+codec\+\_\+version\+\_\+str (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__codec_ga62d45353664dd1e1cb0868d6fdb77552}{}\label{group__codec_ga62d45353664dd1e1cb0868d6fdb77552}
+
+
+Return the version information (as a string) 
+
+Returns a printable string containing the full library version number. This may contain additional text following the three digit version number, as to indicate release candidates, prerelease versions, etc. \index{Common Algorithm Interface@{Common Algorithm Interface}!aom\+\_\+codec\+\_\+version\+\_\+extra\+\_\+str@{aom\+\_\+codec\+\_\+version\+\_\+extra\+\_\+str}}
+\index{aom\+\_\+codec\+\_\+version\+\_\+extra\+\_\+str@{aom\+\_\+codec\+\_\+version\+\_\+extra\+\_\+str}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+version\+\_\+extra\+\_\+str(void)}{aom_codec_version_extra_str(void)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ aom\+\_\+codec\+\_\+version\+\_\+extra\+\_\+str (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__codec_gadde8130d243e6228f6bfedc98f2e3532}{}\label{group__codec_gadde8130d243e6228f6bfedc98f2e3532}
+
+
+Return the version information (as a string) 
+
+Returns a printable \char`\"{}extra string\char`\"{}. This is the component of the string returned by \hyperlink{group__codec_ga62d45353664dd1e1cb0868d6fdb77552}{aom\+\_\+codec\+\_\+version\+\_\+str()} following the three digit version number. \index{Common Algorithm Interface@{Common Algorithm Interface}!aom\+\_\+codec\+\_\+build\+\_\+config@{aom\+\_\+codec\+\_\+build\+\_\+config}}
+\index{aom\+\_\+codec\+\_\+build\+\_\+config@{aom\+\_\+codec\+\_\+build\+\_\+config}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+build\+\_\+config(void)}{aom_codec_build_config(void)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ aom\+\_\+codec\+\_\+build\+\_\+config (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__codec_gaf72432504daf378befd8b3c122f14c01}{}\label{group__codec_gaf72432504daf378befd8b3c122f14c01}
+
+
+Return the build configuration. 
+
+Returns a printable string containing an encoded version of the build configuration. This may be useful to aom support. \index{Common Algorithm Interface@{Common Algorithm Interface}!aom\+\_\+codec\+\_\+iface\+\_\+name@{aom\+\_\+codec\+\_\+iface\+\_\+name}}
+\index{aom\+\_\+codec\+\_\+iface\+\_\+name@{aom\+\_\+codec\+\_\+iface\+\_\+name}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+iface\+\_\+name(aom\+\_\+codec\+\_\+iface\+\_\+t $\ast$iface)}{aom_codec_iface_name(aom_codec_iface_t *iface)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ aom\+\_\+codec\+\_\+iface\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf aom\+\_\+codec\+\_\+iface\+\_\+t} $\ast$}]{iface}
+\end{DoxyParamCaption}
+)}\hypertarget{group__codec_ga013b1f6d96b2cf9489396311a7e5179b}{}\label{group__codec_ga013b1f6d96b2cf9489396311a7e5179b}
+
+
+Return the name for a given interface. 
+
+Returns a human readable string for name of the given codec interface.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em iface} & Interface pointer \\
+\hline
+\end{DoxyParams}
+\index{Common Algorithm Interface@{Common Algorithm Interface}!aom\+\_\+codec\+\_\+err\+\_\+to\+\_\+string@{aom\+\_\+codec\+\_\+err\+\_\+to\+\_\+string}}
+\index{aom\+\_\+codec\+\_\+err\+\_\+to\+\_\+string@{aom\+\_\+codec\+\_\+err\+\_\+to\+\_\+string}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+err\+\_\+to\+\_\+string(aom\+\_\+codec\+\_\+err\+\_\+t err)}{aom_codec_err_to_string(aom_codec_err_t err)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ aom\+\_\+codec\+\_\+err\+\_\+to\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{{\bf aom\+\_\+codec\+\_\+err\+\_\+t}}]{err}
+\end{DoxyParamCaption}
+)}\hypertarget{group__codec_ga83c6525528574d1a88e73a9f605c9115}{}\label{group__codec_ga83c6525528574d1a88e73a9f605c9115}
+
+
+Convert error number to printable string. 
+
+Returns a human readable string for the last error returned by the algorithm. The returned error will be one line and will not contain any newline characters.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em err} & Error number. \\
+\hline
+\end{DoxyParams}
+\index{Common Algorithm Interface@{Common Algorithm Interface}!aom\+\_\+codec\+\_\+error@{aom\+\_\+codec\+\_\+error}}
+\index{aom\+\_\+codec\+\_\+error@{aom\+\_\+codec\+\_\+error}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+error(aom\+\_\+codec\+\_\+ctx\+\_\+t $\ast$ctx)}{aom_codec_error(aom_codec_ctx_t *ctx)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ aom\+\_\+codec\+\_\+error (
+\begin{DoxyParamCaption}
+\item[{{\bf aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$}]{ctx}
+\end{DoxyParamCaption}
+)}\hypertarget{group__codec_ga50949c0854605c722832bbfb0803f5f4}{}\label{group__codec_ga50949c0854605c722832bbfb0803f5f4}
+
+
+Retrieve error synopsis for codec context. 
+
+Returns a human readable string for the last error returned by the algorithm. The returned error will be one line and will not contain any newline characters.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ctx} & Pointer to this instance\textquotesingle{}s context. \\
+\hline
+\end{DoxyParams}
+\index{Common Algorithm Interface@{Common Algorithm Interface}!aom\+\_\+codec\+\_\+error\+\_\+detail@{aom\+\_\+codec\+\_\+error\+\_\+detail}}
+\index{aom\+\_\+codec\+\_\+error\+\_\+detail@{aom\+\_\+codec\+\_\+error\+\_\+detail}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+error\+\_\+detail(aom\+\_\+codec\+\_\+ctx\+\_\+t $\ast$ctx)}{aom_codec_error_detail(aom_codec_ctx_t *ctx)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ aom\+\_\+codec\+\_\+error\+\_\+detail (
+\begin{DoxyParamCaption}
+\item[{{\bf aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$}]{ctx}
+\end{DoxyParamCaption}
+)}\hypertarget{group__codec_ga43a70562598b485685794a4e9d9d53f7}{}\label{group__codec_ga43a70562598b485685794a4e9d9d53f7}
+
+
+Retrieve detailed error information for codec context. 
+
+Returns a human readable string providing detailed information about the last error.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ctx} & Pointer to this instance\textquotesingle{}s context.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & No detailed information is available. \\
+\hline
+\end{DoxyRetVals}
+\index{Common Algorithm Interface@{Common Algorithm Interface}!aom\+\_\+codec\+\_\+destroy@{aom\+\_\+codec\+\_\+destroy}}
+\index{aom\+\_\+codec\+\_\+destroy@{aom\+\_\+codec\+\_\+destroy}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+destroy(aom\+\_\+codec\+\_\+ctx\+\_\+t $\ast$ctx)}{aom_codec_destroy(aom_codec_ctx_t *ctx)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+codec\+\_\+err\+\_\+t} aom\+\_\+codec\+\_\+destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$}]{ctx}
+\end{DoxyParamCaption}
+)}\hypertarget{group__codec_ga9b60e186f61ba2d6ab2b8069b76a15c5}{}\label{group__codec_ga9b60e186f61ba2d6ab2b8069b76a15c5}
+
+
+Destroy a codec instance. 
+
+Destroys a codec context, freeing any associated memory buffers.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ctx} & Pointer to this instance\textquotesingle{}s context\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7caf145dc2f86014a08ebad36ac2b140001}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+OK}} & The codec algorithm initialized. \\
+\hline
+{\em \hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7caa4328d9fc527a3fd3cf76eb54e3db1a2}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+M\+E\+M\+\_\+\+E\+R\+R\+OR}} & Memory allocation failed. \\
+\hline
+\end{DoxyRetVals}
+\index{Common Algorithm Interface@{Common Algorithm Interface}!aom\+\_\+codec\+\_\+get\+\_\+caps@{aom\+\_\+codec\+\_\+get\+\_\+caps}}
+\index{aom\+\_\+codec\+\_\+get\+\_\+caps@{aom\+\_\+codec\+\_\+get\+\_\+caps}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+get\+\_\+caps(aom\+\_\+codec\+\_\+iface\+\_\+t $\ast$iface)}{aom_codec_get_caps(aom_codec_iface_t *iface)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+codec\+\_\+caps\+\_\+t} aom\+\_\+codec\+\_\+get\+\_\+caps (
+\begin{DoxyParamCaption}
+\item[{{\bf aom\+\_\+codec\+\_\+iface\+\_\+t} $\ast$}]{iface}
+\end{DoxyParamCaption}
+)}\hypertarget{group__codec_ga66b1d3c795c3868efc88d73d01439461}{}\label{group__codec_ga66b1d3c795c3868efc88d73d01439461}
+
+
+Get the capabilities of an algorithm. 
+
+Retrieves the capabilities bitfield from the algorithm\textquotesingle{}s interface.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em iface} & Pointer to the algorithm interface \\
+\hline
+\end{DoxyParams}
+\index{Common Algorithm Interface@{Common Algorithm Interface}!aom\+\_\+codec\+\_\+control\+\_\+@{aom\+\_\+codec\+\_\+control\+\_\+}}
+\index{aom\+\_\+codec\+\_\+control\+\_\+@{aom\+\_\+codec\+\_\+control\+\_\+}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+control\+\_\+(aom\+\_\+codec\+\_\+ctx\+\_\+t $\ast$ctx, int ctrl\+\_\+id,...)}{aom_codec_control_(aom_codec_ctx_t *ctx, int ctrl_id,...)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+codec\+\_\+err\+\_\+t} aom\+\_\+codec\+\_\+control\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{{\bf aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$}]{ctx, }
+\item[{int}]{ctrl\+\_\+id, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{group__codec_ga51eb332a40dcacc39000ab8e0be36b79}{}\label{group__codec_ga51eb332a40dcacc39000ab8e0be36b79}
+
+
+Control algorithm. 
+
+This function is used to exchange algorithm specific data with the codec instance. This can be used to implement features specific to a particular algorithm.
+
+This wrapper function dispatches the request to the helper function associated with the given ctrl\+\_\+id. It tries to call this function transparently, but will return \hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca20f818786bc939e6e58192f6a150d691}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+E\+R\+R\+OR} if the request could not be dispatched.
+
+Note that this function should not be used directly. Call the \hyperlink{group__codec_ga6da974f4eeaba1fa74106b28d0fe6ac5}{aom\+\_\+codec\+\_\+control} wrapper macro instead.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ctx} & Pointer to this instance\textquotesingle{}s context \\
+\hline
+\mbox{\tt in}  & {\em ctrl\+\_\+id} & Algorithm specific control identifier\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7caf145dc2f86014a08ebad36ac2b140001}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+OK}} & The control request was processed. \\
+\hline
+{\em \hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca20f818786bc939e6e58192f6a150d691}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+E\+R\+R\+OR}} & The control request was not processed. \\
+\hline
+{\em \hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca0c6ff8587f8bcc0429aecfa9fe2762df}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM}} & The data was not valid. \\
+\hline
+\end{DoxyRetVals}
+\index{Common Algorithm Interface@{Common Algorithm Interface}!aom\+\_\+obu\+\_\+type\+\_\+to\+\_\+string@{aom\+\_\+obu\+\_\+type\+\_\+to\+\_\+string}}
+\index{aom\+\_\+obu\+\_\+type\+\_\+to\+\_\+string@{aom\+\_\+obu\+\_\+type\+\_\+to\+\_\+string}!Common Algorithm Interface@{Common Algorithm Interface}}
+\paragraph[{\texorpdfstring{aom\+\_\+obu\+\_\+type\+\_\+to\+\_\+string(\+O\+B\+U\+\_\+\+T\+Y\+P\+E type)}{aom_obu_type_to_string(OBU_TYPE type)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ aom\+\_\+obu\+\_\+type\+\_\+to\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{{\bf O\+B\+U\+\_\+\+T\+Y\+PE}}]{type}
+\end{DoxyParamCaption}
+)}\hypertarget{group__codec_gaed56ca94e36f024f20133f253689b64b}{}\label{group__codec_gaed56ca94e36f024f20133f253689b64b}
+
+
+Returns string representation of O\+B\+U\+\_\+\+T\+Y\+PE. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em type} & The O\+B\+U\+\_\+\+T\+Y\+PE to convert to string. \\
+\hline
+\end{DoxyParams}

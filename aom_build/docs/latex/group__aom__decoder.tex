@@ -1,0 +1,188 @@
+\hypertarget{group__aom__decoder}{}\subsection{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}
+\label{group__aom__decoder}\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}
+\subsubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{aomdx_8h}{aomdx.\+h}
+\begin{DoxyCompactList}\small\item\em Provides definitions for using A\+OM or A\+V1 within the aom Decoder interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structaom__inspect__init}{aom\+\_\+inspect\+\_\+init}
+\begin{DoxyCompactList}\small\item\em Structure to hold inspection callback and context. \end{DoxyCompactList}\item 
+struct \hyperlink{structAv1DecodeReturn}{Av1\+Decode\+Return}
+\begin{DoxyCompactList}\small\item\em Structure to collect a buffer index when inspecting. \end{DoxyCompactList}\item 
+struct \hyperlink{structaom__tile__data}{aom\+\_\+tile\+\_\+data}
+\begin{DoxyCompactList}\small\item\em Structure to hold a tile\textquotesingle{}s start address and size in the bitstream. \end{DoxyCompactList}\item 
+struct \hyperlink{structav1__ext__ref__frame}{av1\+\_\+ext\+\_\+ref\+\_\+frame}
+\begin{DoxyCompactList}\small\item\em Structure to hold the external reference frame pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group__aom__decoder_ga4e755ba2db79154311994183ad9e4b28}{Accounting} \hyperlink{group__aom__decoder_ga4e755ba2db79154311994183ad9e4b28}{Accounting}
+\item 
+typedef void($\ast$ \hyperlink{group__aom__decoder_ga1b37b4b76004e5a2776c2e2f16b052cd}{aom\+\_\+inspect\+\_\+cb}) (void $\ast$decoder, void $\ast$ctx)
+\item 
+typedef struct \hyperlink{structaom__inspect__init}{aom\+\_\+inspect\+\_\+init} \hyperlink{group__aom__decoder_gacb9e1c8988786bd40511f75106785f6d}{aom\+\_\+inspect\+\_\+init}
+\begin{DoxyCompactList}\small\item\em Structure to hold inspection callback and context. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structaom__tile__data}{aom\+\_\+tile\+\_\+data} \hyperlink{group__aom__decoder_ga9a0f96778a43917403e5163338bc1554}{aom\+\_\+tile\+\_\+data}
+\begin{DoxyCompactList}\small\item\em Structure to hold a tile\textquotesingle{}s start address and size in the bitstream. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structav1__ext__ref__frame}{av1\+\_\+ext\+\_\+ref\+\_\+frame} \hyperlink{group__aom__decoder_ga83fa00a891fa821cd5eb1c15ffd7287b}{av1\+\_\+ext\+\_\+ref\+\_\+frame\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Structure to hold the external reference frame pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__aom__decoder_ga3865fd4b3192489baa9a5c3632ebe97b}{aom\+\_\+dec\+\_\+control\+\_\+id} \{ \\*
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97babab96509cdce01ed1cf027185da4d874}{A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+R\+E\+F\+\_\+\+U\+P\+D\+A\+T\+ES} = A\+O\+M\+\_\+\+D\+E\+C\+O\+D\+E\+R\+\_\+\+C\+T\+R\+L\+\_\+\+I\+D\+\_\+\+S\+T\+A\+RT, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba159ddb748cb69956226b7c13e3890ff6}{A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba03f15fd9a3044ca1a1707e12b6a4588b}{A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+R\+E\+F\+\_\+\+U\+S\+ED}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba175c454a7adf2d3927a0e979b4a2b07b}{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+S\+I\+ZE}, 
+\\*
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba592a5d1390204d743ddfe7bfe8ef177c}{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+S\+I\+ZE}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97bace55b4f6d152f2f0d29f70ab918cba4f}{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+B\+I\+T\+\_\+\+D\+E\+P\+TH}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97bacd7229e5fb766670fe995739931c2ee3}{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+I\+M\+G\+\_\+\+F\+O\+R\+M\+AT}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba4d9799d9e520785870b8d1f73a19c3c4}{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+S\+I\+ZE}, 
+\\*
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba242d7dba47ef646f51f9795e2fa92f91}{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+C\+O\+U\+NT}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97babb0f1c97c6092ebed96ca9800e05157e}{A\+V1\+\_\+\+S\+E\+T\+\_\+\+B\+Y\+T\+E\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97bac19ffcb187b1e1b5eee18499a97f69d2}{A\+V1\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+\+T\+I\+L\+E\+\_\+\+D\+E\+C\+O\+D\+E\+\_\+\+O\+R\+D\+ER}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba45b658bd6518cfd30c56b13e98ab168a}{A\+V1\+\_\+\+S\+E\+T\+\_\+\+S\+K\+I\+P\+\_\+\+L\+O\+O\+P\+\_\+\+F\+I\+L\+T\+ER}, 
+\\*
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97bab7332818193596356a580c83ecb12a66}{A\+V1\+\_\+\+G\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+T\+I\+NG}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97baa984acc8b42df9c7d18fc3556a14fd29}{A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+Q\+U\+A\+N\+T\+I\+Z\+ER}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97bac056b4cf80427fd05e3c4c9fc46edb78}{A\+V1\+\_\+\+S\+E\+T\+\_\+\+D\+E\+C\+O\+D\+E\+\_\+\+T\+I\+L\+E\+\_\+\+R\+OW}, 
+{\bfseries A\+V1\+\_\+\+S\+E\+T\+\_\+\+D\+E\+C\+O\+D\+E\+\_\+\+T\+I\+L\+E\+\_\+\+C\+OL}, 
+\\*
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba0795d8084ae8c78528c01587198df9e2}{A\+V1\+\_\+\+S\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+M\+O\+DE}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97baed16ed4514ea1bd2847e607ca880b246}{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+I\+N\+FO}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97badf1e96275f692bc97ddb4ce2fbdb456e}{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+D\+A\+TA}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97badfbe6c1ebe4039bfef4d2cfd98755add}{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+R\+E\+F\+\_\+\+P\+TR}, 
+\\*
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97baffdaca91296725bd16142a33f3cc6522}{A\+V1\+D\+\_\+\+E\+X\+T\+\_\+\+T\+I\+L\+E\+\_\+\+D\+E\+B\+UG}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba4784af3a10d73a36f739cb1c99caf876}{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+R\+O\+W\+\_\+\+MT}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba1fb269c5c5913d9995b6c35d28e2a788}{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+I\+S\+\_\+\+A\+N\+N\+E\+XB}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97baa8b955fc5a2f6e33c6dad858d7c15f67}{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+N\+G\+\_\+\+P\+O\+I\+NT}, 
+\\*
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba8d51f96b8877b665225f5cfaa73ded8e}{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+A\+L\+L\+\_\+\+L\+A\+Y\+E\+RS}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97bae02fd57774db8c30e49b083fa51b6236}{A\+V1\+\_\+\+S\+E\+T\+\_\+\+I\+N\+S\+P\+E\+C\+T\+I\+O\+N\+\_\+\+C\+A\+L\+L\+B\+A\+CK}, 
+\hyperlink{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba17fa09c9ce1ae4a68eae21efd219418b}{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+S\+K\+I\+P\+\_\+\+F\+I\+L\+M\+\_\+\+G\+R\+A\+IN}, 
+{\bfseries A\+O\+M\+\_\+\+D\+E\+C\+O\+D\+E\+R\+\_\+\+C\+T\+R\+L\+\_\+\+I\+D\+\_\+\+M\+AX}
+ \}\begin{DoxyCompactList}\small\item\em A\+OM decoder control functions. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsubsection*{Algorithm interface for A\+V1}
+\label{_amgrp8c574bd9a585a04008b0d15257056884}%
+This interface provides the capability to decode A\+V1 streams. \begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__codec_ga4ef55b44c762836d1550e11921bed403}{aom\+\_\+codec\+\_\+iface\+\_\+t} {\bfseries aom\+\_\+codec\+\_\+av1\+\_\+dx\+\_\+algo}\hypertarget{group__aom__decoder_ga3747f3c9af0ff0dfc68196b00efd7771}{}\label{group__aom__decoder_ga3747f3c9af0ff0dfc68196b00efd7771}
+
+\item 
+\hyperlink{group__codec_ga4ef55b44c762836d1550e11921bed403}{aom\+\_\+codec\+\_\+iface\+\_\+t} $\ast$ {\bfseries aom\+\_\+codec\+\_\+av1\+\_\+dx} (void)\hypertarget{group__aom__decoder_gac1531da8eff42fd25462c95a450f0c4f}{}\label{group__aom__decoder_gac1531da8eff42fd25462c95a450f0c4f}
+
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+
+
+\subsubsection{Typedef Documentation}
+\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!Accounting@{Accounting}}
+\index{Accounting@{Accounting}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}
+\paragraph[{\texorpdfstring{Accounting}{Accounting}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Accounting} {\bf Accounting}}\hypertarget{group__aom__decoder_ga4e755ba2db79154311994183ad9e4b28}{}\label{group__aom__decoder_ga4e755ba2db79154311994183ad9e4b28}
+Data structure that stores bit accounting for debug \index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!aom\+\_\+inspect\+\_\+cb@{aom\+\_\+inspect\+\_\+cb}}
+\index{aom\+\_\+inspect\+\_\+cb@{aom\+\_\+inspect\+\_\+cb}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}
+\paragraph[{\texorpdfstring{aom\+\_\+inspect\+\_\+cb}{aom_inspect_cb}}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ aom\+\_\+inspect\+\_\+cb) (void $\ast$decoder, void $\ast$ctx)}\hypertarget{group__aom__decoder_ga1b37b4b76004e5a2776c2e2f16b052cd}{}\label{group__aom__decoder_ga1b37b4b76004e5a2776c2e2f16b052cd}
+Callback that inspects decoder frame data. \index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!aom\+\_\+inspect\+\_\+init@{aom\+\_\+inspect\+\_\+init}}
+\index{aom\+\_\+inspect\+\_\+init@{aom\+\_\+inspect\+\_\+init}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}
+\paragraph[{\texorpdfstring{aom\+\_\+inspect\+\_\+init}{aom_inspect_init}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf aom\+\_\+inspect\+\_\+init}  {\bf aom\+\_\+inspect\+\_\+init}}\hypertarget{group__aom__decoder_gacb9e1c8988786bd40511f75106785f6d}{}\label{group__aom__decoder_gacb9e1c8988786bd40511f75106785f6d}
+
+
+Structure to hold inspection callback and context. 
+
+Defines a structure to hold the inspection callback function and calling context. \index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!aom\+\_\+tile\+\_\+data@{aom\+\_\+tile\+\_\+data}}
+\index{aom\+\_\+tile\+\_\+data@{aom\+\_\+tile\+\_\+data}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}
+\paragraph[{\texorpdfstring{aom\+\_\+tile\+\_\+data}{aom_tile_data}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf aom\+\_\+tile\+\_\+data}  {\bf aom\+\_\+tile\+\_\+data}}\hypertarget{group__aom__decoder_ga9a0f96778a43917403e5163338bc1554}{}\label{group__aom__decoder_ga9a0f96778a43917403e5163338bc1554}
+
+
+Structure to hold a tile\textquotesingle{}s start address and size in the bitstream. 
+
+Defines a structure to hold a tile\textquotesingle{}s start address and size in the bitstream. \index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!av1\+\_\+ext\+\_\+ref\+\_\+frame\+\_\+t@{av1\+\_\+ext\+\_\+ref\+\_\+frame\+\_\+t}}
+\index{av1\+\_\+ext\+\_\+ref\+\_\+frame\+\_\+t@{av1\+\_\+ext\+\_\+ref\+\_\+frame\+\_\+t}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}
+\paragraph[{\texorpdfstring{av1\+\_\+ext\+\_\+ref\+\_\+frame\+\_\+t}{av1_ext_ref_frame_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf av1\+\_\+ext\+\_\+ref\+\_\+frame}  {\bf av1\+\_\+ext\+\_\+ref\+\_\+frame\+\_\+t}}\hypertarget{group__aom__decoder_ga83fa00a891fa821cd5eb1c15ffd7287b}{}\label{group__aom__decoder_ga83fa00a891fa821cd5eb1c15ffd7287b}
+
+
+Structure to hold the external reference frame pointer. 
+
+Define a structure to hold the external reference frame pointer. 
+
+\subsubsection{Enumeration Type Documentation}
+\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!aom\+\_\+dec\+\_\+control\+\_\+id@{aom\+\_\+dec\+\_\+control\+\_\+id}}
+\index{aom\+\_\+dec\+\_\+control\+\_\+id@{aom\+\_\+dec\+\_\+control\+\_\+id}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}
+\paragraph[{\texorpdfstring{aom\+\_\+dec\+\_\+control\+\_\+id}{aom_dec_control_id}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf aom\+\_\+dec\+\_\+control\+\_\+id}}\hypertarget{group__aom__decoder_ga3865fd4b3192489baa9a5c3632ebe97b}{}\label{group__aom__decoder_ga3865fd4b3192489baa9a5c3632ebe97b}
+
+
+A\+OM decoder control functions. 
+
+This set of macros define the control functions available for the A\+OM decoder interface.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__codec_ga6da974f4eeaba1fa74106b28d0fe6ac5}{aom\+\_\+codec\+\_\+control} 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+R\+E\+F\+\_\+\+U\+P\+D\+A\+T\+ES@{A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+R\+E\+F\+\_\+\+U\+P\+D\+A\+T\+ES}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+R\+E\+F\+\_\+\+U\+P\+D\+A\+T\+ES@{A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+R\+E\+F\+\_\+\+U\+P\+D\+A\+T\+ES}}\item[{\em 
+A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+R\+E\+F\+\_\+\+U\+P\+D\+A\+T\+ES\hypertarget{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97babab96509cdce01ed1cf027185da4d874}{}\label{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97babab96509cdce01ed1cf027185da4d874}
+}]control function to get info on which reference frames were updated by the last decode \index{A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED@{A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED@{A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED}}\item[{\em 
+A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED\hypertarget{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba159ddb748cb69956226b7c13e3890ff6}{}\label{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba159ddb748cb69956226b7c13e3890ff6}
+}]check if the indicated frame is corrupted \index{A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+R\+E\+F\+\_\+\+U\+S\+ED@{A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+R\+E\+F\+\_\+\+U\+S\+ED}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+R\+E\+F\+\_\+\+U\+S\+ED@{A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+R\+E\+F\+\_\+\+U\+S\+ED}}\item[{\em 
+A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+R\+E\+F\+\_\+\+U\+S\+ED\hypertarget{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba03f15fd9a3044ca1a1707e12b6a4588b}{}\label{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba03f15fd9a3044ca1a1707e12b6a4588b}
+}]control function to get info on which reference frames were used by the last decode \index{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+S\+I\+ZE@{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+S\+I\+ZE}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+S\+I\+ZE@{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+S\+I\+ZE}}\item[{\em 
+A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+S\+I\+ZE\hypertarget{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba175c454a7adf2d3927a0e979b4a2b07b}{}\label{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba175c454a7adf2d3927a0e979b4a2b07b}
+}]control function to get the dimensions that the current frame is decoded at. This may be different to the intended display size for the frame as specified in the wrapper or frame header (see A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+S\+I\+ZE). \index{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+S\+I\+ZE@{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+S\+I\+ZE}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+S\+I\+ZE@{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+S\+I\+ZE}}\item[{\em 
+A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+S\+I\+ZE\hypertarget{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba592a5d1390204d743ddfe7bfe8ef177c}{}\label{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba592a5d1390204d743ddfe7bfe8ef177c}
+}]control function to get the current frame\textquotesingle{}s intended display dimensions (as specified in the wrapper or frame header). This may be different to the decoded dimensions of this frame (see A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+S\+I\+ZE). \index{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+B\+I\+T\+\_\+\+D\+E\+P\+TH@{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+B\+I\+T\+\_\+\+D\+E\+P\+TH}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+B\+I\+T\+\_\+\+D\+E\+P\+TH@{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+B\+I\+T\+\_\+\+D\+E\+P\+TH}}\item[{\em 
+A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+B\+I\+T\+\_\+\+D\+E\+P\+TH\hypertarget{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97bace55b4f6d152f2f0d29f70ab918cba4f}{}\label{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97bace55b4f6d152f2f0d29f70ab918cba4f}
+}]control function to get the bit depth of the stream. \index{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+I\+M\+G\+\_\+\+F\+O\+R\+M\+AT@{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+I\+M\+G\+\_\+\+F\+O\+R\+M\+AT}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+I\+M\+G\+\_\+\+F\+O\+R\+M\+AT@{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+I\+M\+G\+\_\+\+F\+O\+R\+M\+AT}}\item[{\em 
+A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+I\+M\+G\+\_\+\+F\+O\+R\+M\+AT\hypertarget{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97bacd7229e5fb766670fe995739931c2ee3}{}\label{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97bacd7229e5fb766670fe995739931c2ee3}
+}]control function to get the image format of the stream. \index{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+S\+I\+ZE@{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+S\+I\+ZE}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+S\+I\+ZE@{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+S\+I\+ZE}}\item[{\em 
+A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+S\+I\+ZE\hypertarget{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba4d9799d9e520785870b8d1f73a19c3c4}{}\label{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba4d9799d9e520785870b8d1f73a19c3c4}
+}]control function to get the size of the tile. \index{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+C\+O\+U\+NT@{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+C\+O\+U\+NT}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+C\+O\+U\+NT@{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+C\+O\+U\+NT}}\item[{\em 
+A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+C\+O\+U\+NT\hypertarget{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba242d7dba47ef646f51f9795e2fa92f91}{}\label{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba242d7dba47ef646f51f9795e2fa92f91}
+}]control function to get the tile count in a tile list. \index{A\+V1\+\_\+\+S\+E\+T\+\_\+\+B\+Y\+T\+E\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT@{A\+V1\+\_\+\+S\+E\+T\+\_\+\+B\+Y\+T\+E\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!A\+V1\+\_\+\+S\+E\+T\+\_\+\+B\+Y\+T\+E\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT@{A\+V1\+\_\+\+S\+E\+T\+\_\+\+B\+Y\+T\+E\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT}}\item[{\em 
+A\+V1\+\_\+\+S\+E\+T\+\_\+\+B\+Y\+T\+E\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT\hypertarget{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97babb0f1c97c6092ebed96ca9800e05157e}{}\label{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97babb0f1c97c6092ebed96ca9800e05157e}
+}]control function to set the byte alignment of the planes in the reference buffers. Valid values are power of 2, from 32 to 1024. A value of 0 sets legacy alignment. I.\+e. Y plane is aligned to 32 bytes, U plane directly follows Y plane, and V plane directly follows U plane. Default value is 0. \index{A\+V1\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+\+T\+I\+L\+E\+\_\+\+D\+E\+C\+O\+D\+E\+\_\+\+O\+R\+D\+ER@{A\+V1\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+\+T\+I\+L\+E\+\_\+\+D\+E\+C\+O\+D\+E\+\_\+\+O\+R\+D\+ER}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!A\+V1\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+\+T\+I\+L\+E\+\_\+\+D\+E\+C\+O\+D\+E\+\_\+\+O\+R\+D\+ER@{A\+V1\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+\+T\+I\+L\+E\+\_\+\+D\+E\+C\+O\+D\+E\+\_\+\+O\+R\+D\+ER}}\item[{\em 
+A\+V1\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+\+T\+I\+L\+E\+\_\+\+D\+E\+C\+O\+D\+E\+\_\+\+O\+R\+D\+ER\hypertarget{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97bac19ffcb187b1e1b5eee18499a97f69d2}{}\label{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97bac19ffcb187b1e1b5eee18499a97f69d2}
+}]control function to invert the decoding order to from right to left. The function is used in a test to confirm the decoding independence of tile columns. The function may be used in application where this order of decoding is desired.
+
+T\+O\+D\+O(yaowu)\+: Rework the unit test that uses this control, and in a future release, this test-\/only control shall be removed. \index{A\+V1\+\_\+\+S\+E\+T\+\_\+\+S\+K\+I\+P\+\_\+\+L\+O\+O\+P\+\_\+\+F\+I\+L\+T\+ER@{A\+V1\+\_\+\+S\+E\+T\+\_\+\+S\+K\+I\+P\+\_\+\+L\+O\+O\+P\+\_\+\+F\+I\+L\+T\+ER}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!A\+V1\+\_\+\+S\+E\+T\+\_\+\+S\+K\+I\+P\+\_\+\+L\+O\+O\+P\+\_\+\+F\+I\+L\+T\+ER@{A\+V1\+\_\+\+S\+E\+T\+\_\+\+S\+K\+I\+P\+\_\+\+L\+O\+O\+P\+\_\+\+F\+I\+L\+T\+ER}}\item[{\em 
+A\+V1\+\_\+\+S\+E\+T\+\_\+\+S\+K\+I\+P\+\_\+\+L\+O\+O\+P\+\_\+\+F\+I\+L\+T\+ER\hypertarget{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba45b658bd6518cfd30c56b13e98ab168a}{}\label{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba45b658bd6518cfd30c56b13e98ab168a}
+}]control function to set the skip loop filter flag. Valid values are integers. The decoder will skip the loop filter when its value is set to nonzero. If the loop filter is skipped the decoder may accumulate decode artifacts. The default value is 0. \index{A\+V1\+\_\+\+G\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+T\+I\+NG@{A\+V1\+\_\+\+G\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+T\+I\+NG}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!A\+V1\+\_\+\+G\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+T\+I\+NG@{A\+V1\+\_\+\+G\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+T\+I\+NG}}\item[{\em 
+A\+V1\+\_\+\+G\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+T\+I\+NG\hypertarget{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97bab7332818193596356a580c83ecb12a66}{}\label{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97bab7332818193596356a580c83ecb12a66}
+}]control function to retrieve a pointer to the Accounting struct. When compiled without --enable-\/accounting, this returns A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+I\+N\+C\+A\+P\+A\+B\+LE. If called before a frame has been decoded, this returns A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+E\+R\+R\+OR. The caller should ensure that A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+OK is returned before attempting to dereference the Accounting pointer. \index{A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+Q\+U\+A\+N\+T\+I\+Z\+ER@{A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+Q\+U\+A\+N\+T\+I\+Z\+ER}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+Q\+U\+A\+N\+T\+I\+Z\+ER@{A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+Q\+U\+A\+N\+T\+I\+Z\+ER}}\item[{\em 
+A\+O\+M\+D\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+Q\+U\+A\+N\+T\+I\+Z\+ER\hypertarget{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97baa984acc8b42df9c7d18fc3556a14fd29}{}\label{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97baa984acc8b42df9c7d18fc3556a14fd29}
+}]control function to get last decoded frame quantizer. Returned value uses internal quantizer scale defined by the codec. \index{A\+V1\+\_\+\+S\+E\+T\+\_\+\+D\+E\+C\+O\+D\+E\+\_\+\+T\+I\+L\+E\+\_\+\+R\+OW@{A\+V1\+\_\+\+S\+E\+T\+\_\+\+D\+E\+C\+O\+D\+E\+\_\+\+T\+I\+L\+E\+\_\+\+R\+OW}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!A\+V1\+\_\+\+S\+E\+T\+\_\+\+D\+E\+C\+O\+D\+E\+\_\+\+T\+I\+L\+E\+\_\+\+R\+OW@{A\+V1\+\_\+\+S\+E\+T\+\_\+\+D\+E\+C\+O\+D\+E\+\_\+\+T\+I\+L\+E\+\_\+\+R\+OW}}\item[{\em 
+A\+V1\+\_\+\+S\+E\+T\+\_\+\+D\+E\+C\+O\+D\+E\+\_\+\+T\+I\+L\+E\+\_\+\+R\+OW\hypertarget{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97bac056b4cf80427fd05e3c4c9fc46edb78}{}\label{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97bac056b4cf80427fd05e3c4c9fc46edb78}
+}]control function to set the range of tile decoding. A value that is greater and equal to zero indicates only the specific row/column is decoded. A value that is -\/1 indicates the whole row/column is decoded. A special case is both values are -\/1 that means the whole frame is decoded. \index{A\+V1\+\_\+\+S\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+M\+O\+DE@{A\+V1\+\_\+\+S\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+M\+O\+DE}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!A\+V1\+\_\+\+S\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+M\+O\+DE@{A\+V1\+\_\+\+S\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+M\+O\+DE}}\item[{\em 
+A\+V1\+\_\+\+S\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+M\+O\+DE\hypertarget{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba0795d8084ae8c78528c01587198df9e2}{}\label{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba0795d8084ae8c78528c01587198df9e2}
+}]control function to set the tile coding mode. A value that is equal to zero indicates the tiles are coded in normal tile mode. A value that is 1 indicates the tiles are coded in large-\/scale tile mode. \index{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+I\+N\+FO@{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+I\+N\+FO}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+I\+N\+FO@{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+I\+N\+FO}}\item[{\em 
+A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+I\+N\+FO\hypertarget{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97baed16ed4514ea1bd2847e607ca880b246}{}\label{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97baed16ed4514ea1bd2847e607ca880b246}
+}]control function to get the frame header information of an encoded frame in the bitstream. This provides a way to access a frame\textquotesingle{}s header data. \index{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+D\+A\+TA@{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+D\+A\+TA}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+D\+A\+TA@{A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+D\+A\+TA}}\item[{\em 
+A\+V1\+D\+\_\+\+G\+E\+T\+\_\+\+T\+I\+L\+E\+\_\+\+D\+A\+TA\hypertarget{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97badf1e96275f692bc97ddb4ce2fbdb456e}{}\label{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97badf1e96275f692bc97ddb4ce2fbdb456e}
+}]control function to get the start address and size of a tile in the coded bitstream. This provides a way to access a specific tile\textquotesingle{}s bitstream data. \index{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+R\+E\+F\+\_\+\+P\+TR@{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+R\+E\+F\+\_\+\+P\+TR}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+R\+E\+F\+\_\+\+P\+TR@{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+R\+E\+F\+\_\+\+P\+TR}}\item[{\em 
+A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+R\+E\+F\+\_\+\+P\+TR\hypertarget{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97badfbe6c1ebe4039bfef4d2cfd98755add}{}\label{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97badfbe6c1ebe4039bfef4d2cfd98755add}
+}]control function to set the external references\textquotesingle{} pointers in the decoder. This is used while decoding the tile list O\+BU in large-\/scale tile coding mode. \index{A\+V1\+D\+\_\+\+E\+X\+T\+\_\+\+T\+I\+L\+E\+\_\+\+D\+E\+B\+UG@{A\+V1\+D\+\_\+\+E\+X\+T\+\_\+\+T\+I\+L\+E\+\_\+\+D\+E\+B\+UG}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!A\+V1\+D\+\_\+\+E\+X\+T\+\_\+\+T\+I\+L\+E\+\_\+\+D\+E\+B\+UG@{A\+V1\+D\+\_\+\+E\+X\+T\+\_\+\+T\+I\+L\+E\+\_\+\+D\+E\+B\+UG}}\item[{\em 
+A\+V1\+D\+\_\+\+E\+X\+T\+\_\+\+T\+I\+L\+E\+\_\+\+D\+E\+B\+UG\hypertarget{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97baffdaca91296725bd16142a33f3cc6522}{}\label{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97baffdaca91296725bd16142a33f3cc6522}
+}]control function to enable the ext-\/tile software debug and testing code in the decoder. \index{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+R\+O\+W\+\_\+\+MT@{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+R\+O\+W\+\_\+\+MT}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+R\+O\+W\+\_\+\+MT@{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+R\+O\+W\+\_\+\+MT}}\item[{\em 
+A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+R\+O\+W\+\_\+\+MT\hypertarget{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba4784af3a10d73a36f739cb1c99caf876}{}\label{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba4784af3a10d73a36f739cb1c99caf876}
+}]control function to enable the row based multi-\/threading of decoding. A value that is equal to 1 indicates that row based multi-\/threading is enabled. \index{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+I\+S\+\_\+\+A\+N\+N\+E\+XB@{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+I\+S\+\_\+\+A\+N\+N\+E\+XB}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+I\+S\+\_\+\+A\+N\+N\+E\+XB@{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+I\+S\+\_\+\+A\+N\+N\+E\+XB}}\item[{\em 
+A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+I\+S\+\_\+\+A\+N\+N\+E\+XB\hypertarget{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba1fb269c5c5913d9995b6c35d28e2a788}{}\label{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba1fb269c5c5913d9995b6c35d28e2a788}
+}]control function to indicate whether bitstream is in Annex-\/B format. \index{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+N\+G\+\_\+\+P\+O\+I\+NT@{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+N\+G\+\_\+\+P\+O\+I\+NT}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+N\+G\+\_\+\+P\+O\+I\+NT@{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+N\+G\+\_\+\+P\+O\+I\+NT}}\item[{\em 
+A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+N\+G\+\_\+\+P\+O\+I\+NT\hypertarget{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97baa8b955fc5a2f6e33c6dad858d7c15f67}{}\label{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97baa8b955fc5a2f6e33c6dad858d7c15f67}
+}]control function to indicate which operating point to use. A scalable stream may define multiple operating points, each of which defines a set of temporal and spatial layers to be processed. The operating point index may take a value between 0 and operating\+\_\+points\+\_\+cnt\+\_\+minus\+\_\+1 (which is at most 31). \index{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+A\+L\+L\+\_\+\+L\+A\+Y\+E\+RS@{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+A\+L\+L\+\_\+\+L\+A\+Y\+E\+RS}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+A\+L\+L\+\_\+\+L\+A\+Y\+E\+RS@{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+A\+L\+L\+\_\+\+L\+A\+Y\+E\+RS}}\item[{\em 
+A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+A\+L\+L\+\_\+\+L\+A\+Y\+E\+RS\hypertarget{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba8d51f96b8877b665225f5cfaa73ded8e}{}\label{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba8d51f96b8877b665225f5cfaa73ded8e}
+}]control function to indicate whether to output one frame per temporal unit (the default), or one frame per spatial layer. In a scalable stream, each temporal unit corresponds to a single \char`\"{}frame\char`\"{} of video, and within a temporal unit there may be multiple spatial layers with different versions of that frame. For video playback, only the highest-\/quality version (within the selected operating point) is needed, but for some use cases it is useful to have access to multiple versions of a frame when they are available. \index{A\+V1\+\_\+\+S\+E\+T\+\_\+\+I\+N\+S\+P\+E\+C\+T\+I\+O\+N\+\_\+\+C\+A\+L\+L\+B\+A\+CK@{A\+V1\+\_\+\+S\+E\+T\+\_\+\+I\+N\+S\+P\+E\+C\+T\+I\+O\+N\+\_\+\+C\+A\+L\+L\+B\+A\+CK}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!A\+V1\+\_\+\+S\+E\+T\+\_\+\+I\+N\+S\+P\+E\+C\+T\+I\+O\+N\+\_\+\+C\+A\+L\+L\+B\+A\+CK@{A\+V1\+\_\+\+S\+E\+T\+\_\+\+I\+N\+S\+P\+E\+C\+T\+I\+O\+N\+\_\+\+C\+A\+L\+L\+B\+A\+CK}}\item[{\em 
+A\+V1\+\_\+\+S\+E\+T\+\_\+\+I\+N\+S\+P\+E\+C\+T\+I\+O\+N\+\_\+\+C\+A\+L\+L\+B\+A\+CK\hypertarget{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97bae02fd57774db8c30e49b083fa51b6236}{}\label{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97bae02fd57774db8c30e49b083fa51b6236}
+}]control function to set an aom\+\_\+inspect\+\_\+cb callback that is invoked each time a frame is decoded. When compiled without --enable-\/inspection, this returns A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+I\+N\+C\+A\+P\+A\+B\+LE. \index{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+S\+K\+I\+P\+\_\+\+F\+I\+L\+M\+\_\+\+G\+R\+A\+IN@{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+S\+K\+I\+P\+\_\+\+F\+I\+L\+M\+\_\+\+G\+R\+A\+IN}!A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}}\index{A\+O\+Media A\+O\+M/\+A\+V1 Decoder@{A\+O\+Media A\+O\+M/\+A\+V1 Decoder}!A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+S\+K\+I\+P\+\_\+\+F\+I\+L\+M\+\_\+\+G\+R\+A\+IN@{A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+S\+K\+I\+P\+\_\+\+F\+I\+L\+M\+\_\+\+G\+R\+A\+IN}}\item[{\em 
+A\+V1\+D\+\_\+\+S\+E\+T\+\_\+\+S\+K\+I\+P\+\_\+\+F\+I\+L\+M\+\_\+\+G\+R\+A\+IN\hypertarget{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba17fa09c9ce1ae4a68eae21efd219418b}{}\label{group__aom__decoder_gga3865fd4b3192489baa9a5c3632ebe97ba17fa09c9ce1ae4a68eae21efd219418b}
+}]control function to set the skip film grain flag. Valid values are integers. The decoder will skip the film grain when its value is set to nonzero. The default value is 0. \end{description}
+\end{Desc}

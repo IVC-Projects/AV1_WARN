@@ -1,0 +1,72 @@
+\hypertarget{structaom__codec__ctx}{}\subsection{aom\+\_\+codec\+\_\+ctx Struct Reference}
+\label{structaom__codec__ctx}\index{aom\+\_\+codec\+\_\+ctx@{aom\+\_\+codec\+\_\+ctx}}
+
+
+Codec context structure.  
+
+
+
+
+{\ttfamily \#include $<$aom\+\_\+codec.\+h$>$}
+
+\subsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{structaom__codec__ctx_a3aa8abff3e05d2fbbf4f5a9fa0575f2b}{name}
+\item 
+\hyperlink{group__codec_ga4ef55b44c762836d1550e11921bed403}{aom\+\_\+codec\+\_\+iface\+\_\+t} $\ast$ \hyperlink{structaom__codec__ctx_a49c3517c6879e8b57061496078cfd040}{iface}
+\item 
+\hyperlink{group__codec_gaaae61e0f8663e6137f1e228757248e7c}{aom\+\_\+codec\+\_\+err\+\_\+t} \hyperlink{structaom__codec__ctx_a4cf9c265a7c34e92bb02d04aa3cab718}{err}
+\item 
+const char $\ast$ \hyperlink{structaom__codec__ctx_ad152db82a10b68df869ccb29370dae00}{err\+\_\+detail}
+\item 
+\hyperlink{group__codec_ga18f2242c1afca329581fbd3f2c81721b}{aom\+\_\+codec\+\_\+flags\+\_\+t} \hyperlink{structaom__codec__ctx_acb3a6528de757c4c862fa77619ef7e40}{init\+\_\+flags}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>const struct \hyperlink{structaom__codec__dec__cfg}{aom\_codec\_dec\_cfg} $\ast$ \hyperlink{structaom__codec__ctx_a4b762ba3bde6bc72fddc9543adca33ef}{dec}\\
+\>const struct \hyperlink{structaom__codec__enc__cfg}{aom\_codec\_enc\_cfg} $\ast$ {\bfseries enc}\\
+\>const void $\ast$ {\bfseries raw}\\
+\} \hyperlink{structaom__codec__ctx_ac6777025d3b72c9ab49adba78fc70b30}{config}\\
+
+\end{tabbing}\item 
+\hyperlink{group__codec_ga3671963ca4b3d6c2adbc186c8ed18023}{aom\+\_\+codec\+\_\+priv\+\_\+t} $\ast$ \hyperlink{structaom__codec__ctx_a9bd533e9da28ce73c8b787d4359ed337}{priv}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Codec context structure. 
+
+All codecs \hyperlink{rfc2119_MUST}{M\+U\+ST} support this context structure fully. In general, this data should be considered private to the codec algorithm, and not be manipulated or examined by the calling application. Applications may reference the \textquotesingle{}name\textquotesingle{} member to get a printable description of the algorithm. 
+
+\subsubsection{Field Documentation}
+\index{aom\+\_\+codec\+\_\+ctx@{aom\+\_\+codec\+\_\+ctx}!name@{name}}
+\index{name@{name}!aom\+\_\+codec\+\_\+ctx@{aom\+\_\+codec\+\_\+ctx}}
+\paragraph[{\texorpdfstring{name}{name}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ aom\+\_\+codec\+\_\+ctx\+::name}\hypertarget{structaom__codec__ctx_a3aa8abff3e05d2fbbf4f5a9fa0575f2b}{}\label{structaom__codec__ctx_a3aa8abff3e05d2fbbf4f5a9fa0575f2b}
+Printable interface name \index{aom\+\_\+codec\+\_\+ctx@{aom\+\_\+codec\+\_\+ctx}!iface@{iface}}
+\index{iface@{iface}!aom\+\_\+codec\+\_\+ctx@{aom\+\_\+codec\+\_\+ctx}}
+\paragraph[{\texorpdfstring{iface}{iface}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+codec\+\_\+iface\+\_\+t}$\ast$ aom\+\_\+codec\+\_\+ctx\+::iface}\hypertarget{structaom__codec__ctx_a49c3517c6879e8b57061496078cfd040}{}\label{structaom__codec__ctx_a49c3517c6879e8b57061496078cfd040}
+Interface pointers \index{aom\+\_\+codec\+\_\+ctx@{aom\+\_\+codec\+\_\+ctx}!err@{err}}
+\index{err@{err}!aom\+\_\+codec\+\_\+ctx@{aom\+\_\+codec\+\_\+ctx}}
+\paragraph[{\texorpdfstring{err}{err}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+codec\+\_\+err\+\_\+t} aom\+\_\+codec\+\_\+ctx\+::err}\hypertarget{structaom__codec__ctx_a4cf9c265a7c34e92bb02d04aa3cab718}{}\label{structaom__codec__ctx_a4cf9c265a7c34e92bb02d04aa3cab718}
+Last returned error \index{aom\+\_\+codec\+\_\+ctx@{aom\+\_\+codec\+\_\+ctx}!err\+\_\+detail@{err\+\_\+detail}}
+\index{err\+\_\+detail@{err\+\_\+detail}!aom\+\_\+codec\+\_\+ctx@{aom\+\_\+codec\+\_\+ctx}}
+\paragraph[{\texorpdfstring{err\+\_\+detail}{err_detail}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ aom\+\_\+codec\+\_\+ctx\+::err\+\_\+detail}\hypertarget{structaom__codec__ctx_ad152db82a10b68df869ccb29370dae00}{}\label{structaom__codec__ctx_ad152db82a10b68df869ccb29370dae00}
+Detailed info, if available \index{aom\+\_\+codec\+\_\+ctx@{aom\+\_\+codec\+\_\+ctx}!init\+\_\+flags@{init\+\_\+flags}}
+\index{init\+\_\+flags@{init\+\_\+flags}!aom\+\_\+codec\+\_\+ctx@{aom\+\_\+codec\+\_\+ctx}}
+\paragraph[{\texorpdfstring{init\+\_\+flags}{init_flags}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+codec\+\_\+flags\+\_\+t} aom\+\_\+codec\+\_\+ctx\+::init\+\_\+flags}\hypertarget{structaom__codec__ctx_acb3a6528de757c4c862fa77619ef7e40}{}\label{structaom__codec__ctx_acb3a6528de757c4c862fa77619ef7e40}
+Flags passed at init time \index{aom\+\_\+codec\+\_\+ctx@{aom\+\_\+codec\+\_\+ctx}!dec@{dec}}
+\index{dec@{dec}!aom\+\_\+codec\+\_\+ctx@{aom\+\_\+codec\+\_\+ctx}}
+\paragraph[{\texorpdfstring{dec}{dec}}]{\setlength{\rightskip}{0pt plus 5cm}const struct {\bf aom\+\_\+codec\+\_\+dec\+\_\+cfg}$\ast$ aom\+\_\+codec\+\_\+ctx\+::dec}\hypertarget{structaom__codec__ctx_a4b762ba3bde6bc72fddc9543adca33ef}{}\label{structaom__codec__ctx_a4b762ba3bde6bc72fddc9543adca33ef}
+$<$ Decoder Configuration Pointer Encoder Configuration Pointer \index{aom\+\_\+codec\+\_\+ctx@{aom\+\_\+codec\+\_\+ctx}!config@{config}}
+\index{config@{config}!aom\+\_\+codec\+\_\+ctx@{aom\+\_\+codec\+\_\+ctx}}
+\paragraph[{\texorpdfstring{config}{config}}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \}   aom\+\_\+codec\+\_\+ctx\+::config}\hypertarget{structaom__codec__ctx_ac6777025d3b72c9ab49adba78fc70b30}{}\label{structaom__codec__ctx_ac6777025d3b72c9ab49adba78fc70b30}
+Configuration pointer aliasing union \index{aom\+\_\+codec\+\_\+ctx@{aom\+\_\+codec\+\_\+ctx}!priv@{priv}}
+\index{priv@{priv}!aom\+\_\+codec\+\_\+ctx@{aom\+\_\+codec\+\_\+ctx}}
+\paragraph[{\texorpdfstring{priv}{priv}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+codec\+\_\+priv\+\_\+t}$\ast$ aom\+\_\+codec\+\_\+ctx\+::priv}\hypertarget{structaom__codec__ctx_a9bd533e9da28ce73c8b787d4359ed337}{}\label{structaom__codec__ctx_a9bd533e9da28ce73c8b787d4359ed337}
+Algorithm private storage 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+aom/\hyperlink{aom__codec_8h}{aom\+\_\+codec.\+h}\end{DoxyCompactItemize}

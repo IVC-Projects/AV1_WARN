@@ -1,0 +1,2 @@
+/usr/bin/ar qc libaom_pc.a  CMakeFiles/aom_pc.dir/gen_src/aom_pc_dummy.c.o
+/usr/bin/ranlib libaom_pc.a

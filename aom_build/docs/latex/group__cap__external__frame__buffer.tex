@@ -1,0 +1,57 @@
+\hypertarget{group__cap__external__frame__buffer}{}\subsection{External Frame Buffer Functions}
+\label{group__cap__external__frame__buffer}\index{External Frame Buffer Functions@{External Frame Buffer Functions}}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__codec_gaaae61e0f8663e6137f1e228757248e7c}{aom\+\_\+codec\+\_\+err\+\_\+t} \hyperlink{group__cap__external__frame__buffer_ga1818a812e4d1e70eeafbe5b0ee538d6e}{aom\+\_\+codec\+\_\+set\+\_\+frame\+\_\+buffer\+\_\+functions} (\hyperlink{group__codec_ga9a1d27f9742d9f70783e3c6cb849b5b4}{aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$ctx, \hyperlink{aom__frame__buffer_8h_a01fdfbbc9be8b320437a49d3de07814d}{aom\+\_\+get\+\_\+frame\+\_\+buffer\+\_\+cb\+\_\+fn\+\_\+t} cb\+\_\+get, \hyperlink{aom__frame__buffer_8h_a1803cd0766dc297d88172f174fbb6ab5}{aom\+\_\+release\+\_\+frame\+\_\+buffer\+\_\+cb\+\_\+fn\+\_\+t} cb\+\_\+release, void $\ast$cb\+\_\+priv)
+\begin{DoxyCompactList}\small\item\em Pass in external frame buffers for the decoder to use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+The following section is required to be implemented for all decoders that advertise the A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+C\+A\+P\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+B\+U\+F\+F\+ER capability. Calling this function for codecs that don\textquotesingle{}t advertise this capability will result in an error code being returned, usually A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+E\+R\+R\+OR.
+
+\begin{DoxyNote}{Note}
+Currently this only works with A\+V1. 
+\end{DoxyNote}
+
+
+\subsubsection{Function Documentation}
+\index{External Frame Buffer Functions@{External Frame Buffer Functions}!aom\+\_\+codec\+\_\+set\+\_\+frame\+\_\+buffer\+\_\+functions@{aom\+\_\+codec\+\_\+set\+\_\+frame\+\_\+buffer\+\_\+functions}}
+\index{aom\+\_\+codec\+\_\+set\+\_\+frame\+\_\+buffer\+\_\+functions@{aom\+\_\+codec\+\_\+set\+\_\+frame\+\_\+buffer\+\_\+functions}!External Frame Buffer Functions@{External Frame Buffer Functions}}
+\paragraph[{\texorpdfstring{aom\+\_\+codec\+\_\+set\+\_\+frame\+\_\+buffer\+\_\+functions(aom\+\_\+codec\+\_\+ctx\+\_\+t $\ast$ctx, aom\+\_\+get\+\_\+frame\+\_\+buffer\+\_\+cb\+\_\+fn\+\_\+t cb\+\_\+get, aom\+\_\+release\+\_\+frame\+\_\+buffer\+\_\+cb\+\_\+fn\+\_\+t cb\+\_\+release, void $\ast$cb\+\_\+priv)}{aom_codec_set_frame_buffer_functions(aom_codec_ctx_t *ctx, aom_get_frame_buffer_cb_fn_t cb_get, aom_release_frame_buffer_cb_fn_t cb_release, void *cb_priv)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+codec\+\_\+err\+\_\+t} aom\+\_\+codec\+\_\+set\+\_\+frame\+\_\+buffer\+\_\+functions (
+\begin{DoxyParamCaption}
+\item[{{\bf aom\+\_\+codec\+\_\+ctx\+\_\+t} $\ast$}]{ctx, }
+\item[{{\bf aom\+\_\+get\+\_\+frame\+\_\+buffer\+\_\+cb\+\_\+fn\+\_\+t}}]{cb\+\_\+get, }
+\item[{{\bf aom\+\_\+release\+\_\+frame\+\_\+buffer\+\_\+cb\+\_\+fn\+\_\+t}}]{cb\+\_\+release, }
+\item[{void $\ast$}]{cb\+\_\+priv}
+\end{DoxyParamCaption}
+)}\hypertarget{group__cap__external__frame__buffer_ga1818a812e4d1e70eeafbe5b0ee538d6e}{}\label{group__cap__external__frame__buffer_ga1818a812e4d1e70eeafbe5b0ee538d6e}
+
+
+Pass in external frame buffers for the decoder to use. 
+
+Registers functions to be called when libaom needs a frame buffer to decode the current frame and a function to be called when libaom does not internally reference the frame buffer. This set function must be called before the first call to decode or libaom will assume the default behavior of allocating frame buffers internally.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ctx} & Pointer to this instance\textquotesingle{}s context \\
+\hline
+\mbox{\tt in}  & {\em cb\+\_\+get} & Pointer to the get callback function \\
+\hline
+\mbox{\tt in}  & {\em cb\+\_\+release} & Pointer to the release callback function \\
+\hline
+\mbox{\tt in}  & {\em cb\+\_\+priv} & Callback\textquotesingle{}s private data\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7caf145dc2f86014a08ebad36ac2b140001}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+OK}} & External frame buffers will be used by libaom. \\
+\hline
+{\em \hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca0c6ff8587f8bcc0429aecfa9fe2762df}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM}} & One or more of the callbacks were N\+U\+LL. \\
+\hline
+{\em \hyperlink{group__codec_ggaaae61e0f8663e6137f1e228757248e7ca20f818786bc939e6e58192f6a150d691}{A\+O\+M\+\_\+\+C\+O\+D\+E\+C\+\_\+\+E\+R\+R\+OR}} & Decoder context not initialized, or algorithm not capable of using external frame buffers.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+When decoding A\+V1, the application may be required to pass in at least \hyperlink{aom__frame__buffer_8h_a9470ef667d6ce967e93d9e528d523919}{A\+O\+M\+\_\+\+M\+A\+X\+I\+M\+U\+M\+\_\+\+W\+O\+R\+K\+\_\+\+B\+U\+F\+F\+E\+RS} external frame buffers. 
+\end{DoxyNote}

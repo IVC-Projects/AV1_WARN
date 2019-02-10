@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/chenjs/a5/aom_190109/aom/av1/encoder/x86/hash_sse42.c
+stdint.h
+-
+smmintrin.h
+-
+

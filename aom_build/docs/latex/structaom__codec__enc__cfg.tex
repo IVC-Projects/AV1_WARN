@@ -1,0 +1,529 @@
+\hypertarget{structaom__codec__enc__cfg}{}\subsection{aom\+\_\+codec\+\_\+enc\+\_\+cfg Struct Reference}
+\label{structaom__codec__enc__cfg}\index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+
+
+Encoder configuration structure.  
+
+
+
+
+{\ttfamily \#include $<$aom\+\_\+encoder.\+h$>$}
+
+\subsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a2aef2cdcf97e60ab36f7ca77c028e816}{g\+\_\+usage}
+\begin{DoxyCompactList}\small\item\em Algorithm specific \char`\"{}usage\char`\"{} value. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a55f56f04145e334cfa727df77d8378d4}{g\+\_\+threads}
+\begin{DoxyCompactList}\small\item\em Maximum number of threads to use. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a715cb435d6eaca88eab71a763af3d8ec}{g\+\_\+profile}
+\begin{DoxyCompactList}\small\item\em Bitstream profile to use. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a80cb459c5ef3c7e1516f617c4c9d6eab}{g\+\_\+w}
+\begin{DoxyCompactList}\small\item\em Width of the frame. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a37b0f57b63bec8d133df8901d4407ee6}{g\+\_\+h}
+\begin{DoxyCompactList}\small\item\em Height of the frame. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a71628d182062afe21a884fa584714b74}{g\+\_\+limit}
+\begin{DoxyCompactList}\small\item\em Max number of frames to encode. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a8349dcee2119c7fb3fd15a0ae6fdcf12}{g\+\_\+forced\+\_\+max\+\_\+frame\+\_\+width}
+\begin{DoxyCompactList}\small\item\em Forced maximum width of the frame. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a0a02763f4709e7ed87dfa84532d7eaaf}{g\+\_\+forced\+\_\+max\+\_\+frame\+\_\+height}
+\begin{DoxyCompactList}\small\item\em Forced maximum height of the frame. \end{DoxyCompactList}\item 
+\hyperlink{group__codec_ga90c2026e798a669241dc57464472a198}{aom\+\_\+bit\+\_\+depth\+\_\+t} \hyperlink{structaom__codec__enc__cfg_a76a27f44cded1516803a776a0a7e9038}{g\+\_\+bit\+\_\+depth}
+\begin{DoxyCompactList}\small\item\em Bit-\/depth of the codec. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a021aed8496604b1ad3af2c51f52d075d}{g\+\_\+input\+\_\+bit\+\_\+depth}
+\begin{DoxyCompactList}\small\item\em Bit-\/depth of the input frames. \end{DoxyCompactList}\item 
+struct \hyperlink{structaom__rational}{aom\+\_\+rational} \hyperlink{structaom__codec__enc__cfg_a10664f1fc5b6ec29b77ee13efeeecdf7}{g\+\_\+timebase}
+\begin{DoxyCompactList}\small\item\em Stream timebase units. \end{DoxyCompactList}\item 
+\hyperlink{group__encoder_ga5f326af84993f371bb165883bb5a5a59}{aom\+\_\+codec\+\_\+er\+\_\+flags\+\_\+t} \hyperlink{structaom__codec__enc__cfg_a8f3763485bb1f6eea6466b2fe0da2304}{g\+\_\+error\+\_\+resilient}
+\begin{DoxyCompactList}\small\item\em Enable error resilient modes. \end{DoxyCompactList}\item 
+enum \hyperlink{group__encoder_ga92b6709b58dc3435e3ba652da562eda1}{aom\+\_\+enc\+\_\+pass} \hyperlink{structaom__codec__enc__cfg_aad58e4d10c7904d50ce959aef202dc64}{g\+\_\+pass}
+\begin{DoxyCompactList}\small\item\em Multi-\/pass Encoding Mode. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a614a49318f2011cc8735d7e51b910fa4}{g\+\_\+lag\+\_\+in\+\_\+frames}
+\begin{DoxyCompactList}\small\item\em Allow lagged encoding. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a0b64b07e9238ee51f6195b1bbb7cd2fd}{rc\+\_\+dropframe\+\_\+thresh}
+\begin{DoxyCompactList}\small\item\em Temporal resampling configuration, if supported by the codec. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_ab9123d944cd168511d65c823b30d5705}{rc\+\_\+resize\+\_\+mode}
+\begin{DoxyCompactList}\small\item\em Mode for spatial resampling, if supported by the codec. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a0e1d616495fb994ed67418b90b14f168}{rc\+\_\+resize\+\_\+denominator}
+\begin{DoxyCompactList}\small\item\em Frame resize denominator. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a5da400d15cfd927a18e17a44985b910a}{rc\+\_\+resize\+\_\+kf\+\_\+denominator}
+\begin{DoxyCompactList}\small\item\em Keyframe resize denominator. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a704ff1b4202b1d5499928b98eef17424}{rc\+\_\+superres\+\_\+mode}
+\begin{DoxyCompactList}\small\item\em Frame super-\/resolution scaling mode. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a9217f81f33c62161df9d94e42f2b77c6}{rc\+\_\+superres\+\_\+denominator}
+\begin{DoxyCompactList}\small\item\em Frame super-\/resolution denominator. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a4b5ed538fedccae4805fec4a58187fa7}{rc\+\_\+superres\+\_\+kf\+\_\+denominator}
+\begin{DoxyCompactList}\small\item\em Keyframe super-\/resolution denominator. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a64d3517b2cef17cd57ec3f659ad0f2ab}{rc\+\_\+superres\+\_\+qthresh}
+\begin{DoxyCompactList}\small\item\em Frame super-\/resolution q threshold. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_adf982eaa83e7bbdeb40f56bfd307cc98}{rc\+\_\+superres\+\_\+kf\+\_\+qthresh}
+\begin{DoxyCompactList}\small\item\em Keyframe super-\/resolution q threshold. \end{DoxyCompactList}\item 
+enum \hyperlink{group__encoder_ga7c084d3ecef569aad166ce70b0e8a957}{aom\+\_\+rc\+\_\+mode} \hyperlink{structaom__codec__enc__cfg_a3fd74d888658039d09bc4eacf163a495}{rc\+\_\+end\+\_\+usage}
+\begin{DoxyCompactList}\small\item\em Rate control algorithm to use. \end{DoxyCompactList}\item 
+\hyperlink{group__encoder_ga85cca9fad6bc25c667f013a39c607174}{aom\+\_\+fixed\+\_\+buf\+\_\+t} \hyperlink{structaom__codec__enc__cfg_ad5c6f5c96ec54cabc71edb01045a1f04}{rc\+\_\+twopass\+\_\+stats\+\_\+in}
+\begin{DoxyCompactList}\small\item\em Two-\/pass stats buffer. \end{DoxyCompactList}\item 
+\hyperlink{group__encoder_ga85cca9fad6bc25c667f013a39c607174}{aom\+\_\+fixed\+\_\+buf\+\_\+t} \hyperlink{structaom__codec__enc__cfg_a3ccdeecb9ed287076f413f088792a4d0}{rc\+\_\+firstpass\+\_\+mb\+\_\+stats\+\_\+in}
+\begin{DoxyCompactList}\small\item\em first pass mb stats buffer. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_ab21539da477dba7506d90353c27d218b}{rc\+\_\+target\+\_\+bitrate}
+\begin{DoxyCompactList}\small\item\em Target data rate. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_aa5c6cede8c820ef29fc3c106aa1227eb}{rc\+\_\+min\+\_\+quantizer}
+\begin{DoxyCompactList}\small\item\em Minimum (Best Quality) Quantizer. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a8f8851455e06db026022d4b01671b122}{rc\+\_\+max\+\_\+quantizer}
+\begin{DoxyCompactList}\small\item\em Maximum (Worst Quality) Quantizer. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a8695946812f24f3719aed80cff00aa29}{rc\+\_\+undershoot\+\_\+pct}
+\begin{DoxyCompactList}\small\item\em Rate control adaptation undershoot control. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_ad57c8287bcacf2ca7230a3e11906b65c}{rc\+\_\+overshoot\+\_\+pct}
+\begin{DoxyCompactList}\small\item\em Rate control adaptation overshoot control. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a2eb74c50bbc22536248925cd92b746c2}{rc\+\_\+buf\+\_\+sz}
+\begin{DoxyCompactList}\small\item\em Decoder Buffer Size. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a6c25595e7dfcdf3229c3f66c91224fcc}{rc\+\_\+buf\+\_\+initial\+\_\+sz}
+\begin{DoxyCompactList}\small\item\em Decoder Buffer Initial Size. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_aa4d9838419e94e634a02d710da06c842}{rc\+\_\+buf\+\_\+optimal\+\_\+sz}
+\begin{DoxyCompactList}\small\item\em Decoder Buffer Optimal Size. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a630b9cb2fa79022a7b63cb0bed7e5fcb}{rc\+\_\+2pass\+\_\+vbr\+\_\+bias\+\_\+pct}
+\begin{DoxyCompactList}\small\item\em Two-\/pass mode C\+B\+R/\+V\+BR bias. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a623802304a377237ec6df7ae31984655}{rc\+\_\+2pass\+\_\+vbr\+\_\+minsection\+\_\+pct}
+\begin{DoxyCompactList}\small\item\em Two-\/pass mode per-\/\+G\+OP minimum bitrate. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a5610caa642c808af885c1521e916a1e6}{rc\+\_\+2pass\+\_\+vbr\+\_\+maxsection\+\_\+pct}
+\begin{DoxyCompactList}\small\item\em Two-\/pass mode per-\/\+G\+OP maximum bitrate. \end{DoxyCompactList}\item 
+int \hyperlink{structaom__codec__enc__cfg_aae6716f2cd78979c59f7fa39fec1717f}{fwd\+\_\+kf\+\_\+enabled}
+\begin{DoxyCompactList}\small\item\em Option to enable forward reference key frame. \end{DoxyCompactList}\item 
+enum \hyperlink{group__encoder_gac0498fc02cd368e6d9675cdb0bab5a84}{aom\+\_\+kf\+\_\+mode} \hyperlink{structaom__codec__enc__cfg_a3c1ea7f3ea90b9b8eab4c3f266ffacdc}{kf\+\_\+mode}
+\begin{DoxyCompactList}\small\item\em Keyframe placement mode. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a5df0104b97c8ad18f8f1df492706a256}{kf\+\_\+min\+\_\+dist}
+\begin{DoxyCompactList}\small\item\em Keyframe minimum interval. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a877936e8a60207e7eac223811af0c124}{kf\+\_\+max\+\_\+dist}
+\begin{DoxyCompactList}\small\item\em Keyframe maximum interval. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_aa72f5e8f1508388778175d8075e15195}{sframe\+\_\+dist}
+\begin{DoxyCompactList}\small\item\em sframe interval \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_aab919adaf0e01b41da93505a075b6804}{sframe\+\_\+mode}
+\begin{DoxyCompactList}\small\item\em sframe insertion mode \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_af4583da6c145778f822a4a61db28c40a}{large\+\_\+scale\+\_\+tile}
+\begin{DoxyCompactList}\small\item\em Tile coding mode. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a71d97f2a1ff3850955c50705104ac54a}{monochrome}
+\begin{DoxyCompactList}\small\item\em Monochrome mode. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_a35b8433fa60af32d0aecc2b56e736a98}{full\+\_\+still\+\_\+picture\+\_\+hdr}
+\begin{DoxyCompactList}\small\item\em full\+\_\+still\+\_\+picture\+\_\+hdr \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structaom__codec__enc__cfg_adb3fe41c1ce39579a49b97bc2ca7b2f2}{save\+\_\+as\+\_\+annexb}
+\begin{DoxyCompactList}\small\item\em Bitstream syntax mode. \end{DoxyCompactList}\item 
+int \hyperlink{structaom__codec__enc__cfg_a1b1fc8284e9a26deb875b1b2a58e47d9}{tile\+\_\+width\+\_\+count}
+\begin{DoxyCompactList}\small\item\em Number of explicit tile widths specified. \end{DoxyCompactList}\item 
+int \hyperlink{structaom__codec__enc__cfg_aefb0569c7e68dd865067417145d39a0c}{tile\+\_\+height\+\_\+count}
+\begin{DoxyCompactList}\small\item\em Number of explicit tile heights specified. \end{DoxyCompactList}\item 
+int \hyperlink{structaom__codec__enc__cfg_ab03c0c96d42faaa8a3d697d4d283afcf}{tile\+\_\+widths} \mbox{[}64\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array of specified tile widths. \end{DoxyCompactList}\item 
+int \hyperlink{structaom__codec__enc__cfg_a7859761b70f5a44005dfd776e7c2f79d}{tile\+\_\+heights} \mbox{[}64\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array of specified tile heights. \end{DoxyCompactList}\item 
+\hyperlink{group__codec_ga58cddec4492c70945a2b4c3773c665b0}{cfg\+\_\+options\+\_\+t} \hyperlink{structaom__codec__enc__cfg_a91c4b8e91211a9cea98a8003ef2e4e65}{cfg}
+\begin{DoxyCompactList}\small\item\em Options defined per config file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Encoder configuration structure. 
+
+This structure contains the encoder settings that have common representations across all codecs. This doesn\textquotesingle{}t imply that all codecs support all features, however. 
+
+\subsubsection{Field Documentation}
+\index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!g\+\_\+usage@{g\+\_\+usage}}
+\index{g\+\_\+usage@{g\+\_\+usage}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{g\+\_\+usage}{g_usage}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::g\+\_\+usage}\hypertarget{structaom__codec__enc__cfg_a2aef2cdcf97e60ab36f7ca77c028e816}{}\label{structaom__codec__enc__cfg_a2aef2cdcf97e60ab36f7ca77c028e816}
+
+
+Algorithm specific \char`\"{}usage\char`\"{} value. 
+
+Algorithms may define multiple values for usage, which may convey the intent of how the application intends to use the stream. If this value is non-\/zero, consult the documentation for the codec to determine its meaning. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!g\+\_\+threads@{g\+\_\+threads}}
+\index{g\+\_\+threads@{g\+\_\+threads}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{g\+\_\+threads}{g_threads}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::g\+\_\+threads}\hypertarget{structaom__codec__enc__cfg_a55f56f04145e334cfa727df77d8378d4}{}\label{structaom__codec__enc__cfg_a55f56f04145e334cfa727df77d8378d4}
+
+
+Maximum number of threads to use. 
+
+For multi-\/threaded implementations, use no more than this number of threads. The codec may use fewer threads than allowed. The value 0 is equivalent to the value 1. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!g\+\_\+profile@{g\+\_\+profile}}
+\index{g\+\_\+profile@{g\+\_\+profile}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{g\+\_\+profile}{g_profile}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::g\+\_\+profile}\hypertarget{structaom__codec__enc__cfg_a715cb435d6eaca88eab71a763af3d8ec}{}\label{structaom__codec__enc__cfg_a715cb435d6eaca88eab71a763af3d8ec}
+
+
+Bitstream profile to use. 
+
+Some codecs support a notion of multiple bitstream profiles. Typically this maps to a set of features that are turned on or off. Often the profile to use is determined by the features of the intended decoder. Consult the documentation for the codec to determine the valid values for this parameter, or set to zero for a sane default.\+profile of bitstream to use \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!g\+\_\+w@{g\+\_\+w}}
+\index{g\+\_\+w@{g\+\_\+w}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{g\+\_\+w}{g_w}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::g\+\_\+w}\hypertarget{structaom__codec__enc__cfg_a80cb459c5ef3c7e1516f617c4c9d6eab}{}\label{structaom__codec__enc__cfg_a80cb459c5ef3c7e1516f617c4c9d6eab}
+
+
+Width of the frame. 
+
+This value identifies the presentation resolution of the frame, in pixels. Note that the frames passed as input to the encoder must have this resolution. Frames will be presented by the decoder in this resolution, independent of any spatial resampling the encoder may do. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!g\+\_\+h@{g\+\_\+h}}
+\index{g\+\_\+h@{g\+\_\+h}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{g\+\_\+h}{g_h}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::g\+\_\+h}\hypertarget{structaom__codec__enc__cfg_a37b0f57b63bec8d133df8901d4407ee6}{}\label{structaom__codec__enc__cfg_a37b0f57b63bec8d133df8901d4407ee6}
+
+
+Height of the frame. 
+
+This value identifies the presentation resolution of the frame, in pixels. Note that the frames passed as input to the encoder must have this resolution. Frames will be presented by the decoder in this resolution, independent of any spatial resampling the encoder may do. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!g\+\_\+limit@{g\+\_\+limit}}
+\index{g\+\_\+limit@{g\+\_\+limit}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{g\+\_\+limit}{g_limit}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::g\+\_\+limit}\hypertarget{structaom__codec__enc__cfg_a71628d182062afe21a884fa584714b74}{}\label{structaom__codec__enc__cfg_a71628d182062afe21a884fa584714b74}
+
+
+Max number of frames to encode. 
+
+\index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!g\+\_\+forced\+\_\+max\+\_\+frame\+\_\+width@{g\+\_\+forced\+\_\+max\+\_\+frame\+\_\+width}}
+\index{g\+\_\+forced\+\_\+max\+\_\+frame\+\_\+width@{g\+\_\+forced\+\_\+max\+\_\+frame\+\_\+width}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{g\+\_\+forced\+\_\+max\+\_\+frame\+\_\+width}{g_forced_max_frame_width}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::g\+\_\+forced\+\_\+max\+\_\+frame\+\_\+width}\hypertarget{structaom__codec__enc__cfg_a8349dcee2119c7fb3fd15a0ae6fdcf12}{}\label{structaom__codec__enc__cfg_a8349dcee2119c7fb3fd15a0ae6fdcf12}
+
+
+Forced maximum width of the frame. 
+
+If this value is non-\/zero then it is used to force the maximum frame width written in write\+\_\+sequence\+\_\+header(). \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!g\+\_\+forced\+\_\+max\+\_\+frame\+\_\+height@{g\+\_\+forced\+\_\+max\+\_\+frame\+\_\+height}}
+\index{g\+\_\+forced\+\_\+max\+\_\+frame\+\_\+height@{g\+\_\+forced\+\_\+max\+\_\+frame\+\_\+height}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{g\+\_\+forced\+\_\+max\+\_\+frame\+\_\+height}{g_forced_max_frame_height}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::g\+\_\+forced\+\_\+max\+\_\+frame\+\_\+height}\hypertarget{structaom__codec__enc__cfg_a0a02763f4709e7ed87dfa84532d7eaaf}{}\label{structaom__codec__enc__cfg_a0a02763f4709e7ed87dfa84532d7eaaf}
+
+
+Forced maximum height of the frame. 
+
+If this value is non-\/zero then it is used to force the maximum frame height written in write\+\_\+sequence\+\_\+header(). \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!g\+\_\+bit\+\_\+depth@{g\+\_\+bit\+\_\+depth}}
+\index{g\+\_\+bit\+\_\+depth@{g\+\_\+bit\+\_\+depth}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{g\+\_\+bit\+\_\+depth}{g_bit_depth}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+bit\+\_\+depth\+\_\+t} aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::g\+\_\+bit\+\_\+depth}\hypertarget{structaom__codec__enc__cfg_a76a27f44cded1516803a776a0a7e9038}{}\label{structaom__codec__enc__cfg_a76a27f44cded1516803a776a0a7e9038}
+
+
+Bit-\/depth of the codec. 
+
+This value identifies the bit\+\_\+depth of the codec, Only certain bit-\/depths are supported as identified in the aom\+\_\+bit\+\_\+depth\+\_\+t enum. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!g\+\_\+input\+\_\+bit\+\_\+depth@{g\+\_\+input\+\_\+bit\+\_\+depth}}
+\index{g\+\_\+input\+\_\+bit\+\_\+depth@{g\+\_\+input\+\_\+bit\+\_\+depth}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{g\+\_\+input\+\_\+bit\+\_\+depth}{g_input_bit_depth}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::g\+\_\+input\+\_\+bit\+\_\+depth}\hypertarget{structaom__codec__enc__cfg_a021aed8496604b1ad3af2c51f52d075d}{}\label{structaom__codec__enc__cfg_a021aed8496604b1ad3af2c51f52d075d}
+
+
+Bit-\/depth of the input frames. 
+
+This value identifies the bit\+\_\+depth of the input frames in bits. Note that the frames passed as input to the encoder must have this bit-\/depth. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!g\+\_\+timebase@{g\+\_\+timebase}}
+\index{g\+\_\+timebase@{g\+\_\+timebase}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{g\+\_\+timebase}{g_timebase}}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf aom\+\_\+rational} aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::g\+\_\+timebase}\hypertarget{structaom__codec__enc__cfg_a10664f1fc5b6ec29b77ee13efeeecdf7}{}\label{structaom__codec__enc__cfg_a10664f1fc5b6ec29b77ee13efeeecdf7}
+
+
+Stream timebase units. 
+
+Indicates the smallest interval of time, in seconds, used by the stream. For fixed frame rate material, or variable frame rate material where frames are timed at a multiple of a given clock (ex\+: video capture), the \hyperlink{rfc2119_RECOMMENDED}{R\+E\+C\+O\+M\+M\+E\+N\+D\+ED} method is to set the timebase to the reciprocal of the frame rate (ex\+: 1001/30000 for 29.\+970 Hz N\+T\+SC). This allows the pts to correspond to the frame number, which can be handy. For re-\/encoding video from containers with absolute time timestamps, the \hyperlink{rfc2119_RECOMMENDED}{R\+E\+C\+O\+M\+M\+E\+N\+D\+ED} method is to set the timebase to that of the parent container or multimedia framework (ex\+: 1/1000 for ms, as in F\+LV). \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!g\+\_\+error\+\_\+resilient@{g\+\_\+error\+\_\+resilient}}
+\index{g\+\_\+error\+\_\+resilient@{g\+\_\+error\+\_\+resilient}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{g\+\_\+error\+\_\+resilient}{g_error_resilient}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+codec\+\_\+er\+\_\+flags\+\_\+t} aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::g\+\_\+error\+\_\+resilient}\hypertarget{structaom__codec__enc__cfg_a8f3763485bb1f6eea6466b2fe0da2304}{}\label{structaom__codec__enc__cfg_a8f3763485bb1f6eea6466b2fe0da2304}
+
+
+Enable error resilient modes. 
+
+The error resilient bitfield indicates to the encoder which features it should enable to take measures for streaming over lossy or noisy links. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!g\+\_\+pass@{g\+\_\+pass}}
+\index{g\+\_\+pass@{g\+\_\+pass}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{g\+\_\+pass}{g_pass}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf aom\+\_\+enc\+\_\+pass} aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::g\+\_\+pass}\hypertarget{structaom__codec__enc__cfg_aad58e4d10c7904d50ce959aef202dc64}{}\label{structaom__codec__enc__cfg_aad58e4d10c7904d50ce959aef202dc64}
+
+
+Multi-\/pass Encoding Mode. 
+
+This value should be set to the current phase for multi-\/pass encoding. For single pass, set to \hyperlink{group__encoder_gga92b6709b58dc3435e3ba652da562eda1a1b4b8ee9c1910fc59ac9dfd9700f3f02}{A\+O\+M\+\_\+\+R\+C\+\_\+\+O\+N\+E\+\_\+\+P\+A\+SS}. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!g\+\_\+lag\+\_\+in\+\_\+frames@{g\+\_\+lag\+\_\+in\+\_\+frames}}
+\index{g\+\_\+lag\+\_\+in\+\_\+frames@{g\+\_\+lag\+\_\+in\+\_\+frames}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{g\+\_\+lag\+\_\+in\+\_\+frames}{g_lag_in_frames}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::g\+\_\+lag\+\_\+in\+\_\+frames}\hypertarget{structaom__codec__enc__cfg_a614a49318f2011cc8735d7e51b910fa4}{}\label{structaom__codec__enc__cfg_a614a49318f2011cc8735d7e51b910fa4}
+
+
+Allow lagged encoding. 
+
+If set, this value allows the encoder to consume a number of input frames before producing output frames. This allows the encoder to base decisions for the current frame on future frames. This does increase the latency of the encoding pipeline, so it is not appropriate in all situations (ex\+: realtime encoding).
+
+Note that this is a maximum value -- the encoder may produce frames sooner than the given limit. Set this value to 0 to disable this feature. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!rc\+\_\+dropframe\+\_\+thresh@{rc\+\_\+dropframe\+\_\+thresh}}
+\index{rc\+\_\+dropframe\+\_\+thresh@{rc\+\_\+dropframe\+\_\+thresh}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{rc\+\_\+dropframe\+\_\+thresh}{rc_dropframe_thresh}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::rc\+\_\+dropframe\+\_\+thresh}\hypertarget{structaom__codec__enc__cfg_a0b64b07e9238ee51f6195b1bbb7cd2fd}{}\label{structaom__codec__enc__cfg_a0b64b07e9238ee51f6195b1bbb7cd2fd}
+
+
+Temporal resampling configuration, if supported by the codec. 
+
+Temporal resampling allows the codec to \char`\"{}drop\char`\"{} frames as a strategy to meet its target data rate. This can cause temporal discontinuities in the encoded video, which may appear as stuttering during playback. This trade-\/off is often acceptable, but for many applications is not. It can be disabled in these cases.
+
+Note that not all codecs support this feature. All aom A\+Vx codecs do. For other codecs, consult the documentation for that algorithm.
+
+This threshold is described as a percentage of the target data buffer. When the data buffer falls below this percentage of fullness, a dropped frame is indicated. Set the threshold to zero (0) to disable this feature. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!rc\+\_\+resize\+\_\+mode@{rc\+\_\+resize\+\_\+mode}}
+\index{rc\+\_\+resize\+\_\+mode@{rc\+\_\+resize\+\_\+mode}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{rc\+\_\+resize\+\_\+mode}{rc_resize_mode}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::rc\+\_\+resize\+\_\+mode}\hypertarget{structaom__codec__enc__cfg_ab9123d944cd168511d65c823b30d5705}{}\label{structaom__codec__enc__cfg_ab9123d944cd168511d65c823b30d5705}
+
+
+Mode for spatial resampling, if supported by the codec. 
+
+Spatial resampling allows the codec to compress a lower resolution version of the frame, which is then upscaled by the decoder to the correct presentation resolution. This increases visual quality at low data rates, at the expense of C\+PU time on the encoder/decoder. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!rc\+\_\+resize\+\_\+denominator@{rc\+\_\+resize\+\_\+denominator}}
+\index{rc\+\_\+resize\+\_\+denominator@{rc\+\_\+resize\+\_\+denominator}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{rc\+\_\+resize\+\_\+denominator}{rc_resize_denominator}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::rc\+\_\+resize\+\_\+denominator}\hypertarget{structaom__codec__enc__cfg_a0e1d616495fb994ed67418b90b14f168}{}\label{structaom__codec__enc__cfg_a0e1d616495fb994ed67418b90b14f168}
+
+
+Frame resize denominator. 
+
+The denominator for resize to use, assuming 8 as the numerator.
+
+Valid denominators are 8 -\/ 16 for now. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!rc\+\_\+resize\+\_\+kf\+\_\+denominator@{rc\+\_\+resize\+\_\+kf\+\_\+denominator}}
+\index{rc\+\_\+resize\+\_\+kf\+\_\+denominator@{rc\+\_\+resize\+\_\+kf\+\_\+denominator}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{rc\+\_\+resize\+\_\+kf\+\_\+denominator}{rc_resize_kf_denominator}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::rc\+\_\+resize\+\_\+kf\+\_\+denominator}\hypertarget{structaom__codec__enc__cfg_a5da400d15cfd927a18e17a44985b910a}{}\label{structaom__codec__enc__cfg_a5da400d15cfd927a18e17a44985b910a}
+
+
+Keyframe resize denominator. 
+
+The denominator for resize to use, assuming 8 as the numerator.
+
+Valid denominators are 8 -\/ 16 for now. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!rc\+\_\+superres\+\_\+mode@{rc\+\_\+superres\+\_\+mode}}
+\index{rc\+\_\+superres\+\_\+mode@{rc\+\_\+superres\+\_\+mode}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{rc\+\_\+superres\+\_\+mode}{rc_superres_mode}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::rc\+\_\+superres\+\_\+mode}\hypertarget{structaom__codec__enc__cfg_a704ff1b4202b1d5499928b98eef17424}{}\label{structaom__codec__enc__cfg_a704ff1b4202b1d5499928b98eef17424}
+
+
+Frame super-\/resolution scaling mode. 
+
+Similar to spatial resampling, frame super-\/resolution integrates upscaling after the encode/decode process. Taking control of upscaling and using restoration filters should allow it to outperform normal resizing.
+
+Mode 0 is S\+U\+P\+E\+R\+R\+E\+S\+\_\+\+N\+O\+NE, mode 1 is S\+U\+P\+E\+R\+R\+E\+S\+\_\+\+F\+I\+X\+ED, mode 2 is S\+U\+P\+E\+R\+R\+E\+S\+\_\+\+R\+A\+N\+D\+OM and mode 3 is S\+U\+P\+E\+R\+R\+E\+S\+\_\+\+Q\+T\+H\+R\+E\+SH. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!rc\+\_\+superres\+\_\+denominator@{rc\+\_\+superres\+\_\+denominator}}
+\index{rc\+\_\+superres\+\_\+denominator@{rc\+\_\+superres\+\_\+denominator}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{rc\+\_\+superres\+\_\+denominator}{rc_superres_denominator}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::rc\+\_\+superres\+\_\+denominator}\hypertarget{structaom__codec__enc__cfg_a9217f81f33c62161df9d94e42f2b77c6}{}\label{structaom__codec__enc__cfg_a9217f81f33c62161df9d94e42f2b77c6}
+
+
+Frame super-\/resolution denominator. 
+
+The denominator for superres to use. If fixed it will only change if the cumulative scale change over resizing and superres is greater than 1/2; this forces superres to reduce scaling.
+
+Valid denominators are 8 to 16.
+
+Used only by S\+U\+P\+E\+R\+R\+E\+S\+\_\+\+F\+I\+X\+ED. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!rc\+\_\+superres\+\_\+kf\+\_\+denominator@{rc\+\_\+superres\+\_\+kf\+\_\+denominator}}
+\index{rc\+\_\+superres\+\_\+kf\+\_\+denominator@{rc\+\_\+superres\+\_\+kf\+\_\+denominator}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{rc\+\_\+superres\+\_\+kf\+\_\+denominator}{rc_superres_kf_denominator}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::rc\+\_\+superres\+\_\+kf\+\_\+denominator}\hypertarget{structaom__codec__enc__cfg_a4b5ed538fedccae4805fec4a58187fa7}{}\label{structaom__codec__enc__cfg_a4b5ed538fedccae4805fec4a58187fa7}
+
+
+Keyframe super-\/resolution denominator. 
+
+The denominator for superres to use. If fixed it will only change if the cumulative scale change over resizing and superres is greater than 1/2; this forces superres to reduce scaling.
+
+Valid denominators are 8 -\/ 16 for now. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!rc\+\_\+superres\+\_\+qthresh@{rc\+\_\+superres\+\_\+qthresh}}
+\index{rc\+\_\+superres\+\_\+qthresh@{rc\+\_\+superres\+\_\+qthresh}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{rc\+\_\+superres\+\_\+qthresh}{rc_superres_qthresh}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::rc\+\_\+superres\+\_\+qthresh}\hypertarget{structaom__codec__enc__cfg_a64d3517b2cef17cd57ec3f659ad0f2ab}{}\label{structaom__codec__enc__cfg_a64d3517b2cef17cd57ec3f659ad0f2ab}
+
+
+Frame super-\/resolution q threshold. 
+
+The q level threshold after which superres is used. Valid values are 1 to 63.
+
+Used only by S\+U\+P\+E\+R\+R\+E\+S\+\_\+\+Q\+T\+H\+R\+E\+SH \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!rc\+\_\+superres\+\_\+kf\+\_\+qthresh@{rc\+\_\+superres\+\_\+kf\+\_\+qthresh}}
+\index{rc\+\_\+superres\+\_\+kf\+\_\+qthresh@{rc\+\_\+superres\+\_\+kf\+\_\+qthresh}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{rc\+\_\+superres\+\_\+kf\+\_\+qthresh}{rc_superres_kf_qthresh}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::rc\+\_\+superres\+\_\+kf\+\_\+qthresh}\hypertarget{structaom__codec__enc__cfg_adf982eaa83e7bbdeb40f56bfd307cc98}{}\label{structaom__codec__enc__cfg_adf982eaa83e7bbdeb40f56bfd307cc98}
+
+
+Keyframe super-\/resolution q threshold. 
+
+The q level threshold after which superres is used for key frames. Valid values are 1 to 63.
+
+Used only by S\+U\+P\+E\+R\+R\+E\+S\+\_\+\+Q\+T\+H\+R\+E\+SH \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!rc\+\_\+end\+\_\+usage@{rc\+\_\+end\+\_\+usage}}
+\index{rc\+\_\+end\+\_\+usage@{rc\+\_\+end\+\_\+usage}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{rc\+\_\+end\+\_\+usage}{rc_end_usage}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf aom\+\_\+rc\+\_\+mode} aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::rc\+\_\+end\+\_\+usage}\hypertarget{structaom__codec__enc__cfg_a3fd74d888658039d09bc4eacf163a495}{}\label{structaom__codec__enc__cfg_a3fd74d888658039d09bc4eacf163a495}
+
+
+Rate control algorithm to use. 
+
+Indicates whether the end usage of this stream is to be streamed over a bandwidth constrained link, indicating that Constant Bit Rate (C\+BR) mode should be used, or whether it will be played back on a high bandwidth link, as from a local disk, where higher variations in bitrate are acceptable. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!rc\+\_\+twopass\+\_\+stats\+\_\+in@{rc\+\_\+twopass\+\_\+stats\+\_\+in}}
+\index{rc\+\_\+twopass\+\_\+stats\+\_\+in@{rc\+\_\+twopass\+\_\+stats\+\_\+in}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{rc\+\_\+twopass\+\_\+stats\+\_\+in}{rc_twopass_stats_in}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+fixed\+\_\+buf\+\_\+t} aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::rc\+\_\+twopass\+\_\+stats\+\_\+in}\hypertarget{structaom__codec__enc__cfg_ad5c6f5c96ec54cabc71edb01045a1f04}{}\label{structaom__codec__enc__cfg_ad5c6f5c96ec54cabc71edb01045a1f04}
+
+
+Two-\/pass stats buffer. 
+
+A buffer containing all of the stats packets produced in the first pass, concatenated. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!rc\+\_\+firstpass\+\_\+mb\+\_\+stats\+\_\+in@{rc\+\_\+firstpass\+\_\+mb\+\_\+stats\+\_\+in}}
+\index{rc\+\_\+firstpass\+\_\+mb\+\_\+stats\+\_\+in@{rc\+\_\+firstpass\+\_\+mb\+\_\+stats\+\_\+in}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{rc\+\_\+firstpass\+\_\+mb\+\_\+stats\+\_\+in}{rc_firstpass_mb_stats_in}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+fixed\+\_\+buf\+\_\+t} aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::rc\+\_\+firstpass\+\_\+mb\+\_\+stats\+\_\+in}\hypertarget{structaom__codec__enc__cfg_a3ccdeecb9ed287076f413f088792a4d0}{}\label{structaom__codec__enc__cfg_a3ccdeecb9ed287076f413f088792a4d0}
+
+
+first pass mb stats buffer. 
+
+A buffer containing all of the first pass mb stats packets produced in the first pass, concatenated. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!rc\+\_\+target\+\_\+bitrate@{rc\+\_\+target\+\_\+bitrate}}
+\index{rc\+\_\+target\+\_\+bitrate@{rc\+\_\+target\+\_\+bitrate}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{rc\+\_\+target\+\_\+bitrate}{rc_target_bitrate}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::rc\+\_\+target\+\_\+bitrate}\hypertarget{structaom__codec__enc__cfg_ab21539da477dba7506d90353c27d218b}{}\label{structaom__codec__enc__cfg_ab21539da477dba7506d90353c27d218b}
+
+
+Target data rate. 
+
+Target bandwidth to use for this stream, in kilobits per second. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!rc\+\_\+min\+\_\+quantizer@{rc\+\_\+min\+\_\+quantizer}}
+\index{rc\+\_\+min\+\_\+quantizer@{rc\+\_\+min\+\_\+quantizer}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{rc\+\_\+min\+\_\+quantizer}{rc_min_quantizer}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::rc\+\_\+min\+\_\+quantizer}\hypertarget{structaom__codec__enc__cfg_aa5c6cede8c820ef29fc3c106aa1227eb}{}\label{structaom__codec__enc__cfg_aa5c6cede8c820ef29fc3c106aa1227eb}
+
+
+Minimum (Best Quality) Quantizer. 
+
+The quantizer is the most direct control over the quality of the encoded image. The range of valid values for the quantizer is codec specific. Consult the documentation for the codec to determine the values to use. To determine the range programmatically, call \hyperlink{group__encoder_gabe456ab6f99bdebc47018779b75d2521}{aom\+\_\+codec\+\_\+enc\+\_\+config\+\_\+default()} with a usage value of 0. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!rc\+\_\+max\+\_\+quantizer@{rc\+\_\+max\+\_\+quantizer}}
+\index{rc\+\_\+max\+\_\+quantizer@{rc\+\_\+max\+\_\+quantizer}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{rc\+\_\+max\+\_\+quantizer}{rc_max_quantizer}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::rc\+\_\+max\+\_\+quantizer}\hypertarget{structaom__codec__enc__cfg_a8f8851455e06db026022d4b01671b122}{}\label{structaom__codec__enc__cfg_a8f8851455e06db026022d4b01671b122}
+
+
+Maximum (Worst Quality) Quantizer. 
+
+The quantizer is the most direct control over the quality of the encoded image. The range of valid values for the quantizer is codec specific. Consult the documentation for the codec to determine the values to use. To determine the range programmatically, call \hyperlink{group__encoder_gabe456ab6f99bdebc47018779b75d2521}{aom\+\_\+codec\+\_\+enc\+\_\+config\+\_\+default()} with a usage value of 0. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!rc\+\_\+undershoot\+\_\+pct@{rc\+\_\+undershoot\+\_\+pct}}
+\index{rc\+\_\+undershoot\+\_\+pct@{rc\+\_\+undershoot\+\_\+pct}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{rc\+\_\+undershoot\+\_\+pct}{rc_undershoot_pct}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::rc\+\_\+undershoot\+\_\+pct}\hypertarget{structaom__codec__enc__cfg_a8695946812f24f3719aed80cff00aa29}{}\label{structaom__codec__enc__cfg_a8695946812f24f3719aed80cff00aa29}
+
+
+Rate control adaptation undershoot control. 
+
+This value, expressed as a percentage of the target bitrate, controls the maximum allowed adaptation speed of the codec. This factor controls the maximum amount of bits that can be subtracted from the target bitrate in order to compensate for prior overshoot.
+
+Valid values in the range 0-\/1000. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!rc\+\_\+overshoot\+\_\+pct@{rc\+\_\+overshoot\+\_\+pct}}
+\index{rc\+\_\+overshoot\+\_\+pct@{rc\+\_\+overshoot\+\_\+pct}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{rc\+\_\+overshoot\+\_\+pct}{rc_overshoot_pct}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::rc\+\_\+overshoot\+\_\+pct}\hypertarget{structaom__codec__enc__cfg_ad57c8287bcacf2ca7230a3e11906b65c}{}\label{structaom__codec__enc__cfg_ad57c8287bcacf2ca7230a3e11906b65c}
+
+
+Rate control adaptation overshoot control. 
+
+This value, expressed as a percentage of the target bitrate, controls the maximum allowed adaptation speed of the codec. This factor controls the maximum amount of bits that can be added to the target bitrate in order to compensate for prior undershoot.
+
+Valid values in the range 0-\/1000. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!rc\+\_\+buf\+\_\+sz@{rc\+\_\+buf\+\_\+sz}}
+\index{rc\+\_\+buf\+\_\+sz@{rc\+\_\+buf\+\_\+sz}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{rc\+\_\+buf\+\_\+sz}{rc_buf_sz}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::rc\+\_\+buf\+\_\+sz}\hypertarget{structaom__codec__enc__cfg_a2eb74c50bbc22536248925cd92b746c2}{}\label{structaom__codec__enc__cfg_a2eb74c50bbc22536248925cd92b746c2}
+
+
+Decoder Buffer Size. 
+
+This value indicates the amount of data that may be buffered by the decoding application. Note that this value is expressed in units of time (milliseconds). For example, a value of 5000 indicates that the client will buffer (at least) 5000ms worth of encoded data. Use the target bitrate (\hyperlink{structaom__codec__enc__cfg_ab21539da477dba7506d90353c27d218b}{rc\+\_\+target\+\_\+bitrate}) to convert to bits/bytes, if necessary. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!rc\+\_\+buf\+\_\+initial\+\_\+sz@{rc\+\_\+buf\+\_\+initial\+\_\+sz}}
+\index{rc\+\_\+buf\+\_\+initial\+\_\+sz@{rc\+\_\+buf\+\_\+initial\+\_\+sz}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{rc\+\_\+buf\+\_\+initial\+\_\+sz}{rc_buf_initial_sz}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::rc\+\_\+buf\+\_\+initial\+\_\+sz}\hypertarget{structaom__codec__enc__cfg_a6c25595e7dfcdf3229c3f66c91224fcc}{}\label{structaom__codec__enc__cfg_a6c25595e7dfcdf3229c3f66c91224fcc}
+
+
+Decoder Buffer Initial Size. 
+
+This value indicates the amount of data that will be buffered by the decoding application prior to beginning playback. This value is expressed in units of time (milliseconds). Use the target bitrate (\hyperlink{structaom__codec__enc__cfg_ab21539da477dba7506d90353c27d218b}{rc\+\_\+target\+\_\+bitrate}) to convert to bits/bytes, if necessary. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!rc\+\_\+buf\+\_\+optimal\+\_\+sz@{rc\+\_\+buf\+\_\+optimal\+\_\+sz}}
+\index{rc\+\_\+buf\+\_\+optimal\+\_\+sz@{rc\+\_\+buf\+\_\+optimal\+\_\+sz}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{rc\+\_\+buf\+\_\+optimal\+\_\+sz}{rc_buf_optimal_sz}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::rc\+\_\+buf\+\_\+optimal\+\_\+sz}\hypertarget{structaom__codec__enc__cfg_aa4d9838419e94e634a02d710da06c842}{}\label{structaom__codec__enc__cfg_aa4d9838419e94e634a02d710da06c842}
+
+
+Decoder Buffer Optimal Size. 
+
+This value indicates the amount of data that the encoder should try to maintain in the decoder\textquotesingle{}s buffer. This value is expressed in units of time (milliseconds). Use the target bitrate (\hyperlink{structaom__codec__enc__cfg_ab21539da477dba7506d90353c27d218b}{rc\+\_\+target\+\_\+bitrate}) to convert to bits/bytes, if necessary. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!rc\+\_\+2pass\+\_\+vbr\+\_\+bias\+\_\+pct@{rc\+\_\+2pass\+\_\+vbr\+\_\+bias\+\_\+pct}}
+\index{rc\+\_\+2pass\+\_\+vbr\+\_\+bias\+\_\+pct@{rc\+\_\+2pass\+\_\+vbr\+\_\+bias\+\_\+pct}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{rc\+\_\+2pass\+\_\+vbr\+\_\+bias\+\_\+pct}{rc_2pass_vbr_bias_pct}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::rc\+\_\+2pass\+\_\+vbr\+\_\+bias\+\_\+pct}\hypertarget{structaom__codec__enc__cfg_a630b9cb2fa79022a7b63cb0bed7e5fcb}{}\label{structaom__codec__enc__cfg_a630b9cb2fa79022a7b63cb0bed7e5fcb}
+
+
+Two-\/pass mode C\+B\+R/\+V\+BR bias. 
+
+Bias, expressed on a scale of 0 to 100, for determining target size for the current frame. The value 0 indicates the optimal C\+BR mode value should be used. The value 100 indicates the optimal V\+BR mode value should be used. Values in between indicate which way the encoder should \char`\"{}lean.\char`\"{} \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!rc\+\_\+2pass\+\_\+vbr\+\_\+minsection\+\_\+pct@{rc\+\_\+2pass\+\_\+vbr\+\_\+minsection\+\_\+pct}}
+\index{rc\+\_\+2pass\+\_\+vbr\+\_\+minsection\+\_\+pct@{rc\+\_\+2pass\+\_\+vbr\+\_\+minsection\+\_\+pct}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{rc\+\_\+2pass\+\_\+vbr\+\_\+minsection\+\_\+pct}{rc_2pass_vbr_minsection_pct}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::rc\+\_\+2pass\+\_\+vbr\+\_\+minsection\+\_\+pct}\hypertarget{structaom__codec__enc__cfg_a623802304a377237ec6df7ae31984655}{}\label{structaom__codec__enc__cfg_a623802304a377237ec6df7ae31984655}
+
+
+Two-\/pass mode per-\/\+G\+OP minimum bitrate. 
+
+This value, expressed as a percentage of the target bitrate, indicates the minimum bitrate to be used for a single G\+OP (aka \char`\"{}section\char`\"{}) \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!rc\+\_\+2pass\+\_\+vbr\+\_\+maxsection\+\_\+pct@{rc\+\_\+2pass\+\_\+vbr\+\_\+maxsection\+\_\+pct}}
+\index{rc\+\_\+2pass\+\_\+vbr\+\_\+maxsection\+\_\+pct@{rc\+\_\+2pass\+\_\+vbr\+\_\+maxsection\+\_\+pct}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{rc\+\_\+2pass\+\_\+vbr\+\_\+maxsection\+\_\+pct}{rc_2pass_vbr_maxsection_pct}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::rc\+\_\+2pass\+\_\+vbr\+\_\+maxsection\+\_\+pct}\hypertarget{structaom__codec__enc__cfg_a5610caa642c808af885c1521e916a1e6}{}\label{structaom__codec__enc__cfg_a5610caa642c808af885c1521e916a1e6}
+
+
+Two-\/pass mode per-\/\+G\+OP maximum bitrate. 
+
+This value, expressed as a percentage of the target bitrate, indicates the maximum bitrate to be used for a single G\+OP (aka \char`\"{}section\char`\"{}) \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!fwd\+\_\+kf\+\_\+enabled@{fwd\+\_\+kf\+\_\+enabled}}
+\index{fwd\+\_\+kf\+\_\+enabled@{fwd\+\_\+kf\+\_\+enabled}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{fwd\+\_\+kf\+\_\+enabled}{fwd_kf_enabled}}]{\setlength{\rightskip}{0pt plus 5cm}int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::fwd\+\_\+kf\+\_\+enabled}\hypertarget{structaom__codec__enc__cfg_aae6716f2cd78979c59f7fa39fec1717f}{}\label{structaom__codec__enc__cfg_aae6716f2cd78979c59f7fa39fec1717f}
+
+
+Option to enable forward reference key frame. 
+
+\index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!kf\+\_\+mode@{kf\+\_\+mode}}
+\index{kf\+\_\+mode@{kf\+\_\+mode}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{kf\+\_\+mode}{kf_mode}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf aom\+\_\+kf\+\_\+mode} aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::kf\+\_\+mode}\hypertarget{structaom__codec__enc__cfg_a3c1ea7f3ea90b9b8eab4c3f266ffacdc}{}\label{structaom__codec__enc__cfg_a3c1ea7f3ea90b9b8eab4c3f266ffacdc}
+
+
+Keyframe placement mode. 
+
+This value indicates whether the encoder should place keyframes at a fixed interval, or determine the optimal placement automatically (as governed by the \hyperlink{structaom__codec__enc__cfg_a5df0104b97c8ad18f8f1df492706a256}{kf\+\_\+min\+\_\+dist} and \hyperlink{structaom__codec__enc__cfg_a877936e8a60207e7eac223811af0c124}{kf\+\_\+max\+\_\+dist} parameters) \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!kf\+\_\+min\+\_\+dist@{kf\+\_\+min\+\_\+dist}}
+\index{kf\+\_\+min\+\_\+dist@{kf\+\_\+min\+\_\+dist}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{kf\+\_\+min\+\_\+dist}{kf_min_dist}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::kf\+\_\+min\+\_\+dist}\hypertarget{structaom__codec__enc__cfg_a5df0104b97c8ad18f8f1df492706a256}{}\label{structaom__codec__enc__cfg_a5df0104b97c8ad18f8f1df492706a256}
+
+
+Keyframe minimum interval. 
+
+This value, expressed as a number of frames, prevents the encoder from placing a keyframe nearer than kf\+\_\+min\+\_\+dist to the previous keyframe. At least kf\+\_\+min\+\_\+dist frames non-\/keyframes will be coded before the next keyframe. Set kf\+\_\+min\+\_\+dist equal to kf\+\_\+max\+\_\+dist for a fixed interval. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!kf\+\_\+max\+\_\+dist@{kf\+\_\+max\+\_\+dist}}
+\index{kf\+\_\+max\+\_\+dist@{kf\+\_\+max\+\_\+dist}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{kf\+\_\+max\+\_\+dist}{kf_max_dist}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::kf\+\_\+max\+\_\+dist}\hypertarget{structaom__codec__enc__cfg_a877936e8a60207e7eac223811af0c124}{}\label{structaom__codec__enc__cfg_a877936e8a60207e7eac223811af0c124}
+
+
+Keyframe maximum interval. 
+
+This value, expressed as a number of frames, forces the encoder to code a keyframe if one has not been coded in the last kf\+\_\+max\+\_\+dist frames. A value of 0 implies all frames will be keyframes. Set kf\+\_\+min\+\_\+dist equal to kf\+\_\+max\+\_\+dist for a fixed interval. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!sframe\+\_\+dist@{sframe\+\_\+dist}}
+\index{sframe\+\_\+dist@{sframe\+\_\+dist}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{sframe\+\_\+dist}{sframe_dist}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::sframe\+\_\+dist}\hypertarget{structaom__codec__enc__cfg_aa72f5e8f1508388778175d8075e15195}{}\label{structaom__codec__enc__cfg_aa72f5e8f1508388778175d8075e15195}
+
+
+sframe interval 
+
+This value, expressed as a number of frames, forces the encoder to code an S-\/\+Frame every sframe\+\_\+dist frames. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!sframe\+\_\+mode@{sframe\+\_\+mode}}
+\index{sframe\+\_\+mode@{sframe\+\_\+mode}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{sframe\+\_\+mode}{sframe_mode}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::sframe\+\_\+mode}\hypertarget{structaom__codec__enc__cfg_aab919adaf0e01b41da93505a075b6804}{}\label{structaom__codec__enc__cfg_aab919adaf0e01b41da93505a075b6804}
+
+
+sframe insertion mode 
+
+This value must be set to 1 or 2, and tells the encoder how to insert S-\/\+Frames. It will only have an effect if sframe\+\_\+dist != 0.
+
+If altref is enabled\+:
+\begin{DoxyItemize}
+\item if sframe\+\_\+mode == 1, the considered frame will be made into an S-\/\+Frame only if it is an altref frame
+\item if sframe\+\_\+mode == 2, the next altref frame will be made into an S-\/\+Frame.
+\end{DoxyItemize}
+
+Otherwise\+: the considered frame will be made into an S-\/\+Frame. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!large\+\_\+scale\+\_\+tile@{large\+\_\+scale\+\_\+tile}}
+\index{large\+\_\+scale\+\_\+tile@{large\+\_\+scale\+\_\+tile}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{large\+\_\+scale\+\_\+tile}{large_scale_tile}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::large\+\_\+scale\+\_\+tile}\hypertarget{structaom__codec__enc__cfg_af4583da6c145778f822a4a61db28c40a}{}\label{structaom__codec__enc__cfg_af4583da6c145778f822a4a61db28c40a}
+
+
+Tile coding mode. 
+
+This value indicates the tile coding mode. A value of 0 implies a normal non-\/large-\/scale tile coding. A value of 1 implies a large-\/scale tile coding. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!monochrome@{monochrome}}
+\index{monochrome@{monochrome}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{monochrome}{monochrome}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::monochrome}\hypertarget{structaom__codec__enc__cfg_a71d97f2a1ff3850955c50705104ac54a}{}\label{structaom__codec__enc__cfg_a71d97f2a1ff3850955c50705104ac54a}
+
+
+Monochrome mode. 
+
+If this is nonzero, the encoder will generate a monochrome stream with no chroma planes. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!full\+\_\+still\+\_\+picture\+\_\+hdr@{full\+\_\+still\+\_\+picture\+\_\+hdr}}
+\index{full\+\_\+still\+\_\+picture\+\_\+hdr@{full\+\_\+still\+\_\+picture\+\_\+hdr}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{full\+\_\+still\+\_\+picture\+\_\+hdr}{full_still_picture_hdr}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::full\+\_\+still\+\_\+picture\+\_\+hdr}\hypertarget{structaom__codec__enc__cfg_a35b8433fa60af32d0aecc2b56e736a98}{}\label{structaom__codec__enc__cfg_a35b8433fa60af32d0aecc2b56e736a98}
+
+
+full\+\_\+still\+\_\+picture\+\_\+hdr 
+
+If this is nonzero, the encoder will generate a full header even for still picture encoding. if zero, a reduced header is used for still picture. This flag has no effect when a regular video with more than a single frame is encoded. \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!save\+\_\+as\+\_\+annexb@{save\+\_\+as\+\_\+annexb}}
+\index{save\+\_\+as\+\_\+annexb@{save\+\_\+as\+\_\+annexb}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{save\+\_\+as\+\_\+annexb}{save_as_annexb}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::save\+\_\+as\+\_\+annexb}\hypertarget{structaom__codec__enc__cfg_adb3fe41c1ce39579a49b97bc2ca7b2f2}{}\label{structaom__codec__enc__cfg_adb3fe41c1ce39579a49b97bc2ca7b2f2}
+
+
+Bitstream syntax mode. 
+
+This value indicates the bitstream syntax mode. A value of 0 indicates bitstream is saved as Section 5 bitstream. A value of 1 indicates the bitstream is saved in Annex-\/B format \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!tile\+\_\+width\+\_\+count@{tile\+\_\+width\+\_\+count}}
+\index{tile\+\_\+width\+\_\+count@{tile\+\_\+width\+\_\+count}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{tile\+\_\+width\+\_\+count}{tile_width_count}}]{\setlength{\rightskip}{0pt plus 5cm}int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::tile\+\_\+width\+\_\+count}\hypertarget{structaom__codec__enc__cfg_a1b1fc8284e9a26deb875b1b2a58e47d9}{}\label{structaom__codec__enc__cfg_a1b1fc8284e9a26deb875b1b2a58e47d9}
+
+
+Number of explicit tile widths specified. 
+
+This value indicates the number of tile widths specified A value of 0 implies no tile widths are specified. Tile widths are given in the array tile\+\_\+widths\mbox{[}\mbox{]} \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!tile\+\_\+height\+\_\+count@{tile\+\_\+height\+\_\+count}}
+\index{tile\+\_\+height\+\_\+count@{tile\+\_\+height\+\_\+count}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{tile\+\_\+height\+\_\+count}{tile_height_count}}]{\setlength{\rightskip}{0pt plus 5cm}int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::tile\+\_\+height\+\_\+count}\hypertarget{structaom__codec__enc__cfg_aefb0569c7e68dd865067417145d39a0c}{}\label{structaom__codec__enc__cfg_aefb0569c7e68dd865067417145d39a0c}
+
+
+Number of explicit tile heights specified. 
+
+This value indicates the number of tile heights specified A value of 0 implies no tile heights are specified. Tile heights are given in the array tile\+\_\+heights\mbox{[}\mbox{]} \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!tile\+\_\+widths@{tile\+\_\+widths}}
+\index{tile\+\_\+widths@{tile\+\_\+widths}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{tile\+\_\+widths}{tile_widths}}]{\setlength{\rightskip}{0pt plus 5cm}int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::tile\+\_\+widths\mbox{[}64\mbox{]}}\hypertarget{structaom__codec__enc__cfg_ab03c0c96d42faaa8a3d697d4d283afcf}{}\label{structaom__codec__enc__cfg_ab03c0c96d42faaa8a3d697d4d283afcf}
+
+
+Array of specified tile widths. 
+
+This array specifies tile widths (and may be empty) The number of widths specified is given by tile\+\_\+width\+\_\+count \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!tile\+\_\+heights@{tile\+\_\+heights}}
+\index{tile\+\_\+heights@{tile\+\_\+heights}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{tile\+\_\+heights}{tile_heights}}]{\setlength{\rightskip}{0pt plus 5cm}int aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::tile\+\_\+heights\mbox{[}64\mbox{]}}\hypertarget{structaom__codec__enc__cfg_a7859761b70f5a44005dfd776e7c2f79d}{}\label{structaom__codec__enc__cfg_a7859761b70f5a44005dfd776e7c2f79d}
+
+
+Array of specified tile heights. 
+
+This array specifies tile heights (and may be empty) The number of heights specified is given by tile\+\_\+height\+\_\+count \index{aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}!cfg@{cfg}}
+\index{cfg@{cfg}!aom\+\_\+codec\+\_\+enc\+\_\+cfg@{aom\+\_\+codec\+\_\+enc\+\_\+cfg}}
+\paragraph[{\texorpdfstring{cfg}{cfg}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cfg\+\_\+options\+\_\+t} aom\+\_\+codec\+\_\+enc\+\_\+cfg\+::cfg}\hypertarget{structaom__codec__enc__cfg_a91c4b8e91211a9cea98a8003ef2e4e65}{}\label{structaom__codec__enc__cfg_a91c4b8e91211a9cea98a8003ef2e4e65}
+
+
+Options defined per config file. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+aom/\hyperlink{aom__encoder_8h}{aom\+\_\+encoder.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,158 @@
+\hypertarget{structaom__image}{}\subsection{aom\+\_\+image Struct Reference}
+\label{structaom__image}\index{aom\+\_\+image@{aom\+\_\+image}}
+
+
+Image Descriptor.  
+
+
+
+
+{\ttfamily \#include $<$aom\+\_\+image.\+h$>$}
+
+\subsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{aom__image_8h_ab71efff8c7f49380fad23b93bc2e9bfc}{aom\+\_\+img\+\_\+fmt\+\_\+t} \hyperlink{structaom__image_a6c64b1ab918d80d52eb8f5d6d957e825}{fmt}
+\item 
+\hyperlink{aom__image_8h_ad72aacc083639c415fe2b4a12ea2e9e9}{aom\+\_\+color\+\_\+primaries\+\_\+t} \hyperlink{structaom__image_aeff339c4b3d37ce2528bce37418bdaa6}{cp}
+\item 
+\hyperlink{aom__image_8h_aad2d14d16ce5f24c6225f716a0a30563}{aom\+\_\+transfer\+\_\+characteristics\+\_\+t} \hyperlink{structaom__image_aa7f7bf00699076f824460be08a0e1e65}{tc}
+\item 
+\hyperlink{aom__image_8h_a9994d1b5fe7cc98d54b26859d610a1cc}{aom\+\_\+matrix\+\_\+coefficients\+\_\+t} \hyperlink{structaom__image_a47c4dda09afa07d6eb0dd0de8cd31838}{mc}
+\item 
+int \hyperlink{structaom__image_ab7886616025ff8bd0bb96d967fca9ad8}{monochrome}
+\item 
+\hyperlink{aom__image_8h_a48f259fc7774b1c799b3ebe7530c19bd}{aom\+\_\+chroma\+\_\+sample\+\_\+position\+\_\+t} \hyperlink{structaom__image_a4f235c521bc95a061e9e0b2a3d5d457e}{csp}
+\item 
+\hyperlink{aom__image_8h_ab7754f796b26c07a78bb338b38f8df67}{aom\+\_\+color\+\_\+range\+\_\+t} \hyperlink{structaom__image_abcab05cb3e14a6391b9758f1954160d6}{range}
+\item 
+unsigned int \hyperlink{structaom__image_a695141e492ab146dc15e8131827eb237}{w}
+\item 
+unsigned int \hyperlink{structaom__image_a3fcffff0a25a4fd9218ed38842014ef2}{h}
+\item 
+unsigned int \hyperlink{structaom__image_a46ed9ffd741938d306a0db5a24bdcf8e}{bit\+\_\+depth}
+\item 
+unsigned int \hyperlink{structaom__image_a89f80b1f58d608b9d2080635f4359034}{d\+\_\+w}
+\item 
+unsigned int \hyperlink{structaom__image_ab986419a1f0fff93a2dc505f47194988}{d\+\_\+h}
+\item 
+unsigned int \hyperlink{structaom__image_aa2365dc74ee71cded1a149e5d48d6c86}{r\+\_\+w}
+\item 
+unsigned int \hyperlink{structaom__image_aa996793ca8bfb0e6da05945898d39367}{r\+\_\+h}
+\item 
+unsigned int \hyperlink{structaom__image_a83fdb3677275dc0e1e38701000447214}{x\+\_\+chroma\+\_\+shift}
+\item 
+unsigned int \hyperlink{structaom__image_a5acfc850c272e1377f3b7d58a95f3749}{y\+\_\+chroma\+\_\+shift}
+\item 
+unsigned char $\ast$ \hyperlink{structaom__image_ac54dbc5237ca2914f9ec30105dfbe302}{planes} \mbox{[}3\mbox{]}
+\item 
+int \hyperlink{structaom__image_a6dc693d7dbc9eb06c0cdde307ca58372}{stride} \mbox{[}3\mbox{]}
+\item 
+size\+\_\+t \hyperlink{structaom__image_af0f6c220bf000d1c488075c19d889290}{sz}
+\item 
+int \hyperlink{structaom__image_a8b3396eaa38cbc62a90bfccd00b93b5a}{bps}
+\item 
+int \hyperlink{structaom__image_a11c7cb24c961e9bdcf25977a5dc53a40}{temporal\+\_\+id}
+\item 
+int \hyperlink{structaom__image_a1c3a59a1de1895da27135d04218f961a}{spatial\+\_\+id}
+\item 
+void $\ast$ \hyperlink{structaom__image_a522583fa7c1cda5ede3f65e9e574cf9f}{user\+\_\+priv}\hypertarget{structaom__image_a522583fa7c1cda5ede3f65e9e574cf9f}{}\label{structaom__image_a522583fa7c1cda5ede3f65e9e574cf9f}
+
+\begin{DoxyCompactList}\small\item\em The following member may be set by the application to associate data with this image. \end{DoxyCompactList}\item 
+unsigned char $\ast$ \hyperlink{structaom__image_a7c367f3227d5876ce9e5c198a01c2028}{img\+\_\+data}
+\item 
+int \hyperlink{structaom__image_ad29ed1ce3206c77ade67a76b69ee339e}{img\+\_\+data\+\_\+owner}
+\item 
+int \hyperlink{structaom__image_adcb959372df75813c6b1e01903ec3011}{self\+\_\+allocd}
+\item 
+void $\ast$ \hyperlink{structaom__image_aab189cb8d141a7b46102a913327398b3}{fb\+\_\+priv}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Image Descriptor. 
+
+\subsubsection{Field Documentation}
+\index{aom\+\_\+image@{aom\+\_\+image}!fmt@{fmt}}
+\index{fmt@{fmt}!aom\+\_\+image@{aom\+\_\+image}}
+\paragraph[{\texorpdfstring{fmt}{fmt}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+img\+\_\+fmt\+\_\+t} aom\+\_\+image\+::fmt}\hypertarget{structaom__image_a6c64b1ab918d80d52eb8f5d6d957e825}{}\label{structaom__image_a6c64b1ab918d80d52eb8f5d6d957e825}
+Image Format \index{aom\+\_\+image@{aom\+\_\+image}!cp@{cp}}
+\index{cp@{cp}!aom\+\_\+image@{aom\+\_\+image}}
+\paragraph[{\texorpdfstring{cp}{cp}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+color\+\_\+primaries\+\_\+t} aom\+\_\+image\+::cp}\hypertarget{structaom__image_aeff339c4b3d37ce2528bce37418bdaa6}{}\label{structaom__image_aeff339c4b3d37ce2528bce37418bdaa6}
+C\+I\+CP Color Primaries \index{aom\+\_\+image@{aom\+\_\+image}!tc@{tc}}
+\index{tc@{tc}!aom\+\_\+image@{aom\+\_\+image}}
+\paragraph[{\texorpdfstring{tc}{tc}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+transfer\+\_\+characteristics\+\_\+t} aom\+\_\+image\+::tc}\hypertarget{structaom__image_aa7f7bf00699076f824460be08a0e1e65}{}\label{structaom__image_aa7f7bf00699076f824460be08a0e1e65}
+C\+I\+CP Transfer Characteristics \index{aom\+\_\+image@{aom\+\_\+image}!mc@{mc}}
+\index{mc@{mc}!aom\+\_\+image@{aom\+\_\+image}}
+\paragraph[{\texorpdfstring{mc}{mc}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+matrix\+\_\+coefficients\+\_\+t} aom\+\_\+image\+::mc}\hypertarget{structaom__image_a47c4dda09afa07d6eb0dd0de8cd31838}{}\label{structaom__image_a47c4dda09afa07d6eb0dd0de8cd31838}
+C\+I\+CP Matrix Coefficients \index{aom\+\_\+image@{aom\+\_\+image}!monochrome@{monochrome}}
+\index{monochrome@{monochrome}!aom\+\_\+image@{aom\+\_\+image}}
+\paragraph[{\texorpdfstring{monochrome}{monochrome}}]{\setlength{\rightskip}{0pt plus 5cm}int aom\+\_\+image\+::monochrome}\hypertarget{structaom__image_ab7886616025ff8bd0bb96d967fca9ad8}{}\label{structaom__image_ab7886616025ff8bd0bb96d967fca9ad8}
+Whether image is monochrome \index{aom\+\_\+image@{aom\+\_\+image}!csp@{csp}}
+\index{csp@{csp}!aom\+\_\+image@{aom\+\_\+image}}
+\paragraph[{\texorpdfstring{csp}{csp}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+chroma\+\_\+sample\+\_\+position\+\_\+t} aom\+\_\+image\+::csp}\hypertarget{structaom__image_a4f235c521bc95a061e9e0b2a3d5d457e}{}\label{structaom__image_a4f235c521bc95a061e9e0b2a3d5d457e}
+chroma sample position \index{aom\+\_\+image@{aom\+\_\+image}!range@{range}}
+\index{range@{range}!aom\+\_\+image@{aom\+\_\+image}}
+\paragraph[{\texorpdfstring{range}{range}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aom\+\_\+color\+\_\+range\+\_\+t} aom\+\_\+image\+::range}\hypertarget{structaom__image_abcab05cb3e14a6391b9758f1954160d6}{}\label{structaom__image_abcab05cb3e14a6391b9758f1954160d6}
+Color Range \index{aom\+\_\+image@{aom\+\_\+image}!w@{w}}
+\index{w@{w}!aom\+\_\+image@{aom\+\_\+image}}
+\paragraph[{\texorpdfstring{w}{w}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+image\+::w}\hypertarget{structaom__image_a695141e492ab146dc15e8131827eb237}{}\label{structaom__image_a695141e492ab146dc15e8131827eb237}
+Stored image width \index{aom\+\_\+image@{aom\+\_\+image}!h@{h}}
+\index{h@{h}!aom\+\_\+image@{aom\+\_\+image}}
+\paragraph[{\texorpdfstring{h}{h}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+image\+::h}\hypertarget{structaom__image_a3fcffff0a25a4fd9218ed38842014ef2}{}\label{structaom__image_a3fcffff0a25a4fd9218ed38842014ef2}
+Stored image height \index{aom\+\_\+image@{aom\+\_\+image}!bit\+\_\+depth@{bit\+\_\+depth}}
+\index{bit\+\_\+depth@{bit\+\_\+depth}!aom\+\_\+image@{aom\+\_\+image}}
+\paragraph[{\texorpdfstring{bit\+\_\+depth}{bit_depth}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+image\+::bit\+\_\+depth}\hypertarget{structaom__image_a46ed9ffd741938d306a0db5a24bdcf8e}{}\label{structaom__image_a46ed9ffd741938d306a0db5a24bdcf8e}
+Stored image bit-\/depth \index{aom\+\_\+image@{aom\+\_\+image}!d\+\_\+w@{d\+\_\+w}}
+\index{d\+\_\+w@{d\+\_\+w}!aom\+\_\+image@{aom\+\_\+image}}
+\paragraph[{\texorpdfstring{d\+\_\+w}{d_w}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+image\+::d\+\_\+w}\hypertarget{structaom__image_a89f80b1f58d608b9d2080635f4359034}{}\label{structaom__image_a89f80b1f58d608b9d2080635f4359034}
+Displayed image width \index{aom\+\_\+image@{aom\+\_\+image}!d\+\_\+h@{d\+\_\+h}}
+\index{d\+\_\+h@{d\+\_\+h}!aom\+\_\+image@{aom\+\_\+image}}
+\paragraph[{\texorpdfstring{d\+\_\+h}{d_h}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+image\+::d\+\_\+h}\hypertarget{structaom__image_ab986419a1f0fff93a2dc505f47194988}{}\label{structaom__image_ab986419a1f0fff93a2dc505f47194988}
+Displayed image height \index{aom\+\_\+image@{aom\+\_\+image}!r\+\_\+w@{r\+\_\+w}}
+\index{r\+\_\+w@{r\+\_\+w}!aom\+\_\+image@{aom\+\_\+image}}
+\paragraph[{\texorpdfstring{r\+\_\+w}{r_w}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+image\+::r\+\_\+w}\hypertarget{structaom__image_aa2365dc74ee71cded1a149e5d48d6c86}{}\label{structaom__image_aa2365dc74ee71cded1a149e5d48d6c86}
+Intended rendering image width \index{aom\+\_\+image@{aom\+\_\+image}!r\+\_\+h@{r\+\_\+h}}
+\index{r\+\_\+h@{r\+\_\+h}!aom\+\_\+image@{aom\+\_\+image}}
+\paragraph[{\texorpdfstring{r\+\_\+h}{r_h}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+image\+::r\+\_\+h}\hypertarget{structaom__image_aa996793ca8bfb0e6da05945898d39367}{}\label{structaom__image_aa996793ca8bfb0e6da05945898d39367}
+Intended rendering image height \index{aom\+\_\+image@{aom\+\_\+image}!x\+\_\+chroma\+\_\+shift@{x\+\_\+chroma\+\_\+shift}}
+\index{x\+\_\+chroma\+\_\+shift@{x\+\_\+chroma\+\_\+shift}!aom\+\_\+image@{aom\+\_\+image}}
+\paragraph[{\texorpdfstring{x\+\_\+chroma\+\_\+shift}{x_chroma_shift}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+image\+::x\+\_\+chroma\+\_\+shift}\hypertarget{structaom__image_a83fdb3677275dc0e1e38701000447214}{}\label{structaom__image_a83fdb3677275dc0e1e38701000447214}
+subsampling order, X \index{aom\+\_\+image@{aom\+\_\+image}!y\+\_\+chroma\+\_\+shift@{y\+\_\+chroma\+\_\+shift}}
+\index{y\+\_\+chroma\+\_\+shift@{y\+\_\+chroma\+\_\+shift}!aom\+\_\+image@{aom\+\_\+image}}
+\paragraph[{\texorpdfstring{y\+\_\+chroma\+\_\+shift}{y_chroma_shift}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int aom\+\_\+image\+::y\+\_\+chroma\+\_\+shift}\hypertarget{structaom__image_a5acfc850c272e1377f3b7d58a95f3749}{}\label{structaom__image_a5acfc850c272e1377f3b7d58a95f3749}
+subsampling order, Y \index{aom\+\_\+image@{aom\+\_\+image}!planes@{planes}}
+\index{planes@{planes}!aom\+\_\+image@{aom\+\_\+image}}
+\paragraph[{\texorpdfstring{planes}{planes}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ aom\+\_\+image\+::planes\mbox{[}3\mbox{]}}\hypertarget{structaom__image_ac54dbc5237ca2914f9ec30105dfbe302}{}\label{structaom__image_ac54dbc5237ca2914f9ec30105dfbe302}
+pointer to the top left pixel for each plane \index{aom\+\_\+image@{aom\+\_\+image}!stride@{stride}}
+\index{stride@{stride}!aom\+\_\+image@{aom\+\_\+image}}
+\paragraph[{\texorpdfstring{stride}{stride}}]{\setlength{\rightskip}{0pt plus 5cm}int aom\+\_\+image\+::stride\mbox{[}3\mbox{]}}\hypertarget{structaom__image_a6dc693d7dbc9eb06c0cdde307ca58372}{}\label{structaom__image_a6dc693d7dbc9eb06c0cdde307ca58372}
+stride between rows for each plane \index{aom\+\_\+image@{aom\+\_\+image}!sz@{sz}}
+\index{sz@{sz}!aom\+\_\+image@{aom\+\_\+image}}
+\paragraph[{\texorpdfstring{sz}{sz}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t aom\+\_\+image\+::sz}\hypertarget{structaom__image_af0f6c220bf000d1c488075c19d889290}{}\label{structaom__image_af0f6c220bf000d1c488075c19d889290}
+data size \index{aom\+\_\+image@{aom\+\_\+image}!bps@{bps}}
+\index{bps@{bps}!aom\+\_\+image@{aom\+\_\+image}}
+\paragraph[{\texorpdfstring{bps}{bps}}]{\setlength{\rightskip}{0pt plus 5cm}int aom\+\_\+image\+::bps}\hypertarget{structaom__image_a8b3396eaa38cbc62a90bfccd00b93b5a}{}\label{structaom__image_a8b3396eaa38cbc62a90bfccd00b93b5a}
+bits per sample (for packed formats) \index{aom\+\_\+image@{aom\+\_\+image}!temporal\+\_\+id@{temporal\+\_\+id}}
+\index{temporal\+\_\+id@{temporal\+\_\+id}!aom\+\_\+image@{aom\+\_\+image}}
+\paragraph[{\texorpdfstring{temporal\+\_\+id}{temporal_id}}]{\setlength{\rightskip}{0pt plus 5cm}int aom\+\_\+image\+::temporal\+\_\+id}\hypertarget{structaom__image_a11c7cb24c961e9bdcf25977a5dc53a40}{}\label{structaom__image_a11c7cb24c961e9bdcf25977a5dc53a40}
+Temporal layer Id of image \index{aom\+\_\+image@{aom\+\_\+image}!spatial\+\_\+id@{spatial\+\_\+id}}
+\index{spatial\+\_\+id@{spatial\+\_\+id}!aom\+\_\+image@{aom\+\_\+image}}
+\paragraph[{\texorpdfstring{spatial\+\_\+id}{spatial_id}}]{\setlength{\rightskip}{0pt plus 5cm}int aom\+\_\+image\+::spatial\+\_\+id}\hypertarget{structaom__image_a1c3a59a1de1895da27135d04218f961a}{}\label{structaom__image_a1c3a59a1de1895da27135d04218f961a}
+Spatial layer Id of image \index{aom\+\_\+image@{aom\+\_\+image}!img\+\_\+data@{img\+\_\+data}}
+\index{img\+\_\+data@{img\+\_\+data}!aom\+\_\+image@{aom\+\_\+image}}
+\paragraph[{\texorpdfstring{img\+\_\+data}{img_data}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ aom\+\_\+image\+::img\+\_\+data}\hypertarget{structaom__image_a7c367f3227d5876ce9e5c198a01c2028}{}\label{structaom__image_a7c367f3227d5876ce9e5c198a01c2028}
+private \index{aom\+\_\+image@{aom\+\_\+image}!img\+\_\+data\+\_\+owner@{img\+\_\+data\+\_\+owner}}
+\index{img\+\_\+data\+\_\+owner@{img\+\_\+data\+\_\+owner}!aom\+\_\+image@{aom\+\_\+image}}
+\paragraph[{\texorpdfstring{img\+\_\+data\+\_\+owner}{img_data_owner}}]{\setlength{\rightskip}{0pt plus 5cm}int aom\+\_\+image\+::img\+\_\+data\+\_\+owner}\hypertarget{structaom__image_ad29ed1ce3206c77ade67a76b69ee339e}{}\label{structaom__image_ad29ed1ce3206c77ade67a76b69ee339e}
+private \index{aom\+\_\+image@{aom\+\_\+image}!self\+\_\+allocd@{self\+\_\+allocd}}
+\index{self\+\_\+allocd@{self\+\_\+allocd}!aom\+\_\+image@{aom\+\_\+image}}
+\paragraph[{\texorpdfstring{self\+\_\+allocd}{self_allocd}}]{\setlength{\rightskip}{0pt plus 5cm}int aom\+\_\+image\+::self\+\_\+allocd}\hypertarget{structaom__image_adcb959372df75813c6b1e01903ec3011}{}\label{structaom__image_adcb959372df75813c6b1e01903ec3011}
+private \index{aom\+\_\+image@{aom\+\_\+image}!fb\+\_\+priv@{fb\+\_\+priv}}
+\index{fb\+\_\+priv@{fb\+\_\+priv}!aom\+\_\+image@{aom\+\_\+image}}
+\paragraph[{\texorpdfstring{fb\+\_\+priv}{fb_priv}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ aom\+\_\+image\+::fb\+\_\+priv}\hypertarget{structaom__image_aab189cb8d141a7b46102a913327398b3}{}\label{structaom__image_aab189cb8d141a7b46102a913327398b3}
+Frame buffer data associated with the image. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+aom/\hyperlink{aom__image_8h}{aom\+\_\+image.\+h}\end{DoxyCompactItemize}
