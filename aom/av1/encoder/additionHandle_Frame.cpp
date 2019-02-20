@@ -8,7 +8,7 @@ extern uint8_t**  blockCallTensorflow(uint8_t* ppp, int cur_buf_height, int cur_
 extern uint16_t** callTensorflow_hbd(uint16_t* ppp, int height, int width, int stride, FRAME_TYPE frame_type);
 extern uint16_t** blockCallTensorflow_hbd(uint16_t* ppp, int cur_buf_height, int cur_buf_width, int stride, FRAME_TYPE frame_type);
 
-/*Feed full frame image into the network*/
+/*Feed the whole frame image into the network*/
 void additionHandle_frame(AV1_COMP *cpi, AV1_COMMON *cm, FRAME_TYPE frame_type) {
 	YV12_BUFFER_CONFIG *pcPicYuvRec = &cm->cur_frame->buf;
 
