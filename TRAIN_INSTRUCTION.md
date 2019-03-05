@@ -11,11 +11,12 @@
 
 ## Files
 
-* training/NN_RUN.py : main training file.
+* training/train.py : main training file.
 * training/UTILS.py : defines some functions that need to be used in the training process, such as how to load the data set and how to calculate PSNR.
-* training/WDSR.py : A TensorFlow-based implementation of [Wide Activation for Efficient and Accurate Image Super-Resolution](https://arxiv.org/abs/1808.08718) (WDSR), winner 
+* training/WDSR8.py : A TensorFlow-based implementation of [Wide Activation for Efficient and Accurate Image Super-Resolution](https://arxiv.org/abs/1808.08718) (WDSR), winner 
   of the [NTIRE 2018](http://www.vision.ee.ethz.ch/ntire18/) super-resolution challenge.
-* training/NN_TEST.py : test the generalization power of the saved checkpoints.
+* training/RES.py : 
+* training/evaluate.py : test the generalization power of the saved checkpoints.
 
 ## Environment setup
 
@@ -25,7 +26,7 @@ The following packages are required:
 * pillow
 
 ## Dataset
-To start training the CL+VL+TH model, first download the dataset, available at http://www.statmt.org/lm-benchmark/, and extract it into the ./data directory.  ÔÚÏßÑ§Ï°£¬mini-batchÈ¨ºâtrade offĞ§ÂÊºÍÏÔ´æ,
+To start training the CL+VL+TH model, first download the dataset, available at http://www.statmt.org/lm-benchmark/, and extract it into the ./data directory.  åœ¨çº¿å­¦ä¹ ï¼Œmini-batchæƒè¡¡trade offæ•ˆç‡å’Œæ˜¾å­˜,
 The images in the dataset are all in the YUV format.
 
 ## Train method
