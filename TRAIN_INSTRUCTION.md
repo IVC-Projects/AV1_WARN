@@ -15,7 +15,7 @@
 * training/UTILS.py : defines some functions that need to be used in the training process, such as how to load the data set and how to calculate PSNR.
 * training/WDSR8.py : A TensorFlow-based implementation of [Wide Activation for Efficient and Accurate Image Super-Resolution](https://arxiv.org/abs/1808.08718) (WDSR), winner 
   of the [NTIRE 2018](http://www.vision.ee.ethz.ch/ntire18/) super-resolution challenge.<br>
- We used Xavier Initialization as the method for weight initialization.
+ We adopted Xavier Initialization as the method for weight initialization.
 * training/ResNet8.py : plain residual network with 8 residual blocks(ResNet).
 * training/evaluate.py : test the generalization power of the saved checkpoints.
 
@@ -28,14 +28,17 @@ The following packages are required:
 
 ## Dataset
 
-To start training model, first download the dataset and extract data and training label into two directories separately. Also, you need to modify the `LOW_DATA_PATH` and `HIGH_DATA_PATH` values in train.py to point to them separately.<br>
-Note:The images in the dataset are all in the YUV format.
+To start training model, first download the dataset and extract training data and label into two directories separately. Also, you need to modify the `LOW_DATA_PATH` and `HIGH_DATA_PATH` values in train.py to point to them separately.<br>
+Note:The images in the dataset are all in the YUV format.In addition,the names of the images contain information about heights and widths of the images in a uniform format.For example,the height and width of the image are recorded at index 3 position if `out_0000_BasketballDrive_1920x1080_50` file is split by `'_'`.
 
 ## Train method
-To train the model, the initial learning rate is set to 0.0001 and parameters β1 = 0.9, β2 = 0.999. The learning rate is adjusted with the step strategy using gamma=0.5. In our implementation, the learning rate is halved every 150 epochs in QP=43 for the intra coding. 
-All networks were trained using the Adam optimizer,and 400 examples in each iteration.
 
-* WDSR models can be trained with a pixel-wise loss function with train.py.Default for WDSR is mean squared error.For example,
+To train the model, the initial learning rate is set to 0.0001 and parameters β1 = 0.9, β2 = 0.999. The learning rate is adjusted with the step strategy using gamma=0.5. In our implementation, the learning rate is halved every 150 epochs in QP=43 for the intra coding. 
+All networks were trained using the Adam optimizer,and 400 examples in each iteration.<br>
+
+* Firstly, you need to modify the extraction rules in the `getWH(yuvfileName)` function in training/UTILS.py, which extracts the height and width of images in yuv format from their names.
+
+* Make sure the training set path is correct.WDSR models can be trained with a pixel-wise loss function with train.py.Default for WDSR is mean squared error.For example,
 
         python train.py >>FILE_NAME.log 2>&1
 
@@ -53,10 +56,10 @@ All networks were trained using the Adam optimizer,and 400 examples in each iter
 
 ## Evaluation
 
-To evaluate saved models with evaluate.py and then select the model with the highest PSNR. For example,
+To evaluate saved models with evaluate.py and then select the epoch with the highest PSNR. For example,
 
         python evaluate.py >>./train_log/FILE_NAME.log 2>&1
 
 ## FAQ
-
+1.
 
