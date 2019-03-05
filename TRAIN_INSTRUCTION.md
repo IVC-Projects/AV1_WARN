@@ -15,7 +15,7 @@
 * training/UTILS.py : defines some functions that need to be used in the training process, such as how to load the data set and how to calculate PSNR.
 * training/WDSR8.py : A TensorFlow-based implementation of [Wide Activation for Efficient and Accurate Image Super-Resolution](https://arxiv.org/abs/1808.08718) (WDSR), winner 
   of the [NTIRE 2018](http://www.vision.ee.ethz.ch/ntire18/) super-resolution challenge.
-* training/ResNet8.py : plain residual network (ResNet)
+* training/ResNet8.py : plain residual network with 8 residual blocks(ResNet).
 * training/evaluate.py : test the generalization power of the saved checkpoints.
 
 ## Environment setup
@@ -29,11 +29,10 @@ The following packages are required:
 
 To start training model, first download the dataset and extract data and training label into two directories separately. Also, you need to modify the `LOW_DATA_PATH` and `HIGH_DATA_PATH` values in train.py to point to them separately.<br>
 Note:The images in the dataset are all in the YUV format.
-The mini-batch method will be used in the training
-在线学习，mini-batch权衡trade off效率和显存,
 
 ## Train method
-To train the model, the initial learning rate is set to 0.0001. The learning rate is adjusted with the step strategy using gamma=0.5. In our implementation, the learning rate is multiplied by 0.5 every 180 epochs in QP=52 for the intra coding. In terms of the inter coding, the learning rate is halved per 80 epochs in QP=52. And, Small QP may converge faster.
+To train the model, the initial learning rate is set to 0.0001 and parameters β1 = 0.9, β2 = 0.999. The learning rate is adjusted with the step strategy using gamma=0.5. In our implementation, the learning rate is halved every 150 epochs in QP=43 for the intra coding. 
+All networks were trained using the Adam optimizer,and 400 examples in each iteration.
 
 * WDSR models can be trained with a pixel-wise loss function with train.py.Default for WDSR is mean squared error.For example,
 
