@@ -14,7 +14,8 @@
 * training/train.py : main training file.
 * training/UTILS.py : defines some functions that need to be used in the training process, such as how to load the data set and how to calculate PSNR.
 * training/WDSR8.py : A TensorFlow-based implementation of [Wide Activation for Efficient and Accurate Image Super-Resolution](https://arxiv.org/abs/1808.08718) (WDSR), winner 
-  of the [NTIRE 2018](http://www.vision.ee.ethz.ch/ntire18/) super-resolution challenge.
+  of the [NTIRE 2018](http://www.vision.ee.ethz.ch/ntire18/) super-resolution challenge.<br>
+ We used Xavier Initialization as the method for weight initialization.
 * training/ResNet8.py : plain residual network with 8 residual blocks(ResNet).
 * training/evaluate.py : test the generalization power of the saved checkpoints.
 
@@ -40,9 +41,9 @@ All networks were trained using the Adam optimizer,and 400 examples in each iter
 
     FILE_NAME.log is the file you want to redirect the output to.
 
-* if start with a checkpoint
+* if start with a checkpoint,
 
-        python VDSRTEST.py --model_path=./checkpoints/CHECKPOINT_NAME.ckpt
+        python train.py --model_path=./checkpoints/CHECKPOINT_NAME.ckpt
 
 * The commands for launching tensorboard:
 
@@ -52,7 +53,7 @@ All networks were trained using the Adam optimizer,and 400 examples in each iter
 
 ## Evaluation
 
-to evaluate saved models with evaluate.py and then select the model with the highest PSNR. For example,
+To evaluate saved models with evaluate.py and then select the model with the highest PSNR. For example,
 
         python evaluate.py >>./train_log/FILE_NAME.log 2>&1
 
