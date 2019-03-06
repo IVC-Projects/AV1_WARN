@@ -29,7 +29,7 @@ The following packages are required:
 ## Dataset
 
 To start training model, first download the dataset and extract training data and label into two directories separately. Also, you need to modify the `LOW_DATA_PATH` and `HIGH_DATA_PATH` values in train.py to point to them separately.<br>
-Note:The images in the dataset are all in the YUV format.In addition,the names of the images contain information about heights and widths of the images in a uniform format.For example,the height and width of the image are recorded at index 3 position if `out_0000_BasketballDrive_1920x1080_50` file is split by `'_'`.
+Note: The images in the dataset are all in the YUV format. In addition, the names of the images contain information about heights and widths of the images in a uniform format.For example, the  size of the image is recorded at index 3 position if `out_0000_BasketballDrive_1920x1080_50` file is split by `'_'`.
 
 ## Train method
 
@@ -38,7 +38,7 @@ All networks were trained using the Adam optimizer,and 400 examples in each iter
 
 * Firstly, you need to modify the extraction rules in the `getWH(yuvfileName)` function in training/UTILS.py, which extracts the height and width of images in yuv format from their names.
 
-* Make sure the training set path is correct.WDSR models can be trained with a pixel-wise loss function with train.py.Default for WDSR is mean squared error.For example,
+* Make sure the path of training set is correct. Then, WDSR models can be trained with a pixel-wise loss function with train.py. Default for WDSR is mean squared error. For example,
 
         python train.py >>FILE_NAME.log 2>&1
 
@@ -48,11 +48,11 @@ All networks were trained using the Adam optimizer,and 400 examples in each iter
 
         python train.py --model_path=./checkpoints/CHECKPOINT_NAME.ckpt
 
-* The commands for launching tensorboard:
+* In order to view stats during training (image previews, scalar for loss), simply run
 
         tensorboard --logdir=logs
         
-    The `--logdir` option sets the location point to the log directory of the job.If you still have difficulty in launching tensorboard,you can refer to the https://www.jianshu.com/p/d8f9b0dfacdb.
+    The `--logdir` option sets the location point to the log directory of the job.
 
 ## Evaluation
 
@@ -60,7 +60,9 @@ To evaluate saved models with evaluate.py and then select the epoch with the hig
 
         python evaluate.py >>./train_log/FILE_NAME.log 2>&1
 
-Also, pay attention to the name format of the validation set images.
+Also, pay attention to the name format of the validation set images.<br>
+The `EXP_DATA` in evaluate.py parameter indicates the model you want to evaluate. Similarly, you need to modify the `ORIGINAL_PATH` and `GT_PATH` values in evaluate.py to point to your validation set.
+
 ## FAQ
-1.You might get a slight error running evaluation.py to evaluate the generalization abilities of the models.The main reason is probably something wrong with the directory for the low-pixel images in evaluation.py.More precisely,the current directory in which the images in the validation set are located is not named like 'QP63' or 'QP53'.Because at the end of the evaluation.py file, it is required to subtract the PSNR in AV1 anchor from the PSNR of the images through the neural network to calculate the gain and find the best model.
+1.You might get a slight error running evaluation.py to evaluate the generalization abilities of the models. The main reason is probably something wrong with the directory for the low-pixel images in evaluation.py. More precisely, the current directory in which the low-pixel images are located is not named like 'QP63' or 'QP53' or anything like that. Because it is required to subtract the PSNR in AV1 anchor from the PSNR of the images through CNN to calculate the gain and find the best model at the end of the evaluation.py file.
 
