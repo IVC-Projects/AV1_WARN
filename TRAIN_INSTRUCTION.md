@@ -22,8 +22,8 @@
 ## Environment setup
 
 The following packages are required:
-* TensorFlow
-* Python
+* TensorFlow 1.x
+* Python 3.x
 * pillow
 
 ## Dataset
