@@ -60,8 +60,7 @@ To evaluate saved models with evaluate.py and then select the epoch with the hig
 
         python evaluate.py >>./train_log/FILE_NAME.log 2>&1
 
-Also, pay attention to the name format of the validation set images.<br>
-The `EXP_DATA` in evaluate.py parameter indicates the model you want to evaluate. Similarly, you need to modify the `ORIGINAL_PATH` and `GT_PATH` values in evaluate.py to point to your validation set.
+The `EXP_DATA` in evaluate.py parameter indicates the model you want to evaluate. Similarly, you need to modify the `ORIGINAL_PATH` and `GT_PATH` values in evaluate.py to point to your validation set. Pay attention to the name format of the validation set images.
 
 ## FAQ
 1.You might get a slight error running evaluation.py to evaluate the generalization abilities of the models. The main reason is probably something wrong with the directory for the low-pixel images in evaluation.py. More precisely, the current directory in which the low-pixel images are located is not named like 'QP63' or 'QP53' or anything like that. Because it is required to subtract the PSNR in AV1 anchor from the PSNR of the images through CNN to calculate the gain and find the best model at the end of the evaluation.py file.
