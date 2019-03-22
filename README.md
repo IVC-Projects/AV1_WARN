@@ -1,5 +1,5 @@
 <div align=center>
-   <img width="180" height="150" src="images/logo.png"/>
+   <img width="270" height="225" src="images/logo.png"/>
    <h1>AV1_WARN</h1>
 </div>
 
@@ -10,4 +10,4 @@
 * If you are interested in the version that adds the CNN after deblocking and want to reproduce the performance of  experiment，please refer to the test commands in Intra_test.sh and Inter_test.sh.
 
 ## Subjective quality
-![](https://github.com/IVC-Projects/AV1_WARN/tree/master/images/Visual_quality.png)
+![](https://github.com/IVC-Projects/AV1_WARN/blob/master/images/Visual_quality.jpg)
