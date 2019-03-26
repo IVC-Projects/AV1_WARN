@@ -75,7 +75,7 @@ def test_all_ckpt(modelPath, fileOrDir, flags):
             #tf.logging.warning("epoch:%d\t" % epoch)
             saver = tf.train.Saver(tf.global_variables())
             saver.restore(sess,os.path.join(modelPath,ckpt))
-            total_imgs = len(fileName_list)361
+            total_imgs = len(fileName_list)
             for i in range(total_imgs):
                 imgY = original_ycbcr[i][0]
                 out = sess.run(output_tensor, feed_dict={input_tensor: imgY})
