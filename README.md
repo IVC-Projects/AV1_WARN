@@ -3,6 +3,9 @@
    <h1>AV1_WARN</h1>
 </div>
 
+![](https://github.com/IVC-Projects/AV1_WARN/blob/master/images/logo.png)
+# AV1_WARN
+
 ## Approach
 
 * If you want to know our training details, please refer to the TRAIN_INSTRUCTION.md file and the training directory.<br>
