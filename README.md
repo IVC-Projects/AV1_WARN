@@ -1,5 +1,5 @@
 <div align=center>
-   <img width="270" height="270" src="images/logo.png"/>
+   <img width="270" height="200" src="images/logo.png"/>
    <h1>AV1_WARN</h1>
 </div>
 
