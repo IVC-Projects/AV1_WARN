@@ -1,10 +1,7 @@
 <div align=center>
-   <img width="270" height="200" src="images/logo.png"/>
+   <img width="270" height="220" src="images/logo.png"/>
    <h1>AV1_WARN</h1>
 </div>
-
-![](https://github.com/IVC-Projects/AV1_WARN/blob/master/images/logo.png)
-# AV1_WARN
 
 ## Approach
 
