@@ -93,7 +93,7 @@ def entranceI(inp):
     i = test_all_ckpt(I_MODEL_PATH, inp, 0)
     return i
 
-def entranceB(inp):616
+def entranceB(inp):
     tf.logging.warning("python, in B")
     b = test_all_ckpt(B_MODEL_PATH, inp, 1)
     return b
